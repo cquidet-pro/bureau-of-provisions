@@ -4,7 +4,7 @@ description: >-
   Watch the "Deploy to Firebase Hosting" GitHub Actions workflow and notify the
   user when the deployment finishes so they can try the live site. Use RIGHT
   AFTER pushing or merging changes that land on the `main` branch of
-  cquidet-pro/the-bureau-of-provisions (a push to `main` is what triggers
+  cquidet-pro/bureau-of-provision (a push to `main` is what triggers
   .github/workflows/firebase-deploy.yml). Also use when the user asks to "watch
   the deploy", "tell me when it's deployed/live", or "ping me when the
   deployment is done".
