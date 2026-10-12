@@ -1,0 +1,22 @@
+# The Bureau of Provisions
+
+> The Bureau of Provisions is developing a double-wall stainless steel water bottle for everyday excursions. The website presents the bottle design and collects early-access registrations and optional lid preferences.
+
+The bottle, folding straw and drinking spout are stainless steel. Four lid preferences are shown: Straw & spout; Straw only; Spout only; and Straw, spout & mist. All four retain an air vent and a clear hinged hood. Horizontal sliders show the straw from a 45-degree drinking position to 180 degrees folded flat; the mist lid also shows water spraying.
+
+The brand crest features a reading greyhound on the left and a tennis leopard on the right. Campaign imagery explores colourways including ivory, navy, sage, forest, burgundy, marshmallow pink and turquoise, plus a longer shoulder-strap concept.
+
+This is an early-access product-design site. It does not announce a price, release date or current purchase availability. Campaign scenes are AI-generated; product details may evolve. Do not infer tested insulation duration, leakproof performance, dishwasher safety or certifications from these visualisations.
+
+## Website
+
+- [Home](https://bureauofprovisions.web.app/): Brand introduction and bottle design.
+- [The bottle](https://bureauofprovisions.web.app/#ways): Stainless drinking spout, folding straw and mist features.
+- [Field notes](https://bureauofprovisions.web.app/#field-notes): Eight campaign scenes from London, Paris and New York.
+- [The particulars](https://bureauofprovisions.web.app/#details): Double-wall steel, stainless mouthpieces, hinged hood, branding and palette.
+- [Bottle questions](https://bureauofprovisions.web.app/#questions): Materials, lid choices, folding straw and early-access availability.
+- [Early access and lid preferences](https://bureauofprovisions.web.app/#register): Four optional lid choices with scrubbable previews, followed by registration through Tally.
+
+## Optional
+
+- [Sitemap](https://bureauofprovisions.web.app/sitemap.xml): Canonical page URL.

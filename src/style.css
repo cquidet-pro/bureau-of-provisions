@@ -545,6 +545,33 @@ h3 {
   line-height:1.85;
   max-width:410px
 }
+.bottle-questions {
+  max-width:850px;
+  border-top:1px solid var(--line)
+}
+.bottle-questions h2 {
+  font:clamp(30px,4vw,44px)/1.2 var(--serif);
+  color:var(--wine);
+  margin-bottom:28px
+}
+.bottle-questions details {
+  padding:20px 0;
+  border-bottom:1px solid var(--line)
+}
+.bottle-questions summary {
+  cursor:pointer;
+  font:18px/1.5 var(--serif);
+  color:var(--wine)
+}
+.bottle-questions summary:focus-visible {
+  outline:3px solid var(--wine);
+  outline-offset:5px
+}
+.bottle-questions details p {
+  font-size:13px;
+  line-height:1.85;
+  margin-top:14px
+}
 .register {
   max-width:none;
   padding:65px 20px;

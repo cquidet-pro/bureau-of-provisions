@@ -1,0 +1,7 @@
+# Public product-design and early-access site. Search and AI crawlers are welcome.
+User-agent: *
+Allow: /
+
+Sitemap: https://bureauofprovisions.web.app/sitemap.xml
+
+# Plain-text site summary for assistants: https://bureauofprovisions.web.app/llms.txt
