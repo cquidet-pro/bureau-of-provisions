@@ -305,7 +305,7 @@ h2 em {
   display:flex;
   align-items:center;
   gap:14px;
-  margin:23px 0 13px
+  margin:0 0 13px
 }
 .number {
   width:32px;
@@ -338,7 +338,7 @@ h3 {
   max-width:1408px;
   margin:0 auto 20px;
   display:grid;
-  grid-template-columns:1fr 1fr;
+  grid-template-columns:minmax(0,1fr);
   background:var(--sage);
   border-top:1px solid var(--line);
   border-bottom:1px solid var(--line)
@@ -548,9 +548,9 @@ h3 {
 .register {
   max-width:none;
   padding:65px 20px;
-  background:var(--rose);
-  border-top:1px solid #c49e95;
-  border-bottom:1px solid #c49e95
+  background:var(--paper);
+  border-top:1px solid var(--line);
+  border-bottom:1px solid var(--line)
 }
 .registration-card {
   max-width:690px;
@@ -566,7 +566,7 @@ h3 {
   font:9px var(--mono);
   text-transform:uppercase;
   letter-spacing:1px;
-  border-bottom:1px solid #b68f85;
+  border-bottom:1px solid var(--line);
   padding:12px 0 18px;
   margin-bottom:38px
 }
@@ -594,6 +594,226 @@ h3 {
 .registration-card .small-copy {
   font-size:10px!important;
   margin-top:18px!important
+}
+.cap-picker {
+  max-width:490px;
+  margin:30px auto 0;
+  padding:0;
+  border:0;
+  text-align:left
+}
+.cap-picker-legend {
+  font:9px var(--mono);
+  text-transform:uppercase;
+  letter-spacing:1px;
+  color:var(--wine);
+  padding:0
+}
+.cap-picker-hint {
+  font-size:10px!important;
+  line-height:1.7;
+  margin:9px 0 15px!important;
+  color:#6b5a4e
+}
+.cap-options {
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:9px
+}
+.cap-option {
+  display:block;
+  cursor:pointer
+}
+.cap-option input {
+  position:absolute;
+  opacity:0;
+  width:1px;
+  height:1px
+}
+.cap-option-inner {
+  position:relative;
+  display:block;
+  height:100%;
+  padding:11px 10px 13px;
+  border:1px solid #c9b8a6;
+  background:#fbf6ea;
+  text-align:center;
+  transition:border-color .15s,background .15s
+}
+.cap-option:hover .cap-option-inner {
+  border-color:var(--wine)
+}
+.cap-option input:focus-visible+.cap-option-inner {
+  outline:2px solid var(--wine);
+  outline-offset:2px
+}
+.cap-option input:checked+.cap-option-inner {
+  border:3px solid var(--wine);
+  background:#fbf6ea;
+  padding:9px 8px 11px
+}
+.cap-thumbnail {
+  display:block;
+  width:100%;
+  height:auto;
+  aspect-ratio:1;
+  object-fit:cover;
+  margin:0 auto 10px
+}
+.cap-option-wrap {
+  display:grid;
+  grid-template-rows:subgrid;
+  grid-row:span 2;
+  min-width:0
+}
+.cap-image-wrap {
+  display:block;
+  position:relative;
+  width:100%;
+  aspect-ratio:1 / 1;
+  overflow:hidden;
+  margin-bottom:10px
+}
+.cap-image-wrap .cap-thumbnail { height:100%; margin-bottom:0 }
+.cap-annotations {
+  position:absolute;
+  inset:0;
+  width:100%;
+  height:100%;
+  pointer-events:none;
+  color:var(--wine)
+}
+.cap-annotations[hidden] { display:none }
+.cap-callout polyline {
+  fill:none;
+  stroke:currentColor;
+  stroke-width:4;
+  stroke-linecap:round;
+  stroke-linejoin:round
+}
+.cap-callout rect {
+  fill:var(--paper);
+  fill-opacity:.96;
+  stroke:currentColor;
+  stroke-width:2
+}
+.cap-callout text {
+  fill:currentColor;
+  font:48px var(--mono)
+}
+.cap-motion-control { position:relative; margin-top:7px; color:var(--wine) }
+.cap-motion-control input[type="range"] {
+  --progress:100%;
+  display:block;
+  appearance:none;
+  width:100%;
+  height:44px;
+  margin:0;
+  background:transparent;
+  cursor:ew-resize;
+  touch-action:pan-y
+}
+.cap-motion-control input::-webkit-slider-runnable-track {
+  height:3px;
+  background:linear-gradient(to right,var(--wine) var(--progress),#c9b8a6 var(--progress))
+}
+.cap-motion-control input::-webkit-slider-thumb {
+  appearance:none;
+  width:20px;
+  height:20px;
+  margin-top:-8.5px;
+  border:2px solid var(--wine);
+  border-radius:50%;
+  background:var(--paper)
+}
+.cap-motion-control input::-moz-range-track { height:3px; background:#c9b8a6 }
+.cap-motion-control input::-moz-range-progress { height:3px; background:var(--wine) }
+.cap-motion-control input::-moz-range-thumb {
+  width:16px;
+  height:16px;
+  border:2px solid var(--wine);
+  border-radius:50%;
+  background:var(--paper)
+}
+.cap-motion-control input:focus-visible { outline:2px solid var(--wine); outline-offset:2px }
+.cap-motion-labels { display:flex; justify-content:space-between; gap:6px; font:10px var(--mono) }
+.cap-motion-labels output { font-style:italic; text-align:center }
+.cap-motion-labels > span { white-space:nowrap }
+.visually-hidden {
+  position:absolute;
+  width:1px;
+  height:1px;
+  padding:0;
+  overflow:hidden;
+  clip-path:inset(50%);
+  white-space:nowrap
+}
+@media(max-width:520px) {
+  .cap-options { grid-template-columns:minmax(0,1fr); gap:18px }
+}
+.register-embed[hidden],.registration-start button[hidden] {
+  display:none
+}
+.registration-start button:focus-visible {
+  outline:2px solid var(--wine);
+  outline-offset:3px
+}
+#registration-preference {
+  font-size:11px;
+  line-height:1.7;
+  margin-top:8px
+}
+.registration-card .cap-design-note {
+  max-width:490px;
+  margin:14px auto 0!important;
+  font-size:10px!important;
+  color:#6b5a4e
+}
+.registration-start {
+  max-width:490px;
+  margin:24px auto 0
+}
+.registration-start .button {
+  cursor:pointer;
+  max-width:100%;
+  white-space:normal;
+  line-height:1.6
+}
+@media(max-width:420px) {
+  .cap-option-name { overflow-wrap:anywhere }
+}
+.cap-option-name {
+  display:block;
+  font:11px var(--mono);
+  text-transform:uppercase;
+  letter-spacing:.6px;
+  color:var(--ink)
+}
+.cap-option-note {
+  display:block;
+  margin-top:5px;
+  font-size:10px;
+  line-height:1.5;
+  color:#6b5a4e
+}
+.cap-option-flag {
+  position:absolute;
+  top:7px;
+  right:7px;
+  font:8px var(--mono);
+  text-transform:uppercase;
+  letter-spacing:.6px;
+  color:var(--wine);
+  border:1px solid var(--wine);
+  padding:1px 4px
+}
+.cap-picker-status {
+  min-height:14px;
+  margin:12px 0 0!important;
+  font:9px var(--mono);
+  text-transform:uppercase;
+  letter-spacing:.6px;
+  color:var(--wine)
 }
 .site-foot {
   max-width:1600px;
@@ -985,4 +1205,13 @@ body:has(.photo-dialog[open]) {
     transition:none!important;
     animation:none!important
   }
+}
+
+.cap-motion-boundary {
+  position:absolute;
+  left:76.27%;
+  top:0;
+  transform:translateX(-50%);
+  pointer-events:none;
+  font:9px var(--mono)
 }
