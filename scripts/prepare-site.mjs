@@ -4,6 +4,10 @@ import { resolve, sep } from "node:path";
 const output = resolve("dist");
 const page = resolve(output, "index.html");
 let html = readFileSync(page, "utf8");
+// Keep bookmark icon URLs at the site root when Vite uses a relative base.
+html = html.replace(/<link\b[^>]*rel="(?:icon|apple-touch-icon)"[^>]*>/g, (tag) =>
+  tag.replace(/href="\.\//, 'href="/')
+);
 let count = 0;
 html = html.replace(/<link\b[^>]*rel="stylesheet"[^>]*>/g, (tag) => {
   const href = tag.match(/href="([^"]+)"/)?.[1];
