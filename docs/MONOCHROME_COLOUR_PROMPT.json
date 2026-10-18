@@ -1,0 +1,5 @@
+{
+  "tool": "image_gen.imagegen",
+  "prompt": "Edit this exact1536x1024 five-column two-row bottle colour sheet. ONLY recolour TWO bottles: bottom row column4 (currently sky-blue/orange) and bottom row column5 (currently teal/lilac). Bottom row column4 must be fully white: satin white body, white lid collar/latch and plain white woven SINGLE continuous U strap. Bottom row column5 must be fully grey: medium cool stone-grey body, matching grey lid collar/latch and plain matching grey woven SINGLE continuous U strap. No contrasting colour panels, no stripes on these two monochrome versions. Keep both body coat-of-arms animal supporters and tiny high strap motifs as subtle dark charcoal ink; preserve their exact size/position. Clear hood stays clear; exposed steel remains steel. Preserve all physical shapes/proportions, lids, rings, one continuous strap, cell positions/crop, lighting, background, every other eight bottles. Colour-only edits; do not change geometry or add accessories. Exact original grid and canvas.",
+  "asset": "public/images/product/two-tone-monochrome-v1.png"
+}

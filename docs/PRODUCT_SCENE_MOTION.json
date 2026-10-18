@@ -1,0 +1,12 @@
+{
+  "tool": "Built-in image_gen",
+  "ringlets": {
+    "path": "public/images/product/platform-study-v10.webp",
+    "prompt": "Edit this photograph with exactly ONE change: refine the girl on the LEFT bench's dark brown shoulder-length hair into clearly DEFINED RINGLETS: individual glossy spiral curls/corkscrew ringlets, visibly separated and well formed, with natural volume. Keep her dark brown hair color and length, face, sunglasses, deadpan expression, clothes and posture. Do not make loose waves or a frizzy halo. Preserve absolutely EVERYTHING else in this image, including the current very small complete bottle crest with BOTH heraldic animals, simple crown and banner, tiny strap emblems, bottle and lid geometry, straw/spout/rear mist, spray, boy, newspaper-reading man, setting, composition, lighting, and colors. No added text or graphics. Only define the girl's ringlets more clearly."
+  },
+  "newspaper": {
+    "path": "public/images/product/newspaper-turn-v1.webp",
+    "prompt": "Create an animation companion frame by editing this exact source photograph. Change ONLY the newspaper-reading man on the FAR RIGHT's hands and newspaper: capture him MID PAGE TURN, gently lifting the upper right leaf of the newspaper with his right hand and turning that leaf over toward the left. The page is partly curled, with visible newspaper print, realistic thin paper bending, no blank white sheet. His left hand holds the remaining newspaper. His face, head, uniform, pose and seated body remain perfectly unchanged. Keep all movement inside the small rectangle x=1230 to 1435 and y=485 to 650 in the 1536x1024 source image. Preserve every other pixel and feature as closely as possible: girl with defined dark ringlets, boy, product and its small crest with both animals, straps, rear mist spray, station room, framing and lighting. Same front-on camera. Only a brief local newspaper page-turn pose, not a redesign, no added text or labels. This frame will be overlaid ONLY over the hands/newspaper region of the original."
+  },
+  "motion": "Local newspaper page rotates and crossfades to a matching hand pose at random 7–20 second intervals while visible. Pauses offscreen, in hidden tabs, or with reduced motion."
+}

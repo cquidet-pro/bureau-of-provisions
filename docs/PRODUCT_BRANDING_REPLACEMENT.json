@@ -1,0 +1,43 @@
+{
+  "tool": "Built-in image_gen",
+  "reference": "public/images/product/crest-approved-v3.png",
+  "request": "Replace all visible bottle crests and tiny upper strap animal motifs with the user's simplified greyhound and tennis-leopard logo.",
+  "prompt": "Use case: compositing. Image 1 is the EDIT TARGET product image. Image 2 is the approved branding reference ONLY. Make a strictly localized branding replacement. Replace EVERY existing bottle body crest with the complete exact crest from image 2: reading greyhound on left, spotted tennis leopard with little hat and racket on right, serif BoP shield, simple three-point crown, clean Bureau of Provisions banner, curved divider and DEPARTMENT OF THIRST tagline. Both animals MUST remain on every body crest. Keep the body crest exactly the same small size and same high position as in image 1. Also replace EVERY tiny strap animal print with the corresponding animals from image 2: reading greyhound on one side, tennis leopard on the other. Tiny subtle prints into existing woven fabric, immediately below the upper stitched attachment near side clips. Keep lower strap fabric plain. Match each original print's existing navy/cream/black/tonal ink colour for appropriate contrast, use the exact new artwork shape. Do not paste any cream background rectangle from logo reference: print ink directly on original bottle colour and strap fabric. Preserve all other pixels as closely as possible: approved tall slim bottle geometry, lid, transparent hinged hood, steel straw, spout, latch, base dot pattern, metal clips, one continuous U-shaped strap, palette, shadows, background, composition. Do not change bottle or strap sizes or shift image framing. If a collection, preserve EXACT five-column two-row grid, same cell boundaries, all ten colours in original order, same canvas dimensions. If a scene, preserve all people faces poses clothing, clock, lighting, room, mist outlet/spray, bottle scale and position. If cutaway, preserve exact engineering and cutaway, water and lid arrangement. The sole requested edits are the crest ink and tiny strap ink. Output same dimensions as edit target. SIZE LOCK: on collection sheets, full body crest including tagline must be only 80 pixels wide and 90 pixels tall, centered at same original location about x153,y285 within first 307x512 cell, repeat by column/row. Tiny strap animal must be ONLY 14 pixels tall and 7 pixels wide just below attachment stitching. Do not enlarge these prints. Keep them understated.",
+  "assets": [
+    {
+      "source": "platform-family-approved-v7.png",
+      "output": "platform-family-brand-v8.png",
+      "generated": "/Users/andonella/.codex/generated_images/01a13ba6-f16d-7cb2-9ade-e75b1343cd88/exec-7f7a923c-054c-4ad8-be39-528e82802216.png"
+    },
+    {
+      "source": "two-tone-colour-only-v4.png",
+      "output": "two-tone-colour-brand-v5.png",
+      "generated": "/Users/andonella/.codex/generated_images/01a13ba6-f16d-7cb2-9ade-e75b1343cd88/exec-08dfe9a4-896e-4d9f-a0fe-897768107656.png"
+    },
+    {
+      "source": "two-tone-monochrome-v1.png",
+      "output": "two-tone-monochrome-brand-v2.png",
+      "generated": "/Users/andonella/.codex/generated_images/01a13ba6-f16d-7cb2-9ade-e75b1343cd88/exec-a73f27fc-c31e-49c1-967b-594497805a56.png"
+    },
+    {
+      "source": "two-tone-sport-play-v1.png",
+      "output": "two-tone-sport-brand-v2.png",
+      "generated": "/Users/andonella/.codex/generated_images/01a13ba6-f16d-7cb2-9ade-e75b1343cd88/exec-f3d6f094-e4eb-4c41-9d78-07645878b600.png"
+    },
+    {
+      "source": "two-tone-sport-play-pink-v2.png",
+      "output": "two-tone-pink-brand-v3.png",
+      "generated": "/Users/andonella/.codex/generated_images/01a13ba6-f16d-7cb2-9ade-e75b1343cd88/exec-f16ca9c1-9849-457f-944f-26ee3f0a0bd3.png"
+    },
+    {
+      "source": "bottle-cutaway-v2.png",
+      "output": "bottle-cutaway-brand-v3.png",
+      "generated": "/Users/andonella/.codex/generated_images/01a13ba6-f16d-7cb2-9ade-e75b1343cd88/exec-fddd2739-675b-43fa-897d-e75e38f528d1.png"
+    }
+  ],
+  "notes": [
+    "Versioned outputs preserve original artwork.",
+    "Body crest includes both heraldic supporters; strap prints use the corresponding individual animals.",
+    "Motion overlays mask only background gestures and do not expose their old bottle branding."
+  ]
+}

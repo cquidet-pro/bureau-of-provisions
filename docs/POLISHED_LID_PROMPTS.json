@@ -1,0 +1,12 @@
+[
+  {
+    "key": "polishedScene",
+    "path": "/Users/andonella/github-local/bureau-of-provisions/public/images/product/platform-cad-lid-v16.png",
+    "prompt": "EXACT LOCAL TEXTURE/ROUGHNESS EDIT ONLY. First image is edit target. Second tiny reference shows desired steel finish. Change ONLY the visibly brushed steel mouthpieces on the bottle lid to highly polished mirror-finish stainless steel: smooth glossy surfaces, distinct crisp dark/light specular reflections like the second reference, no radial machining rings, no brushed or satin grain, no frosted metal. Preserve their exact silhouette, size, location, openings and every geometric contour. Reflect the existing warm station lighting naturally in the steel. The hood-mounted silicone disc and its neck remain softly TRANSLUCENT SILICONE, never metallic; clear hood remains transparent. All other pixels must remain identical: no shape or camera changes, no moving parts, no changes to lid, latch, mist spray, body, fabric strap, people, lighting, colour, scene composition or scale. Do not add branding; existing exact website logos are separate layers.1536x1024 same composition."
+  },
+  {
+    "key": "polishedMacro",
+    "path": "/Users/andonella/github-local/bureau-of-provisions/public/images/product/lid-solid-reference-v5.png",
+    "prompt": "EXACT LOCAL TEXTURE/ROUGHNESS EDIT ONLY. First image is edit target. Second reference shows desired steel finish. Change ONLY the metal mouthpieces on the lid deck (the short rear-centre capped cylinder, the squat hourglass open spout at front-right, and steel surfaces of the low folding straw assembly) from brushed/radially machined steel to smooth MIRROR-POLISHED stainless steel matching the second reference. Smooth glossy highlights with distinct reflected light/dark bands, NO brushed grain or concentric machining rings, NO satin finish. Do not reshape or move any component. EVERY geometry, contour, opening, pivot, collar, latch, clip, strap, camera angle, ivory colour and light position stays exactly the same. Crucially preserve the softly TRANSLUCENT SILICONE round piece and neck mounted in the hood, and the transparent circular hood; these must not become metal. Preserve the dark straw mouth tip. No changes to any other pixels, framing or background; no added words, animals or branding. Same1088x1445 portrait composition."
+  }
+]

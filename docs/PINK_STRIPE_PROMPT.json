@@ -1,0 +1,5 @@
+{
+  "tool": "image_gen.imagegen",
+  "prompt": "Edit ONLY the TOP RIGHT bottle (column5 row1) in this exact1536x1024 product sheet. Replace its yellow body colour with soft candy pink #ed9fb9. Replace its sea-blue lid collar with deeper raspberry pink #b94678. Replace the blue woven carry strap with raspberry pink woven fabric while retaining its narrow ivory longitudinal stripe all the way along the ONE continuous U strap. Keep tiny ivory animal prints high up below attachment stitching. Preserve body crest including BOTH animal supporters; render crest ink in deep raspberry for legibility. Preserve all physical geometry, tall slim proportions, clear hinged hood, steel drinking parts, latch, rings, one continuous strap, exact bottle position, lighting and grid crop. ALL other nine bottles and every other pixel unchanged. Colour-only edit, no accessories or shape modifications.",
+  "asset": "public/images/product/two-tone-sport-play-pink-v2.png"
+}

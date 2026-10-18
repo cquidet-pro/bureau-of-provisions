@@ -1,0 +1,31 @@
+{
+  "tool": "image_gen.imagegen",
+  "edits": [
+    {
+      "reference": "platform-family-brand-v8.png",
+      "prompt": "Remove ONLY the decorative rectangular field of tiny black dots on lower front of foreground bottle, restore seamless plain ivory satin surface matching shading. Also enlarge LEFT reading greyhound beside body shield by15 percent, same banner baseline, to balance right spotted leopard. Preserve crest design and size otherwise, all strap motifs, bottle geometry, one strap, people, station, mist and exact1536x1024 composition."
+    },
+    {
+      "reference": "bottle-cutaway-brand-v3.png",
+      "prompt": "Remove ONLY the rectangular decorative dot field on lower intact left half of cutaway bottle; restore seamless plain ivory surface matching shading. Preserve all other pixels: current crest/supporters, strap, cutaway engineering, water, lid, exact1024x1536 framing. Do not add writing yet."
+    },
+    {
+      "reference": "two-tone-colour-brand-v5.png",
+      "prompt": "Edit this exact1536x1024 five-column two-row product collection. Remove EVERY decorative rectangle of tiny dots on the lower front of all ten bottle bodies, restore seamless plain satin surface in each original body colour matching its existing lighting/shadows. Do not put any new writing or graphics there yet. Preserve everything else exactly: all colours, tall slim shape, lids, steel parts, rings, ONE continuous strap with existing stripes, tiny upper strap animal prints, current body crest with BOTH supporters and banner, background and EXACT cell crop/framing. Enlarge left reading greyhound beside shield by15 percent on each body crest so its visual height balances right spotted tennis leopard, feet anchored on original banner baseline; preserve crest design, position and small overall size."
+    },
+    {
+      "reference": "two-tone-monochrome-brand-v3.png",
+      "prompt": "Edit this exact1536x1024 five-column two-row product collection. Remove EVERY decorative rectangle of tiny dots on the lower front of all ten bottle bodies, restore seamless plain satin surface in each original body colour matching its existing lighting/shadows. Do not put any new writing or graphics there yet. Preserve everything else exactly: all colours, tall slim shape, lids, steel parts, rings, ONE continuous strap with existing stripes, tiny upper strap animal prints, current body crest with BOTH supporters and banner, background and EXACT cell crop/framing."
+    },
+    {
+      "reference": "two-tone-sport-brand-v2.png",
+      "prompt": "Edit this exact1536x1024 five-column two-row product collection. Remove EVERY decorative rectangle of tiny dots on the lower front of all ten bottle bodies, restore seamless plain satin surface in each original body colour matching its existing lighting/shadows. Do not put any new writing or graphics there yet. Preserve everything else exactly: all colours, tall slim shape, lids, steel parts, rings, ONE continuous strap with existing stripes, tiny upper strap animal prints, current body crest with BOTH supporters and banner, background and EXACT cell crop/framing. Enlarge left reading greyhound beside shield by15 percent on each body crest so its visual height balances right spotted tennis leopard, feet anchored on original banner baseline; preserve crest design, position and small overall size."
+    },
+    {
+      "reference": "two-tone-pink-brand-v3.png",
+      "prompt": "Edit this exact1536x1024 five-column two-row product collection. Remove EVERY decorative rectangle of tiny dots on the lower front of all ten bottle bodies, restore seamless plain satin surface in each original body colour matching its existing lighting/shadows. Do not put any new writing or graphics there yet. Preserve everything else exactly: all colours, tall slim shape, lids, steel parts, rings, ONE continuous strap with existing stripes, tiny upper strap animal prints, current body crest with BOTH supporters and banner, background and EXACT cell crop/framing. Enlarge left reading greyhound beside shield by15 percent on each body crest so its visual height balances right spotted tennis leopard, feet anchored on original banner baseline; preserve crest design, position and small overall size."
+    }
+  ],
+  "brailleArtwork": "public/images/product/bottle-braille-message.svg",
+  "generator": "scripts/generate-braille.mjs"
+}

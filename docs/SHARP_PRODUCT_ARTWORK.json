@@ -1,0 +1,203 @@
+{
+  "tool": "image_gen.imagegen",
+  "logo": "public/images/product/crest-vector-v1.svg",
+  "mainPrompt": "Restore and enhance this exact approved product campaign photograph at high resolution. Requested output3072x2048 pixels, same3:2 composition. Increase genuine fine detail and focus: clear woven strap fibres, satin bottle edges, crisp steel fittings and clear hood, sharp clothing seams and ringlets, stone floor and station joinery. Do not change anything's shape, size, position or design. Preserve mum looking LEFT at bottle, preppy young girl, boy, newspaper husband and conductor, painting location, clock and mist. REMOVE ONLY printed branding from foreground bottle body and both strap animal prints, replacing ink with matching original unprinted ivory satin/weave. Leave lower body blank. Exact approved tall slim geometry, ONE continuous U strap, hood/drinking parts/latch and lighting. Branding will be applied as exact vector artwork separately. No new graphics, text or dots. Do not introduce soft focus or painterly smoothing.",
+  "cutawayPrompt": "Enhance sharpness and fine photographic detail in this exact approved bottle cutaway. Same1024x1536 portrait, same geometry, half section, lifted open lid, steel walls, water chamber and straw, same single visible continuous strap, no redesign. Fine crisp steel edges, clean satin surface and sharply resolved woven fibres. Remove ONLY the body crest/tagline ink and strap animal print to leave blank matching ivory surfaces for precise vector branding. Keep blank lower body, no dots/text/logos added. Preserve all framing, proportions, parts and lighting exactly. No painterly smoothing.",
+  "studies": [
+    {
+      "name": "Strawberry / Sky",
+      "reference": "/images/product/two-tone-colour-braille-v7.png",
+      "column": 0,
+      "row": 0,
+      "colours": [
+        "#e88888",
+        "#accde0"
+      ],
+      "source": "/Users/andonella/.codex/generated_images/01a13734-76ee-7bf2-b1a5-8b229a813126/exec-dc0b5ee1-1abc-43cc-86df-578f66237fa2.png",
+      "prompt": "Produce ONE high-resolution isolated product photograph of ONLY bottle column1, row1 of the reference sheet (Strawberry / Sky). Do NOT show a grid or other bottles. Requested portrait1024x1536. Copy its EXACT physical product geometry and colours: body#e88888, collar and single continuous U strap#accde0. Same tall slim body, clear OPEN hinged hood, steel drinking parts and front oval latch, two rings and same continuous U strap. No handles, bumpers, grips or shape redesign. Full bottle and entire U strap centred, clear hood top at3% image height, strap bottom at96%, bottle body from31% to90% height, body sides at28% and72% width, strap side runs near17% and83%. Clean warm ivory studio backdrop, sharp fine satin texture, crisp edges, detailed woven fibres, natural shadows. REMOVE all existing printed body crests and strap prints, leave unprinted coloured surfaces; exact vector brand will be applied separately. Leave lower body blank for precise braille overlay. Do not invent text, dots, labels or logos. Priority: same approved geometry, sharp product detail.",
+      "asset": "colour-01-sharp-v1.png"
+    },
+    {
+      "name": "Cobalt / Sunshine",
+      "reference": "/images/product/two-tone-colour-braille-v7.png",
+      "column": 1,
+      "row": 0,
+      "colours": [
+        "#355eab",
+        "#f2cb55"
+      ],
+      "source": "/Users/andonella/.codex/generated_images/01a13734-76ee-7bf2-b1a5-8b229a813126/exec-d2893e36-808c-4bba-96c4-a1bb8134bd1a.png",
+      "prompt": "Produce ONE high-resolution isolated product photograph of ONLY bottle column2, row1 of the reference sheet (Cobalt / Sunshine). Do NOT show a grid or other bottles. Requested portrait1024x1536. Copy its EXACT physical product geometry and colours: body#355eab, collar and single continuous U strap#f2cb55. Same tall slim body, clear OPEN hinged hood, steel drinking parts and front oval latch, two rings and same continuous U strap. No handles, bumpers, grips or shape redesign. Full bottle and entire U strap centred, clear hood top at3% image height, strap bottom at96%, bottle body from31% to90% height, body sides at28% and72% width, strap side runs near17% and83%. Clean warm ivory studio backdrop, sharp fine satin texture, crisp edges, detailed woven fibres, natural shadows. REMOVE all existing printed body crests and strap prints, leave unprinted coloured surfaces; exact vector brand will be applied separately. Leave lower body blank for precise braille overlay. Do not invent text, dots, labels or logos. Priority: same approved geometry, sharp product detail.",
+      "asset": "colour-02-sharp-v1.png"
+    },
+    {
+      "name": "Mint / Peach",
+      "reference": "/images/product/two-tone-colour-braille-v7.png",
+      "column": 2,
+      "row": 0,
+      "colours": [
+        "#7fb6a3",
+        "#f2ab85"
+      ],
+      "source": "/Users/andonella/.codex/generated_images/01a13734-76ee-7bf2-b1a5-8b229a813126/exec-b632b1b9-4cd8-4695-956a-844d840b096e.png",
+      "prompt": "Produce ONE high-resolution isolated product photograph of ONLY bottle column3, row1 of the reference sheet (Mint / Peach). Do NOT show a grid or other bottles. Requested portrait1024x1536. Copy its EXACT physical product geometry and colours: body#7fb6a3, collar and single continuous U strap#f2ab85. Same tall slim body, clear OPEN hinged hood, steel drinking parts and front oval latch, two rings and same continuous U strap. No handles, bumpers, grips or shape redesign. Full bottle and entire U strap centred, clear hood top at3% image height, strap bottom at96%, bottle body from31% to90% height, body sides at28% and72% width, strap side runs near17% and83%. Clean warm ivory studio backdrop, sharp fine satin texture, crisp edges, detailed woven fibres, natural shadows. REMOVE all existing printed body crests and strap prints, leave unprinted coloured surfaces; exact vector brand will be applied separately. Leave lower body blank for precise braille overlay. Do not invent text, dots, labels or logos. Priority: same approved geometry, sharp product detail.",
+      "asset": "colour-03-sharp-v1.png"
+    },
+    {
+      "name": "Lilac / Butter",
+      "reference": "/images/product/two-tone-colour-braille-v7.png",
+      "column": 3,
+      "row": 0,
+      "colours": [
+        "#b5a1d0",
+        "#f2d78c"
+      ],
+      "source": "/Users/andonella/.codex/generated_images/01a13734-76ee-7bf2-b1a5-8b229a813126/exec-1bffdcab-2e81-4e57-9d0f-f82fce5edef6.png",
+      "prompt": "Produce ONE high-resolution isolated product photograph of ONLY bottle column4, row1 of the reference sheet (Lilac / Butter). Do NOT show a grid or other bottles. Requested portrait1024x1536. Copy its EXACT physical product geometry and colours: body#b5a1d0, collar and single continuous U strap#f2d78c. Same tall slim body, clear OPEN hinged hood, steel drinking parts and front oval latch, two rings and same continuous U strap. No handles, bumpers, grips or shape redesign. Full bottle and entire U strap centred, clear hood top at3% image height, strap bottom at96%, bottle body from31% to90% height, body sides at28% and72% width, strap side runs near17% and83%. Clean warm ivory studio backdrop, sharp fine satin texture, crisp edges, detailed woven fibres, natural shadows. REMOVE all existing printed body crests and strap prints, leave unprinted coloured surfaces; exact vector brand will be applied separately. Leave lower body blank for precise braille overlay. Do not invent text, dots, labels or logos. Priority: same approved geometry, sharp product detail.",
+      "asset": "colour-04-sharp-v1.png"
+    },
+    {
+      "name": "Ocean / Coral",
+      "reference": "/images/product/two-tone-colour-braille-v7.png",
+      "column": 4,
+      "row": 0,
+      "colours": [
+        "#358ba6",
+        "#e97562"
+      ],
+      "source": "/Users/andonella/.codex/generated_images/01a13734-76ee-7bf2-b1a5-8b229a813126/exec-40583cad-99c8-441d-a241-1f807ffab94a.png",
+      "prompt": "Produce ONE high-resolution isolated product photograph of ONLY bottle column5, row1 of the reference sheet (Ocean / Coral). Do NOT show a grid or other bottles. Requested portrait1024x1536. Copy its EXACT physical product geometry and colours: body#358ba6, collar and single continuous U strap#e97562. Same tall slim body, clear OPEN hinged hood, steel drinking parts and front oval latch, two rings and same continuous U strap. No handles, bumpers, grips or shape redesign. Full bottle and entire U strap centred, clear hood top at3% image height, strap bottom at96%, bottle body from31% to90% height, body sides at28% and72% width, strap side runs near17% and83%. Clean warm ivory studio backdrop, sharp fine satin texture, crisp edges, detailed woven fibres, natural shadows. REMOVE all existing printed body crests and strap prints, leave unprinted coloured surfaces; exact vector brand will be applied separately. Leave lower body blank for precise braille overlay. Do not invent text, dots, labels or logos. Priority: same approved geometry, sharp product detail.",
+      "asset": "colour-05-sharp-v1.png"
+    },
+    {
+      "name": "Apricot / Periwinkle",
+      "reference": "/images/product/two-tone-colour-braille-v7.png",
+      "column": 0,
+      "row": 1,
+      "colours": [
+        "#edb080",
+        "#819ac9"
+      ],
+      "source": "/Users/andonella/.codex/generated_images/01a13734-76ee-7bf2-b1a5-8b229a813126/exec-b8fc4cbb-41b2-4378-8f8f-2951bbc94aa3.png",
+      "prompt": "Produce ONE isolated high-detail product photo of ONLY bottle column1, row2 in reference (Apricot / Periwinkle). No grid or other bottles. Portrait1024x1536. Exact original physical shape and colours: body#edb080, collar/latch and SINGLE continuous U strap#819ac9. For All White/All Grey every painted and woven part same monochrome, steel stays steel and transparent hood clear. Same tall slim bottle, fully OPEN clear hinged hood, steel drinking parts, oval front latch, two side rings, U strap draped below body. No new handles/bumper/grips/physical features. Full bottle+strap centred: clear hood top3%, strap bottom96%, body from31% to90%height, body sides28%/72%width, strap runs near17%/83%width. Sharp satin finish, precise steel edges, visible crisp woven fibres, warm ivory studio backdrop and realistic shadow. REMOVE printed body crest and all strap prints, leave clean surfaces for exact vector branding. Blank lower body, no dots/text/logos. Preserve approved shape, do not redesign.",
+      "asset": "colour-06-sharp-v1.png"
+    },
+    {
+      "name": "Raspberry / Mint",
+      "reference": "/images/product/two-tone-colour-braille-v7.png",
+      "column": 1,
+      "row": 1,
+      "colours": [
+        "#b95c80",
+        "#a6d9c5"
+      ],
+      "source": "/Users/andonella/.codex/generated_images/01a13734-76ee-7bf2-b1a5-8b229a813126/exec-af20d672-560b-4196-959a-8478efb39876.png",
+      "prompt": "Produce ONE isolated high-detail product photo of ONLY bottle column2, row2 in reference (Raspberry / Mint). No grid or other bottles. Portrait1024x1536. Exact original physical shape and colours: body#b95c80, collar/latch and SINGLE continuous U strap#a6d9c5. For All White/All Grey every painted and woven part same monochrome, steel stays steel and transparent hood clear. Same tall slim bottle, fully OPEN clear hinged hood, steel drinking parts, oval front latch, two side rings, U strap draped below body. No new handles/bumper/grips/physical features. Full bottle+strap centred: clear hood top3%, strap bottom96%, body from31% to90%height, body sides28%/72%width, strap runs near17%/83%width. Sharp satin finish, precise steel edges, visible crisp woven fibres, warm ivory studio backdrop and realistic shadow. REMOVE printed body crest and all strap prints, leave clean surfaces for exact vector branding. Blank lower body, no dots/text/logos. Preserve approved shape, do not redesign.",
+      "asset": "colour-07-sharp-v1.png"
+    },
+    {
+      "name": "Lime / Navy",
+      "reference": "/images/product/two-tone-colour-braille-v7.png",
+      "column": 2,
+      "row": 1,
+      "colours": [
+        "#b9c65b",
+        "#29435d"
+      ],
+      "source": "/Users/andonella/.codex/generated_images/01a13734-76ee-7bf2-b1a5-8b229a813126/exec-93396832-122c-4ea9-8e5d-8a8d2e5160d1.png",
+      "prompt": "Produce ONE isolated high-detail product photo of ONLY bottle column3, row2 in reference (Lime / Navy). No grid or other bottles. Portrait1024x1536. Exact original physical shape and colours: body#b9c65b, collar/latch and SINGLE continuous U strap#29435d. For All White/All Grey every painted and woven part same monochrome, steel stays steel and transparent hood clear. Same tall slim bottle, fully OPEN clear hinged hood, steel drinking parts, oval front latch, two side rings, U strap draped below body. No new handles/bumper/grips/physical features. Full bottle+strap centred: clear hood top3%, strap bottom96%, body from31% to90%height, body sides28%/72%width, strap runs near17%/83%width. Sharp satin finish, precise steel edges, visible crisp woven fibres, warm ivory studio backdrop and realistic shadow. REMOVE printed body crest and all strap prints, leave clean surfaces for exact vector branding. Blank lower body, no dots/text/logos. Preserve approved shape, do not redesign.",
+      "asset": "colour-08-sharp-v1.png"
+    },
+    {
+      "name": "All White",
+      "reference": "/images/product/two-tone-monochrome-braille-v5.png",
+      "column": 3,
+      "row": 1,
+      "colours": [
+        "#f3f3f1",
+        "#f3f3f1"
+      ],
+      "source": "/Users/andonella/.codex/generated_images/01a13734-76ee-7bf2-b1a5-8b229a813126/exec-6651a423-1ea4-4fd1-bfac-1d936192a240.png",
+      "prompt": "Produce ONE isolated high-detail product photo of ONLY bottle column4, row2 in reference (All White). No grid or other bottles. Portrait1024x1536. Exact original physical shape and colours: body#f3f3f1, collar/latch and SINGLE continuous U strap#f3f3f1. For All White/All Grey every painted and woven part same monochrome, steel stays steel and transparent hood clear. Same tall slim bottle, fully OPEN clear hinged hood, steel drinking parts, oval front latch, two side rings, U strap draped below body. No new handles/bumper/grips/physical features. Full bottle+strap centred: clear hood top3%, strap bottom96%, body from31% to90%height, body sides28%/72%width, strap runs near17%/83%width. Sharp satin finish, precise steel edges, visible crisp woven fibres, warm ivory studio backdrop and realistic shadow. REMOVE printed body crest and all strap prints, leave clean surfaces for exact vector branding. Blank lower body, no dots/text/logos. Preserve approved shape, do not redesign.",
+      "asset": "colour-09-sharp-v1.png"
+    },
+    {
+      "name": "All Grey",
+      "reference": "/images/product/two-tone-monochrome-braille-v5.png",
+      "column": 4,
+      "row": 1,
+      "colours": [
+        "#929392",
+        "#929392"
+      ],
+      "source": "/Users/andonella/.codex/generated_images/01a13734-76ee-7bf2-b1a5-8b229a813126/exec-b2bc8aff-3b24-4a6b-8808-d1b600dd01ee.png",
+      "prompt": "Produce ONE isolated high-detail product photo of ONLY bottle column5, row2 in reference (All Grey). No grid or other bottles. Portrait1024x1536. Exact original physical shape and colours: body#929392, collar/latch and SINGLE continuous U strap#929392. For All White/All Grey every painted and woven part same monochrome, steel stays steel and transparent hood clear. Same tall slim bottle, fully OPEN clear hinged hood, steel drinking parts, oval front latch, two side rings, U strap draped below body. No new handles/bumper/grips/physical features. Full bottle+strap centred: clear hood top3%, strap bottom96%, body from31% to90%height, body sides28%/72%width, strap runs near17%/83%width. Sharp satin finish, precise steel edges, visible crisp woven fibres, warm ivory studio backdrop and realistic shadow. REMOVE printed body crest and all strap prints, leave clean surfaces for exact vector branding. Blank lower body, no dots/text/logos. Preserve approved shape, do not redesign.",
+      "asset": "colour-10-sharp-v1.png"
+    },
+    {
+      "name": "Midnight Paris",
+      "reference": "/images/product/two-tone-safari-braille-v4.png",
+      "column": 0,
+      "row": 0,
+      "colours": [
+        "#142e54",
+        "#ca2935"
+      ],
+      "source": "/Users/andonella/.codex/generated_images/01a13734-76ee-7bf2-b1a5-8b229a813126/exec-e3e27183-1acf-4d2c-8099-35d8910a56b5.png",
+      "prompt": "Render ONE isolated high-detail product photograph of ONLY reference TOP ROW column1 bottle (Midnight Paris). No other bottles, no grid. Portrait1024x1536. EXACT physical geometry and colours from selected reference: body#142e54, lid collar/latch#ca2935, SINGLE continuous U-shaped woven navy strap with red centre stripe edged by two fine ivory pinstripes. Keep stripe design following entire U route. Same approved tall slim body, OPEN clear hood, steel parts, oval latch, two side rings. No new handles/bumpers/grips. Full bottle and entire strap centred, clear hood top3%, strap bottom96%, body starts31%/ends90%height, body sides28%/72%width, strap sides near17%/83%. Crisp satin coating, sharp steel edges and woven fibres, warm ivory studio background and realistic shadows. REMOVE body crest and animal strap prints leaving clean fabric/satin for exact vector artwork later. Lower body blank, no dots/text/logos. Priority preserve approved product geometry/proportions and existing striped palette.",
+      "asset": "colour-11-sharp-v1.png"
+    },
+    {
+      "name": "Away Day",
+      "reference": "/images/product/two-tone-safari-braille-v4.png",
+      "column": 1,
+      "row": 0,
+      "colours": [
+        "#eee5d4",
+        "#173e62"
+      ],
+      "source": "/Users/andonella/.codex/generated_images/01a13734-76ee-7bf2-b1a5-8b229a813126/exec-4ad344a2-f707-4b81-90ac-899313d54e64.png",
+      "prompt": "Render ONE isolated high-detail product photograph of ONLY reference TOP ROW column2 bottle (Away Day). No other bottles, no grid. Portrait1024x1536. EXACT physical geometry and colours from selected reference: body#eee5d4, lid collar/latch#173e62, SINGLE continuous U-shaped woven ivory strap with red centre stripe bordered by navy stripes. Keep stripe design following entire U route. Same approved tall slim body, OPEN clear hood, steel parts, oval latch, two side rings. No new handles/bumpers/grips. Full bottle and entire strap centred, clear hood top3%, strap bottom96%, body starts31%/ends90%height, body sides28%/72%width, strap sides near17%/83%. Crisp satin coating, sharp steel edges and woven fibres, warm ivory studio background and realistic shadows. REMOVE body crest and animal strap prints leaving clean fabric/satin for exact vector artwork later. Lower body blank, no dots/text/logos. Priority preserve approved product geometry/proportions and existing striped palette.",
+      "asset": "colour-12-sharp-v1.png"
+    },
+    {
+      "name": "Safari Club",
+      "reference": "/images/product/two-tone-safari-braille-v4.png",
+      "column": 2,
+      "row": 0,
+      "colours": [
+        "#c5ad83",
+        "#667052"
+      ],
+      "source": "/Users/andonella/.codex/generated_images/01a13734-76ee-7bf2-b1a5-8b229a813126/exec-65c47939-5563-4982-9e5d-a45ece748051.png",
+      "prompt": "Render ONE isolated high-detail product photograph of ONLY reference TOP ROW column3 bottle (Safari Club). No other bottles, no grid. Portrait1024x1536. EXACT physical geometry and colours from selected reference: body#c5ad83, lid collar/latch#667052, SINGLE continuous U-shaped woven olive strap with narrow khaki centre stripe. Keep stripe design following entire U route. Same approved tall slim body, OPEN clear hood, steel parts, oval latch, two side rings. No new handles/bumpers/grips. Full bottle and entire strap centred, clear hood top3%, strap bottom96%, body starts31%/ends90%height, body sides28%/72%width, strap sides near17%/83%. Crisp satin coating, sharp steel edges and woven fibres, warm ivory studio background and realistic shadows. REMOVE body crest and animal strap prints leaving clean fabric/satin for exact vector artwork later. Lower body blank, no dots/text/logos. Priority preserve approved product geometry/proportions and existing striped palette.",
+      "asset": "colour-13-sharp-v1.png"
+    },
+    {
+      "name": "Web Hero",
+      "reference": "/images/product/two-tone-safari-braille-v4.png",
+      "column": 3,
+      "row": 0,
+      "colours": [
+        "#cb2236",
+        "#2356ab"
+      ],
+      "source": "/Users/andonella/.codex/generated_images/01a13734-76ee-7bf2-b1a5-8b229a813126/exec-86e2f4c3-7c66-4d7a-ae45-05afb1d6f0fa.png",
+      "prompt": "Render ONE isolated high-detail product photograph of ONLY reference TOP ROW column4 bottle (Web Hero). No other bottles, no grid. Portrait1024x1536. EXACT physical geometry and colours from selected reference: body#cb2236, lid collar/latch#2356ab, SINGLE continuous U-shaped woven royal blue strap with red centre stripe and subtle tonal diamond weave. Keep stripe design following entire U route. Same approved tall slim body, OPEN clear hood, steel parts, oval latch, two side rings. No new handles/bumpers/grips. Full bottle and entire strap centred, clear hood top3%, strap bottom96%, body starts31%/ends90%height, body sides28%/72%width, strap sides near17%/83%. Crisp satin coating, sharp steel edges and woven fibres, warm ivory studio background and realistic shadows. REMOVE body crest and animal strap prints leaving clean fabric/satin for exact vector artwork later. Lower body blank, no dots/text/logos. Priority preserve approved product geometry/proportions and existing striped palette.",
+      "asset": "colour-14-sharp-v1.png"
+    },
+    {
+      "name": "Pink Parade",
+      "reference": "/images/product/two-tone-pink-braille-v5.png",
+      "column": 4,
+      "row": 0,
+      "colours": [
+        "#ed9fb9",
+        "#b94678"
+      ],
+      "source": "/Users/andonella/.codex/generated_images/01a13734-76ee-7bf2-b1a5-8b229a813126/exec-4b51244e-6d6d-48d4-b562-cd1fd4194c7c.png",
+      "prompt": "Render ONE isolated high-detail product photograph of ONLY reference TOP ROW column5 bottle (Pink Parade). No other bottles, no grid. Portrait1024x1536. EXACT physical geometry and colours from selected reference: body#ed9fb9, lid collar/latch#b94678, SINGLE continuous U-shaped woven raspberry pink strap with narrow ivory centre stripe. Keep stripe design following entire U route. Same approved tall slim body, OPEN clear hood, steel parts, oval latch, two side rings. No new handles/bumpers/grips. Full bottle and entire strap centred, clear hood top3%, strap bottom96%, body starts31%/ends90%height, body sides28%/72%width, strap sides near17%/83%. Crisp satin coating, sharp steel edges and woven fibres, warm ivory studio background and realistic shadows. REMOVE body crest and animal strap prints leaving clean fabric/satin for exact vector artwork later. Lower body blank, no dots/text/logos. Priority preserve approved product geometry/proportions and existing striped palette.",
+      "asset": "colour-15-sharp-v1.png"
+    }
+  ]
+}

@@ -1,21 +1,12 @@
 # The Bureau of Provisions
 
-> The Bureau of Provisions is developing a double-wall stainless steel water bottle for everyday excursions. The website presents the bottle design and collects early-access registrations and optional lid preferences.
+> A stainless steel bottle design with a folding steel straw, wide drinking spout and optional mist. The first release is in development; final dimensions, capacity and colours are to be confirmed.
 
-The bottle, folding straw and drinking spout are stainless steel. Four lid preferences are shown: Straw & spout; Straw only; Spout only; and Straw, spout & mist. All four retain an air vent and a clear hinged hood. Horizontal sliders show the straw from a 45-degree drinking position to 180 degrees folded flat; the mist lid also shows water spraying.
+## Product
 
-The brand crest features a reading greyhound on the left and a tennis leopard on the right. Campaign imagery explores colourways including ivory, navy, sage, forest, burgundy, marshmallow pink and turquoise, plus a longer shoulder-strap concept.
-
-This is an early-access product-design site. It does not announce a price, release date or current purchase availability. Campaign scenes are AI-generated; product details may evolve. Do not infer tested insulation duration, leakproof performance, dishwasher safety or certifications from these visualisations.
-
-## Website
-
-- [Home](https://bureauofprovisions.web.app/): Brand introduction and bottle design.
-- [The bottle](https://bureauofprovisions.web.app/#ways): Stainless drinking spout, folding straw and mist features.
-- [Field notes](https://bureauofprovisions.web.app/#field-notes): Eight campaign scenes from London, Paris and New York.
-- [The particulars](https://bureauofprovisions.web.app/#details): Double-wall steel, stainless mouthpieces, hinged hood, branding and palette.
-- [Bottle questions](https://bureauofprovisions.web.app/#questions): Materials, lid choices, folding straw and early-access availability.
-- [Early access and lid preferences](https://bureauofprovisions.web.app/#register): Four optional lid choices with scrubbable previews, followed by registration through Tally.
+- [The bottle](https://bureauofprovisions.web.app/#ways): Six interactive feature descriptions: mist, straw, spout, one continuous detachable carry strap with clip-on snap hooks, double-wall stainless steel and dishwasher-safe cleaning.
+- [Anatomy and specifications](https://bureauofprovisions.web.app/#specifications): An illustrative half-cutaway and material specifications. Final physical measurements are to be confirmed.
+- [Two-tone colour studies](https://bureauofprovisions.web.app/#colourways): Nineteen brighter palettes and striped strap studies for ages 6–10. Includes princess, football, space and superhero palette editions. Colours change only; the original bottle geometry and one continuous detachable carry strap with clip-on snap hooks are preserved.
 
 ## Optional
 

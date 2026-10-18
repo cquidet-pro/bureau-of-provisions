@@ -1,0 +1,1 @@
+Localized image edit of platform-family-paired-v14.png: remove only the airborne mist plume, restoring green wall panels; preserve rear nozzle, lid, hood, straw, spout, body, strap, people and framing. Use only in the interactive anatomy demonstration; preserve hero image.

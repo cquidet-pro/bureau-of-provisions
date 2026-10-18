@@ -1,0 +1,51 @@
+{
+  "tool": "image_gen.imagegen",
+  "scenePrompt": "Edit ONLY family arrangement/hair in this exact sharp1536x1024 station scene. Young preppy girl on left (head x535 y455) keeps same child age8–9, face, sunglasses, navy blazer/tartan skirt/knee socks/loafers and seated position. Gather her dark curly hair into a neat high PONYTAIL with defined ringlet curls cascading behind the ponytail; a few tidy curls frame face. MOVE the mother in burgundy suit from right of boy to the empty bench IMMEDIATELY LEFT OF GIRL: mother's head centre approximately x380 y445, seated torso x365 y555, legs towards x345 y760. Mother sits naturally alongside daughter, independently with hands in own lap, same chic burgundy trouser suit, ivory top, silk scarf, sunglasses, loafers, identity and hairstyle; her head looks right toward daughter and foreground bottle. Natural family grouping. Remove mother from old position and restore plain unoccupied bench there. Keep husband at far right with EXACT newspaper/hands/pose/location for existing animation. Keep boy same position and conductor unchanged. Place girl's bag discreetly under bench on left if necessary, retain skateboard. Preserve foreground bottle and SINGLE continuous strap, completely BLANK ivory body/fabric with no logos (vector branding added separately), mist, all geometry, clock, painting, station and lighting, original composition/dimensions. Do not blur or soften.",
+  "sceneSource": "/Users/andonella/.codex/generated_images/01a13734-76ee-7bf2-b1a5-8b229a813126/exec-f5a02c49-4006-4c4c-9e3e-72e2c4a696cf.png",
+  "editions": [
+    {
+      "name": "Royal Protocol",
+      "body": "#d7a5b9",
+      "accent": "#695678",
+      "theme": "princess",
+      "detail": "dusty rose body, muted plum collar and single continuous plum strap with two extremely fine champagne woven pinstripes. Sophisticated princess colours, understated, no glitter, no plastic jewels, no crown attachment.",
+      "copy": "Royal protocol. Juice first.",
+      "asset": "kids-edition-1-v1",
+      "source": "/Users/andonella/.codex/generated_images/01a13734-76ee-7bf2-b1a5-8b229a813126/exec-5a132b7b-6d5b-4e5b-9019-8e80b2369aa0.png",
+      "prompt": "ONLY recolour the exact blank bottle product in this reference. Output ONE portrait1024x1536 matching this exact camera/framing. Kids design theme:princess. dusty rose body, muted plum collar and single continuous plum strap with two extremely fine champagne woven pinstripes. Sophisticated princess colours, understated, no glitter, no plastic jewels, no crown attachment. Sharp chic boutique product photography, dry deadpan editorial mood. Preserve EVERY physical shape, position and proportion: same tall slim body, fully open clear hinged hood, steel straw/spout parts, oval latch, two side rings, ONE CONTINUOUS U STRAP. Same lid/body/base geometry, no handle/bumper/grip/additional parts, no shorter bottle. Keep all body surfaces and upper strap tabs unprinted for exact vector crest/animal overlays. Lower body blank for braille added separately. Do not generate words, logos or symbols on bottle. Exact reference silhouette and framing; colour/pattern-only edit. Sharp satin coating and woven fibres, same warm ivory background."
+    },
+    {
+      "name": "Extra Time",
+      "body": "#214e43",
+      "accent": "#eee8d8",
+      "theme": "football",
+      "detail": "deep pitch-green body, chalk ivory collar and one continuous ivory strap with a narrow burgundy centre stripe edged by green pinstripes. Football kit elegance, restrained club-house palette. No team badge.",
+      "copy": "Match postponed. Still hydrated.",
+      "asset": "kids-edition-2-v1",
+      "source": "/Users/andonella/.codex/generated_images/01a13734-76ee-7bf2-b1a5-8b229a813126/exec-fc65a957-86e9-4123-bef4-f35a448eadc4.png",
+      "prompt": "ONLY recolour the exact blank bottle product in this reference. Output ONE portrait1024x1536 matching this exact camera/framing. Kids design theme:football. deep pitch-green body, chalk ivory collar and one continuous ivory strap with a narrow burgundy centre stripe edged by green pinstripes. Football kit elegance, restrained club-house palette. No team badge. Sharp chic boutique product photography, dry deadpan editorial mood. Preserve EVERY physical shape, position and proportion: same tall slim body, fully open clear hinged hood, steel straw/spout parts, oval latch, two side rings, ONE CONTINUOUS U STRAP. Same lid/body/base geometry, no handle/bumper/grip/additional parts, no shorter bottle. Keep all body surfaces and upper strap tabs unprinted for exact vector crest/animal overlays. Lower body blank for braille added separately. Do not generate words, logos or symbols on bottle. Exact reference silhouette and framing; colour/pattern-only edit. Sharp satin coating and woven fibres, same warm ivory background."
+    },
+    {
+      "name": "Orbit Club",
+      "body": "#252e51",
+      "accent": "#aaa0c9",
+      "theme": "space",
+      "detail": "midnight indigo body, soft lunar-lilac collar and one continuous lilac strap with a thin silver-grey centre stripe. Chic space-cadet palette, only a few very tiny subtle woven stars high on strap, no spaceship accessories.",
+      "copy": "Small steps. Large sips.",
+      "asset": "kids-edition-3-v1",
+      "source": "/Users/andonella/.codex/generated_images/01a13734-76ee-7bf2-b1a5-8b229a813126/exec-6d1bd35d-69d1-49a2-acbe-afc9a608b2ec.png",
+      "prompt": "ONLY recolour the exact blank bottle product in this reference. Output ONE portrait1024x1536 matching this exact camera/framing. Kids design theme:space. midnight indigo body, soft lunar-lilac collar and one continuous lilac strap with a thin silver-grey centre stripe. Chic space-cadet palette, only a few very tiny subtle woven stars high on strap, no spaceship accessories. Sharp chic boutique product photography, dry deadpan editorial mood. Preserve EVERY physical shape, position and proportion: same tall slim body, fully open clear hinged hood, steel straw/spout parts, oval latch, two side rings, ONE CONTINUOUS U STRAP. Same lid/body/base geometry, no handle/bumper/grip/additional parts, no shorter bottle. Keep all body surfaces and upper strap tabs unprinted for exact vector crest/animal overlays. Lower body blank for braille added separately. Do not generate words, logos or symbols on bottle. Exact reference silhouette and framing; colour/pattern-only edit. Sharp satin coating and woven fibres, same warm ivory background."
+    },
+    {
+      "name": "Secret Identity",
+      "body": "#31539b",
+      "accent": "#ba3e49",
+      "theme": "superheroes",
+      "detail": "deep cobalt body, muted cherry-red collar and one continuous cherry-red strap with a hairline warm gold stripe. Understated superhero palette, no faces or character graphics.",
+      "copy": "Powers pending. Water ready.",
+      "asset": "kids-edition-4-v1",
+      "source": "/Users/andonella/.codex/generated_images/01a13734-76ee-7bf2-b1a5-8b229a813126/exec-d61c4d60-19e5-4cfc-a222-56f4a2a2d2d6.png",
+      "prompt": "ONLY recolour the exact blank bottle product in this reference. Output ONE portrait1024x1536 matching this exact camera/framing. Kids design theme:superheroes. deep cobalt body, muted cherry-red collar and one continuous cherry-red strap with a hairline warm gold stripe. Understated superhero palette, no faces or character graphics. Sharp chic boutique product photography, dry deadpan editorial mood. Preserve EVERY physical shape, position and proportion: same tall slim body, fully open clear hinged hood, steel straw/spout parts, oval latch, two side rings, ONE CONTINUOUS U STRAP. Same lid/body/base geometry, no handle/bumper/grip/additional parts, no shorter bottle. Keep all body surfaces and upper strap tabs unprinted for exact vector crest/animal overlays. Lower body blank for braille added separately. Do not generate words, logos or symbols on bottle. Exact reference silhouette and framing; colour/pattern-only edit. Sharp satin coating and woven fibres, same warm ivory background."
+    }
+  ]
+}

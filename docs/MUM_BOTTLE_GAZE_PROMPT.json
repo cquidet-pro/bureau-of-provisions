@@ -1,0 +1,5 @@
+{
+  "tool": "image_gen.imagegen",
+  "prompt": "Make a tiny localized photographic edit to this EXACT1536x1024 station image. ONLY turn the mother's head and gaze. Mother is the adult woman in burgundy trouser suit seated on the right between boy and newspaper-reading husband, head centre approximately x1240 y447. Currently her face looks toward right. Turn her head naturally toward LEFT, nose pointing towards the large ivory bottle at x768; her face and sunglasses should unmistakably face the bottle, slightly downward towards its upper body. Keep her head position, face identity, age, brown hair, angular sunglasses, deadpan expression, cream top, scarf, burgundy suit, hands in her own lap, independently seated crossed-leg pose exactly as currently. Preserve husband/newspaper/hands EXACTLY, boy and preppy young girl with ringlets, conductor, station, clock, painting, lights, mist, all foreground bottle/crest/strap pixels and blank lower body. No dots or text added; braille is a separate website overlay. No other changes or image reframing.",
+  "asset": "public/images/product/platform-family-braille-v10.png"
+}

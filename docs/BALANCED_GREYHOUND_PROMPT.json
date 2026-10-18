@@ -1,0 +1,5 @@
+{
+  "tool": "image_gen.imagegen",
+  "prompt": "Narrow logo correction on this exact bottle colour sheet. On the TWO monochrome bottles in bottom row columns4 and5 ONLY, enlarge the reading greyhound supporter at the LEFT of the BoP body shield by approximately15 percent in height and width, anchoring its feet at the same banner baseline. It currently feels smaller than the tennis leopard on right; make the two heraldic animals visually balanced in height and weight. Retain greyhound identity, reading pose, fine heraldic line style and charcoal ink. Do not turn it into leopard, do not remove either animal. Preserve shield, BoP lettering, crown, banner, overall small high logo placement and right leopard unchanged. Do not alter tiny strap motifs. Preserve all white/grey colours, every product geometry, one continuous strap, all other eight bottles, background, grid and1536x1024 composition. Only the left shield supporter on the two bottom-right bottles changes.",
+  "asset": "public/images/product/two-tone-monochrome-v2.png"
+}

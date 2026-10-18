@@ -76,8 +76,15 @@ for (const tag of tags("img")) {
   if (tag.src) localFile(tag.src);
 }
 assert.equal((html.match(/<h1\b/g) || []).length, 1);
-assert.equal(tags("input").filter((tag) => tag.name === "cap_type").length, 4);
-assert.ok(html.includes("Can I buy the bottle yet?"), "Missing visible early-access explanation");
+assert.equal(tags("button").filter((tag) => tag["data-colour"]).length, 19, "Expected nineteen colour studies");
+assert.equal(tags("a").filter((tag) => tag.class?.split(" ").includes("colour-register")).length, 19, "Every bottle needs a registration link");
+assert.equal(tags("button").filter((tag) => tag["data-drinking-method"]).length, 3, "Expected separate straw, spout and spray modes");
+assert.deepEqual(tags("button").filter(tag => tag["data-straw-position"]).map(tag => tag["data-straw-position"]), ["flat", "up"], "Straw must have only Flat/Up still positions");
+assert.ok(!tags("button").some(tag => "data-drinking-hold" in tag || "data-drinking-reset" in tag), "Removed hold/reset controls must stay removed");
+assert.ok(html.includes("Press to mist."), "Mist needs its direct action label");
+assert.ok(html.includes('aria-label="6. Dishwasher safe"'), "Missing sixth dishwasher-safe callout");
+assert.ok(anchors.has("specifications") && anchors.has("colourways"), "Missing product sections");
+assert.ok(html.includes("Design in development."), "Missing visible product-development status");
 assert.ok(html.includes("<style>"), "Local CSS was not inlined");
 assert.ok(!tags("link").some((tag) => tag.rel === "stylesheet" && tag.href?.startsWith("./assets/")));
 for (const tag of tags("script")) if (tag.src?.startsWith("./assets/")) localFile(tag.src);

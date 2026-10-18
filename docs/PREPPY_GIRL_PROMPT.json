@@ -1,0 +1,5 @@
+{
+  "tool": "image_gen.imagegen",
+  "prompt": "Edit ONLY the clothing of the young girl seated left of the foreground bottle in this exact station scene. Give her a neat age-appropriate classic preppy outfit: tailored navy blazer with subtle cream piping and small brass buttons, crisp ivory collared shirt, a fine burgundy ribbon tie, knee-length navy and muted burgundy tartan pleated skirt, ivory knee socks and polished burgundy penny loafers. Natural seated fabric folds, skirt covers knees modestly. Retain her same age8–9, exact face, dark defined ringlets, sunglasses, child proportions, hands on lap, deadpan expression, current head/body location and pose. Retain skateboard in exactly its current location. Preserve ALL other pixels including bottle, SINGLE continuous strap, tiny high strap animal prints, full small body crest with BOTH animal supporters, mist, bottle geometry, boy, cool mother in burgundy trouser suit, husband with newspaper, conductor, painting and station. No other changes. Exact1536x1024 photographic composition.",
+  "asset": "public/images/product/platform-family-approved-v7.png"
+}
