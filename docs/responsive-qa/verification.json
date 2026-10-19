@@ -1,0 +1,80 @@
+[
+  {
+    "device": {
+      "name": "iphone-390",
+      "width": 390,
+      "height": 844
+    },
+    "strawUp": "up",
+    "strawFlat": true,
+    "gulp": {
+      "controlsHidden": true,
+      "labels": true,
+      "text": "Tilt the bottle and drink directly through the wide stainless steel spout. A larger opening for a fuller mouthful.",
+      "title": "02 / Spout. A big gulp."
+    },
+    "spray": {
+      "background": "rgb(113, 59, 68)",
+      "foreground": "rgb(244, 237, 223)",
+      "height": 44,
+      "text": "Press to mist."
+    },
+    "mist": {
+      "particles": 22,
+      "running": "true"
+    },
+    "overflow": false
+  },
+  {
+    "device": {
+      "name": "tablet-768",
+      "width": 768,
+      "height": 1024
+    },
+    "strawUp": "up",
+    "strawFlat": true,
+    "gulp": {
+      "controlsHidden": true,
+      "labels": true,
+      "text": "Tilt the bottle and drink directly through the wide stainless steel spout. A larger opening for a fuller mouthful.",
+      "title": "02 / Spout. A big gulp."
+    },
+    "spray": {
+      "background": "rgb(113, 59, 68)",
+      "foreground": "rgb(244, 237, 223)",
+      "height": 44,
+      "text": "Press to mist."
+    },
+    "mist": {
+      "particles": 22,
+      "running": "true"
+    },
+    "overflow": false
+  },
+  {
+    "device": {
+      "name": "laptop-1366",
+      "width": 1366,
+      "height": 900
+    },
+    "strawUp": "up",
+    "strawFlat": true,
+    "gulp": {
+      "controlsHidden": true,
+      "labels": true,
+      "text": "Tilt the bottle and drink directly through the wide stainless steel spout. A larger opening for a fuller mouthful.",
+      "title": "02 / Spout. A big gulp."
+    },
+    "spray": {
+      "background": "rgb(113, 59, 68)",
+      "foreground": "rgb(244, 237, 223)",
+      "height": 44,
+      "text": "Press to mist."
+    },
+    "mist": {
+      "particles": 22,
+      "running": "true"
+    },
+    "overflow": false
+  }
+]
