@@ -1759,11 +1759,11 @@ body:has(.photo-dialog[open]) {
 /* A complete anatomy spread on laptops: portrait cutaway plus six concise notes. */
 @media (min-width:1001px) {
   .anatomy { padding-top:24px; }
-  .anatomy > .section-heading { margin-bottom:20px; }
-  .anatomy > .section-heading h2 { font-size:clamp(32px,3vw,44px); }
-  .anatomy > .section-heading .eyebrow { margin-bottom:8px; }
+  .anatomy-spread > .section-heading { margin-bottom:20px; }
+  .anatomy-spread > .section-heading h2 { font-size:clamp(32px,3vw,44px); }
+  .anatomy-spread > .section-heading .eyebrow { margin-bottom:8px; }
   .anatomy-grid {
-    grid-template-columns:minmax(0,min(38%,calc(66.667svh - 160px))) minmax(0,1fr);
+    grid-template-columns:minmax(0,min(40%,calc(66.667svh - 110px))) minmax(0,1fr);
     gap:clamp(24px,3vw,48px);
     align-items:center;
   }
@@ -1779,4 +1779,30 @@ body:has(.photo-dialog[open]) {
   .anatomy .dimension-summary > div { padding:12px; }
   .anatomy .dimension-summary strong { font-size:28px; margin:7px 0; }
   .anatomy .specification-status { margin-top:12px; }
+}
+
+/* Each product study occupies a screen without cropping its photograph. */
+@media (min-width:1001px) {
+  .anatomy-spread { min-height:calc(100svh - 24px); display:flex; flex-direction:column; }
+  .anatomy-spread > .anatomy-grid { flex:1; }
+  .drinking-prototype { min-height:calc(100svh - 40px); display:flex; flex-direction:column; }
+  .drinking-methods button { padding:14px 12px; }
+  .drinking-overhead-layout { flex:1; grid-template-columns:minmax(0,1fr) minmax(0,1fr); }
+  .drinking-overhead-layout .drinking-detail { padding:12px 20px; }
+  .drinking-overhead-layout .drinking-detail .eyebrow { min-height:0; }
+  .drinking-overhead-layout .drinking-closeup-wrap {
+    width:min(100%,calc(75.294svh - 158.118px));
+    max-width:none;
+    margin:8px auto;
+  }
+  .drinking-detail-note { margin-top:8px; }
+  .drinking-prototype > .viewer-note { margin:0; padding:8px 20px 12px; }
+  .drinking-overhead-layout .viewer-explanation { padding:24px; }
+  .drinking-overhead-layout .viewer-explanation h3 { font-size:clamp(26px,2.6vw,36px); }
+  .drinking-prototype .overhead-part { padding:8px; font-size:9px; }
+  .colourways { padding-top:30px; }
+  .colourways > .section-heading { margin-bottom:22px; }
+  .colourways > .section-heading .eyebrow { margin-bottom:10px; }
+  .colourways > .section-heading h2 { font-size:clamp(32px,3vw,44px); }
+  .colourways .edition-intro { margin-top:0; }
 }
