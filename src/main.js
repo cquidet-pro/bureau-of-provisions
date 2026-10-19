@@ -22,6 +22,37 @@ function closeHotspot(restoreFocus = false) {
     restoringHotspotFocus = false;
   }
 }
+// Keep every feature panel inside the viewport, including edge pins 2 and 5.
+function positionHotspot(hotspot) {
+  const panel = hotspot.querySelector('.feature-popover');
+  hotspot.classList.remove('popover-flipped');
+  panel.style.setProperty('--popover-offset-x', '0px');
+  panel.style.setProperty('--popover-offset-y', '0px');
+  if (matchMedia('(max-width:1000px)').matches) return;
+  const margin = 16;
+  const viewportWidth = document.documentElement.clientWidth;
+  const viewportHeight = window.innerHeight;
+  let box = panel.getBoundingClientRect();
+  if ((hotspot.classList.contains('hotspot-left') && box.left < margin) ||
+      (hotspot.classList.contains('hotspot-right') && box.right > viewportWidth - margin)) {
+    hotspot.classList.add('popover-flipped');
+    box = panel.getBoundingClientRect();
+  }
+  const offsetX = Math.max(margin - box.left, Math.min(0, viewportWidth - margin - box.right));
+  const offsetY = Math.max(margin - box.top, Math.min(0, viewportHeight - margin - box.bottom));
+  panel.style.setProperty('--popover-offset-x', `${offsetX}px`);
+  panel.style.setProperty('--popover-offset-y', `${offsetY}px`);
+}
+let hotspotPositionFrame;
+function scheduleHotspotPosition() {
+  if (!openHotspot || hotspotPositionFrame) return;
+  hotspotPositionFrame = requestAnimationFrame(() => {
+    hotspotPositionFrame = null;
+    if (openHotspot) positionHotspot(openHotspot);
+  });
+}
+window.addEventListener('resize', scheduleHotspotPosition);
+window.addEventListener('scroll', scheduleHotspotPosition, {passive:true, capture:true});
 function showHotspot(hotspot, pin = false) {
   clearTimeout(hideHotspotTimer);
   if (openHotspot !== hotspot) closeHotspot();
@@ -30,6 +61,7 @@ function showHotspot(hotspot, pin = false) {
   hotspot.classList.add('is-open');
   hotspot.querySelector('.feature-pin').setAttribute('aria-expanded', 'true');
   hotspot.querySelector('.feature-popover').hidden = false;
+  positionHotspot(hotspot);
 }
 for (const hotspot of hotspots) {
   const button = hotspot.querySelector('.feature-pin');

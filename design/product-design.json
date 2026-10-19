@@ -142,7 +142,8 @@
         ]
       }
     ],
-    "main_scene_background_coverage": "public/images/product/station-background-coverage-v1.svg"
+    "main_scene_background_coverage": "public/images/product/station-background-coverage-v1.svg",
+    "cad_specifications": "design/cad-specifications.json"
   },
   "invariants": {
     "body": "same tall/slim body, shoulder, base and proportions",
@@ -646,6 +647,21 @@
     "straw": "Two still positions only: Flat initial and Up final reference. Flat/Up switch. No animation, interpolation, automatic folding, playback, hold or Reset; fixed camera.",
     "spout": "Static explanation and Tilt to drink. No playback, hold or Reset.",
     "mist": "Press to mist. starts fine mist; no hold or Reset button.",
-    "main_callouts": "Right column3/4/6 moved to65% width, leaders retargeted, clear of boy face."
+    "main_callouts": "Right column3/4/6 moved to65% width, leaders retargeted, clear of boy face. Panels flip and clamp within16px viewport margins, updating on resize and scroll.",
+    "outlet_controls": "Flat/Up immediately above Straw label; Press to mist. immediately above Spray label; no dotted/shaded outlet halo."
+  },
+  "specifications": {
+    "body_diameter_mm": 65,
+    "body_height_from_foot_mm": 185.4,
+    "overall_closed_height_mm": 207.7,
+    "hood_top_height_mm": 207.5,
+    "capacity_ml": 500,
+    "capacity_basis": "Nominal design capacity from current source model parent label, not a measured liquid volume."
+  },
+  "preorder": {
+    "price_gbp": 39,
+    "unit": "per bottle",
+    "shipping": "Ships internationally",
+    "registration_url": "https://tally.so/r/5BW7JN"
   }
 }

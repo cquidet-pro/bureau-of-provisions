@@ -1373,8 +1373,10 @@ body:has(.photo-dialog[open]) {
 .feature-hotspot.is-open { z-index:5; }
 .feature-pin { display:grid; place-items:center; width:34px; height:34px; border:1px solid var(--paper); border-radius:50%; background:var(--wine); color:var(--paper); box-shadow:0 2px 9px #0003; font:15px var(--mono); padding:0; transition:transform .18s,background .18s; }
 .feature-pin:hover,.feature-pin[aria-expanded=true] { transform:scale(1.12); background:#4d2830; }
-.feature-popover { position:absolute; top:50%; right:calc(100% + 16px); width:clamp(220px,20vw,285px); transform:translateY(-50%); padding:23px; border:1px solid var(--wine); background:#f4eddf; box-shadow:0 8px 30px #17292933; text-align:left; }
+.feature-popover { position:absolute; top:50%; right:calc(100% + 16px); width:clamp(220px,20vw,285px); transform:translate(var(--popover-offset-x,0px),calc(-50% + var(--popover-offset-y,0px))); max-width:calc(100vw - 32px); max-height:calc(100dvh - 32px); overflow:auto; padding:23px; border:1px solid var(--wine); background:#f4eddf; box-shadow:0 8px 30px #17292933; text-align:left; }
 .hotspot-right .feature-popover { right:auto; left:calc(100% + 16px); }
+.hotspot-left.popover-flipped .feature-popover { right:auto; left:calc(100% + 16px); }
+.hotspot-right.popover-flipped .feature-popover { left:auto; right:calc(100% + 16px); }
 .feature-popover .eyebrow { font-size:9px; margin:0 18px 12px 0; }
 .feature-popover h3 { font:400 26px/1.15 var(--serif); color:var(--wine); margin-bottom:12px; }
 .feature-popover>p:last-child { font:12px/1.75 Inter,Arial,sans-serif; }
@@ -1597,7 +1599,6 @@ body:has(.photo-dialog[open]) {
 .drinking-detail { min-width:0; padding:30px 20px; text-align:center; border-left:1px solid var(--line); }
 .drinking-detail .eyebrow { min-height:36px; font-size:9px; line-height:1.6; letter-spacing:1px; margin:0; }
 .drinking-closeup { display:block; width:100%; margin:18px 0; border:1px solid #c8c4b4; background:var(--paper); }
-.method-halo { fill:#713b4408; stroke:var(--wine); stroke-width:3; vector-effect:non-scaling-stroke; }
 .drinking-action { display:inline-block; color:var(--wine); border-bottom:1px solid currentColor; padding-bottom:6px; font:22px var(--serif); }
 .drinking-detail-note { margin:14px auto 0; max-width:220px; font:10px/1.6 var(--mono); color:#596263; }
 @media(max-width:760px) {
@@ -1618,7 +1619,6 @@ body:has(.photo-dialog[open]) {
 .demo-ink { color:#09233f; mix-blend-mode:multiply; }
 .drinking-closeup-wrap { position:relative; margin:18px 0; }
 .drinking-closeup-wrap .drinking-closeup { margin:0; }
-.drinking-closeup-wrap .method-halo { fill:none; stroke:#f3e9d5; stroke-width:1; stroke-dasharray:3 4; }
 .demo-route { fill:none; stroke:none; }
 .drinking-outlet { position:absolute; transform:translate(-50%,-50%); width:38px; height:38px; border:1px solid #f3e9d5; border-radius:50%; background:var(--wine); color:#fff6e5; font:11px var(--mono); box-shadow:0 0 0 5px #f3e9d530; touch-action:none; user-select:none; cursor:pointer; }
 .drinking-outlet:hover,.drinking-outlet:focus-visible,.is-running .drinking-outlet { background:#fff6e5; color:var(--wine); outline:2px solid var(--wine); outline-offset:3px; }
@@ -1649,7 +1649,6 @@ body:has(.photo-dialog[open]) {
 .drinking-overhead-layout .viewer-explanation h3 { font-size:36px; margin-top:20px; }
 .drinking-overhead-layout .viewer-explanation>p:not(.eyebrow):not(.drinking-action):not(.drinking-status) { font-size:15px; line-height:1.85; }
 .drinking-overhead-layout .drinking-action { margin-top:24px; }
-.drinking-overhead-layout .method-halo { stroke:var(--wine); stroke-width:2; fill:#763e4820; stroke-dasharray:4 5; }
 .overhead-leaders { fill:none; stroke:#713b44; stroke-width:2; vector-effect:non-scaling-stroke; }
 .overhead-part { min-height:44px; position:absolute; border:1px solid var(--wine); border-radius:2px; padding:10px 12px; background:var(--paper); color:var(--wine); font:11px var(--mono); transform:translate(-50%,-50%); cursor:pointer; white-space:nowrap; }
 .overhead-part[aria-pressed=true],.overhead-part:hover { color:var(--paper); background:var(--wine); }
@@ -1703,3 +1702,13 @@ body:has(.photo-dialog[open]) {
 .station-detail-clock { left:42.3177083%; top:0; width:15.625%; height:17.578125%; -webkit-mask-image:linear-gradient(to bottom,#000 88%,transparent); mask-image:linear-gradient(to bottom,#000 88%,transparent); }
 .station-detail-floor { left:40.3645833%; top:91.796875%; width:20.1822917%; height:8.203125%; object-fit:cover; -webkit-mask-image:linear-gradient(to right,transparent,#000 8%,#000 92%,transparent); mask-image:linear-gradient(to right,transparent,#000 8%,#000 92%,transparent); }
 .station-detail-office { left:0; top:6.34765625%; width:18.8802083%; height:42.96875%; -webkit-mask-image:linear-gradient(to right,#000 92%,transparent),linear-gradient(to bottom,transparent,#000 3%,#000 97%,transparent); -webkit-mask-composite:source-in; mask-image:linear-gradient(to right,#000 92%,transparent),linear-gradient(to bottom,transparent,#000 3%,#000 97%,transparent); mask-composite:intersect; }
+
+/* Actions sit immediately above the selected outlet label, within the photo. */
+.drinking-closeup-wrap .drinking-controls { position:absolute; z-index:2; margin:0; transform:translateY(calc(-100% - 32px)); flex-wrap:nowrap; }
+[data-method="straw"] .drinking-closeup-wrap .drinking-controls { left:clamp(8px,calc(14% - 48px),80px); top:65%; }
+[data-method="spray"] .drinking-closeup-wrap .drinking-controls { right:2%; top:48%; }
+.drinking-closeup-wrap .straw-positions { gap:4px; }
+.drinking-closeup-wrap .drinking-controls button { background:var(--paper); min-width:44px; }
+.drinking-closeup-wrap .straw-positions button[aria-pressed="true"],.drinking-closeup-wrap [data-drinking-play] { background:var(--wine); color:var(--paper); }
+.drinking-closeup-wrap .drinking-controls [data-drinking-play] { min-width:0; white-space:nowrap; }
+.preorder-price { font:12px/1.6 Inter,Arial,sans-serif; color:var(--wine); }

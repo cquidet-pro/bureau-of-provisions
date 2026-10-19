@@ -2,9 +2,9 @@
 const prototype = document.querySelector('[data-drinking-prototype]');
 if (prototype) {
   const options = {
-    straw: {title:'01 / Straw. A proper sip.', description:'Lift the folding straw for an upright sip, then fold it flat beneath the clear hood. Choose Flat or Up to see both positions.', action:'Unfold. Sip. Fold away.', detail:'Folding stainless steel straw', ready:'Flat. Folded away.', x:430, y:965, rx:40, ry:44},
-    gulp: {title:'02 / Spout. A big gulp.', description:'Tilt the bottle and drink directly through the wide stainless steel spout. A larger opening for a fuller mouthful.', action:'Tilt to drink', detail:'Wide stainless steel drinking spout', ready:'Tilt to drink.', x:675, y:925, rx:78, ry:68},
-    spray: {title:'03 / Spray. A little weather.', description:'Press the rear-centre spray head to release a fine cooling mist. Available with the optional mist lid.', action:'Press. Mist. Much better.', detail:'Rear-centre cooling spray head', ready:'Forecast: locally refreshing.', x:592, y:732, rx:80, ry:66}
+    straw: {title:'01 / Straw. A proper sip.', description:'Lift the folding straw for an upright sip, then fold it flat beneath the clear hood. Choose Flat or Up to see both positions.', action:'Unfold. Sip. Fold away.', detail:'Folding stainless steel straw', ready:'Flat. Folded away.'},
+    gulp: {title:'02 / Spout. A big gulp.', description:'Tilt the bottle and drink directly through the wide stainless steel spout. A larger opening for a fuller mouthful.', action:'Tilt to drink', detail:'Wide stainless steel drinking spout', ready:'Tilt to drink.'},
+    spray: {title:'03 / Spray. A little weather.', description:'Press the rear-centre spray head to release a fine cooling mist. Available with the optional mist lid.', action:'Press. Mist. Much better.', detail:'Rear-centre cooling spray head', ready:'Forecast: locally refreshing.'}
   };
   const find = selector => prototype.querySelector(selector);
   const play = find('[data-drinking-play]');
@@ -12,7 +12,6 @@ if (prototype) {
   const strawControls = find('[data-straw-positions]');
   const strawUp = find('[data-straw-up]');
   const particles = find('[data-drinking-particles]');
-  const halo = find('[data-drinking-halo]');
   const status = find('[data-drinking-status]');
   const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
   let method='straw', running=false, frame=0, started=0, lastEmission=0, drops=[];
@@ -21,7 +20,6 @@ if (prototype) {
     prototype.dataset.strawPosition=up?'up':'flat';
     prototype.querySelectorAll('[data-straw-position]').forEach(button=>button.setAttribute('aria-pressed',String(button.dataset.strawPosition===(up?'up':'flat'))));
     if(method==='straw') {
-      halo.setAttribute('cx',up?'435':'430'); halo.setAttribute('cy',up?'875':'965');
       find('[data-straw-leader]').setAttribute('d',up?'M180 940H340L435 875':'M180 940H350L430 965');
       status.textContent=up?'Up. Ready for a sip.':options.straw.ready;
     }
@@ -77,7 +75,6 @@ if (prototype) {
     find('[data-drinking-title]').textContent=item.title;find('[data-drinking-description]').textContent=item.description;
     find('[data-drinking-action]').textContent=item.action;find('[data-drinking-detail]').textContent=item.detail;
     find('.drinking-closeup').setAttribute('aria-label',`Overhead lid study highlighting ${item.detail.toLowerCase()}.`);
-    for(const name of ['cx','cy','rx','ry'])halo.setAttribute(name,item[{cx:'x',cy:'y',rx:'rx',ry:'ry'}[name]]);
     controls.hidden=method==='gulp';strawControls.hidden=method!=='straw';play.hidden=method!=='spray';status.hidden=method==='gulp';
     strawPose(false);status.textContent=item.ready;
   }

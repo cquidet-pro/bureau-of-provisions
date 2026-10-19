@@ -112,6 +112,8 @@ This remains an illustrative design study. Do not infer or publish numeric dimen
 ## 10. Clear interactive examples and callouts
 
 - Keep Straw sip, Big gulp and Cooling spray separately selectable and consistently framed.
+- Place Flat/Up directly above the Straw label and Press to mist. directly above the Spray label on the image, rather than below the explanatory copy. Keep the selected labels and pointer lines; no dotted or shaded outlet ring.
+- Feature hover panels must remain within the viewport. Flip the opening direction at side edges and clamp vertically/horizontally, including panels2 and5; reposition on resize and scroll.
 - Use the approved photographed hardware; do not replace it with a rough generic procedural 3D bottle.
 - Straw: **two still positions only**, Flat (initial) and Up (the final raised reference). Use a Flat / Up switch; no animation, interpolation, automatic folding, playback, hold or Reset buttons. The camera, bottle and all other parts remain fixed. Use [raised overhead reference](STRAW_RAISED_OVERHEAD_REFERENCE.png) for the Up pose: the short open drinking bore faces the viewer within its stationary hinge assembly. The [three-quarter reference](STRAW_45_DEGREE_REFERENCE.png) clarifies the hinge angle; it does not authorize changing the overhead camera. Intermediate motion experiments are superseded.
 - Spout: explanation and “Tilt to drink” only; no playback, hold or reset controls.
@@ -146,7 +148,7 @@ Copy pairs a short dry line with a precise benefit. Examples: “Big thirst. Zer
 
 The family scene keeps the girl in preppy clothes, dark ringlet ponytail and no glasses; mother sits independently beside her; boy sits beside his father. Preserve people and scene positions during bottle/material edits. The conductor stands at a generous **open arched ticket-service window**, framed in mahogany and slim brass, with no bars across his face, torso or counter. This latest user correction supersedes the previous full grille. The lamp-switch alternate pose must use the same open arch; do not reintroduce the old barred gesture or foreground grille. Preserve the painting position, page-turn and light animations unless explicitly asked to change them.
 
-Every bottle keeps “Register to pre-order” carrying its selected name to the existing Tally interest form. Registration is not a paid checkout. Dishwasher safe is a user-provided feature; capacity, height, diameter and unconfirmed performance claims remain pending.
+Every bottle keeps “Register to pre-order” carrying its selected name to the existing Tally interest form. Registration is not a paid checkout. Dishwasher safe is a user-provided feature. Current Original/Mist V55 CAD gives a 65 mm body diameter, 185.4 mm body height from the protective-foot datum, and 207.7 mm closed overall envelope including the silicone insert (hood top:207.5 mm). The model labels 500 mL as nominal design capacity; do not describe it as measured liquid volume. Source bounds, native-file hash and the reason the inherited 231 mm label is stale are recorded in [cad-specifications.json](../design/cad-specifications.json). Unconfirmed performance claims remain pending. Pre-order price is £39 per bottle; ships internationally. Registration still uses the existing interest form.
 
 ## 12. Reusable production workflow
 

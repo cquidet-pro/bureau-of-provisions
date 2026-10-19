@@ -1,0 +1,84 @@
+{
+  "source_repository": "water-bottle-design",
+  "source_version": "Original spray / Fold Fix V55",
+  "native_file": "output/cad/original-spray/fold-fix-v55/Bureau-Original-Spray-Fold-Fix-V55.FCStd",
+  "native_sha256": "011e4e666cd46d2ba49bdc2a5d9791322c3d5a54fe76882df52cbd2eae0eb0f4",
+  "source_manifest_sha256": "296b5f58cd8c6f84db2f85321005fc116be9965b2914ed2bf75a969ecc13734f",
+  "reference_frame": 40,
+  "units": "mm",
+  "body_diameter_mm": 65,
+  "body_height_from_foot_mm": 185.4,
+  "overall_closed_height_mm": 207.7,
+  "hood_top_height_mm": 207.5,
+  "capacity_ml": 500,
+  "capacity_basis": "Nominal design capacity from current source model parent label, not a measured liquid volume.",
+  "height_basis": "Closed original/mist assembly: silicone insert maximum Z207.6999969482422, foot minimum Z0.0000004656612873; rounded to0.1mm. Hood itself reaches207.50001525878906.",
+  "body_height_basis": "Body top Z185.42279052734375 measured from protective foot datum near zero, rounded to0.1mm.",
+  "excluded_stale_dimension": "231mm in the inherited parent label is stale; never use it as the current CAD height.",
+  "source_bounds": [
+    {
+      "id": 0,
+      "name": "01 \u2022 Insulated bottle shell",
+      "bounds_mm": [
+        [
+          -32.5,
+          -32.5,
+          0.943627655506134
+        ],
+        [
+          32.5,
+          32.5,
+          185.42279052734375
+        ]
+      ]
+    },
+    {
+      "id": 1,
+      "name": "02 \u2022 Protective silicone foot",
+      "bounds_mm": [
+        [
+          -31.660287857055664,
+          -31.660287857055664,
+          4.6566128730773926e-07
+        ],
+        [
+          31.660287857055664,
+          31.660287857055664,
+          16.04166603088379
+        ]
+      ]
+    },
+    {
+      "id": 284,
+      "name": "V20 \u2022 smooth translucent flip hood",
+      "bounds_mm": [
+        [
+          -30.000001907348633,
+          -30.000001907348633,
+          189.5
+        ],
+        [
+          30.000001907348633,
+          30.000001907348633,
+          207.50001525878906
+        ]
+      ]
+    },
+    {
+      "id": 287,
+      "name": "V26 \u2022 ONE PIECE silicone drink and vent insert",
+      "bounds_mm": [
+        [
+          3.999999761581421,
+          -15.000000953674316,
+          189.75
+        ],
+        [
+          20.0,
+          17.350000381469727,
+          207.6999969482422
+        ]
+      ]
+    }
+  ]
+}
