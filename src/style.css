@@ -1755,3 +1755,28 @@ body:has(.photo-dialog[open]) {
     margin-inline:auto;
   }
 }
+
+/* A complete anatomy spread on laptops: portrait cutaway plus six concise notes. */
+@media (min-width:1001px) {
+  .anatomy { padding-top:24px; }
+  .anatomy > .section-heading { margin-bottom:20px; }
+  .anatomy > .section-heading h2 { font-size:clamp(32px,3vw,44px); }
+  .anatomy > .section-heading .eyebrow { margin-bottom:8px; }
+  .anatomy-grid {
+    grid-template-columns:minmax(0,min(38%,calc(66.667svh - 160px))) minmax(0,1fr);
+    gap:clamp(24px,3vw,48px);
+    align-items:center;
+  }
+  .anatomy-plate { padding:10px; }
+  .anatomy-plate figcaption { font-size:8px; padding:10px 3px 2px; gap:4px; }
+  .anatomy-plate figcaption span { font-size:9px; }
+  .anatomy-information > .eyebrow { margin-bottom:16px; }
+  .anatomy-parts { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); column-gap:24px; }
+  .anatomy-parts > div { padding:14px 0; }
+  .anatomy-parts dt { gap:10px; font-size:20px; }
+  .anatomy-parts dd { margin:8px 0 0 30px; font-size:12px; line-height:1.6; }
+  .anatomy .dimension-summary { margin-top:14px; }
+  .anatomy .dimension-summary > div { padding:12px; }
+  .anatomy .dimension-summary strong { font-size:28px; margin:7px 0; }
+  .anatomy .specification-status { margin-top:12px; }
+}
