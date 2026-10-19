@@ -15,7 +15,7 @@ if (prototype) {
   const status = find('[data-drinking-status]');
   const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
   const pressedHead = find('[data-mist-pressed]');
-  const pump = {down:140, burstEnd:280, returned:500, count:72, x:666, y:792};
+  const pump = {down:140, burstEnd:280, returned:500, count:240, x:666, y:792};
   let method='straw', pumping=false, frame=0, pumpStarted=null, drops=[];
   let releaseTimer, clearTimer;
   function headPose(amount, phase) {
@@ -45,9 +45,9 @@ if (prototype) {
   }
   function emit(born) {
     const node=document.createElementNS('http://www.w3.org/2000/svg','circle');
-    const drop={node,born,life:800+Math.random()*500,spread:(Math.random()-.5)*90,reach:150+Math.random()*180};
-    node.setAttribute('r',1+Math.random()*1.8);
-    node.setAttribute('fill','#eefaff'); node.setAttribute('stroke','#abcbd5'); node.setAttribute('stroke-width','.4');
+    const drop={node,born,life:800+Math.random()*500,spread:(Math.random()-.5)*125,reach:240+Math.random()*140};
+    node.setAttribute('r',1.3+Math.random()*2.1);
+    node.setAttribute('fill','#dff2f8'); node.setAttribute('stroke','#86acb7'); node.setAttribute('stroke-width','.55');
     node.setAttribute('opacity','0');
     particles.append(node); drops.push(drop);
     return drop;
@@ -56,10 +56,10 @@ if (prototype) {
     const age=now-drop.born;
     if(age<0) return true;
     const t=Math.min(1,age/drop.life);
-    // One finite pulse leaves the side outlet, moving outward and downward.
+    // One finite pulse leaves the side outlet, aimed toward the 03 Spray label.
     const travel=1-Math.pow(1-t,1.35);
-    drop.node.setAttribute('cx',pump.x+drop.reach*.88*travel);
-    drop.node.setAttribute('cy',pump.y+drop.reach*.5*travel+drop.spread*t+45*t*t);
+    drop.node.setAttribute('cx',pump.x+drop.reach*.95*travel);
+    drop.node.setAttribute('cy',pump.y-drop.reach*.34*travel+drop.spread*t+12*t*t);
     drop.node.setAttribute('opacity',Math.min(1,age/55)*Math.pow(1-t,1.2)*.85);
     return t<1;
   }
