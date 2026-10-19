@@ -1808,3 +1808,4 @@ body:has(.photo-dialog[open]) {
 }
 
 .colourways .edition-intro > p { font-size:clamp(14px,1.4vw,20px); line-height:1.6; }
+.anatomy-spread > .section-heading > p { font:clamp(13px,1.1vw,16px)/1.6 var(--mono); }
