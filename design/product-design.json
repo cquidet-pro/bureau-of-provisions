@@ -661,7 +661,7 @@
   "interaction_rules": {
     "straw": "Two still positions only: Flat initial and Up final reference. Flat/Up switch. No animation, interpolation, automatic folding, playback, hold or Reset; fixed camera.",
     "spout": "Static explanation and Tilt to drink. No playback, hold or Reset.",
-    "mist": "Momentary Press to mist. action: one500ms press/return pump per click, one finite140ms emission window, 240-droplet pulse travels outward toward the03Spray label after release and fade; no continuous emission, toggle/Stop, hold or Reset. Compact phone rectangle clear of hood with extra invisible tap area.",
+    "mist": "Momentary Press to mist. action: one500ms press/return pump per click, one finite140ms emission window, Dense white plume with650 fine droplets and soft edges matching the main-page spray; finite pulse travels outward toward the03Spray label after release and fade; no continuous emission, toggle/Stop, hold or Reset. Compact phone rectangle clear of hood with extra invisible tap area.",
     "main_callouts": "Right column3/4/6 moved to65% width, leaders retargeted, clear of boy face. Panels flip and clamp within16px viewport margins, updating on resize and scroll.",
     "outlet_controls": "Flat/Up immediately above Straw label; Press to mist. immediately above Spray label; no dotted/shaded outlet halo. Flat/Up match Press to mist. compact height, type and padding; natural text widths."
   },

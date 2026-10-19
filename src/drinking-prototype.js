@@ -15,8 +15,8 @@ if (prototype) {
   const status = find('[data-drinking-status]');
   const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
   const pressedHead = find('[data-mist-pressed]');
-  const pump = {down:140, burstEnd:280, returned:500, count:240, x:666, y:792};
-  let method='straw', pumping=false, frame=0, pumpStarted=null, drops=[];
+  const pump = {down:140, burstEnd:280, returned:500, count:650, x:666, y:792};
+  let method='straw', pumping=false, frame=0, pumpStarted=null, drops=[], puffs=[];
   let releaseTimer, clearTimer;
   function headPose(amount, phase) {
     pressedHead.setAttribute('opacity',String(amount));
@@ -40,14 +40,14 @@ if (prototype) {
   function stop() {
     clearTimeout(releaseTimer); clearTimeout(clearTimer);
     cancelAnimationFrame(frame); frame=0;
-    particles.replaceChildren(); drops=[];
+    particles.replaceChildren(); drops=[]; puffs=[];
     releasePump();
   }
   function emit(born) {
     const node=document.createElementNS('http://www.w3.org/2000/svg','circle');
     const drop={node,born,life:800+Math.random()*500,spread:(Math.random()-.5)*125,reach:240+Math.random()*140};
-    node.setAttribute('r',1.3+Math.random()*2.1);
-    node.setAttribute('fill','#c1dce5'); node.setAttribute('stroke','#6f97a6'); node.setAttribute('stroke-width','.55');
+    node.setAttribute('r',.35+Math.random()*1.25);
+    node.setAttribute('fill','#fff');
     node.setAttribute('opacity','0');
     particles.append(node); drops.push(drop);
     return drop;
@@ -63,6 +63,38 @@ if (prototype) {
     drop.node.setAttribute('opacity',Math.min(1,age/35)*Math.min(1,(1-t)/.4)*.8);
     return t<1;
   }
+  function emitPuff(born) {
+    const ns='http://www.w3.org/2000/svg';
+    const node=document.createElementNS(ns,'g');
+    node.dataset.mistPlume='';
+    node.setAttribute('filter','url(#mist-soft-edge)');
+    node.setAttribute('opacity','0');
+    // Overlapping translucent wisps form a tapered white water plume.
+    // Fine unblurred droplets above it retain the sparkle of the main photograph.
+    for(let i=0;i<60;i++) {
+      const t=(i+1)/60, wisp=document.createElementNS(ns,'ellipse');
+      const spread=(Math.random()-.5)*t*82;
+      wisp.setAttribute('cx',t*270);
+      wisp.setAttribute('cy',-t*92+spread);
+      wisp.setAttribute('rx',8+t*23);
+      wisp.setAttribute('ry',3+t*15);
+      wisp.setAttribute('fill','#fff');
+      wisp.setAttribute('opacity',.1+Math.random()*.13);
+      node.append(wisp);
+    }
+    particles.prepend(node); puffs.push({node,born,life:1350});
+  }
+  function positionPuff(puff,now) {
+    const age=now-puff.born;
+    if(age<0)return true;
+    const t=Math.min(1,age/puff.life);
+    const growth=Math.min(1,age/180);
+    // Once the pump releases, the entire finite cloud clears the nozzle.
+    const drift=Math.max(0,age-140)/1210;
+    puff.node.setAttribute('transform',`translate(${pump.x+drift*150} ${pump.y-drift*48}) scale(${.25+.75*growth} ${.6+.4*growth})`);
+    puff.node.setAttribute('opacity',Math.min(1,age/65)*Math.pow(1-t,1.15)*.95);
+    return t<1;
+  }
   function tick(now) {
     frame=0;
     if(pumpStarted!==null) {
@@ -76,7 +108,8 @@ if (prototype) {
       }
     }
     drops=drops.filter(drop=>{if(position(drop,now))return true;drop.node.remove();return false;});
-    if(pumping||drops.length) frame=requestAnimationFrame(tick);
+    puffs=puffs.filter(puff=>{if(positionPuff(puff,now))return true;puff.node.remove();return false;});
+    if(pumping||drops.length||puffs.length) frame=requestAnimationFrame(tick);
     else status.textContent='One burst finished. Press to mist again.';
   }
   function startMist() {
@@ -87,6 +120,7 @@ if (prototype) {
     status.textContent='One press. One short burst of mist.';
     if(reducedMotion.matches) {
       headPose(1,'pressed');
+      emitPuff(pumpStarted); positionPuff(puffs[puffs.length-1],pumpStarted+200);
       for(let i=0;i<24;i++) {
         const drop=emit(pumpStarted);
         position(drop,pumpStarted+drop.life*(.15+i/48));
@@ -100,6 +134,7 @@ if (prototype) {
     }
     headPose(0,'pressing');
     // The full emission schedule is fixed by this click; no continuing emitter.
+    emitPuff(pumpStarted+pump.down);
     for(let i=0;i<pump.count;i++) emit(pumpStarted+pump.down+i*(pump.burstEnd-pump.down)/pump.count);
     if(!frame) frame=requestAnimationFrame(tick);
   }
