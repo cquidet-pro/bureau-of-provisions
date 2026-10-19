@@ -15,7 +15,8 @@ if (prototype) {
   const status = find('[data-drinking-status]');
   const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
   const pressedHead = find('[data-mist-pressed]');
-  const pump = {down:140, burstEnd:280, returned:500, count:650, x:666, y:792};
+  // Outlet centred on the right-hand vertical steel wall, below the rim.
+  const pump = {down:140, burstEnd:280, returned:500, count:650, x:647, y:782};
   let method='straw', pumping=false, frame=0, pumpStarted=null, drops=[], puffs=[];
   let releaseTimer, clearTimer;
   function headPose(amount, phase) {

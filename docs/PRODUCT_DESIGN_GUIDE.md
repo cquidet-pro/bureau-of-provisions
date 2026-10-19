@@ -123,7 +123,7 @@ This remains an illustrative design study. Do not infer or publish numeric dimen
 - Recalibrate pointers, highlights and particles whenever the image/camera changes. Do not copy coordinates between views.
 - Main scene point **1 stays on the left** and its leader points to the spray head, routing around the hood. Point 6 stays lower-right, routed below the other leaders.
 
-Current calibration: main photo1536×1024: spray point1 starts(390,170) and ends near(766,324). Enlarged lid1088×1445: highlight head near(592,732), mist leaves its side outlet near(666,792) during the press and travels outward toward the “03 Spray” label. These coordinates are view-specific, not product measurements.
+Current calibration: main photo1536×1024: spray point1 starts(390,170) and ends near(766,324). Enlarged lid1088×1445: highlight head near(592,732), mist leaves the middle of its right-hand vertical steel wall near(647,782) during the press and travels outward toward the “03 Spray” label. These coordinates are view-specific, not product measurements.
 
 ## 11. Site art direction and copy
 
