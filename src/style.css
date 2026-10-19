@@ -1709,6 +1709,6 @@ body:has(.photo-dialog[open]) {
 [data-method="spray"] .drinking-closeup-wrap .drinking-controls { right:2%; top:48%; }
 .drinking-closeup-wrap .straw-positions { gap:4px; }
 .drinking-closeup-wrap .drinking-controls button { background:var(--paper); min-width:44px; }
-.drinking-closeup-wrap .straw-positions button[aria-pressed="true"],.drinking-closeup-wrap [data-drinking-play] { background:var(--wine); color:var(--paper); }
+.drinking-closeup-wrap .straw-positions button[aria-pressed="true"],.drinking-closeup-wrap .drinking-controls [data-drinking-play] { background:var(--wine); color:var(--paper); }
 .drinking-closeup-wrap .drinking-controls [data-drinking-play] { min-width:0; white-space:nowrap; }
 .preorder-price { font:12px/1.6 Inter,Arial,sans-serif; color:var(--wine); }
