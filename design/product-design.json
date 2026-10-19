@@ -60,7 +60,32 @@
     ],
     "placement": "small/high body mark; discreet strap prints centred just below stitched tabs",
     "braille_asset": "/images/product/bottle-braille-message.svg#message",
-    "braille_message": "Stay a little unreasonable."
+    "braille_message": "Stay a little unreasonable.",
+    "render_assets": {
+      "crest": {
+        "navy": "/images/product/crest-navy-v12.svg",
+        "brand": "/images/product/crest-brand-v12.svg",
+        "ivory": "/images/product/crest-ivory-v12.svg",
+        "cream": "/images/product/crest-cream-v12.svg",
+        "charcoal": "/images/product/crest-charcoal-v12.svg",
+        "olive": "/images/product/crest-olive-v12.svg",
+        "raspberry": "/images/product/crest-raspberry-v12.svg",
+        "plum": "/images/product/crest-plum-v12.svg"
+      },
+      "greyhound": {
+        "navy": "/images/product/greyhound-navy-v12.svg",
+        "ivory": "/images/product/greyhound-ivory-v12.svg",
+        "cream": "/images/product/greyhound-cream-v12.svg",
+        "charcoal": "/images/product/greyhound-charcoal-v12.svg"
+      },
+      "leopard": {
+        "navy": "/images/product/leopard-navy-v12.svg",
+        "ivory": "/images/product/leopard-ivory-v12.svg",
+        "cream": "/images/product/leopard-cream-v12.svg",
+        "charcoal": "/images/product/leopard-charcoal-v12.svg"
+      }
+    },
+    "browser_compatibility": "Use self-contained SVG image exports; no external SVG use chains. Original editable master retained."
   },
   "cutaway_exception": {
     "strap": "one flat CUT section, no returning U-loop; reaches floor and drapes forward",
@@ -100,7 +125,12 @@
       "source_png": "/images/product/edition-01-principles-v2.png",
       "generation_method": "built-in image_gen; colour-only edit of common studio master",
       "prompt_record": "docs/COLLECTION_RENDER_PROMPTS.json",
-      "generated_source": "/Users/andonella/.codex/generated_images/01a13734-76ee-7bf2-b1a5-8b229a813126/exec-497e8231-93d0-4a6e-a1ef-42f758f94693.png"
+      "generated_source": "/Users/andonella/.codex/generated_images/01a13734-76ee-7bf2-b1a5-8b229a813126/exec-497e8231-93d0-4a6e-a1ef-42f758f94693.png",
+      "branding_assets": {
+        "crest": "/images/product/crest-navy-v12.svg",
+        "greyhound": "/images/product/greyhound-navy-v12.svg",
+        "leopard": "/images/product/leopard-navy-v12.svg"
+      }
     },
     {
       "number": 2,
@@ -115,7 +145,12 @@
       "source_png": "/images/product/edition-02-principles-v2.png",
       "generation_method": "built-in image_gen; colour-only edit of common studio master",
       "prompt_record": "docs/COLLECTION_RENDER_PROMPTS.json",
-      "generated_source": "/Users/andonella/.codex/generated_images/01a13734-76ee-7bf2-b1a5-8b229a813126/exec-5210a3d1-3cf9-4c17-add4-ec382af1cc80.png"
+      "generated_source": "/Users/andonella/.codex/generated_images/01a13734-76ee-7bf2-b1a5-8b229a813126/exec-5210a3d1-3cf9-4c17-add4-ec382af1cc80.png",
+      "branding_assets": {
+        "crest": "/images/product/crest-ivory-v12.svg",
+        "greyhound": "/images/product/greyhound-navy-v12.svg",
+        "leopard": "/images/product/leopard-navy-v12.svg"
+      }
     },
     {
       "number": 3,
@@ -130,7 +165,12 @@
       "source_png": "/images/product/edition-03-principles-v2.png",
       "generation_method": "built-in image_gen; colour-only edit of common studio master",
       "prompt_record": "docs/COLLECTION_RENDER_PROMPTS.json",
-      "generated_source": "/Users/andonella/.codex/generated_images/01a13734-76ee-7bf2-b1a5-8b229a813126/exec-66911de6-76c9-4c9c-9fb7-763684f459c5.png"
+      "generated_source": "/Users/andonella/.codex/generated_images/01a13734-76ee-7bf2-b1a5-8b229a813126/exec-66911de6-76c9-4c9c-9fb7-763684f459c5.png",
+      "branding_assets": {
+        "crest": "/images/product/crest-navy-v12.svg",
+        "greyhound": "/images/product/greyhound-navy-v12.svg",
+        "leopard": "/images/product/leopard-navy-v12.svg"
+      }
     },
     {
       "number": 4,
@@ -145,7 +185,12 @@
       "source_png": "/images/product/edition-04-principles-v2.png",
       "generation_method": "built-in image_gen; colour-only edit of common studio master",
       "prompt_record": "docs/COLLECTION_RENDER_PROMPTS.json",
-      "generated_source": "/Users/andonella/.codex/generated_images/01a13734-76ee-7bf2-b1a5-8b229a813126/exec-9fb56f03-ff91-40b5-b836-9a691d13858f.png"
+      "generated_source": "/Users/andonella/.codex/generated_images/01a13734-76ee-7bf2-b1a5-8b229a813126/exec-9fb56f03-ff91-40b5-b836-9a691d13858f.png",
+      "branding_assets": {
+        "crest": "/images/product/crest-navy-v12.svg",
+        "greyhound": "/images/product/greyhound-navy-v12.svg",
+        "leopard": "/images/product/leopard-navy-v12.svg"
+      }
     },
     {
       "number": 5,
@@ -160,7 +205,12 @@
       "source_png": "/images/product/edition-05-principles-v2.png",
       "generation_method": "built-in image_gen; colour-only edit of common studio master",
       "prompt_record": "docs/COLLECTION_RENDER_PROMPTS.json",
-      "generated_source": "/Users/andonella/.codex/generated_images/01a13734-76ee-7bf2-b1a5-8b229a813126/exec-8452d309-4328-4fc4-9531-d9b9997cbfbe.png"
+      "generated_source": "/Users/andonella/.codex/generated_images/01a13734-76ee-7bf2-b1a5-8b229a813126/exec-8452d309-4328-4fc4-9531-d9b9997cbfbe.png",
+      "branding_assets": {
+        "crest": "/images/product/crest-ivory-v12.svg",
+        "greyhound": "/images/product/greyhound-navy-v12.svg",
+        "leopard": "/images/product/leopard-navy-v12.svg"
+      }
     },
     {
       "number": 6,
@@ -175,7 +225,12 @@
       "source_png": "/images/product/edition-06-principles-v2.png",
       "generation_method": "built-in image_gen; colour-only edit of common studio master",
       "prompt_record": "docs/COLLECTION_RENDER_PROMPTS.json",
-      "generated_source": "/Users/andonella/.codex/generated_images/01a13734-76ee-7bf2-b1a5-8b229a813126/exec-65963328-23fa-4da7-b0b2-eb0442845420.png"
+      "generated_source": "/Users/andonella/.codex/generated_images/01a13734-76ee-7bf2-b1a5-8b229a813126/exec-65963328-23fa-4da7-b0b2-eb0442845420.png",
+      "branding_assets": {
+        "crest": "/images/product/crest-navy-v12.svg",
+        "greyhound": "/images/product/greyhound-navy-v12.svg",
+        "leopard": "/images/product/leopard-navy-v12.svg"
+      }
     },
     {
       "number": 7,
@@ -190,7 +245,12 @@
       "source_png": "/images/product/edition-07-principles-v2.png",
       "generation_method": "built-in image_gen; colour-only edit of common studio master",
       "prompt_record": "docs/COLLECTION_RENDER_PROMPTS.json",
-      "generated_source": "/Users/andonella/.codex/generated_images/01a13734-76ee-7bf2-b1a5-8b229a813126/exec-22e47261-4df1-4946-ac0d-63e08b12e5a5.png"
+      "generated_source": "/Users/andonella/.codex/generated_images/01a13734-76ee-7bf2-b1a5-8b229a813126/exec-22e47261-4df1-4946-ac0d-63e08b12e5a5.png",
+      "branding_assets": {
+        "crest": "/images/product/crest-ivory-v12.svg",
+        "greyhound": "/images/product/greyhound-navy-v12.svg",
+        "leopard": "/images/product/leopard-navy-v12.svg"
+      }
     },
     {
       "number": 8,
@@ -205,7 +265,12 @@
       "source_png": "/images/product/edition-08-principles-v2.png",
       "generation_method": "built-in image_gen; colour-only edit of common studio master",
       "prompt_record": "docs/COLLECTION_RENDER_PROMPTS.json",
-      "generated_source": "/Users/andonella/.codex/generated_images/01a13734-76ee-7bf2-b1a5-8b229a813126/exec-af9422f6-14c2-4f1f-9257-cfdccc48b6d3.png"
+      "generated_source": "/Users/andonella/.codex/generated_images/01a13734-76ee-7bf2-b1a5-8b229a813126/exec-af9422f6-14c2-4f1f-9257-cfdccc48b6d3.png",
+      "branding_assets": {
+        "crest": "/images/product/crest-navy-v12.svg",
+        "greyhound": "/images/product/greyhound-navy-v12.svg",
+        "leopard": "/images/product/leopard-navy-v12.svg"
+      }
     },
     {
       "number": 9,
@@ -220,7 +285,12 @@
       "source_png": "/images/product/edition-09-principles-v2.png",
       "generation_method": "common all-white studio master",
       "prompt_record": "docs/COLLECTION_RENDER_PROMPTS.json",
-      "generated_source": "/Users/andonella/.codex/generated_images/01a13734-76ee-7bf2-b1a5-8b229a813126/exec-ba21b567-5642-41f7-b87f-f99c9b654f3a.png"
+      "generated_source": "/Users/andonella/.codex/generated_images/01a13734-76ee-7bf2-b1a5-8b229a813126/exec-ba21b567-5642-41f7-b87f-f99c9b654f3a.png",
+      "branding_assets": {
+        "crest": "/images/product/crest-charcoal-v12.svg",
+        "greyhound": "/images/product/greyhound-charcoal-v12.svg",
+        "leopard": "/images/product/leopard-charcoal-v12.svg"
+      }
     },
     {
       "number": 10,
@@ -235,7 +305,12 @@
       "source_png": "/images/product/edition-10-principles-v2.png",
       "generation_method": "built-in image_gen; colour-only edit of common studio master",
       "prompt_record": "docs/COLLECTION_RENDER_PROMPTS.json",
-      "generated_source": "/Users/andonella/.codex/generated_images/01a13734-76ee-7bf2-b1a5-8b229a813126/exec-ab8566b0-e15a-49b4-86fa-6eb189cde9aa.png"
+      "generated_source": "/Users/andonella/.codex/generated_images/01a13734-76ee-7bf2-b1a5-8b229a813126/exec-ab8566b0-e15a-49b4-86fa-6eb189cde9aa.png",
+      "branding_assets": {
+        "crest": "/images/product/crest-charcoal-v12.svg",
+        "greyhound": "/images/product/greyhound-charcoal-v12.svg",
+        "leopard": "/images/product/leopard-charcoal-v12.svg"
+      }
     },
     {
       "number": 11,
@@ -250,7 +325,12 @@
       "source_png": "/images/product/edition-11-principles-v2.png",
       "generation_method": "built-in image_gen; colour-only edit of common studio master",
       "prompt_record": "docs/COLLECTION_RENDER_PROMPTS.json",
-      "generated_source": "/Users/andonella/.codex/generated_images/01a13734-76ee-7bf2-b1a5-8b229a813126/exec-4d5005f2-8a8a-4bd3-bf4c-0b26f659a834.png"
+      "generated_source": "/Users/andonella/.codex/generated_images/01a13734-76ee-7bf2-b1a5-8b229a813126/exec-4d5005f2-8a8a-4bd3-bf4c-0b26f659a834.png",
+      "branding_assets": {
+        "crest": "/images/product/crest-ivory-v12.svg",
+        "greyhound": "/images/product/greyhound-ivory-v12.svg",
+        "leopard": "/images/product/leopard-ivory-v12.svg"
+      }
     },
     {
       "number": 12,
@@ -265,7 +345,12 @@
       "source_png": "/images/product/edition-12-principles-v2.png",
       "generation_method": "built-in image_gen; colour-only edit of common studio master",
       "prompt_record": "docs/COLLECTION_RENDER_PROMPTS.json",
-      "generated_source": "/Users/andonella/.codex/generated_images/01a13734-76ee-7bf2-b1a5-8b229a813126/exec-bbbaf975-125f-4249-8656-4347c577e8b6.png"
+      "generated_source": "/Users/andonella/.codex/generated_images/01a13734-76ee-7bf2-b1a5-8b229a813126/exec-bbbaf975-125f-4249-8656-4347c577e8b6.png",
+      "branding_assets": {
+        "crest": "/images/product/crest-navy-v12.svg",
+        "greyhound": "/images/product/greyhound-navy-v12.svg",
+        "leopard": "/images/product/leopard-navy-v12.svg"
+      }
     },
     {
       "number": 13,
@@ -280,7 +365,12 @@
       "source_png": "/images/product/edition-13-principles-v2.png",
       "generation_method": "built-in image_gen; colour-only edit of common studio master",
       "prompt_record": "docs/COLLECTION_RENDER_PROMPTS.json",
-      "generated_source": "/Users/andonella/.codex/generated_images/01a13734-76ee-7bf2-b1a5-8b229a813126/exec-7b708a4b-fd02-4805-b335-a1199656b105.png"
+      "generated_source": "/Users/andonella/.codex/generated_images/01a13734-76ee-7bf2-b1a5-8b229a813126/exec-7b708a4b-fd02-4805-b335-a1199656b105.png",
+      "branding_assets": {
+        "crest": "/images/product/crest-olive-v12.svg",
+        "greyhound": "/images/product/greyhound-ivory-v12.svg",
+        "leopard": "/images/product/leopard-ivory-v12.svg"
+      }
     },
     {
       "number": 14,
@@ -295,7 +385,12 @@
       "source_png": "/images/product/edition-14-principles-v2.png",
       "generation_method": "built-in image_gen; colour-only edit of common studio master",
       "prompt_record": "docs/COLLECTION_RENDER_PROMPTS.json",
-      "generated_source": "/Users/andonella/.codex/generated_images/01a13734-76ee-7bf2-b1a5-8b229a813126/exec-e95d4d1b-b5d5-4cbe-a3d8-f43a09e5d788.png"
+      "generated_source": "/Users/andonella/.codex/generated_images/01a13734-76ee-7bf2-b1a5-8b229a813126/exec-e95d4d1b-b5d5-4cbe-a3d8-f43a09e5d788.png",
+      "branding_assets": {
+        "crest": "/images/product/crest-ivory-v12.svg",
+        "greyhound": "/images/product/greyhound-ivory-v12.svg",
+        "leopard": "/images/product/leopard-ivory-v12.svg"
+      }
     },
     {
       "number": 15,
@@ -310,7 +405,12 @@
       "source_png": "/images/product/edition-15-principles-v2.png",
       "generation_method": "built-in image_gen; colour-only edit of common studio master",
       "prompt_record": "docs/COLLECTION_RENDER_PROMPTS.json",
-      "generated_source": "/Users/andonella/.codex/generated_images/01a13734-76ee-7bf2-b1a5-8b229a813126/exec-253913df-41a4-4326-9572-c1728664af3f.png"
+      "generated_source": "/Users/andonella/.codex/generated_images/01a13734-76ee-7bf2-b1a5-8b229a813126/exec-253913df-41a4-4326-9572-c1728664af3f.png",
+      "branding_assets": {
+        "crest": "/images/product/crest-raspberry-v12.svg",
+        "greyhound": "/images/product/greyhound-ivory-v12.svg",
+        "leopard": "/images/product/leopard-ivory-v12.svg"
+      }
     },
     {
       "number": 16,
@@ -325,7 +425,12 @@
       "source_png": "/images/product/edition-16-principles-v2.png",
       "generation_method": "built-in image_gen; colour-only edit of common studio master",
       "prompt_record": "docs/COLLECTION_RENDER_PROMPTS.json",
-      "generated_source": "/Users/andonella/.codex/generated_images/01a13734-76ee-7bf2-b1a5-8b229a813126/exec-028f4a68-9d53-4ce9-b189-9c43591ca2a6.png"
+      "generated_source": "/Users/andonella/.codex/generated_images/01a13734-76ee-7bf2-b1a5-8b229a813126/exec-028f4a68-9d53-4ce9-b189-9c43591ca2a6.png",
+      "branding_assets": {
+        "crest": "/images/product/crest-plum-v12.svg",
+        "greyhound": "/images/product/greyhound-cream-v12.svg",
+        "leopard": "/images/product/leopard-cream-v12.svg"
+      }
     },
     {
       "number": 17,
@@ -340,7 +445,12 @@
       "source_png": "/images/product/edition-17-principles-v2.png",
       "generation_method": "built-in image_gen; colour-only edit of common studio master",
       "prompt_record": "docs/COLLECTION_RENDER_PROMPTS.json",
-      "generated_source": "/Users/andonella/.codex/generated_images/01a13734-76ee-7bf2-b1a5-8b229a813126/exec-dd6ba562-b0f9-4e21-90a5-e9165388f735.png"
+      "generated_source": "/Users/andonella/.codex/generated_images/01a13734-76ee-7bf2-b1a5-8b229a813126/exec-dd6ba562-b0f9-4e21-90a5-e9165388f735.png",
+      "branding_assets": {
+        "crest": "/images/product/crest-cream-v12.svg",
+        "greyhound": "/images/product/greyhound-navy-v12.svg",
+        "leopard": "/images/product/leopard-navy-v12.svg"
+      }
     },
     {
       "number": 18,
@@ -355,7 +465,12 @@
       "source_png": "/images/product/edition-18-principles-v2.png",
       "generation_method": "built-in image_gen; colour-only edit of common studio master",
       "prompt_record": "docs/COLLECTION_RENDER_PROMPTS.json",
-      "generated_source": "/Users/andonella/.codex/generated_images/01a13734-76ee-7bf2-b1a5-8b229a813126/exec-07c4b351-3ef7-4c31-ab06-bf4ce7748fce.png"
+      "generated_source": "/Users/andonella/.codex/generated_images/01a13734-76ee-7bf2-b1a5-8b229a813126/exec-07c4b351-3ef7-4c31-ab06-bf4ce7748fce.png",
+      "branding_assets": {
+        "crest": "/images/product/crest-cream-v12.svg",
+        "greyhound": "/images/product/greyhound-cream-v12.svg",
+        "leopard": "/images/product/leopard-cream-v12.svg"
+      }
     },
     {
       "number": 19,
@@ -370,7 +485,12 @@
       "source_png": "/images/product/edition-19-principles-v2.png",
       "generation_method": "built-in image_gen; colour-only edit of common studio master",
       "prompt_record": "docs/COLLECTION_RENDER_PROMPTS.json",
-      "generated_source": "/Users/andonella/.codex/generated_images/01a13734-76ee-7bf2-b1a5-8b229a813126/exec-7fd51afe-5d62-4ce2-8892-43ecc23e3728.png"
+      "generated_source": "/Users/andonella/.codex/generated_images/01a13734-76ee-7bf2-b1a5-8b229a813126/exec-7fd51afe-5d62-4ce2-8892-43ecc23e3728.png",
+      "branding_assets": {
+        "crest": "/images/product/crest-cream-v12.svg",
+        "greyhound": "/images/product/greyhound-cream-v12.svg",
+        "leopard": "/images/product/leopard-cream-v12.svg"
+      }
     }
   ],
   "validation": {

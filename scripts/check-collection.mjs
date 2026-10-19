@@ -27,7 +27,10 @@ for (const edition of manifest.editions) {
   assert.ok(card.includes(`--body-colour:${edition.body}`), `Body palette: ${edition.name}`);
   assert.ok(card.includes(`--accent-colour:${edition.accent}`), `Accent palette: ${edition.name}`);
   for (const symbol of ['crest', 'greyhound', 'leopard']) {
-    assert.ok(card.includes(`${manifest.branding.asset}#${symbol}`), `Lost ${symbol}: ${edition.name}`);
+    const asset=edition.branding_assets[symbol];
+    assert.ok(card.includes(`data-brand-symbol="${symbol}" href="${asset}"`), `Lost ${symbol}: ${edition.name}`);
+    const vector=readFileSync(resolve('dist',asset.slice(1)),'utf8');
+    assert.ok(!/<use\b/.test(vector),`Nested use returned in ${asset}`);
   }
   assert.ok(card.includes(manifest.branding.braille_asset), `Lost braille: ${edition.name}`);
   const registration = card.match(/<a class="colour-register"[^>]*href="([^"]+)"/);

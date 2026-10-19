@@ -71,6 +71,8 @@ The strap is also sectioned: show **one flat cut strip**, not a doubled return o
 
 Use `public/images/product/crest-vector-v11.svg`:
 
+**Browser compatibility:** v11 is the editable vector master, not a website sprite. Safari/WebKit can lose masks or clips reached through external, nested SVG `<use>` references, causing overlapping copies of the unmasked artwork. Website instances use self-contained coloured SVG image exports (`*-v12.svg`) produced by `scripts/export-browser-safe-crest.py`. Their drawing paths are expanded and mask/clip definitions are local to each image document; there are no `<use>` chains, external mask references or duplicate IDs. Preserve the exact artwork and each edition's ink colour. Check the header, bottle logos, strap animals and enlarged logo in Safari as well as Chromium after brand changes. Do not reintroduce the external v11 sprite as a shortcut. The header identity is decorative and is not a link to the top; the footer keeps its back-to-top link.
+
 - `#crest`: complete current logo, **without the shield outline**, with the small crown directly on the B.
 - Reading greyhound on the left; tennis leopard on the right, balanced in visual weight and brought closer to BoP. Keep a clear gap between the paw and the P.
 - The P must be complete and not clipped by a former shield mask.
