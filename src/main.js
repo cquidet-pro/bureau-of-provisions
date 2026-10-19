@@ -153,14 +153,91 @@ reducedMotion.addEventListener('change', () => {
 motionToggle.hidden = reducedMotion.matches;
 document.addEventListener('visibilitychange', restartSceneMotion);
 
-// Colour studies are a local preference; they do not place an order.
+// Require a colour choice, then show the shared form beside the selected bottle.
 const colourButtons = [...document.querySelectorAll('[data-colour]')];
 const colourStatus = document.getElementById('colour-status');
-for (const button of colourButtons) {
-  button.addEventListener('click', () => {
-    for (const choice of colourButtons) choice.setAttribute('aria-pressed', String(choice === button));
-    colourStatus.textContent = `Selected: ${button.dataset.colour}. Colour study No. ${button.dataset.colourNumber}.`;
+const preorderLinks = [...document.querySelectorAll('[data-preorder]')];
+const editionLinks = [...document.querySelectorAll('.colour-register')];
+const colourPrompt = document.getElementById('colour-prompt');
+const inlineForm = document.getElementById('preorder-form');
+const formFrame = inlineForm.querySelector('iframe');
+const formSelection = document.getElementById('preorder-selection');
+let selectedColour = null;
+let formColour = null;
+let registrationRow = null;
+function clearRegistrationPreview() {
+  if (!registrationRow) return;
+  registrationRow.before(inlineForm);
+  registrationRow.remove();
+  registrationRow = null;
+}
+function selectColour(button) {
+  selectedColour = button.dataset.colour;
+  colourPrompt.hidden = true;
+  for (const choice of colourButtons) choice.setAttribute('aria-pressed', String(choice === button));
+  colourStatus.textContent = `Selected: ${selectedColour}. Colour study No. ${button.dataset.colourNumber}.`;
+  // A new choice needs a fresh form; keep existing answers when the choice is unchanged.
+  if (formColour !== selectedColour) {
+    inlineForm.hidden = true;
+    clearRegistrationPreview();
+    for (const trigger of [...preorderLinks, ...editionLinks]) trigger.setAttribute('aria-expanded', 'false');
+  }
+}
+function showPreorderForm(link) {
+  const card = colourButtons.find(button => button.dataset.colour === selectedColour).closest('.colour-card');
+  if (!registrationRow || registrationRow.dataset.selectedColour !== selectedColour) {
+    clearRegistrationPreview();
+    registrationRow = document.createElement('div');
+    registrationRow.className = 'registration-row';
+    registrationRow.dataset.selectedColour = selectedColour;
+    const preview = card.cloneNode(true);
+    preview.setAttribute('data-registration-preview', '');
+    preview.querySelector('.colour-register').remove();
+    const previewChoice = preview.querySelector('[data-colour]');
+    previewChoice.removeAttribute('data-colour');
+    previewChoice.removeAttribute('data-colour-number');
+    previewChoice.disabled = true;
+    document.querySelector('.colour-footer').before(registrationRow);
+    registrationRow.append(preview, inlineForm);
+  }
+  formSelection.textContent = `Your selection: ${selectedColour}`;
+  if (formColour !== selectedColour) {
+    const url = new URL('https://tally.so/embed/5BW7JN');
+    url.searchParams.set('colour', selectedColour);
+    url.searchParams.set('hideTitle', '1');
+    url.searchParams.set('transparentBackground', '1');
+    formFrame.src = url.href;
+    formColour = selectedColour;
+  }
+  inlineForm.hidden = false;
+  for (const trigger of [...preorderLinks, ...editionLinks]) {
+    trigger.setAttribute('aria-expanded', String(trigger === link));
+  }
+  inlineForm.focus({preventScroll: true});
+  registrationRow.scrollIntoView({behavior: reducedMotion.matches ? 'instant' : 'smooth', block: 'start'});
+}
+for (const link of [...preorderLinks, ...editionLinks]) {
+  link.removeAttribute('target');
+  link.setAttribute('aria-controls', 'preorder-form');
+  link.setAttribute('aria-expanded', 'false');
+  link.addEventListener('click', event => {
+    event.preventDefault();
+    if (link.classList.contains('colour-register')) {
+      selectColour(link.closest('.colour-card').querySelector('[data-colour]'));
+    }
+    if (selectedColour) {
+      showPreorderForm(link);
+      return;
+    }
+    colourPrompt.hidden = false;
+    colourButtons[0]?.focus({preventScroll: true});
+    document.getElementById('colourways').scrollIntoView({
+      behavior: reducedMotion.matches ? 'instant' : 'smooth', block: 'start',
+    });
   });
+}
+for (const button of colourButtons) {
+  button.addEventListener('click', () => selectColour(button));
 }
 
 // Show the actual vector crest at an inspectable size.

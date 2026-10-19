@@ -1728,3 +1728,21 @@ body:has(.photo-dialog[open]) {
 @media(max-width:1100px) {
   .drinking-closeup-wrap .drinking-controls button { min-height:28px; padding:4px 4px; font-size:8.5px; }
 }
+
+/* Shared registration form sits below the CTA that opened it. */
+.preorder-inline { grid-column:1 / -1; width:100%; max-width:700px; margin:24px auto; padding:20px; scroll-margin-top:24px; }
+.preorder-inline[hidden] { display:none; }
+.preorder-inline h3 { font-size:20px; margin:0 0 12px; }
+.preorder-inline iframe { display:block; width:100%; border:0; }
+
+/* Keep the selected bottle and its registration form together in the collection. */
+.registration-row { grid-column:1 / -1; display:grid; grid-template-columns:minmax(200px, 1fr) minmax(0, 2fr); gap:32px; align-items:center; margin:32px 0; scroll-margin-top:24px; }
+.registration-row > .colour-card { width:100%; max-width:330px; }
+.registration-row > .preorder-inline { grid-column:auto; min-width:0; max-width:none; margin:0; padding:0; }
+@media (max-width:640px) {
+  .registration-row { grid-template-columns:minmax(0, 1fr); gap:24px; }
+  .registration-row > .colour-card { max-width:280px; margin:auto; }
+}
+
+/* The visible selection label lives inside Tally, directly above Name. */
+.preorder-inline > h3 { position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip-path:inset(50%); white-space:nowrap; }
