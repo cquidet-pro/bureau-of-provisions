@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Thank you | The Bureau of Provisions</title>
+    <meta name="description" content="Thank you for registering your interest in the Bureau of Provisions bottle." />
+    <meta name="robots" content="noindex, follow" />
+    <meta name="theme-color" content="#f4eddf" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;1,9..144,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+    <style>
+      :root { color:#293b3d; background:#f4eddf; font-family:Inter,Arial,sans-serif; --wine:#713b44; --rule:#b8b4a1; }
+      * { box-sizing:border-box; }
+      body { margin:0; min-height:100svh; display:flex; flex-direction:column; }
+      .dispatch { padding:14px 24px; background:var(--wine); color:#f4eddf; text-align:center; font:12px/1.6 "Courier New",monospace; letter-spacing:.16em; text-transform:uppercase; }
+      .skip { position:absolute; top:-100px; padding:12px; background:#f4eddf; }
+      .skip:focus { top:0; }
+      header { padding:32px 24px 0; }
+      .crest { display:block; width:132px; height:auto; margin:auto; }
+      main { width:min(100% - 40px, 760px); margin:30px auto 48px; text-align:center; }
+      .eyebrow { margin:0 0 22px; font:12px/1.6 "Courier New",monospace; letter-spacing:.16em; text-transform:uppercase; color:var(--wine); }
+      h1 { margin:0; color:var(--wine); font:400 clamp(44px,6vw,76px)/1.08 Fraunces,Georgia,serif; letter-spacing:-.045em; }
+      h1 em { font-weight:400; }
+      .copy { max-width:470px; margin:24px auto 0; font-size:16px; line-height:1.75; }
+      .button { display:inline-flex; align-items:center; justify-content:center; gap:28px; min-height:52px; margin-top:30px; padding:16px 25px; background:var(--wine); color:#f4eddf; text-decoration:none; font-size:14px; font-weight:600; border:1px solid var(--wine); }
+      .button:hover { background:#562d34; }
+      a:focus-visible { outline:3px solid var(--wine); outline-offset:5px; }
+      .note { margin:22px auto 0; font-size:12px; line-height:1.7; }
+      footer { width:min(100% - 48px,1120px); margin:auto auto 0; padding:20px 0; border-top:1px solid var(--rule); display:flex; justify-content:space-between; gap:16px; font:11px/1.6 "Courier New",monospace; letter-spacing:.08em; text-transform:uppercase; }
+      footer a { color:inherit; text-underline-offset:4px; }
+      @media(max-width:520px) { .dispatch { font-size:10px; padding:12px 20px; } header { padding-top:26px; } .crest { width:110px; } main { margin-top:26px; margin-bottom:36px; } .copy { font-size:15px; } footer { flex-wrap:wrap; font-size:10px; } }
+    </style>
+  </head>
+  <body id="top">
+    <a class="skip" href="#main">Skip to content</a>
+    <div class="dispatch">Independent provisions for everyday excursions</div>
+    <header>
+      <img class="crest" src="/images/product/crest-brand-v12.svg" alt="The Bureau of Provisions — Department of Thirst" width="1040" height="1000" />
+    </header>
+    <main id="main">
+      <p class="eyebrow">Registration received</p>
+      <h1>Thank you.<br /><em>You’re on the list.</em></h1>
+      <p class="copy">Thanks for registering your interest in the Bureau bottle. We’ll be in touch with ordering details when it’s ready.</p>
+      <a class="button" href="/">Back to the Bureau <span aria-hidden="true">→</span></a>
+      <p class="note">This is a registration of interest. No payment has been taken.</p>
+    </main>
+    <footer><span>Department of Thirst · Est. 2026</span><a href="#top">Back to top ↑</a></footer>
+  </body>
+</html>
