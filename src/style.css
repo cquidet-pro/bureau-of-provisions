@@ -1750,8 +1750,8 @@ body:has(.photo-dialog[open]) {
 /* Keep the complete 3:2 platform scene, title and caption within a laptop viewport. */
 @media (min-width:1001px) {
   .product-plate {
-    width:min(100%,calc(150vh - 195px));
-    width:min(100%,calc(150svh - 195px));
+    width:min(100%,calc(150vh - 240px));
+    width:min(100%,calc(150svh - 240px));
     margin-inline:auto;
   }
 }
