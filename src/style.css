@@ -1676,3 +1676,22 @@ body:has(.photo-dialog[open]) {
 .part-straw { left:14%; top:65%; }
 .part-gulp { left:88%; top:65%; }
 .part-spray { left:88%; top:48%; }
+
+/* Native-resolution local restorations preserve the approved product master. */
+.scene-character-detail { position:absolute; display:block; pointer-events:none; object-fit:fill; z-index:0; }
+.scene-character-detail-right {
+  left:66.40625%; top:32.2265625%; width:33.59375%; height:50.78125%;
+  -webkit-mask-image:linear-gradient(to right,transparent,#000 5%),linear-gradient(to bottom,transparent,#000 7%,#000 92%,transparent);
+  -webkit-mask-composite:source-in;
+  mask-image:linear-gradient(to right,transparent,#000 5%),linear-gradient(to bottom,transparent,#000 7%,#000 92%,transparent);
+  mask-composite:intersect;
+}
+
+.scene-character-detail-left {
+  left:16.2760417%; top:32.2265625%; width:24.0885417%; height:49.8046875%;
+  clip-path:polygon(0 0,100% 0,100% 30%,94% 58%,88% 86%,90% 100%,0 100%);
+  -webkit-mask-image:linear-gradient(to right,transparent,#000 5%,#000 92%,transparent),linear-gradient(to bottom,transparent,#000 5%,#000 93%,transparent);
+  -webkit-mask-composite:source-in;
+  mask-image:linear-gradient(to right,transparent,#000 5%,#000 92%,transparent),linear-gradient(to bottom,transparent,#000 5%,#000 93%,transparent);
+  mask-composite:intersect;
+}

@@ -1,6 +1,6 @@
 # Bureau of Provisions — reusable product design guide
 
-Version: 18 October 2026. Applies to website visuals, product studies, colour editions, prompts and future design work.
+Version: 19 October 2026. Applies to website visuals, product studies, colour editions, prompts and future design work.
 
 This is the **current specification**. It consolidates the user's approved corrections; it is not a history of every experiment. Earlier interpretations are archived in [PRODUCT_DESIGN_HISTORY.md](PRODUCT_DESIGN_HISTORY.md). Machine-readable rules and all nineteen edition palettes are in [product-design.json](../design/product-design.json).
 
@@ -52,6 +52,7 @@ Use coherent light, reflections, contact shadows and refraction. Preserve these 
 - Avoid long chains of full-scene generative edits: they can soften faces, hands, weave and product details even when every file is lossless. Limit edits to the requested area, preserve unaffected regions, and compare against the earliest sharp approved source. Return to that source when degradation appears.
 - Check people, faces, hair, hands, fabrics, polished hardware and exact logos at 100% and at intended display size before accepting an iteration. Reject smeared, waxy, blocky or artificially oversharpened results. Do not trade away existing detail to make a small local correction.
 - Match source resolution to the intended display size and device pixel density. Request a genuinely higher-resolution render where needed; do not describe interpolation or CSS scaling as recovered detail. Keep native SVG branding and braille sharp.
+- Main-scene character detail is maintained as two independent native-resolution image layers (`platform-{left,right}-characters-detail-v1.png` masters, lossless WebP delivery), sourced from lossless crops of the approved v18 master. Keep their registration and feathering, preserve all bottle/strap/vector layers, and do not flatten the high-detail people back into the 1536px base. See [restoration record and prompts](CHARACTER_DETAIL_RESTORATION.md).
 
 ## 5. Carry strap and cutaway exception
 

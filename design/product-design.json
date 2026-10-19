@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated": "2026-10-18",
+  "updated": "2026-10-19",
   "guide": "docs/PRODUCT_DESIGN_GUIDE.md",
   "prompt_template": "docs/prompts/PRODUCT_RENDER_TEMPLATE.md",
   "source_hierarchy": [
@@ -25,7 +25,37 @@
       "docs/STRAW_MOTION_REFERENCE_3.png",
       "docs/STRAW_MOTION_REFERENCE_4.png"
     ],
-    "straw_up": "public/images/product/straw-pose-45-v1.webp"
+    "straw_up": "public/images/product/straw-pose-45-v1.webp",
+    "main_scene_character_details": [
+      {
+        "asset": "public/images/product/platform-right-characters-detail-v1.webp",
+        "master": "public/images/product/platform-right-characters-detail-v1.png",
+        "native_dimensions": [
+          1254,
+          1254
+        ],
+        "scene_region": [
+          1020,
+          330,
+          516,
+          520
+        ]
+      },
+      {
+        "asset": "public/images/product/platform-left-characters-detail-v1.webp",
+        "master": "public/images/product/platform-left-characters-detail-v1.png",
+        "native_dimensions": [
+          1069,
+          1472
+        ],
+        "scene_region": [
+          250,
+          330,
+          370,
+          510
+        ]
+      }
+    ]
   },
   "invariants": {
     "body": "same tall/slim body, shoulder, base and proportions",
@@ -509,7 +539,7 @@
     "contact_sheet": "docs/collection-principles-contact-sheet.jpg"
   },
   "quality_audit": {
-    "date": "2026-10-18",
+    "date": "2026-10-19",
     "main_native_dimensions": [
       1536,
       1024
@@ -518,7 +548,8 @@
     "previous_png_webp_pixel_differences": 0,
     "finding": "Loss of fine detail across successive generative revisions and source/display resolution; previous export was pixel-identical, not JPEG compression.",
     "restoration_attempt": "Requested 3072x2048; tool returned 1536x1024. Candidate v19 not integrated because no resolution gain and less faithful strap texture.",
-    "remaining_limit": "Current main scene is still 1536x1024. Genuine higher-resolution source/render needed for substantially improved facial detail at large/retina display sizes."
+    "remaining_limit": "Base scene remains 1536x1024; seated people use independent 1254x1254 and 1069x1472 native detail images. Generated local detail is reconstructed, not recovered original photography. Browser verification of these new layers was blocked by a declined browser origin permission; local composition and production build checked.",
+    "character_restoration": "Two native-resolution local photographic restorations from lossless crops of v18 PNG, with earliest v1 photographic detail as benchmark; feathered CSS image layers preserve base product pixels and exact vector branding. See docs/CHARACTER_DETAIL_RESTORATION.md."
   },
   "interaction_rules": {
     "straw": "Two still positions only: Flat initial and Up final reference. Flat/Up switch. No animation, interpolation, automatic folding, playback, hold or Reset; fixed camera.",
