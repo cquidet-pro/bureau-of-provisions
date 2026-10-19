@@ -1806,3 +1806,5 @@ body:has(.photo-dialog[open]) {
   .colourways > .section-heading h2 { font-size:clamp(32px,3vw,44px); }
   .colourways .edition-intro { margin-top:0; }
 }
+
+.colourways .edition-intro > p { font-size:clamp(14px,1.4vw,20px); line-height:1.6; }
