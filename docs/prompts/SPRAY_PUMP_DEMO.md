@@ -1,0 +1,12 @@
+# Single-pump mist demo — 19 October 2026
+
+The user's three Blender references govern the sequence: rest → depressed head with one burst → head at rest while water travels away. Each click schedules a finite72-droplet pulse over140ms. The head returns after500ms; existing droplets travel outward/downward from the side outlet near(666,792) in the fixed1088×1445 photograph. Flight finishes naturally. No continuing emitter, toggle or Stop control. Reduced-motion mode uses static pressed/burst/rest cues.
+
+The visible Press to mist. rectangle is compact, with extra invisible tap area above it. Labels and explanatory copy remain. No dotted halo.
+
+Local image made with built-in imagegen. Lossless crop extracted from `public/images/product/lid-strap-reference-v8.png` at x495,y630,width210,height230. Versioned master `public/images/product/spray-head-pressed-v1.png`; delivery `public/images/product/spray-head-pressed-v1.webp`, exported losslessly once. The local alternate pose overlays only that source region; no camera, other outlets, branding or strap changes. Pixel dimensions and registration are in the manifest. This is a visual motion illustration, not a measured manufacturing stroke.
+
+Final prompt:
+
+> Use case precise-object-edit. Exact edit target is this lossless crop from our approved bottle photograph. Create ONLY the depressed/pressed state of this same spring-loaded rear spray button for a pump demonstration. Keep EXACT crop frame, fixed camera, fixed background clear hinge/hood, steel deck, lower ivory circular mounting base and surrounding components unchanged. Move the whole upper mirror-polished cylindrical steel spray head straight DOWN toward its stationary ivory base by about 12 pixels at the original 210x230 source scale (roughly5% of crop height), compressing its small exposed stem. Keep its top diameter, shape, mirror reflections and perspective exactly the same; it must be recognizably lower on the stem, not tilted or resized. No fingers, hands, water, arrows, text, extra holes, new buttons or different hardware. Photographic polish matching original, not brushed. Fill the tiny newly exposed background naturally where head top has moved down. This is an exactly registered local alternate pose; do not recompose. High native resolution portrait around1050x1150, lossless PNG.
+

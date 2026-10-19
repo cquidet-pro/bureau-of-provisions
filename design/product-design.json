@@ -143,7 +143,22 @@
       }
     ],
     "main_scene_background_coverage": "public/images/product/station-background-coverage-v1.svg",
-    "cad_specifications": "design/cad-specifications.json"
+    "cad_specifications": "design/cad-specifications.json",
+    "spray_pressed": {
+      "master": "public/images/product/spray-head-pressed-v1.png",
+      "asset": "public/images/product/spray-head-pressed-v1.webp",
+      "native_dimensions": [
+        1198,
+        1313
+      ],
+      "source": "public/images/product/lid-strap-reference-v8.png",
+      "source_region": [
+        495,
+        630,
+        210,
+        230
+      ]
+    }
   },
   "invariants": {
     "body": "same tall/slim body, shoulder, base and proportions",
@@ -646,7 +661,7 @@
   "interaction_rules": {
     "straw": "Two still positions only: Flat initial and Up final reference. Flat/Up switch. No animation, interpolation, automatic folding, playback, hold or Reset; fixed camera.",
     "spout": "Static explanation and Tilt to drink. No playback, hold or Reset.",
-    "mist": "Press to mist. starts fine mist; no hold or Reset button.",
+    "mist": "Momentary Press to mist. action: one500ms press/return pump per click, one finite140ms emission window, droplets continue outward/downward after release and fade; no continuous emission, toggle/Stop, hold or Reset. Compact phone rectangle clear of hood with extra invisible tap area.",
     "main_callouts": "Right column3/4/6 moved to65% width, leaders retargeted, clear of boy face. Panels flip and clamp within16px viewport margins, updating on resize and scroll.",
     "outlet_controls": "Flat/Up immediately above Straw label; Press to mist. immediately above Spray label; no dotted/shaded outlet halo."
   },

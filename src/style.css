@@ -1712,3 +1712,12 @@ body:has(.photo-dialog[open]) {
 .drinking-closeup-wrap .straw-positions button[aria-pressed="true"],.drinking-closeup-wrap .drinking-controls [data-drinking-play] { background:var(--wine); color:var(--paper); }
 .drinking-closeup-wrap .drinking-controls [data-drinking-play] { min-width:0; white-space:nowrap; }
 .preorder-price { font:12px/1.6 Inter,Arial,sans-serif; color:var(--wine); }
+
+/* A compact visible rectangle, with extra tap space above it on narrow screens. */
+.drinking-closeup-wrap .drinking-controls [data-drinking-play] { position:relative; min-height:30px; padding:5px 8px; font-size:9px; line-height:16px; }
+.drinking-closeup-wrap .drinking-controls [data-drinking-play]::before { content:""; position:absolute; inset:-16px 0 0; }
+.drinking-closeup-wrap .drinking-controls [data-drinking-play]:disabled { cursor:default; opacity:1; }
+@media(max-width:1100px) {
+  [data-method="spray"] .drinking-closeup-wrap .drinking-controls { right:0; transform:translateY(calc(-100% - 24px)); }
+  .drinking-closeup-wrap .drinking-controls [data-drinking-play] { min-height:28px; padding:4px 6px; font-size:8.5px; }
+}
