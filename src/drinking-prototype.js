@@ -47,7 +47,7 @@ if (prototype) {
     const node=document.createElementNS('http://www.w3.org/2000/svg','circle');
     const drop={node,born,life:800+Math.random()*500,spread:(Math.random()-.5)*125,reach:240+Math.random()*140};
     node.setAttribute('r',1.3+Math.random()*2.1);
-    node.setAttribute('fill','#dff2f8'); node.setAttribute('stroke','#86acb7'); node.setAttribute('stroke-width','.55');
+    node.setAttribute('fill','#c1dce5'); node.setAttribute('stroke','#6f97a6'); node.setAttribute('stroke-width','.55');
     node.setAttribute('opacity','0');
     particles.append(node); drops.push(drop);
     return drop;
@@ -60,7 +60,7 @@ if (prototype) {
     const travel=1-Math.pow(1-t,1.35);
     drop.node.setAttribute('cx',pump.x+drop.reach*.95*travel);
     drop.node.setAttribute('cy',pump.y-drop.reach*.34*travel+drop.spread*t+12*t*t);
-    drop.node.setAttribute('opacity',Math.min(1,age/55)*Math.pow(1-t,1.2)*.85);
+    drop.node.setAttribute('opacity',Math.min(1,age/35)*Math.min(1,(1-t)/.4)*.8);
     return t<1;
   }
   function tick(now) {

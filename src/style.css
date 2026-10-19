@@ -1719,12 +1719,12 @@ body:has(.photo-dialog[open]) {
 .drinking-closeup-wrap .drinking-controls [data-drinking-play]:disabled { cursor:default; opacity:1; }
 @media(max-width:1100px) {
   [data-method="spray"] .drinking-closeup-wrap .drinking-controls { right:0; transform:translateY(calc(-100% - 24px)); }
-  .drinking-closeup-wrap .drinking-controls [data-drinking-play] { min-height:28px; padding:4px 6px; font-size:8.5px; }
+  .drinking-closeup-wrap .drinking-controls [data-drinking-play] { min-height:28px; padding:4px 4px; font-size:8.5px; }
 }
 
 /* Flat/Up share the compact typography, padding and height of Press to mist. */
 .drinking-closeup-wrap .drinking-controls button { position:relative; min-height:30px; padding:5px 8px; font-size:9px; line-height:16px; }
 .drinking-closeup-wrap .drinking-controls button::before { content:""; position:absolute; inset:-16px 0 0; }
 @media(max-width:1100px) {
-  .drinking-closeup-wrap .drinking-controls button { min-height:28px; padding:4px 6px; font-size:8.5px; }
+  .drinking-closeup-wrap .drinking-controls button { min-height:28px; padding:4px 4px; font-size:8.5px; }
 }
