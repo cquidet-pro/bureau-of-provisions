@@ -1482,7 +1482,7 @@ body:has(.photo-dialog[open]) {
 }
 
 .ticket-light-animation { position:absolute; inset:0; z-index:1; pointer-events:none; }
-.ticket-lamp-gesture { position:absolute; inset:0; opacity:0; background:url('/images/product/ticket-lamp-gesture-v1.png') center/100% 100% no-repeat; mask-image:radial-gradient(ellipse 3.7% 6.1% at 5.3% 40%,#000 65%,transparent 100%); }
+.ticket-lamp-gesture { position:absolute; left:0; top:6.34765625%; width:18.8802083%; height:42.96875%; opacity:0; background:url('/images/product/station-open-arch-gesture-v1.webp') center/100% 100% no-repeat; -webkit-mask-image:radial-gradient(ellipse 19.6% 14.2% at 27.9% 78.2%,#000 65%,transparent 100%); mask-image:radial-gradient(ellipse 19.6% 14.2% at 27.9% 78.2%,#000 65%,transparent 100%); }
 .ticket-lamp-dimmer { position:absolute; inset:0; width:100%; height:100%; opacity:0; transition:opacity .25s; }
 .lamp-off .ticket-lamp-dimmer { opacity:1; }
 .is-switching-light .ticket-lamp-gesture { animation:conductor-lamp-switch 2.2s ease-in-out; }
@@ -1668,8 +1668,7 @@ body:has(.photo-dialog[open]) {
 
 .overhead-strap-ink { color:#213b50; mix-blend-mode:multiply; opacity:.92; }
 
-/* The grille sits in front of the conductor, including lamp gestures. */
-.ticket-grille { position:absolute; inset:0; width:100%; height:100%; pointer-events:none; z-index:2; }
+/* The ticket office now has an unobstructed arched service opening. */
 
 /* The original solid-view camera exposes the low straw and flush mist hole. */
 .drinking-overhead-layout .drinking-closeup-wrap { max-width:570px; margin:12px auto; }
@@ -1695,3 +1694,12 @@ body:has(.photo-dialog[open]) {
   mask-image:linear-gradient(to right,transparent,#000 5%,#000 92%,transparent),linear-gradient(to bottom,transparent,#000 5%,#000 93%,transparent);
   mask-composite:intersect;
 }
+
+/* Independent native-detail background tiles; the product remains the v18 master. */
+.scene-background-details { position:absolute; inset:0; pointer-events:none; z-index:0; -webkit-mask:url('/images/product/station-background-coverage-v1.svg') 0 0/100% 100% no-repeat; mask:url('/images/product/station-background-coverage-v1.svg') 0 0/100% 100% no-repeat; }
+.station-detail { position:absolute; display:block; object-fit:fill; }
+.station-detail-left { left:0; top:0; width:42.3177083%; height:100%; -webkit-mask-image:linear-gradient(to right,#000 96%,transparent); mask-image:linear-gradient(to right,#000 96%,transparent); }
+.station-detail-right { left:57.9427083%; top:0; width:42.0572917%; height:100%; -webkit-mask-image:linear-gradient(to right,transparent,#000 4%); mask-image:linear-gradient(to right,transparent,#000 4%); }
+.station-detail-clock { left:42.3177083%; top:0; width:15.625%; height:17.578125%; -webkit-mask-image:linear-gradient(to bottom,#000 88%,transparent); mask-image:linear-gradient(to bottom,#000 88%,transparent); }
+.station-detail-floor { left:40.3645833%; top:91.796875%; width:20.1822917%; height:8.203125%; object-fit:cover; -webkit-mask-image:linear-gradient(to right,transparent,#000 8%,#000 92%,transparent); mask-image:linear-gradient(to right,transparent,#000 8%,#000 92%,transparent); }
+.station-detail-office { left:0; top:6.34765625%; width:18.8802083%; height:42.96875%; -webkit-mask-image:linear-gradient(to right,#000 92%,transparent),linear-gradient(to bottom,transparent,#000 3%,#000 97%,transparent); -webkit-mask-composite:source-in; mask-image:linear-gradient(to right,#000 92%,transparent),linear-gradient(to bottom,transparent,#000 3%,#000 97%,transparent); mask-composite:intersect; }

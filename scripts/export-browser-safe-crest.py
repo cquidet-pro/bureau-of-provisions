@@ -105,11 +105,11 @@ html = replace_uses(html)
 html = re.sub(r'<article class="colour-card"[\s\S]*?</article>', replace_card, html)
 # Header and close-up use the original brand ink; product overlays use navy.
 html = re.sub(r'<svg class="(?:header-crest|crest-enlargement)"[\s\S]*?</svg>', lambda m: replace_uses(m[0], 'brand'), html)
-assert html.count('data-brand-symbol=') == 66, 'All 66 logo/animal instances must be self-contained images.'
+assert html.count('data-brand-symbol=') == 64, 'All 64 logo/animal instances must be self-contained images.'
 assert 'crest-vector-v11.svg#' not in html
 html_path.write_text(html)
 for edition in manifest['editions']:
     crest, strap = edition_colours(edition['name'])
     edition['branding_assets'] = {'crest': renders['crest'][crest], 'greyhound': renders['greyhound'][strap], 'leopard': renders['leopard'][strap]}
 manifest_path.write_text(json.dumps(manifest, indent=2) + '\n')
-print('Exported 16 self-contained vector images; replaced all 66 external logo uses.')
+print('Exported 16 self-contained vector images; replaced all 64 external logo uses.')
