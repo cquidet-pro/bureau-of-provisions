@@ -82,6 +82,37 @@ assert.equal(tags("button").filter((tag) => tag["data-drinking-method"]).length,
 assert.deepEqual(tags("button").filter(tag => tag["data-straw-position"]).map(tag => tag["data-straw-position"]), ["flat", "up"], "Straw must have only Flat/Up still positions");
 assert.ok(!tags("button").some(tag => "data-drinking-hold" in tag || "data-drinking-reset" in tag), "Removed hold/reset controls must stay removed");
 assert.ok(html.includes("Press to mist."), "Mist needs its direct action label");
+// Validate the containers, not just strings: misplaced closing divs hid all modes.
+const layoutNodes = [];
+const divStack = [];
+const layoutMarkup = html.replace(/<(script|style)\b[^>]*>[\s\S]*?<\/\1>/g, "").replace(/<!--[\s\S]*?-->/g, "");
+for (const [tag] of layoutMarkup.matchAll(/<\/?div\b[^>]*>|<(?:button|h3|p)\b[^>]*>/g)) {
+  if (tag.startsWith("</")) {
+    assert.ok(divStack.length, "Unmatched closing layout container");
+    divStack.pop();
+    continue;
+  }
+  const node = {attrs:attributes(tag), raw:tag, parent:divStack.at(-1)};
+  layoutNodes.push(node);
+  if (/^<div\b/.test(tag)) divStack.push(node);
+}
+assert.equal(divStack.length, 0, "Unclosed layout containers");
+const hasClass = (node, name) => node?.attrs.class?.split(/\s+/).includes(name);
+const photoWrap = layoutNodes.find(node => hasClass(node, "drinking-closeup-wrap"));
+const explanation = layoutNodes.find(node => hasClass(node, "viewer-explanation"));
+assert.ok(hasClass(explanation?.parent, "drinking-overhead-layout"), "Explanation must occupy the right-hand grid column");
+const outletLabels = layoutNodes.filter(node => node.attrs["data-drinking-part"]);
+assert.equal(outletLabels.length, 3);
+assert.ok(outletLabels.every(node => node.parent === photoWrap), "All outlet labels must remain inside the photo");
+assert.equal(layoutNodes.find(node => hasClass(node, "drinking-controls"))?.parent, photoWrap, "Action controls belong above the photo labels");
+for (const name of ["data-drinking-title", "data-drinking-description", "data-drinking-status"]) {
+  assert.equal(layoutNodes.find(node => tagHasAttribute(node, name))?.parent, explanation, `${name} must remain in the explanation column`);
+}
+function tagHasAttribute(node, name) {
+  // These data attributes are intentionally boolean; the general parser reads values only.
+  return node.raw?.includes(name);
+}
+
 assert.ok(html.includes('aria-label="6. Dishwasher safe"'), "Missing sixth dishwasher-safe callout");
 assert.ok(anchors.has("specifications") && anchors.has("colourways"), "Missing product sections");
 assert.ok(html.includes("Design in development."), "Missing visible product-development status");
