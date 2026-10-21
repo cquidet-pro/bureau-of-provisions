@@ -45,9 +45,24 @@ with DevTools open; third-party requests, consent and video can change totals.
 | Site | Transferred | Requests |
 | --- | ---: | ---: |
 | Bureau, before this change | 22.94 MB | 42 |
+| Bureau, after this change, desktop | 12.47 MB | 27 |
+| Bureau, after this change, mobile 390 × 844 | 6.84 MB | 27 |
 | Ion8 | 14.10 MB | 778 |
 | Stanley UK | 6.55 MB | 773 |
 
 These browser transfer figures supersede earlier estimates from summing file
 references. Local preview transfer totals aren't directly comparable because
 Vite's preview server does not provide the production CDN's compression.
+
+The desktop reduction is 45.6%. After-change figures were measured on the live
+custom domain after deployment f321979, with device emulation disabled for the
+desktop comparison. Mobile is an additional measurement, not a comparison with
+the desktop baselines. Counts are from the initial page load; scrolling and
+later scene animations can request additional assets. Browser extensions were
+present in all runs, so these are practical comparisons, not isolated lab scores.
+
+Validation: production build, SEO and all nineteen collection checks passed;
+CDN recovery was exercised for responsive and SVG images without retry loops;
+all 140 pinned CDN assets returned HTTP 200. All 88 smaller image variants were
+decoded and compared with the exact resized PNG master pixels. Chrome desktop
+and 390 × 844 layout, plus Safari collection and enlarged crest, were inspected.
