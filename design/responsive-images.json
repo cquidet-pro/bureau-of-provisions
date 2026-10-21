@@ -1,0 +1,610 @@
+{
+  "/images/product/bottle-cutaway-strap-reference-v9.webp": {
+    "master_sha256": "ccd20ff97b19aafdda1f1fa247228a325f67525ef7892d47bee06c33195ec614",
+    "variants": [
+      {
+        "src": "/images/product/responsive/bottle-cutaway-strap-reference-v9-256w.webp",
+        "width": 256
+      },
+      {
+        "src": "/images/product/responsive/bottle-cutaway-strap-reference-v9-480w.webp",
+        "width": 480
+      },
+      {
+        "src": "/images/product/responsive/bottle-cutaway-strap-reference-v9-768w.webp",
+        "width": 768
+      },
+      {
+        "src": "/images/product/bottle-cutaway-strap-reference-v9.webp",
+        "width": 1024
+      }
+    ]
+  },
+  "/images/product/edition-01-principles-v2.webp": {
+    "master_sha256": "5dfe36a43eb93037b8efcc3341c003c05e8d51fc337f48c7fe43f0cae8491633",
+    "variants": [
+      {
+        "src": "/images/product/responsive/edition-01-principles-v2-256w.webp",
+        "width": 256
+      },
+      {
+        "src": "/images/product/responsive/edition-01-principles-v2-480w.webp",
+        "width": 480
+      },
+      {
+        "src": "/images/product/responsive/edition-01-principles-v2-768w.webp",
+        "width": 768
+      },
+      {
+        "src": "/images/product/edition-01-principles-v2.webp",
+        "width": 1024
+      }
+    ]
+  },
+  "/images/product/edition-02-principles-v2.webp": {
+    "master_sha256": "360c186894a64adc41ffb950e86f635cecdb79294aa0db1448af7a586be09728",
+    "variants": [
+      {
+        "src": "/images/product/responsive/edition-02-principles-v2-256w.webp",
+        "width": 256
+      },
+      {
+        "src": "/images/product/responsive/edition-02-principles-v2-480w.webp",
+        "width": 480
+      },
+      {
+        "src": "/images/product/responsive/edition-02-principles-v2-768w.webp",
+        "width": 768
+      },
+      {
+        "src": "/images/product/edition-02-principles-v2.webp",
+        "width": 1024
+      }
+    ]
+  },
+  "/images/product/edition-03-principles-v2.webp": {
+    "master_sha256": "138ded9a94bfbdba2ceba66b19a02c151c3d63e93d83c608c589b461f9287b1c",
+    "variants": [
+      {
+        "src": "/images/product/responsive/edition-03-principles-v2-256w.webp",
+        "width": 256
+      },
+      {
+        "src": "/images/product/responsive/edition-03-principles-v2-480w.webp",
+        "width": 480
+      },
+      {
+        "src": "/images/product/responsive/edition-03-principles-v2-768w.webp",
+        "width": 768
+      },
+      {
+        "src": "/images/product/edition-03-principles-v2.webp",
+        "width": 1024
+      }
+    ]
+  },
+  "/images/product/edition-04-principles-v2.webp": {
+    "master_sha256": "33e6776128263b05504552a3bc1a5321359eca73075238eaced24604cf50e44d",
+    "variants": [
+      {
+        "src": "/images/product/responsive/edition-04-principles-v2-256w.webp",
+        "width": 256
+      },
+      {
+        "src": "/images/product/responsive/edition-04-principles-v2-480w.webp",
+        "width": 480
+      },
+      {
+        "src": "/images/product/responsive/edition-04-principles-v2-768w.webp",
+        "width": 768
+      },
+      {
+        "src": "/images/product/edition-04-principles-v2.webp",
+        "width": 1024
+      }
+    ]
+  },
+  "/images/product/edition-05-principles-v2.webp": {
+    "master_sha256": "61be2dd4bab41a1ccc7373818e9e9dda320fecc33d6b2d963961b04831ef898e",
+    "variants": [
+      {
+        "src": "/images/product/responsive/edition-05-principles-v2-256w.webp",
+        "width": 256
+      },
+      {
+        "src": "/images/product/responsive/edition-05-principles-v2-480w.webp",
+        "width": 480
+      },
+      {
+        "src": "/images/product/responsive/edition-05-principles-v2-768w.webp",
+        "width": 768
+      },
+      {
+        "src": "/images/product/edition-05-principles-v2.webp",
+        "width": 1024
+      }
+    ]
+  },
+  "/images/product/edition-06-principles-v2.webp": {
+    "master_sha256": "ee2253d8902165c1dc5370a74bcdddb2092bd6102cad875b2c416e12f571d313",
+    "variants": [
+      {
+        "src": "/images/product/responsive/edition-06-principles-v2-256w.webp",
+        "width": 256
+      },
+      {
+        "src": "/images/product/responsive/edition-06-principles-v2-480w.webp",
+        "width": 480
+      },
+      {
+        "src": "/images/product/responsive/edition-06-principles-v2-768w.webp",
+        "width": 768
+      },
+      {
+        "src": "/images/product/edition-06-principles-v2.webp",
+        "width": 1024
+      }
+    ]
+  },
+  "/images/product/edition-07-principles-v2.webp": {
+    "master_sha256": "fc8b54cac0b18625f62b5c2e5429788ab84d74e54128889150aa2ad783ad5786",
+    "variants": [
+      {
+        "src": "/images/product/responsive/edition-07-principles-v2-256w.webp",
+        "width": 256
+      },
+      {
+        "src": "/images/product/responsive/edition-07-principles-v2-480w.webp",
+        "width": 480
+      },
+      {
+        "src": "/images/product/responsive/edition-07-principles-v2-768w.webp",
+        "width": 768
+      },
+      {
+        "src": "/images/product/edition-07-principles-v2.webp",
+        "width": 1024
+      }
+    ]
+  },
+  "/images/product/edition-08-principles-v2.webp": {
+    "master_sha256": "b8772660f6b62ad991c32f473777853e6f5e53c1af2a5d20b883a3f07d32b73f",
+    "variants": [
+      {
+        "src": "/images/product/responsive/edition-08-principles-v2-256w.webp",
+        "width": 256
+      },
+      {
+        "src": "/images/product/responsive/edition-08-principles-v2-480w.webp",
+        "width": 480
+      },
+      {
+        "src": "/images/product/responsive/edition-08-principles-v2-768w.webp",
+        "width": 768
+      },
+      {
+        "src": "/images/product/edition-08-principles-v2.webp",
+        "width": 1024
+      }
+    ]
+  },
+  "/images/product/edition-09-principles-v2.webp": {
+    "master_sha256": "6ee7cc5d1ad656cb1de9dafe94361f74802f13283b6924669fcf21b17b2dbd92",
+    "variants": [
+      {
+        "src": "/images/product/responsive/edition-09-principles-v2-256w.webp",
+        "width": 256
+      },
+      {
+        "src": "/images/product/responsive/edition-09-principles-v2-480w.webp",
+        "width": 480
+      },
+      {
+        "src": "/images/product/responsive/edition-09-principles-v2-768w.webp",
+        "width": 768
+      },
+      {
+        "src": "/images/product/edition-09-principles-v2.webp",
+        "width": 1024
+      }
+    ]
+  },
+  "/images/product/edition-10-principles-v2.webp": {
+    "master_sha256": "3bb26095150a832a171942a9e04817e7de5f8274f2dc24a0d7a5bdb37177b6c5",
+    "variants": [
+      {
+        "src": "/images/product/responsive/edition-10-principles-v2-256w.webp",
+        "width": 256
+      },
+      {
+        "src": "/images/product/responsive/edition-10-principles-v2-480w.webp",
+        "width": 480
+      },
+      {
+        "src": "/images/product/responsive/edition-10-principles-v2-768w.webp",
+        "width": 768
+      },
+      {
+        "src": "/images/product/edition-10-principles-v2.webp",
+        "width": 1024
+      }
+    ]
+  },
+  "/images/product/edition-11-principles-v2.webp": {
+    "master_sha256": "d1cdfeee5b5964902b6e25176721400fb8f9077c50878f80b220243bab2504d6",
+    "variants": [
+      {
+        "src": "/images/product/responsive/edition-11-principles-v2-256w.webp",
+        "width": 256
+      },
+      {
+        "src": "/images/product/responsive/edition-11-principles-v2-480w.webp",
+        "width": 480
+      },
+      {
+        "src": "/images/product/responsive/edition-11-principles-v2-768w.webp",
+        "width": 768
+      },
+      {
+        "src": "/images/product/edition-11-principles-v2.webp",
+        "width": 1024
+      }
+    ]
+  },
+  "/images/product/edition-12-principles-v2.webp": {
+    "master_sha256": "dce66abd328822912d96552d7a413143d99b3526e41507d7f13c1a7d7bc06bc3",
+    "variants": [
+      {
+        "src": "/images/product/responsive/edition-12-principles-v2-256w.webp",
+        "width": 256
+      },
+      {
+        "src": "/images/product/responsive/edition-12-principles-v2-480w.webp",
+        "width": 480
+      },
+      {
+        "src": "/images/product/responsive/edition-12-principles-v2-768w.webp",
+        "width": 768
+      },
+      {
+        "src": "/images/product/edition-12-principles-v2.webp",
+        "width": 1024
+      }
+    ]
+  },
+  "/images/product/edition-13-principles-v2.webp": {
+    "master_sha256": "c10d072c3ea64502acb32d5ff939f2e38bfadbf4bd1ef68054d3b150bb33fa5f",
+    "variants": [
+      {
+        "src": "/images/product/responsive/edition-13-principles-v2-256w.webp",
+        "width": 256
+      },
+      {
+        "src": "/images/product/responsive/edition-13-principles-v2-480w.webp",
+        "width": 480
+      },
+      {
+        "src": "/images/product/responsive/edition-13-principles-v2-768w.webp",
+        "width": 768
+      },
+      {
+        "src": "/images/product/edition-13-principles-v2.webp",
+        "width": 1024
+      }
+    ]
+  },
+  "/images/product/edition-14-principles-v2.webp": {
+    "master_sha256": "c8995dfcc2dfeda6f0cfd3755f5c09ac9f49aa4d4a3314f09608c7f9e1aafd0a",
+    "variants": [
+      {
+        "src": "/images/product/responsive/edition-14-principles-v2-256w.webp",
+        "width": 256
+      },
+      {
+        "src": "/images/product/responsive/edition-14-principles-v2-480w.webp",
+        "width": 480
+      },
+      {
+        "src": "/images/product/responsive/edition-14-principles-v2-768w.webp",
+        "width": 768
+      },
+      {
+        "src": "/images/product/edition-14-principles-v2.webp",
+        "width": 1024
+      }
+    ]
+  },
+  "/images/product/edition-15-principles-v2.webp": {
+    "master_sha256": "91a82979f3da74441f1372b6722e274e9c493e18de33758e8eaec2adfbb34ce8",
+    "variants": [
+      {
+        "src": "/images/product/responsive/edition-15-principles-v2-256w.webp",
+        "width": 256
+      },
+      {
+        "src": "/images/product/responsive/edition-15-principles-v2-480w.webp",
+        "width": 480
+      },
+      {
+        "src": "/images/product/responsive/edition-15-principles-v2-768w.webp",
+        "width": 768
+      },
+      {
+        "src": "/images/product/edition-15-principles-v2.webp",
+        "width": 1024
+      }
+    ]
+  },
+  "/images/product/edition-16-principles-v2.webp": {
+    "master_sha256": "3ee11bc3e7b4d66122cfbd5821e47be6d6c18e91299bce07eea4e3679a222e80",
+    "variants": [
+      {
+        "src": "/images/product/responsive/edition-16-principles-v2-256w.webp",
+        "width": 256
+      },
+      {
+        "src": "/images/product/responsive/edition-16-principles-v2-480w.webp",
+        "width": 480
+      },
+      {
+        "src": "/images/product/responsive/edition-16-principles-v2-768w.webp",
+        "width": 768
+      },
+      {
+        "src": "/images/product/edition-16-principles-v2.webp",
+        "width": 1024
+      }
+    ]
+  },
+  "/images/product/edition-17-principles-v2.webp": {
+    "master_sha256": "2d07442f06d1ddb86ffb7021d2bbae80ef2850dab60e8aa73deb6065102530ff",
+    "variants": [
+      {
+        "src": "/images/product/responsive/edition-17-principles-v2-256w.webp",
+        "width": 256
+      },
+      {
+        "src": "/images/product/responsive/edition-17-principles-v2-480w.webp",
+        "width": 480
+      },
+      {
+        "src": "/images/product/responsive/edition-17-principles-v2-768w.webp",
+        "width": 768
+      },
+      {
+        "src": "/images/product/edition-17-principles-v2.webp",
+        "width": 1024
+      }
+    ]
+  },
+  "/images/product/edition-18-principles-v2.webp": {
+    "master_sha256": "d5e321b8b92e9bda60473436240ac58bef1fca8860af717883c4bda4ea81b2a4",
+    "variants": [
+      {
+        "src": "/images/product/responsive/edition-18-principles-v2-256w.webp",
+        "width": 256
+      },
+      {
+        "src": "/images/product/responsive/edition-18-principles-v2-480w.webp",
+        "width": 480
+      },
+      {
+        "src": "/images/product/responsive/edition-18-principles-v2-768w.webp",
+        "width": 768
+      },
+      {
+        "src": "/images/product/edition-18-principles-v2.webp",
+        "width": 1024
+      }
+    ]
+  },
+  "/images/product/edition-19-principles-v2.webp": {
+    "master_sha256": "0d557677cb060aa2408ca62a1c05f9fcf4494d2ce1f32bd5ae798f8981e236df",
+    "variants": [
+      {
+        "src": "/images/product/responsive/edition-19-principles-v2-256w.webp",
+        "width": 256
+      },
+      {
+        "src": "/images/product/responsive/edition-19-principles-v2-480w.webp",
+        "width": 480
+      },
+      {
+        "src": "/images/product/responsive/edition-19-principles-v2-768w.webp",
+        "width": 768
+      },
+      {
+        "src": "/images/product/edition-19-principles-v2.webp",
+        "width": 1024
+      }
+    ]
+  },
+  "/images/product/platform-left-characters-detail-v1.webp": {
+    "master_sha256": "d15095fdbe64c69273f8c4e94b7b58d0cc9e537b23bda7308ff0812b5fe5d677",
+    "variants": [
+      {
+        "src": "/images/product/responsive/platform-left-characters-detail-v1-256w.webp",
+        "width": 256
+      },
+      {
+        "src": "/images/product/responsive/platform-left-characters-detail-v1-480w.webp",
+        "width": 480
+      },
+      {
+        "src": "/images/product/responsive/platform-left-characters-detail-v1-768w.webp",
+        "width": 768
+      },
+      {
+        "src": "/images/product/responsive/platform-left-characters-detail-v1-1024w.webp",
+        "width": 1024
+      },
+      {
+        "src": "/images/product/platform-left-characters-detail-v1.webp",
+        "width": 1069
+      }
+    ]
+  },
+  "/images/product/platform-right-characters-detail-v1.webp": {
+    "master_sha256": "704017a83c23b58b97b0db423ea6e83480bcca3abd42ae491a52e818c34e9563",
+    "variants": [
+      {
+        "src": "/images/product/responsive/platform-right-characters-detail-v1-256w.webp",
+        "width": 256
+      },
+      {
+        "src": "/images/product/responsive/platform-right-characters-detail-v1-480w.webp",
+        "width": 480
+      },
+      {
+        "src": "/images/product/responsive/platform-right-characters-detail-v1-768w.webp",
+        "width": 768
+      },
+      {
+        "src": "/images/product/responsive/platform-right-characters-detail-v1-1024w.webp",
+        "width": 1024
+      },
+      {
+        "src": "/images/product/platform-right-characters-detail-v1.webp",
+        "width": 1254
+      }
+    ]
+  },
+  "/images/product/platform-strap-reference-v18.webp": {
+    "master_sha256": "f633904fbda629cd467670284ee4c49381d04786666f3110ade9594ff7516269",
+    "variants": [
+      {
+        "src": "/images/product/responsive/platform-strap-reference-v18-256w.webp",
+        "width": 256
+      },
+      {
+        "src": "/images/product/responsive/platform-strap-reference-v18-480w.webp",
+        "width": 480
+      },
+      {
+        "src": "/images/product/responsive/platform-strap-reference-v18-768w.webp",
+        "width": 768
+      },
+      {
+        "src": "/images/product/responsive/platform-strap-reference-v18-1024w.webp",
+        "width": 1024
+      },
+      {
+        "src": "/images/product/platform-strap-reference-v18.webp",
+        "width": 1536
+      }
+    ]
+  },
+  "/images/product/station-clock-detail-v1.webp": {
+    "master_sha256": "71c1283b5c740745c030298ac93ac6253538c26becb4b2c6b9a6364691778717",
+    "variants": [
+      {
+        "src": "/images/product/responsive/station-clock-detail-v1-256w.webp",
+        "width": 256
+      },
+      {
+        "src": "/images/product/responsive/station-clock-detail-v1-480w.webp",
+        "width": 480
+      },
+      {
+        "src": "/images/product/responsive/station-clock-detail-v1-768w.webp",
+        "width": 768
+      },
+      {
+        "src": "/images/product/responsive/station-clock-detail-v1-1024w.webp",
+        "width": 1024
+      },
+      {
+        "src": "/images/product/station-clock-detail-v1.webp",
+        "width": 1448
+      }
+    ]
+  },
+  "/images/product/station-floor-detail-v1.webp": {
+    "master_sha256": "0cd10981d4d60cc0a88ec5bafd14702eb7af51b48b6de82fb047720b2fedacbe",
+    "variants": [
+      {
+        "src": "/images/product/responsive/station-floor-detail-v1-256w.webp",
+        "width": 256
+      },
+      {
+        "src": "/images/product/responsive/station-floor-detail-v1-480w.webp",
+        "width": 480
+      },
+      {
+        "src": "/images/product/responsive/station-floor-detail-v1-768w.webp",
+        "width": 768
+      },
+      {
+        "src": "/images/product/responsive/station-floor-detail-v1-1024w.webp",
+        "width": 1024
+      },
+      {
+        "src": "/images/product/station-floor-detail-v1.webp",
+        "width": 1862
+      }
+    ]
+  },
+  "/images/product/station-left-detail-v1.webp": {
+    "master_sha256": "b5136e6a1902374e9d9789d325aa09185cc651b1ca7d40af863403bac725bc04",
+    "variants": [
+      {
+        "src": "/images/product/responsive/station-left-detail-v1-256w.webp",
+        "width": 256
+      },
+      {
+        "src": "/images/product/responsive/station-left-detail-v1-480w.webp",
+        "width": 480
+      },
+      {
+        "src": "/images/product/responsive/station-left-detail-v1-768w.webp",
+        "width": 768
+      },
+      {
+        "src": "/images/product/station-left-detail-v1.webp",
+        "width": 999
+      }
+    ]
+  },
+  "/images/product/station-open-arch-v1.webp": {
+    "master_sha256": "bd092d6fe26edf6354f0aa4a190cb8e82bd94784bb91f4a75f322d46b7d3492d",
+    "variants": [
+      {
+        "src": "/images/product/responsive/station-open-arch-v1-256w.webp",
+        "width": 256
+      },
+      {
+        "src": "/images/product/responsive/station-open-arch-v1-480w.webp",
+        "width": 480
+      },
+      {
+        "src": "/images/product/responsive/station-open-arch-v1-768w.webp",
+        "width": 768
+      },
+      {
+        "src": "/images/product/station-open-arch-v1.webp",
+        "width": 1018
+      }
+    ]
+  },
+  "/images/product/station-right-detail-v1.webp": {
+    "master_sha256": "4e1c996ef625149af2e3552c9c786c68a9076ee61f7d931e137c0a1bbf0de216",
+    "variants": [
+      {
+        "src": "/images/product/responsive/station-right-detail-v1-256w.webp",
+        "width": 256
+      },
+      {
+        "src": "/images/product/responsive/station-right-detail-v1-480w.webp",
+        "width": 480
+      },
+      {
+        "src": "/images/product/responsive/station-right-detail-v1-768w.webp",
+        "width": 768
+      },
+      {
+        "src": "/images/product/station-right-detail-v1.webp",
+        "width": 996
+      }
+    ]
+  }
+}
