@@ -87,6 +87,13 @@ html = html_path.read_text()
 pattern = re.compile(r'<use href="/images/product/crest-vector-v11\.svg#(crest|greyhound|leopard)"\s*/>|<image data-brand-symbol="(crest|greyhound|leopard)"[^>]*/>')
 count = [0]
 def replace_uses(fragment, crest='navy', strap='navy'):
+    # HTML images retain native lazy loading; don't restore eager SVG wrappers.
+    def replace_img(match):
+        tag = match[0]
+        symbol = re.search(r'data-brand-symbol="([^"]+)"', tag)[1]
+        colour = crest if symbol == 'crest' else strap
+        return re.sub(r'src="[^"]+"', f'src="{renders[symbol][colour]}"', tag)
+    fragment = re.sub(r'<img\b[^>]*data-brand-symbol="[^"]+"[^>]*>', replace_img, fragment)
     def replace(match):
         symbol = match[1] or match[2]
         colour = crest if symbol == 'crest' else strap
@@ -104,7 +111,7 @@ def replace_card(match):
 html = replace_uses(html)
 html = re.sub(r'<article class="colour-card"[\s\S]*?</article>', replace_card, html)
 # Header and close-up use the original brand ink; product overlays use navy.
-html = re.sub(r'<svg class="(?:header-crest|crest-enlargement)"[\s\S]*?</svg>', lambda m: replace_uses(m[0], 'brand'), html)
+html = re.sub(r'<svg class="(?:header-crest|crest-enlargement)"[\s\S]*?</svg>|<img class="(?:header-crest|crest-enlargement)"[^>]*>', lambda m: replace_uses(m[0], 'brand'), html)
 assert html.count('data-brand-symbol=') == 64, 'All 64 logo/animal instances must be self-contained images.'
 assert 'crest-vector-v11.svg#' not in html
 html_path.write_text(html)

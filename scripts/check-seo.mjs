@@ -74,6 +74,10 @@ for (const tag of tags("a")) {
 for (const tag of tags("img")) {
   assert.ok(tag.alt !== undefined, "Image missing alt attribute");
   if (tag.src) localFile(tag.src);
+  if (tag['data-local-src']) localFile(tag['data-local-src']);
+  for (const set of [tag.srcset, tag['data-local-srcset']]) {
+    if (set) for (const candidate of set.split(',')) localFile(candidate.trim().split(/\s+/)[0]);
+  }
 }
 assert.equal((html.match(/<h1\b/g) || []).length, 1);
 assert.equal(tags("button").filter((tag) => tag["data-colour"]).length, 19, "Expected nineteen colour studies");

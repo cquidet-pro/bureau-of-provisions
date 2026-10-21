@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build && node scripts/prepare-site.mjs && node scripts/check-seo.mjs && node scripts/check-collection.mjs",
+    "build": "vite build && node scripts/prepare-site.mjs && node scripts/check-seo.mjs && node scripts/check-collection.mjs && node scripts/check-asset-delivery.mjs",
     "check:seo": "node scripts/check-seo.mjs",
     "preview": "vite preview",
     "check:collection": "node scripts/check-collection.mjs"

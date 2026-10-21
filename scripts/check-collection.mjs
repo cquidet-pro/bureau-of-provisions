@@ -5,7 +5,8 @@ import { resolve } from 'node:path';
 import { createHash } from 'node:crypto';
 
 const manifest = JSON.parse(readFileSync('design/product-design.json', 'utf8'));
-const html = readFileSync('dist/index.html', 'utf8').replace(/((?:src|href)=")\.\//g, '$1/');
+const cdn = existsSync('design/asset-cdn.json') ? JSON.parse(readFileSync('design/asset-cdn.json', 'utf8')).baseUrl : '';
+const html = readFileSync('dist/index.html', 'utf8').replaceAll(cdn || '\0', '').replace(/((?:src|href)=")\.\//g, '$1/');
 const cards = [...html.matchAll(/<article class="colour-card"[\s\S]*?<\/article>/g)].map(m => m[0]);
 assert.equal(manifest.editions.length, 19);
 assert.equal(cards.length, 19);
@@ -28,7 +29,7 @@ for (const edition of manifest.editions) {
   assert.ok(card.includes(`--accent-colour:${edition.accent}`), `Accent palette: ${edition.name}`);
   for (const symbol of ['crest', 'greyhound', 'leopard']) {
     const asset=edition.branding_assets[symbol];
-    assert.ok(card.includes(`data-brand-symbol="${symbol}" href="${asset}"`), `Lost ${symbol}: ${edition.name}`);
+    assert.ok(card.includes(`data-brand-symbol="${symbol}" src="${asset}"`), `Lost ${symbol}: ${edition.name}`);
     const vector=readFileSync(resolve('dist',asset.slice(1)),'utf8');
     assert.ok(!/<use\b/.test(vector),`Nested use returned in ${asset}`);
   }
