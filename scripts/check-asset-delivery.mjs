@@ -14,10 +14,15 @@ assert.ok(photos.every(i => i.sizes && i.width && i.height));
 assert.equal(images.find(i => i.class === 'station-scene').fetchpriority, 'high');
 assert.ok(!existsSync('dist/images/product/platform-strap-reference-v18.png'));
 assert.ok(!existsSync('dist/images/product/crest-vector-v11.svg'));
+const backgrounds = [...html.matchAll(/url\(["']?(\/images\/[^)"']+)/g)].map(m => m[1]);
+assert.ok(backgrounds.length >= 3);
+assert.ok(backgrounds.every(url => /\?v=[a-f0-9]{16}/.test(url)), 'CSS image URLs need content versions');
+assert.match(html, /bottle-braille-message\.svg\?v=[a-f0-9]{16}#message/, 'SVG fragment must follow cache version');
 const script = html.match(/<script data-asset-fallback>([\s\S]*?)<\/script>/)?.[1];
 if (process.env.ASSET_CDN !== 'off') {
   assert.ok(script, 'Production build must include CDN fallback');
-  assert.equal(images.filter(i => i['data-local-src']).length, images.length);
+  assert.ok(images.every(i => i['data-local-src'] || /\?v=[a-f0-9]{16}$/.test(i.src)), 'Every image needs immutable CDN or versioned local delivery');
+  assert.ok(images.filter(i => i['data-local-src']).every(i => /\?v=[a-f0-9]{16}$/.test(i['data-local-src'])));
   let onError;
   runInNewContext(script, {document:{addEventListener(type, handler, capture) {
     assert.equal(type, 'error'); assert.equal(capture, true); onError = handler;

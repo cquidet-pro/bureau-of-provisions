@@ -28,14 +28,20 @@ Firebase setting; this change does not delete old releases.
 
 1. Preserve the approved PNG master and final lossless WebP per the design guide.
 2. Run `python3 scripts/generate-responsive-images.py` (requires Pillow).
-3. Commit the changed originals, delivery sizes, and responsive manifest.
-4. Run `node scripts/pin-asset-cdn.mjs`. This pins only bytes already in Git; it
-   does not upload files. Commit the resulting design/asset-cdn.json as well.
-5. Push both commits together so jsDelivr can resolve that immutable revision.
-6. Run the build and check delivery in Safari and Chromium before publishing.
+3. Build and check delivery in Safari and Chromium.
+4. Commit and push the changed originals, delivery sizes, and responsive manifest.
+   The production build automatically uses that new Git revision for changed or
+   new assets. Unchanged assets keep their existing pinned URLs and browser cache.
+5. Optionally run `node scripts/pin-asset-cdn.mjs` after an asset commit to record
+   a new baseline. This is no longer necessary to publish changed images.
 
-Builds refuse responsive sizes whose PNG master has changed. Modified CDN assets
-stay local until repinned, rather than silently displaying older artwork.
+Builds refuse responsive sizes whose PNG master has changed, rather than
+publishing outdated smaller copies. Uncommitted images use local preview URLs;
+committed changes automatically get new immutable CDN URLs. Firebase fallbacks,
+CSS images/masks and SVG braille use `?v=<content hash>` so replacing a filename
+changes its browser cache key too. The fragment remains after the version query.
+The HTML revalidates on reload and there is no site service worker. An already
+open tab updates when reloaded; publishing does not replace its loaded document.
 
 ## Measurement, 21 October 2026
 

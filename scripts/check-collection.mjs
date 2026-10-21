@@ -5,8 +5,9 @@ import { resolve } from 'node:path';
 import { createHash } from 'node:crypto';
 
 const manifest = JSON.parse(readFileSync('design/product-design.json', 'utf8'));
-const cdn = existsSync('design/asset-cdn.json') ? JSON.parse(readFileSync('design/asset-cdn.json', 'utf8')).baseUrl : '';
-const html = readFileSync('dist/index.html', 'utf8').replaceAll(cdn || '\0', '').replace(/((?:src|href)=")\.\//g, '$1/');
+const html = readFileSync('dist/index.html', 'utf8')
+  .replace(/https:\/\/cdn\.jsdelivr\.net\/gh\/cquidet-pro\/bureau-of-provisions@[a-f0-9]{40}\/public/g, '')
+  .replace(/\?v=[a-f0-9]{16}/g, '').replace(/((?:src|href)=")\.\//g, '$1/');
 const cards = [...html.matchAll(/<article class="colour-card"[\s\S]*?<\/article>/g)].map(m => m[0]);
 assert.equal(manifest.editions.length, 19);
 assert.equal(cards.length, 19);

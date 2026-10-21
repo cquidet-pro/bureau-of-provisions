@@ -18,6 +18,7 @@ const canonicals = tags("link").filter((tag) => tag.rel === "canonical");
 assert.equal(canonicals.length, 1, "Expected one canonical");
 const canonical = canonicals[0].href;
 const origin = new URL(canonical);
+assert.equal(origin.origin, 'https://bureauofprovisions.com', 'Advertise the custom domain to crawlers');
 assert.equal(origin.protocol, "https:");
 assert.equal(origin.pathname, "/");
 assert.equal(origin.search + origin.hash, "", "Lid preferences must canonicalise to the homepage");

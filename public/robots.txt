@@ -2,6 +2,6 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://bureauofprovisions.web.app/sitemap.xml
+Sitemap: https://bureauofprovisions.com/sitemap.xml
 
-# Plain-text site summary for assistants: https://bureauofprovisions.web.app/llms.txt
+# Plain-text site summary for assistants: https://bureauofprovisions.com/llms.txt

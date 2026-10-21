@@ -1,5 +1,6 @@
 import { createHash } from 'node:crypto';
 import { existsSync, readFileSync } from 'node:fs';
+import { createAssetUrls } from './asset-urls.mjs';
 
 const responsive = JSON.parse(readFileSync('design/responsive-images.json', 'utf8'));
 const configPath = 'design/asset-cdn.json';
@@ -28,19 +29,11 @@ function imageSizes(tag) {
 
 export function prepareAssetDelivery(html) {
   html = html.replace(/((?:src|href)=")\.\/images\/product\//g, '$1/images/product/');
+  // Vite made public CSS image paths relative to /assets; CSS is now inlined.
+  html = html.replace(/url\((["']?)(?:\.\.\/|\.\/)images\//g, 'url($1/images/');
   let responsiveCount = 0, cdnCount = 0;
-  const cached = new Map();
-  function cdnUrl(url) {
-    if (!cdn || process.env.ASSET_CDN === 'off') return url;
-    const path = url.split('#')[0];
-    if (!cdn.files[path]) return url;
-    if (!cached.has(path)) {
-      const hash = createHash('sha256').update(readFileSync('public' + path)).digest('hex');
-      cached.set(path, hash === cdn.files[path]);
-      if (!cached.get(path)) console.warn(`Changed asset stays local until CDN is repinned: ${path}`);
-    }
-    return cached.get(path) ? cdn.baseUrl + url : url;
-  }
+  const urls = createAssetUrls(cdn);
+  const cdnUrl = urls.cdn;
   html = html.replace(/<img\b[^>]*>/g, tag => {
     const src = attr(tag, 'src');
     if (!src?.startsWith('/images/product/')) return tag;
@@ -77,6 +70,17 @@ export function prepareAssetDelivery(html) {
     const fallback = `<script data-asset-fallback>document.addEventListener('error',function(e){var t=e.target;if(!t.getAttribute)return;var s=t.getAttribute('data-local-src'),h=t.getAttribute('data-local-href');if(s){var ss=t.getAttribute('data-local-srcset');t.removeAttribute('data-local-src');t.removeAttribute('data-local-srcset');t.removeAttribute('srcset');if(ss)t.setAttribute('srcset',ss);t.setAttribute('src',s);}else if(h){t.removeAttribute('data-local-href');t.setAttribute('href',h);}},true);</script>`;
     html = html.replace('</head>', `<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />${fallback}</head>`);
   }
+  // Firebase fallbacks, CSS masks/backgrounds and SVG braille also need a new
+  // browser cache key when their bytes change, even if the filename is reused.
+  html = html.replace(/\b((?:data-local-)?(?:src|href))="(\/(?:images\/[^" ]+|[^/" ]+\.(?:png|svg|ico)))"/g,
+    (_, key, url) => `${key}="${urls.local(url)}"`);
+  html = html.replace(/\b((?:data-local-)?srcset)="([^"]+)"/g, (_, key, value) =>
+    `${key}="${value.split(',').map(candidate => {
+      const [url, width] = candidate.trim().split(/\s+/);
+      return `${urls.local(url)} ${width}`;
+    }).join(', ')}"`);
+  html = html.replace(/url\((["']?)(\/images\/[^)"']+)\1\)/g,
+    (_, quote, url) => `url(${quote}${urls.local(url)}${quote})`);
   console.log(`Image delivery: ${responsiveCount} responsive photos, ${cdnCount} CDN images with local fallbacks.`);
   return html;
 }

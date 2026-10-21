@@ -4,10 +4,10 @@
 
 ## Product
 
-- [The bottle](https://bureauofprovisions.web.app/#ways): Six interactive feature descriptions: mist, straw, spout, one continuous detachable carry strap with clip-on snap hooks, double-wall stainless steel and dishwasher-safe cleaning.
-- [Anatomy and specifications](https://bureauofprovisions.web.app/#specifications): An illustrative half-cutaway and material specifications. Final physical measurements are to be confirmed.
-- [Two-tone colour studies](https://bureauofprovisions.web.app/#colourways): Nineteen brighter palettes and striped strap studies for ages 6–10. Includes princess, football, space and superhero palette editions. Colours change only; the original bottle geometry and one continuous detachable carry strap with clip-on snap hooks are preserved.
+- [The bottle](https://bureauofprovisions.com/#ways): Six interactive feature descriptions: mist, straw, spout, one continuous detachable carry strap with clip-on snap hooks, double-wall stainless steel and dishwasher-safe cleaning.
+- [Anatomy and specifications](https://bureauofprovisions.com/#specifications): An illustrative half-cutaway and material specifications. Final physical measurements are to be confirmed.
+- [Two-tone colour studies](https://bureauofprovisions.com/#colourways): Nineteen brighter palettes and striped strap studies for ages 6–10. Includes princess, football, space and superhero palette editions. Colours change only; the original bottle geometry and one continuous detachable carry strap with clip-on snap hooks are preserved.
 
 ## Optional
 
-- [Sitemap](https://bureauofprovisions.web.app/sitemap.xml): Canonical page URL.
+- [Sitemap](https://bureauofprovisions.com/sitemap.xml): Canonical page URL.
