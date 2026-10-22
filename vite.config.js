@@ -27,6 +27,8 @@ export default defineConfig({
     },
   }],
   build: {
+    // Keep the previous browser syntax target when updating the build tool.
+    target: ["es2020", "chrome87", "edge88", "firefox78", "safari14"],
     outDir: "dist",
     emptyOutDir: true,
   },

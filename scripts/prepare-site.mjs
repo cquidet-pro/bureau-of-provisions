@@ -21,6 +21,17 @@ html = html.replace(/<link\b[^>]*rel="stylesheet"[^>]*>/g, (tag) => {
 if (count !== 1) throw new Error(`Expected one local stylesheet, found ${count}`);
 html = prepareAssetDelivery(html);
 writeFileSync(page, html);
+// Apply the same CDN, fallback and cache versioning to every additional page.
+function prepareOtherPages(dir) {
+  for (const entry of readdirSync(dir, {withFileTypes:true})) {
+    const path = resolve(dir, entry.name);
+    if (entry.isDirectory()) prepareOtherPages(path);
+    else if (entry.name.endsWith('.html') && path !== page) {
+      writeFileSync(path, prepareAssetDelivery(readFileSync(path, 'utf8')));
+    }
+  }
+}
+prepareOtherPages(output);
 // Keep source PNG masters and retired renders in the repo, outside Hosting.
 // Preserve every file referenced by HTML, CSS, SVG or JS, including fallbacks.
 let references = '';

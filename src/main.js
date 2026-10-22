@@ -162,6 +162,13 @@ const colourPrompt = document.getElementById('colour-prompt');
 const inlineForm = document.getElementById('preorder-form');
 const formFrame = inlineForm.querySelector('iframe');
 const formSelection = document.getElementById('preorder-selection');
+const formFallback = inlineForm.querySelector('[data-form-fallback]');
+const formLoading = inlineForm.querySelector('[data-form-loading]');
+formFrame.addEventListener('load', () => {
+  if (!formFrame.getAttribute('src')) return;
+  formLoading.hidden = true;
+  formFrame.removeAttribute('aria-busy');
+});
 let selectedColour = null;
 let formColour = null;
 let registrationRow = null;
@@ -201,11 +208,16 @@ function showPreorderForm(link) {
     registrationRow.append(preview, inlineForm);
   }
   formSelection.textContent = `Your selection: ${selectedColour}`;
+  const directUrl = new URL('https://tally.so/r/5BW7JN');
+  directUrl.searchParams.set('colour', selectedColour);
+  formFallback.href = directUrl.href;
   if (formColour !== selectedColour) {
     const url = new URL('https://tally.so/embed/5BW7JN');
     url.searchParams.set('colour', selectedColour);
     url.searchParams.set('hideTitle', '1');
     url.searchParams.set('transparentBackground', '1');
+    formLoading.hidden = false;
+    formFrame.setAttribute('aria-busy', 'true');
     formFrame.src = url.href;
     formColour = selectedColour;
   }

@@ -1,4 +1,6 @@
-# Live responsive verification — 19 October 2026
+# Historical responsive verification — 19 October 2026
+
+This is a historical record. Its continuous mist / Stop control was superseded by the approved single-pump interaction. See [the 22 October audit](../WEBSITE_AUDIT_2026-10-22.md) for current checks.
 
 Checked https://bureauofprovisions.com after code deployment `1f67a63`, using the in-app browser with viewport overrides: iPhone-size390×844, tablet768×1024, laptop1366×900. These are responsive browser checks, not physical-device or iOS Safari certification.
 
