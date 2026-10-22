@@ -7,6 +7,7 @@
 - Added an announced loading state, a descriptive iframe title, and an always-available direct Tally link carrying the selected colour if the embed is unavailable.
 - Locked background scrolling while the enlarged crest dialog is open.
 - Applied the CDN, local fallback and content-versioned image handling to the thank-you page as well as the homepage.
+- Live verification exposed Firebase's default one-hour cache on the directory URL `/thank-you/`; added an explicit no-cache rule for that route.
 - Added `nosniff` and a strict-origin cross-origin referrer policy on Hosting.
 - Updated Vite from the vulnerable older build-tool dependency tree; retained the previous browser syntax targets. The npm registry audit reports zero known vulnerabilities.
 - Aligned crawler copy with the current CAD dimensions, nominal capacity and registration process. Removed a stale diamond-weave description from Web Hero's alternative text and palette manifest, matching the plain-webbing design rule.

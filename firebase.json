@@ -39,6 +39,15 @@
         ]
       },
       {
+        "source": "/thank-you/**",
+        "headers": [
+          {
+            "key": "Cache-Control",
+            "value": "no-cache"
+          }
+        ]
+      },
+      {
         "source": "/assets/**",
         "headers": [
           {
