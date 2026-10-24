@@ -98,6 +98,11 @@ button:focus-visible,a:focus-visible {
   color:var(--wine);
   font:19px/1.05 var(--serif)
 }
+.footer-crest {
+  width:72px;
+  height:auto;
+  flex-shrink:0
+}
 .monogram {
   font:43px/.9 var(--serif);
   letter-spacing:-4px;

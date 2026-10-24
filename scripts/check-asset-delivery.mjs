@@ -6,7 +6,7 @@ const html = readFileSync('dist/index.html', 'utf8');
 const attributes = tag => Object.fromEntries([...tag.matchAll(/([\w:-]+)="([^"]*)"/g)].map(m => [m[1], m[2]]));
 const images = [...html.matchAll(/<img\b[^>]*>/g)].map(m => attributes(m[0]));
 const branding = images.filter(i => i['data-brand-symbol']);
-assert.equal(branding.length, 64);
+assert.equal(branding.length, 65);
 assert.ok(branding.filter(i => !i.class.includes('scene') && i.class !== 'header-crest').every(i => i.loading === 'lazy'));
 const photos = images.filter(i => i.srcset);
 assert.equal(photos.length, 28);
