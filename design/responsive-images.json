@@ -648,5 +648,152 @@
         "width": 1024
       }
     ]
+  },
+  "/images/product/edition-21-greece-v1.webp": {
+    "master_sha256": "60b80bab960d547f4aad431128056143d07f938ffca0b615f6eed3fd93ec6f72",
+    "variants": [
+      {
+        "src": "/images/product/responsive/edition-21-greece-v1-256w.webp",
+        "width": 256
+      },
+      {
+        "src": "/images/product/responsive/edition-21-greece-v1-480w.webp",
+        "width": 480
+      },
+      {
+        "src": "/images/product/responsive/edition-21-greece-v1-768w.webp",
+        "width": 768
+      },
+      {
+        "src": "/images/product/edition-21-greece-v1.webp",
+        "width": 1024
+      }
+    ]
+  },
+  "/images/product/edition-22-france-v1.webp": {
+    "master_sha256": "d854531bba6fc62eb9d3ecf2518e6056d6bb18d473dc2a8b80bb51c4107ce6e3",
+    "variants": [
+      {
+        "src": "/images/product/responsive/edition-22-france-v1-256w.webp",
+        "width": 256
+      },
+      {
+        "src": "/images/product/responsive/edition-22-france-v1-480w.webp",
+        "width": 480
+      },
+      {
+        "src": "/images/product/responsive/edition-22-france-v1-768w.webp",
+        "width": 768
+      },
+      {
+        "src": "/images/product/edition-22-france-v1.webp",
+        "width": 1024
+      }
+    ]
+  },
+  "/images/product/edition-23-union-jack-v1.webp": {
+    "master_sha256": "59896ac975cebed51cf2924c381fda952e219e3b1a7cb07376b844fa2f941184",
+    "variants": [
+      {
+        "src": "/images/product/responsive/edition-23-union-jack-v1-256w.webp",
+        "width": 256
+      },
+      {
+        "src": "/images/product/responsive/edition-23-union-jack-v1-480w.webp",
+        "width": 480
+      },
+      {
+        "src": "/images/product/responsive/edition-23-union-jack-v1-768w.webp",
+        "width": 768
+      },
+      {
+        "src": "/images/product/edition-23-union-jack-v1.webp",
+        "width": 1024
+      }
+    ]
+  },
+  "/images/product/edition-24-united-states-v1.webp": {
+    "master_sha256": "37c1eeffff26f38db0c677142f820b65eb038312fd5d8b9be04dc66a79fb9454",
+    "variants": [
+      {
+        "src": "/images/product/responsive/edition-24-united-states-v1-256w.webp",
+        "width": 256
+      },
+      {
+        "src": "/images/product/responsive/edition-24-united-states-v1-480w.webp",
+        "width": 480
+      },
+      {
+        "src": "/images/product/responsive/edition-24-united-states-v1-768w.webp",
+        "width": 768
+      },
+      {
+        "src": "/images/product/edition-24-united-states-v1.webp",
+        "width": 1024
+      }
+    ]
+  },
+  "/images/product/edition-25-brazil-v1.webp": {
+    "master_sha256": "0a1a79c0ca462eecf3f42d9d4c17253b120593fa4e7dfcfc29a63644e70346e7",
+    "variants": [
+      {
+        "src": "/images/product/responsive/edition-25-brazil-v1-256w.webp",
+        "width": 256
+      },
+      {
+        "src": "/images/product/responsive/edition-25-brazil-v1-480w.webp",
+        "width": 480
+      },
+      {
+        "src": "/images/product/responsive/edition-25-brazil-v1-768w.webp",
+        "width": 768
+      },
+      {
+        "src": "/images/product/edition-25-brazil-v1.webp",
+        "width": 1024
+      }
+    ]
+  },
+  "/images/product/edition-26-japan-v1.webp": {
+    "master_sha256": "eccfb939660d03b5c57c3c428c430fed425ab415751f2c5bf2f5915aa0850acc",
+    "variants": [
+      {
+        "src": "/images/product/responsive/edition-26-japan-v1-256w.webp",
+        "width": 256
+      },
+      {
+        "src": "/images/product/responsive/edition-26-japan-v1-480w.webp",
+        "width": 480
+      },
+      {
+        "src": "/images/product/responsive/edition-26-japan-v1-768w.webp",
+        "width": 768
+      },
+      {
+        "src": "/images/product/edition-26-japan-v1.webp",
+        "width": 1024
+      }
+    ]
+  },
+  "/images/product/edition-27-canada-v1.webp": {
+    "master_sha256": "b40f2d552596af042e0c84738e1fe1ec0677b275d7d1ae0e45287d3b277da558",
+    "variants": [
+      {
+        "src": "/images/product/responsive/edition-27-canada-v1-256w.webp",
+        "width": 256
+      },
+      {
+        "src": "/images/product/responsive/edition-27-canada-v1-480w.webp",
+        "width": 480
+      },
+      {
+        "src": "/images/product/responsive/edition-27-canada-v1-768w.webp",
+        "width": 768
+      },
+      {
+        "src": "/images/product/edition-27-canada-v1.webp",
+        "width": 1024
+      }
+    ]
   }
 }

@@ -9,9 +9,9 @@ const html = readFileSync('dist/index.html', 'utf8')
   .replace(/https:\/\/cdn\.jsdelivr\.net\/gh\/cquidet-pro\/bureau-of-provisions@[a-f0-9]{40}\/public/g, '')
   .replace(/\?v=[a-f0-9]{16}/g, '').replace(/((?:src|href)=")\.\//g, '$1/');
 const cards = [...html.matchAll(/<article class="colour-card"[\s\S]*?<\/article>/g)].map(m => m[0]);
-assert.equal(manifest.editions.length, 20);
-assert.equal(cards.length, 20);
-assert.equal(new Set(manifest.editions.map(e => e.number)).size, 20);
+assert.equal(manifest.editions.length, 27);
+assert.equal(cards.length, 27);
+assert.equal(new Set(manifest.editions.map(e => e.number)).size, 27);
 const imageHashes = new Set();
 for (const edition of manifest.editions) {
   const card = cards.find(c => Number(c.match(/data-colour-number="(\d+)"/)?.[1]) === edition.number);
@@ -41,4 +41,4 @@ for (const edition of manifest.editions) {
   assert.equal(link.origin + link.pathname, 'https://tally.so/r/5BW7JN');
   assert.equal(link.searchParams.get('colour'), edition.name);
 }
-console.log('Collection checks passed: 20 current renders, palettes, exact logos, strap animals, braille and registration links.');
+console.log('Collection checks passed: 27 current renders, palettes, exact logos, strap animals, braille and registration links.');

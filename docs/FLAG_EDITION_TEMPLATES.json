@@ -1,0 +1,95 @@
+{
+  "date": "2026-10-25",
+  "method": "built-in image_gen",
+  "reference": "public/images/product/collection-studio-master-v2.png",
+  "notes": "Flag-inspired design palettes, not official flag colour standards. Original catalogue preserved. Exact BoP crest, strap animals and braille remain separate SVG layers.",
+  "editions": [
+    {
+      "number": 21,
+      "name": "Greece",
+      "slug": "greece",
+      "body": "#0d5eaf",
+      "accent": "#f4f3ee",
+      "strap": "Greek flag-inspired blue #0d5eaf and chalk white #f4f3ee striped woven webbing: nine narrow equal longitudinal bands across the strap width, alternating five blue and four white, beginning and ending in blue. Bands run LENGTHWISE along the whole continuous strap. No literal flag patch, no cross or added symbol.",
+      "crest": "cream",
+      "animal": "navy",
+      "source_url": "https://www.presidency.gr/en/presidency/the-flag/",
+      "prompt": "Use case: precise-object-edit. Create one individual colour-only catalogue bottle photograph from the attached neutral master, which is the sole exact geometry/camera authority. Preserve precisely the same 1024x1536 portrait composition, tall slim bottle, body outline, base, floor contact, ivory studio backdrop and lighting. Change only coating colours and woven strap pattern as specified. Keep every mechanical part unchanged: clear smooth open circular hood, colourless translucent silicone seal on diagonal neck, low dark folded straw front-left, squat mirror-polished hourglass drinking spout front-right, short rear-centre cylindrical spray head, oval latch with inset. Mirror-polished steel hardware stays unpainted. Preserve ONE continuous finely woven fabric U-shaped strap and its exact existing width, folds, drape and stitched tabs. Each end attaches with opening oval swivel snap hook, short stem and separate D-ring. No additional attachments. Keep fine plain weave, tidy edges and slim same-fabric folded stitched tabs; no raised geometric jacquard, dirt or fraying. Keep body, strap animal print areas and lower body completely unprinted: exact BoP crest, both animals and braille are separate website SVGs and MUST NOT be generated. No text, dots, logo substitutes, badges, graphics on body or added accessories. All patterning follows the fabric through folds. Preserve source detail outside colour/pattern edit; no redesign. Edition: Greece. Body satin coating #0d5eaf; collar, side lugs and latch loop #f4f3ee. Strap: Greek flag-inspired blue #0d5eaf and chalk white #f4f3ee striped woven webbing: nine narrow equal longitudinal bands across the strap width, alternating five blue and four white, beginning and ending in blue. Bands run LENGTHWISE along the whole continuous strap. No literal flag patch, no cross or added symbol.",
+      "source": "/Users/cedric/.codex/generated_images/01a16f9a-d338-7873-9808-4ccbc11941b7/exec-6540ce43-f328-4f75-93fd-a1c8cc2334f7.png"
+    },
+    {
+      "number": 22,
+      "name": "France",
+      "slug": "france",
+      "body": "#f4f3ee",
+      "accent": "#002654",
+      "strap": "French tricolour-inspired woven strap in exactly three equal-width longitudinal bands: deep blue #002654, chalk white #f4f3ee, French red #ed2939. The three bands follow the whole existing continuous U strap and stitching, with crisp woven boundaries. No literal rectangular flag patches.",
+      "crest": "navy",
+      "animal": "navy",
+      "source_url": "https://www.elysee.fr/la-presidence/le-drapeau-francais",
+      "prompt": "Use case: precise-object-edit. Create one individual colour-only catalogue bottle photograph from the attached neutral master, which is the sole exact geometry/camera authority. Preserve precisely the same 1024x1536 portrait composition, tall slim bottle, body outline, base, floor contact, ivory studio backdrop and lighting. Change only coating colours and woven strap pattern as specified. Keep every mechanical part unchanged: clear smooth open circular hood, colourless translucent silicone seal on diagonal neck, low dark folded straw front-left, squat mirror-polished hourglass drinking spout front-right, short rear-centre cylindrical spray head, oval latch with inset. Mirror-polished steel hardware stays unpainted. Preserve ONE continuous finely woven fabric U-shaped strap and its exact existing width, folds, drape and stitched tabs. Each end attaches with opening oval swivel snap hook, short stem and separate D-ring. No additional attachments. Keep fine plain weave, tidy edges and slim same-fabric folded stitched tabs; no raised geometric jacquard, dirt or fraying. Keep body, strap animal print areas and lower body completely unprinted: exact BoP crest, both animals and braille are separate website SVGs and MUST NOT be generated. No text, dots, logo substitutes, badges, graphics on body or added accessories. All patterning follows the fabric through folds. Preserve source detail outside colour/pattern edit; no redesign. Edition: France. Body satin coating #f4f3ee; collar, side lugs and latch loop #002654. Strap: French tricolour-inspired woven strap in exactly three equal-width longitudinal bands: deep blue #002654, chalk white #f4f3ee, French red #ed2939. The three bands follow the whole existing continuous U strap and stitching, with crisp woven boundaries. No literal rectangular flag patches.",
+      "source": "/Users/cedric/.codex/generated_images/01a16f9a-d338-7873-9808-4ccbc11941b7/exec-1616440f-4893-41ca-ba6b-49d9ba2538e1.png"
+    },
+    {
+      "number": 23,
+      "name": "Union Jack",
+      "slug": "union-jack",
+      "body": "#012169",
+      "accent": "#c8102e",
+      "strap": "Union Jack-inspired navy #012169 woven strap carrying a restrained continuous red #c8102e longitudinal centre stripe edged in narrow chalk-white #f4f3ee borders. At generous intervals, fine white and red diagonal woven cross accents evoke the Union Jack's intersecting saltires. Keep the design refined and legible at catalogue size, navy dominant, NOT a checkerboard or patchwork. Keep the two upper areas below stitched tabs quiet navy so the exact strap animals remain legible when added by the website.",
+      "crest": "cream",
+      "animal": "cream",
+      "source_url": "https://www.royal.uk/union-jack",
+      "prompt": "Use case: precise-object-edit. Create one individual colour-only catalogue bottle photograph from the attached neutral master, which is the sole exact geometry/camera authority. Preserve precisely the same 1024x1536 portrait composition, tall slim bottle, body outline, base, floor contact, ivory studio backdrop and lighting. Change only coating colours and woven strap pattern as specified. Keep every mechanical part unchanged: clear smooth open circular hood, colourless translucent silicone seal on diagonal neck, low dark folded straw front-left, squat mirror-polished hourglass drinking spout front-right, short rear-centre cylindrical spray head, oval latch with inset. Mirror-polished steel hardware stays unpainted. Preserve ONE continuous finely woven fabric U-shaped strap and its exact existing width, folds, drape and stitched tabs. Each end attaches with opening oval swivel snap hook, short stem and separate D-ring. No additional attachments. Keep fine plain weave, tidy edges and slim same-fabric folded stitched tabs; no raised geometric jacquard, dirt or fraying. Keep body, strap animal print areas and lower body completely unprinted: exact BoP crest, both animals and braille are separate website SVGs and MUST NOT be generated. No text, dots, logo substitutes, badges, graphics on body or added accessories. All patterning follows the fabric through folds. Preserve source detail outside colour/pattern edit; no redesign. Edition: Union Jack. Body satin coating #012169; collar, side lugs and latch loop #c8102e. Strap: Union Jack-inspired navy #012169 woven strap carrying a restrained continuous red #c8102e longitudinal centre stripe edged in narrow chalk-white #f4f3ee borders. At generous intervals, fine white and red diagonal woven cross accents evoke the Union Jack's intersecting saltires. Keep the design refined and legible at catalogue size, navy dominant, NOT a checkerboard or patchwork. Keep the two upper areas below stitched tabs quiet navy so the exact strap animals remain legible when added by the website.",
+      "source": "/Users/cedric/.codex/generated_images/01a16f9a-d338-7873-9808-4ccbc11941b7/exec-e7d29574-b9d0-4022-bb1d-1e497e84ae6e.png"
+    },
+    {
+      "number": 24,
+      "name": "United States",
+      "slug": "united-states",
+      "body": "#21345b",
+      "accent": "#b31942",
+      "crest": "cream",
+      "animal": "navy",
+      "strap": "American flag-inspired pristine webbing: alternating narrow red #b31942 and chalk-white #f4f3ee longitudinal stripes along the entire strap, with slim navy #21345b woven outer borders. A few tiny restrained white woven stars may appear only in the navy borders on the lower half, never under the upper animal print positions. Keep it elegant and restrained; no literal flag patch or text.",
+      "prompt": "Use case: precise-object-edit. Make one COLOUR-ONLY edition from the attached neutral studio master as exact geometry, camera and framing authority. Preserve the 1024x1536 portrait layout, tall slim body silhouette, exact sizes, all pixels outside colour/pattern edits, lighting, warm ivory background and floor shadow. Keep clear smooth open circular hood, colourless translucent silicone pad and diagonal neck, low dark folded straw front-left, squat mirror polished hourglass spout front-right, short cylindrical rear-centre spray head, oval latch and metal inset. All metal mirror polished, never painted. ONE continuous detachable fabric strap, same full floor-reaching U route, width, folds and slim same-fabric folded stitched tabs. Two opening oval swivel snap hooks attach via short stems and separate rounded rectangular D-rings; no hardware changes. Fine plain woven webbing, crisp fibres and tidy edges, no dirty texture or raised geometric jacquard. Exact crest, BOTH strap animals and braille will be separate native website SVG layers: leave body and upper strap animal areas unprinted; do not generate logos, animals, lettering or braille. No accessories, extra handles, new body shapes or model changes. Edition United States. Satin body #21345b; collar, side lugs and latch loop #b31942. Strap: American flag-inspired pristine webbing: alternating narrow red #b31942 and chalk-white #f4f3ee longitudinal stripes along the entire strap, with slim navy #21345b woven outer borders. A few tiny restrained white woven stars may appear only in the navy borders on the lower half, never under the upper animal print positions. Keep it elegant and restrained; no literal flag patch or text.",
+      "source": "/Users/cedric/.codex/generated_images/01a16f9a-d338-7873-9808-4ccbc11941b7/exec-0cdeffd6-2ed4-4156-8460-8a2cbca59049.png"
+    },
+    {
+      "number": 25,
+      "name": "Brazil",
+      "slug": "brazil",
+      "body": "#009739",
+      "accent": "#fedf00",
+      "crest": "cream",
+      "animal": "cream",
+      "strap": "Brazilian flag-inspired pristine green #009739 woven strap with a blue #002776 longitudinal centre stripe edged by clean yellow #fedf00 bands, green at both outer edges. Across its width: green / yellow / blue / yellow / green. Continuous lengthwise pattern through all folds. No words, stars, slogan, flag patch or extra badge.",
+      "prompt": "Use case: precise-object-edit. Make one COLOUR-ONLY edition from the attached neutral studio master as exact geometry, camera and framing authority. Preserve the 1024x1536 portrait layout, tall slim body silhouette, exact sizes, all pixels outside colour/pattern edits, lighting, warm ivory background and floor shadow. Keep clear smooth open circular hood, colourless translucent silicone pad and diagonal neck, low dark folded straw front-left, squat mirror polished hourglass spout front-right, short cylindrical rear-centre spray head, oval latch and metal inset. All metal mirror polished, never painted. ONE continuous detachable fabric strap, same full floor-reaching U route, width, folds and slim same-fabric folded stitched tabs. Two opening oval swivel snap hooks attach via short stems and separate rounded rectangular D-rings; no hardware changes. Fine plain woven webbing, crisp fibres and tidy edges, no dirty texture or raised geometric jacquard. Exact crest, BOTH strap animals and braille will be separate native website SVG layers: leave body and upper strap animal areas unprinted; do not generate logos, animals, lettering or braille. No accessories, extra handles, new body shapes or model changes. Edition Brazil. Satin body #009739; collar, side lugs and latch loop #fedf00. Strap: Brazilian flag-inspired pristine green #009739 woven strap with a blue #002776 longitudinal centre stripe edged by clean yellow #fedf00 bands, green at both outer edges. Across its width: green / yellow / blue / yellow / green. Continuous lengthwise pattern through all folds. No words, stars, slogan, flag patch or extra badge.",
+      "source": "/Users/cedric/.codex/generated_images/01a16f9a-d338-7873-9808-4ccbc11941b7/exec-0b033cf9-7ce1-423c-8ed9-ffdfa9e22d8c.png"
+    },
+    {
+      "number": 26,
+      "name": "Japan",
+      "slug": "japan",
+      "body": "#f4f3ee",
+      "accent": "#bc002d",
+      "crest": "navy",
+      "animal": "navy",
+      "strap": "Japanese flag-inspired pristine chalk-white #f4f3ee woven strap with ONE restrained crimson #bc002d longitudinal stripe down the exact centre. White outer bands. Below the upper animal print positions, place just one small simple crimson sun-circle motif on each hanging side as a subtle woven detail. No text, characters or literal flag patch. Keep the centre stripe continuous around the floor-level U.",
+      "prompt": "Use case: precise-object-edit. Make one COLOUR-ONLY edition from the attached neutral studio master as exact geometry, camera and framing authority. Preserve the 1024x1536 portrait layout, tall slim body silhouette, exact sizes, all pixels outside colour/pattern edits, lighting, warm ivory background and floor shadow. Keep clear smooth open circular hood, colourless translucent silicone pad and diagonal neck, low dark folded straw front-left, squat mirror polished hourglass spout front-right, short cylindrical rear-centre spray head, oval latch and metal inset. All metal mirror polished, never painted. ONE continuous detachable fabric strap, same full floor-reaching U route, width, folds and slim same-fabric folded stitched tabs. Two opening oval swivel snap hooks attach via short stems and separate rounded rectangular D-rings; no hardware changes. Fine plain woven webbing, crisp fibres and tidy edges, no dirty texture or raised geometric jacquard. Exact crest, BOTH strap animals and braille will be separate native website SVG layers: leave body and upper strap animal areas unprinted; do not generate logos, animals, lettering or braille. No accessories, extra handles, new body shapes or model changes. Edition Japan. Satin body #f4f3ee; collar, side lugs and latch loop #bc002d. Strap: Japanese flag-inspired pristine chalk-white #f4f3ee woven strap with ONE restrained crimson #bc002d longitudinal stripe down the exact centre. White outer bands. Below the upper animal print positions, place just one small simple crimson sun-circle motif on each hanging side as a subtle woven detail. No text, characters or literal flag patch. Keep the centre stripe continuous around the floor-level U.",
+      "source": "/Users/cedric/.codex/generated_images/01a16f9a-d338-7873-9808-4ccbc11941b7/exec-b285ef4c-7f82-4221-9248-8752bf3c538f.png"
+    },
+    {
+      "number": 27,
+      "name": "Canada",
+      "slug": "canada",
+      "body": "#d80621",
+      "accent": "#f4f3ee",
+      "crest": "cream",
+      "animal": "navy",
+      "strap": "Canadian flag-inspired pristine woven webbing in three lengthwise bands, red #d80621 outer sides and a broader chalk-white #f4f3ee central band, proportions 1:2:1 across the width. One small tasteful red maple-leaf silhouette woven into the white central band on each hanging side well BELOW the upper animal print positions. Keep upper areas directly below stitched tabs plain white for exact BoP animals. The three bands follow the whole floor-level U strap. No text or literal rectangular flag patch.",
+      "prompt": "Use case: precise-object-edit. Make one COLOUR-ONLY edition from the attached neutral studio master as exact geometry, camera and framing authority. Preserve the 1024x1536 portrait layout, tall slim body silhouette, exact sizes, all pixels outside colour/pattern edits, lighting, warm ivory background and floor shadow. Keep clear smooth open circular hood, colourless translucent silicone pad and diagonal neck, low dark folded straw front-left, squat mirror polished hourglass spout front-right, short cylindrical rear-centre spray head, oval latch and metal inset. All metal mirror polished, never painted. ONE continuous detachable fabric strap, same full floor-reaching U route, width, folds and slim same-fabric folded stitched tabs. Two opening oval swivel snap hooks attach via short stems and separate rounded rectangular D-rings; no hardware changes. Fine plain woven webbing, crisp fibres and tidy edges, no dirty texture or raised geometric jacquard. Exact crest, BOTH strap animals and braille will be separate native website SVG layers: leave body and upper strap animal areas unprinted; do not generate logos, animals, lettering or braille. No accessories, extra handles, new body shapes or model changes. Edition Canada. Satin body #d80621; collar, side lugs and latch loop #f4f3ee. Strap: Canadian flag-inspired pristine woven webbing in three lengthwise bands, red #d80621 outer sides and a broader chalk-white #f4f3ee central band, proportions 1:2:1 across the width. One small tasteful red maple-leaf silhouette woven into the white central band on each hanging side well BELOW the upper animal print positions. Keep upper areas directly below stitched tabs plain white for exact BoP animals. The three bands follow the whole floor-level U strap. No text or literal rectangular flag patch.",
+      "source": "/Users/cedric/.codex/generated_images/01a16f9a-d338-7873-9808-4ccbc11941b7/exec-512cc6f0-8abf-4b60-9d73-83dfe4f7921f.png"
+    }
+  ]
+}

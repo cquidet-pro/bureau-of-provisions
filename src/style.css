@@ -1518,6 +1518,14 @@ body:has(.photo-dialog[open],.crest-dialog[open]) {
 .strap-colour-dog { left:23.5%; top:46.8%; width:4.3%; transform:translateX(-50%) rotate(10deg); }
 .strap-colour-leopard { left:76.5%; top:46.8%; width:4.1%; transform:translateX(-50%) rotate(-10deg); }
 .colour-render-sharp .braille-colour { left:33%; top:79%; width:34%; }
+.colour-card:is([data-palette="Greece"],[data-palette="Union Jack"]) .braille-colour { color:#f4eddf; }
+.colour-card:is([data-palette="Greece"],[data-palette="Union Jack"]) .product-crest,
+.colour-card[data-palette="Union Jack"] .strap-print { mix-blend-mode:normal; }
+.colour-card:is([data-palette="United States"],[data-palette="Brazil"],[data-palette="Canada"]) .braille-colour { color:#f4eddf; }
+.colour-card:is([data-palette="United States"],[data-palette="Brazil"],[data-palette="Canada"]) .product-crest,
+.colour-card[data-palette="Brazil"] .strap-print { mix-blend-mode:normal; }
+/* Leave a clear gap above Japan's woven sun circles. */
+.colour-card[data-palette="Japan"] :is(.strap-colour-dog,.strap-colour-leopard) { top:45.3%; }
 .colour-card:is([data-palette="Cobalt / Sunshine"],[data-palette="Ocean / Coral"],[data-palette="Raspberry / Mint"],[data-palette="Midnight Paris"],[data-palette="Web Hero"]) .product-crest,
 .colour-card:is([data-palette="Midnight Paris"],[data-palette="Safari Club"],[data-palette="Web Hero"],[data-palette="Pink Parade"]) .strap-print { color:#fff5de; mix-blend-mode:normal; }
 .colour-card[data-palette="Safari Club"] .product-crest { color:#35442e; }

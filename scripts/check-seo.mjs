@@ -81,8 +81,8 @@ for (const tag of tags("img")) {
   }
 }
 assert.equal((html.match(/<h1\b/g) || []).length, 1);
-assert.equal(tags("button").filter((tag) => tag["data-colour"]).length, 20, "Expected twenty colour studies");
-assert.equal(tags("a").filter((tag) => tag.class?.split(" ").includes("colour-register")).length, 20, "Every bottle needs a registration link");
+assert.equal(tags("button").filter((tag) => tag["data-colour"]).length, 27, "Expected twenty-seven colour studies");
+assert.equal(tags("a").filter((tag) => tag.class?.split(" ").includes("colour-register")).length, 27, "Every bottle needs a registration link");
 assert.equal(tags("button").filter((tag) => tag["data-drinking-method"]).length, 3, "Expected separate straw, spout and spray modes");
 assert.deepEqual(tags("button").filter(tag => tag["data-straw-position"]).map(tag => tag["data-straw-position"]), ["flat", "up"], "Straw must have only Flat/Up still positions");
 assert.ok(!tags("button").some(tag => "data-drinking-hold" in tag || "data-drinking-reset" in tag), "Removed hold/reset controls must stay removed");
