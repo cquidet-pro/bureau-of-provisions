@@ -606,5 +606,47 @@
         "width": 996
       }
     ]
+  },
+  "/images/product/edition-03-mint-peach-v3.webp": {
+    "master_sha256": "001dc44d569b1223d935af2899a5a0e2f41c8de147f70de8c7f853690e3d6be9",
+    "variants": [
+      {
+        "src": "/images/product/responsive/edition-03-mint-peach-v3-256w.webp",
+        "width": 256
+      },
+      {
+        "src": "/images/product/responsive/edition-03-mint-peach-v3-480w.webp",
+        "width": 480
+      },
+      {
+        "src": "/images/product/responsive/edition-03-mint-peach-v3-768w.webp",
+        "width": 768
+      },
+      {
+        "src": "/images/product/edition-03-mint-peach-v3.webp",
+        "width": 1024
+      }
+    ]
+  },
+  "/images/product/edition-03-mint-peach-v4.webp": {
+    "master_sha256": "ad5599b0ec9f06813e20d251d1cceaa96eac3c2e44bca205cbb7eaee1dc96edc",
+    "variants": [
+      {
+        "src": "/images/product/responsive/edition-03-mint-peach-v4-256w.webp",
+        "width": 256
+      },
+      {
+        "src": "/images/product/responsive/edition-03-mint-peach-v4-480w.webp",
+        "width": 480
+      },
+      {
+        "src": "/images/product/responsive/edition-03-mint-peach-v4-768w.webp",
+        "width": 768
+      },
+      {
+        "src": "/images/product/edition-03-mint-peach-v4.webp",
+        "width": 1024
+      }
+    ]
   }
 }

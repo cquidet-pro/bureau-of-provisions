@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated": "2026-10-19",
+  "updated": "2026-10-25",
   "guide": "docs/PRODUCT_DESIGN_GUIDE.md",
   "prompt_template": "docs/prompts/PRODUCT_RENDER_TEMPLATE.md",
   "source_hierarchy": [
@@ -626,6 +626,26 @@
         "crest": "/images/product/crest-cream-v12.svg",
         "greyhound": "/images/product/greyhound-cream-v12.svg",
         "leopard": "/images/product/leopard-cream-v12.svg"
+      }
+    },
+    {
+      "number": 20,
+      "name": "Turquoise / Orange",
+      "body": "#78e4e8",
+      "accent": "#ffa15e",
+      "previous_asset": "/images/product/edition-03-mint-peach-v3.webp",
+      "asset": "/images/product/edition-03-mint-peach-v4.webp",
+      "strap_treatment": "turquoise #78e4e8 plain woven strap with one narrow longitudinal orange #ffa15e centre stripe; turquoise on both outer edges",
+      "geometry_reference": "/images/product/collection-studio-master-v2.webp",
+      "render_status": "visually_reviewed_and_integrated",
+      "source_png": "/images/product/edition-03-mint-peach-v4.png",
+      "generation_method": "built-in image_gen; strap-only colour pattern edit of edition-03-mint-peach-v3.png",
+      "prompt_record": "docs/MINT_PEACH_STRAP_V4.json",
+      "generated_source": "/Users/cedric/.codex/generated_images/01a16f9a-d338-7873-9808-4ccbc11941b7/exec-3ea81d0d-5ec1-4e3e-95ec-0a34bd5276d1.png",
+      "branding_assets": {
+        "crest": "/images/product/crest-navy-v12.svg",
+        "greyhound": "/images/product/greyhound-navy-v12.svg",
+        "leopard": "/images/product/leopard-navy-v12.svg"
       }
     }
   ],

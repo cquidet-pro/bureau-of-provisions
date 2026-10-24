@@ -122,4 +122,4 @@ for (const path of ['dist/index.html','dist/thank-you/index.html']) {
   for (const button of d.querySelectorAll('button')) assert.ok(button.textContent.trim() || button.getAttribute('aria-label'));
   assert.equal(d.querySelectorAll('h1').length, 1);
 }
-console.log('Interaction checks passed: all 19 registrations, fallback links, six feature panels, lid modes, reduced motion, dialog focus and page accessibility structure.');
+console.log('Interaction checks passed: all 20 registrations, fallback links, six feature panels, lid modes, reduced motion, dialog focus and page accessibility structure.');

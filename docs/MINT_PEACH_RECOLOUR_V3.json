@@ -1,0 +1,9 @@
+{
+  "date": "2026-10-24",
+  "method": "built-in image_gen",
+  "reference": "public/images/product/edition-03-principles-v2.png",
+  "output": "public/images/product/edition-03-mint-peach-v3.png",
+  "body": "#78e4e8",
+  "accent": "#ffa15e",
+  "prompt": "Use case: precise-object-edit. Edit the supplied high-resolution lossless studio master for the Mint / Peach colour card. Change ONLY the existing mint body coating to HEX #78e4e8 (bright light cyan mint), and every peach coloured part including collar, latch loop, side lugs and entire continuous woven strap to HEX #ffa15e (warm orange peach). These are material base colours; retain realistic shading and reflections. Preserve exactly the same 1024x1536 portrait framing, bottle proportions, silhouette, camera, all edges, fine woven texture, stitching, strap route, background, shadows, clear circular hood, translucent colourless silicone seal and neck, dark folding straw and mirror-polished steel hardware. One continuous detachable U-shaped strap with opening swivel hooks at both ends. No geometry or material changes. Keep the source blank: no logos, animals, text or braille; those remain separate exact vector website layers. Maximum detail preservation, colour replacement only."
+}

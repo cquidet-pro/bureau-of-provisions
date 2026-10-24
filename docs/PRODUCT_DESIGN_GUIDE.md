@@ -2,7 +2,7 @@
 
 Version: 19 October 2026. Applies to website visuals, product studies, colour editions, prompts and future design work.
 
-This is the **current specification**. It consolidates the user's approved corrections; it is not a history of every experiment. Earlier interpretations are archived in [PRODUCT_DESIGN_HISTORY.md](PRODUCT_DESIGN_HISTORY.md). Machine-readable rules and all nineteen edition palettes are in [product-design.json](../design/product-design.json).
+This is the **current specification**. It consolidates the user's approved corrections; it is not a history of every experiment. Earlier interpretations are archived in [PRODUCT_DESIGN_HISTORY.md](PRODUCT_DESIGN_HISTORY.md). Machine-readable rules and all twenty edition palettes are in [product-design.json](../design/product-design.json).
 
 ## 1. Source hierarchy
 
@@ -92,14 +92,16 @@ Exact message: **Stay a little unreasonable.** Preserve capital S and full stop.
 
 ## 8. “Two tones” collection rules
 
-- All nineteen cards depict this same physical bottle. Only body/collar/latch colours, woven strap colours/patterns and suitable ink contrast vary.
+Latest collection correction, 25 October 2026: retain the original Mint / Peach as edition 03. Add Turquoise / Orange as edition 20, with body #78e4e8, collar #ffa15e, and turquoise strap edges with one orange centre stripe. These are separate catalogue choices with separate registration values.
+
+- All twenty cards depict this same physical bottle. Only body/collar/latch colours, woven strap colours/patterns and suitable ink contrast vary.
 - Keep existing edition names, palettes, intended themes, order, colour-selection behaviour and individual registration links.
 - For ages 6–10: cheerful, chic and deadpan. Princess, football, space and superhero themes are **palette/stripe references**, not physical redesigns or literal characters.
 - No character faces, official club badges, football accessories, spaceship parts, plastic jewels, crown attachments, glitter, grips or bumpers.
 - All White and All Grey remain monochrome. Safari Club is sand/olive/khaki. Pink Parade remains pink/raspberry/ivory. Preserve the restrained stripes on the sport and themed editions.
 - Use individual high-resolution product images, never enlarged cells from a contact sheet. Use the corrected master as the common geometry authority for every recolour.
 
-See the machine-readable nineteen-entry manifest for colour values, strap treatments, previous assets and current output paths.
+See the machine-readable twenty-entry manifest for colour values, strap treatments, previous assets and current output paths.
 
 ## 9. Cutaway anatomy
 
@@ -172,5 +174,5 @@ Every bottle keeps “Register to pre-order” carrying its selected name to the
 - [ ] Exact body logo, both supporters, centred strap animals and exact braille retained.
 - [ ] Palette/stripe changes only; no invented kids geometry or accessories.
 - [ ] Spray labels/animation point to the actual head; point1 remains left.
-- [ ] Same names, nineteen cards, individual registration links and accessible selection controls.
+- [ ] Same names, twenty cards, individual registration links and accessible selection controls.
 - [ ] No invented dimensions/performance claims; source/prompt/output provenance saved.

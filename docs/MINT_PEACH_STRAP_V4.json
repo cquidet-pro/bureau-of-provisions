@@ -1,0 +1,8 @@
+{
+  "date": "2026-10-25",
+  "method": "built-in image_gen",
+  "reference": "public/images/product/edition-03-mint-peach-v3.png",
+  "stripe_reference": "public/images/product/edition-15-principles-v2.png",
+  "output": "public/images/product/edition-03-mint-peach-v4.png",
+  "prompt": "Use case: precise-object-edit. FIRST image is the edit target, Mint / Peach bottle. SECOND image is a stripe layout reference ONLY. Edit ONLY the woven strap textile colours of the FIRST image: turquoise #78e4e8 on both outer lengthwise bands, matching the bottle body, with ONE narrow orange #ffa15e longitudinal line centred along the strap's entire length. Match the restrained single-centre-stripe width of the second image (about 15–20% of strap width), adapting it continuously to the first image's existing folds, stitched tabs, both descending sides and floor-level U foreground. Exactly one orange line, two turquoise margins, no extra stripes. Keep the existing fine plain woven fibres, clean neat edges, slim same-fabric stitched folded tabs, continuous full-view U-shaped route and both detachable opening swivel snap hooks. Preserve every other pixel/element of the FIRST image: body turquoise #78e4e8, orange collar and latch loop #ffa15e, entire lid hardware, clear hood, colourless translucent silicone seal and neck, mirror polished steel, all geometry, exact bottle size, camera, framing, backdrop and lighting. Do not borrow pink, ivory or geometry from the second image. Keep product blank as in edit target; exact vector crest, strap animals and braille are separate website layers and must not be generated. Retain sharp native 1024x1536 portrait detail. Strap colour pattern only."
+}
