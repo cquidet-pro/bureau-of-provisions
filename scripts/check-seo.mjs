@@ -123,6 +123,29 @@ assert.ok(anchors.has("specifications") && anchors.has("colourways"), "Missing p
 assert.ok(html.includes("Design in development."), "Missing visible product-development status");
 assert.ok(html.includes("<style>"), "Local CSS was not inlined");
 assert.ok(!tags("link").some((tag) => tag.rel === "stylesheet" && tag.href?.startsWith("./assets/")));
+// Keep the external font stylesheet off the render path on every public page.
+for (const path of ['index.html', 'thank-you/index.html', '404.html']) {
+  const markup = read(path);
+  assert.ok(markup.includes('<style data-local-fonts>'), `Missing inline font declarations: ${path}`);
+  assert.ok(!/https:\/\/fonts\.(googleapis|gstatic)\.com/.test(markup), `External font dependency: ${path}`);
+  for (const [, url] of markup.matchAll(/url\((\/fonts\/[^)]+\.woff2)\)/g)) {
+    localFile(url);
+    assert.equal(readFileSync(resolve(root, url.slice(1))).subarray(0, 4).toString(), 'wOF2');
+  }
+}
+const missingPage = read('404.html');
+assert.match(missingPage, /name="robots" content="noindex, follow"/);
+assert.match(missingPage, /href="\/"/);
+assert.match(missingPage, /href="\/#colourways"/);
+const hosting = JSON.parse(readFileSync('firebase.json', 'utf8')).hosting;
+assert.ok(!hosting.rewrites?.some(rule => rule.source === '**' && rule.destination === '/index.html'), 'Missing URLs must retain HTTP 404');
+const hero = tags('img').find(tag => tag.class === 'station-scene');
+const preload = tags('link').find(tag => tag.rel === 'preload' && tag.as === 'image');
+assert.ok(preload, 'Discover the LCP image in the document head');
+assert.equal(preload.href, hero.src);
+assert.equal(preload.imagesrcset, hero.srcset);
+assert.equal(preload.imagesizes, hero.sizes);
+assert.ok(anchors.has('bottle-questions'), 'Buyer questions must be readable without JavaScript');
 for (const tag of tags("script")) if (tag.src?.startsWith("./assets/")) localFile(tag.src);
 
 const robots = read("robots.txt");

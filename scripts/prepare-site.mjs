@@ -5,6 +5,13 @@ import { prepareAssetDelivery } from './asset-delivery.mjs';
 const output = resolve("dist");
 const page = resolve(output, "index.html");
 let html = readFileSync(page, "utf8");
+// Inline declarations, not font bytes: preserve typography without a blocking
+// third-party CSS connection. Shared with the static thank-you and 404 pages.
+function inlineFonts(markup) {
+  return markup.replace(/<link\b[^>]*href="(?:\.\/|\/)fonts\/fonts\.css"[^>]*>/g,
+    `<style data-local-fonts>${readFileSync(resolve(output, 'fonts/fonts.css'), 'utf8')}</style>`);
+}
+html = inlineFonts(html);
 // Keep bookmark icon URLs at the site root when Vite uses a relative base.
 html = html.replace(/<link\b[^>]*rel="(?:icon|apple-touch-icon)"[^>]*>/g, (tag) =>
   tag.replace(/href="\.\//, 'href="/')
@@ -27,7 +34,7 @@ function prepareOtherPages(dir) {
     const path = resolve(dir, entry.name);
     if (entry.isDirectory()) prepareOtherPages(path);
     else if (entry.name.endsWith('.html') && path !== page) {
-      writeFileSync(path, prepareAssetDelivery(readFileSync(path, 'utf8')));
+      writeFileSync(path, prepareAssetDelivery(inlineFonts(readFileSync(path, 'utf8'))));
     }
   }
 }

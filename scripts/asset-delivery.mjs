@@ -21,8 +21,9 @@ function imageSizes(tag) {
     return `(min-width: 1001px) min(${(90 * f).toFixed(3)}vw, calc(${(150 * f).toFixed(3)}svh - ${(240 * f).toFixed(3)}px)), ${(90 * f).toFixed(3)}vw`;
   }
   if (attr(tag, 'src')?.includes('edition-')) {
-    // Include the enlarged registration preview; never undersize that copy.
-    return '(max-width: 640px) 45vw, (max-width: 1100px) 30vw, 330px';
+    // Match the two/three/five-column grid, including gaps and page padding.
+    // The enlarged registration clone gets its own sizes in main.js.
+    return '(max-width: 760px) calc((90vw - 13px) / 2), (max-width: 1100px) calc((88vw - 36px) / 3), min(calc((88vw - 72px) / 5), 267.2px)';
   }
   return '(max-width: 760px) min(90vw, 510px), min(36vw, 510px)';
 }
@@ -38,6 +39,9 @@ export function prepareAssetDelivery(html) {
     const src = attr(tag, 'src');
     if (!src?.startsWith('/images/product/')) return tag;
     if (!tag.includes('decoding=')) tag = tag.replace('<img ', '<img decoding="async" ');
+    if (/\b(?:station-detail|scene-character-detail)\b/.test(attr(tag, 'class') || '')) {
+      tag = tag.replace('<img ', '<img fetchpriority="low" ');
+    }
     let localSrcset;
     if (responsive[src]) {
       const master = readFileSync('public' + src.replace(/\.webp$/, '.png'));
@@ -82,5 +86,9 @@ export function prepareAssetDelivery(html) {
   html = html.replace(/url\((["']?)(\/images\/[^)"']+)\1\)/g,
     (_, quote, url) => `url(${quote}${urls.local(url)}${quote})`);
   console.log(`Image delivery: ${responsiveCount} responsive photos, ${cdnCount} CDN images with local fallbacks.`);
+  // Discover the LCP image before parsing the body, with exactly the same
+  // responsive candidates so the preload and image share one request.
+  const hero = html.match(/<img\b[^>]*class="station-scene"[^>]*>/)?.[0];
+  if (hero) html = html.replace('</head>', `<link rel="preload" as="image" href="${attr(hero, 'src')}" imagesrcset="${attr(hero, 'srcset')}" imagesizes="${attr(hero, 'sizes')}" fetchpriority="high" /></head>`);
   return html;
 }

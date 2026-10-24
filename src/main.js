@@ -198,6 +198,7 @@ function showPreorderForm(link) {
     registrationRow.className = 'registration-row';
     registrationRow.dataset.selectedColour = selectedColour;
     const preview = card.cloneNode(true);
+    preview.querySelector('.colour-render > img').setAttribute('sizes', '(max-width: 640px) min(90vw, 280px), (max-width: 760px) max(200px, calc((90vw - 32px) / 3)), min(330px, max(200px, calc((88vw - 32px) / 3)))');
     preview.setAttribute('data-registration-preview', '');
     preview.querySelector('.colour-register').remove();
     const previewChoice = preview.querySelector('[data-colour]');

@@ -1525,7 +1525,7 @@ body:has(.photo-dialog[open],.crest-dialog[open]) {
 .crest-dialog-head { display:flex; justify-content:space-between; align-items:center; gap:20px; }
 .crest-dialog-head h2 { font:24px var(--serif); }
 .crest-dialog-head button { background:none; border:0; padding:10px; color:var(--wine); }
-.crest-enlargement { display:block; width:min(100%,540px); max-height:70vh; margin:20px auto 0; }
+.crest-enlargement { display:block; width:min(100%,540px); height:auto; max-height:70vh; object-fit:contain; margin:20px auto 0; }
 @media(max-width:1000px) {
   .site-head { grid-template-columns:92px minmax(0,1fr) auto; gap:22px; }
   .header-crest { width:92px; height:90px; }
