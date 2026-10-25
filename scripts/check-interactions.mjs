@@ -105,6 +105,23 @@ click(one('[data-drinking-method="spray"]')); click(one('[data-drinking-play]'))
 for (const fn of [...timers.values()]) fn();
 assert.equal(one('[data-drinking-particles]').children.length, 0);
 
+const contact = one('[data-contact-form]');
+const contactFrame = contact.querySelector('iframe');
+assert.equal(contactFrame.getAttribute('src'), null, 'Contact form stays unloaded until opened');
+contact.open = true;
+contact.dispatchEvent(new window.Event('toggle'));
+assert.equal(new URL(contactFrame.src).pathname, '/embed/aOQ7yv');
+assert.equal(new URL(contactFrame.src).searchParams.get('dynamicHeight'), '1');
+assert.equal(document.querySelectorAll('script[src="https://tally.so/widgets/embed.js"]').length, 1);
+const contactSource = contactFrame.src;
+contact.open = false;
+contact.dispatchEvent(new window.Event('toggle'));
+contact.open = true;
+contact.dispatchEvent(new window.Event('toggle'));
+assert.equal(contactFrame.src, contactSource, 'Reopening contact keeps the same form');
+assert.ok(!document.body.textContent.includes('CAD'));
+assert.ok(!document.body.textContent.includes('four lid preferences'));
+
 click(one('[data-open-crest]'));
 assert.equal(one('#crest-dialog').hasAttribute('open'), true);
 click(one('[data-close-crest]'));

@@ -136,6 +136,8 @@ Current calibration: main photo1536×1024: spray point1 starts(390,170) and ends
 
 ## 11. Site art direction and copy
 
+Latest copy correction: do not offer alternative lid configurations while they are unavailable. Describe the three functions of the current design. Use plain “design” or “specifications” in public copy instead of “CAD”; retain the technical source records internally.
+
 Restrained symmetrical staging, warm ivory, wine and navy typography, dry observational humour and precise product descriptions. Punchy lines may be playful, but explain the functions clearly. Keep the compact header: logo on the left, Big thirst. Zero drama. beside it, registration CTA on the right.
 
 ### Reusable visual language

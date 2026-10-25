@@ -163,7 +163,7 @@ const formFrame = inlineForm.querySelector('iframe');
 const formSelection = document.getElementById('preorder-selection');
 const formLoading = inlineForm.querySelector('[data-form-loading]');
 let tallyEmbedScript = null;
-function fitRegistrationForm() {
+function fitTallyEmbeds() {
   if (window.Tally) {
     window.Tally.loadEmbeds();
     return;
@@ -233,7 +233,7 @@ function showPreorderForm(link) {
     formColour = selectedColour;
   }
   inlineForm.hidden = false;
-  fitRegistrationForm();
+  fitTallyEmbeds();
   for (const trigger of [...preorderLinks, ...editionLinks]) {
     trigger.setAttribute('aria-expanded', String(trigger === link));
   }
@@ -263,6 +263,15 @@ for (const link of [...preorderLinks, ...editionLinks]) {
 for (const button of colourButtons) {
   button.addEventListener('click', () => selectColour(button));
 }
+
+// Load the separate contact form only when a visitor opens it.
+const contactForm = document.querySelector('[data-contact-form]');
+contactForm.addEventListener('toggle', () => {
+  if (!contactForm.open) return;
+  const frame = contactForm.querySelector('iframe');
+  if (!frame.getAttribute('src')) frame.src = frame.dataset.contactSrc;
+  fitTallyEmbeds();
+});
 
 // Show the actual vector crest at an inspectable size.
 const crestDialog = document.getElementById('crest-dialog');
