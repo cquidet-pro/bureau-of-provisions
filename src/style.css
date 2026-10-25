@@ -619,10 +619,6 @@ h3 {
   border:0;
   max-width:100%
 }
-.registration-card .form-fallback {
-  font-size:10px!important;
-  margin-top:4px!important
-}
 .registration-card .small-copy {
   font-size:10px!important;
   margin-top:18px!important
@@ -1747,8 +1743,7 @@ body:has(.photo-dialog[open],.crest-dialog[open]) {
 .preorder-inline[hidden] { display:none; }
 .preorder-inline h3 { font-size:20px; margin:0 0 12px; }
 .preorder-inline iframe { display:block; width:100%; border:0; }
-.preorder-inline .form-loading,.preorder-inline .form-fallback,.preorder-inline .registration-note { font:12px/1.7 Inter,Arial,sans-serif; margin:10px 0; }
-.preorder-inline .form-fallback a { color:var(--wine); display:inline-block; padding-block:8px; }
+.preorder-inline .form-loading,.preorder-inline .registration-note { font:12px/1.7 Inter,Arial,sans-serif; margin:8px 0 0; }
 
 /* Keep the selected bottle and its registration form together in the collection. */
 .registration-row { grid-column:1 / -1; display:grid; grid-template-columns:minmax(200px, 1fr) minmax(0, 2fr); gap:32px; align-items:center; margin:32px 0; scroll-margin-top:24px; }

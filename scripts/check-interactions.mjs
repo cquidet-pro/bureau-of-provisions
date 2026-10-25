@@ -49,10 +49,10 @@ for (const link of document.querySelectorAll('.colour-register')) {
   assert.equal(document.querySelectorAll('[data-colour][aria-pressed="true"]').length, 1);
   assert.equal(choice.getAttribute('aria-pressed'), 'true');
   assert.equal(new URL(form.querySelector('iframe').src).searchParams.get('colour'), choice.dataset.colour);
-  // Read the authored URL: linkedom's anchor.href getter double-encodes %2F.
-  const fallback = new URL(form.querySelector('[data-form-fallback]').getAttribute('href'));
-  assert.equal(fallback.origin + fallback.pathname, 'https://tally.so/r/5BW7JN');
-  assert.equal(fallback.searchParams.get('colour'), choice.dataset.colour);
+  assert.equal(form.querySelector('[data-form-fallback]'), null);
+  assert.equal(new URL(form.querySelector('iframe').src).searchParams.get('dynamicHeight'), '1');
+  assert.equal(form.querySelector('iframe').nextElementSibling.textContent.trim(), 'Registration of interest only. No payment is taken.');
+  assert.equal(document.querySelectorAll('script[src="https://tally.so/widgets/embed.js"]').length, 1);
   assert.equal(document.querySelectorAll('.registration-row').length, 1);
   assert.equal(one('[data-registration-preview] .colour-register'), null);
   assert.equal(link.getAttribute('aria-expanded'), 'true');
@@ -122,4 +122,4 @@ for (const path of ['dist/index.html','dist/thank-you/index.html']) {
   for (const button of d.querySelectorAll('button')) assert.ok(button.textContent.trim() || button.getAttribute('aria-label'));
   assert.equal(d.querySelectorAll('h1').length, 1);
 }
-console.log('Interaction checks passed: all 27 registrations, fallback links, six feature panels, lid modes, reduced motion, dialog focus and page accessibility structure.');
+console.log('Interaction checks passed: all 27 registrations, dynamic form height and notice, six feature panels, lid modes, reduced motion, dialog focus and page accessibility structure.');
