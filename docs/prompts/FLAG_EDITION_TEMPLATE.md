@@ -19,6 +19,9 @@ translucent silicone and one continuous detachable woven strap unchanged.
 | Japan / 26 | `#f4f3ee` | `#bc002d` | White with crimson centre stripe and sun-circle accents |
 | Canada / 27 | `#d80621` | `#f4f3ee` | Red/white/red bands with small red maple leaves below the BoP prints |
 
+| Italy / 28 | `#f4f3ee` | `#009246` | Three equal longitudinal bands: green, white, red `#ce2b37` |
+| Spain / 29 | `#aa151b` | `#f1bf00` | Red outer bands with a broad golden-yellow centre |
+
 These hex values are chosen product palettes, not official flag colour standards.
 Greece translates the flag's stripes into longitudinal webbing. Union Jack
 translates its cross motifs into a textile pattern rather than a literal flag.

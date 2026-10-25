@@ -795,5 +795,47 @@
         "width": 1024
       }
     ]
+  },
+  "/images/product/edition-28-italy-v1.webp": {
+    "master_sha256": "2bc2423d71ffbe6fdc5d93c9db49875265ed8ed95d9cb1b931f72dd7b9b37b71",
+    "variants": [
+      {
+        "src": "/images/product/responsive/edition-28-italy-v1-256w.webp",
+        "width": 256
+      },
+      {
+        "src": "/images/product/responsive/edition-28-italy-v1-480w.webp",
+        "width": 480
+      },
+      {
+        "src": "/images/product/responsive/edition-28-italy-v1-768w.webp",
+        "width": 768
+      },
+      {
+        "src": "/images/product/edition-28-italy-v1.webp",
+        "width": 1024
+      }
+    ]
+  },
+  "/images/product/edition-29-spain-v1.webp": {
+    "master_sha256": "8c2f7920a8a0f6b510dd8e6540bc6ebb1125c971118b1b27d674eac7bbc22c4e",
+    "variants": [
+      {
+        "src": "/images/product/responsive/edition-29-spain-v1-256w.webp",
+        "width": 256
+      },
+      {
+        "src": "/images/product/responsive/edition-29-spain-v1-480w.webp",
+        "width": 480
+      },
+      {
+        "src": "/images/product/responsive/edition-29-spain-v1-768w.webp",
+        "width": 768
+      },
+      {
+        "src": "/images/product/edition-29-spain-v1.webp",
+        "width": 1024
+      }
+    ]
   }
 }

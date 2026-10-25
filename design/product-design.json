@@ -790,6 +790,46 @@
         "leopard": "/images/product/leopard-navy-v12.svg"
       },
       "theme": "flag-inspired colour study"
+    },
+    {
+      "number": 28,
+      "name": "Italy",
+      "body": "#f4f3ee",
+      "accent": "#009246",
+      "asset": "/images/product/edition-28-italy-v1.webp",
+      "strap_treatment": "Italian tricolour-inspired pristine woven webbing in exactly three equal-width longitudinal bands: green #009246, chalk white #f4f3ee, red #ce2b37. The three colour bands follow the whole continuous U-shaped strap, stitched tabs and folds. No literal flag patch, symbols, text or badges.",
+      "geometry_reference": "/images/product/collection-studio-master-v2.webp",
+      "render_status": "visually_reviewed_and_integrated",
+      "source_png": "/images/product/edition-28-italy-v1.png",
+      "generation_method": "built-in image_gen; colour-only edit of common lossless studio master",
+      "prompt_record": "docs/FLAG_EDITION_TEMPLATES.json",
+      "generated_source": "/Users/cedric/.codex/generated_images/01a16f9a-d338-7873-9808-4ccbc11941b7/exec-f9294393-212c-4362-8150-5048ae1821e6.png",
+      "branding_assets": {
+        "crest": "/images/product/crest-navy-v12.svg",
+        "greyhound": "/images/product/greyhound-navy-v12.svg",
+        "leopard": "/images/product/leopard-navy-v12.svg"
+      },
+      "theme": "flag-inspired colour study"
+    },
+    {
+      "number": 29,
+      "name": "Spain",
+      "body": "#aa151b",
+      "accent": "#f1bf00",
+      "asset": "/images/product/edition-29-spain-v1.webp",
+      "strap_treatment": "Spanish flag-inspired pristine woven strap with red #aa151b outer bands and a broad golden yellow #f1bf00 centre band, proportions 1:2:1 across the width. The red/yellow/red stripes run longitudinally along the whole continuous U strap, through tabs and all folds. No coat of arms, flag patches, text or extra symbols.",
+      "geometry_reference": "/images/product/collection-studio-master-v2.webp",
+      "render_status": "visually_reviewed_and_integrated",
+      "source_png": "/images/product/edition-29-spain-v1.png",
+      "generation_method": "built-in image_gen; colour-only edit of common lossless studio master",
+      "prompt_record": "docs/FLAG_EDITION_TEMPLATES.json",
+      "generated_source": "/Users/cedric/.codex/generated_images/01a16f9a-d338-7873-9808-4ccbc11941b7/exec-07d18c68-c886-49bf-b2ef-a435d4baaaca.png",
+      "branding_assets": {
+        "crest": "/images/product/crest-cream-v12.svg",
+        "greyhound": "/images/product/greyhound-navy-v12.svg",
+        "leopard": "/images/product/leopard-navy-v12.svg"
+      },
+      "theme": "flag-inspired colour study"
     }
   ],
   "validation": {

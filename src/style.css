@@ -1522,6 +1522,8 @@ body:has(.photo-dialog[open],.crest-dialog[open]) {
 .colour-card[data-palette="Brazil"] .strap-print { mix-blend-mode:normal; }
 /* Leave a clear gap above Japan's woven sun circles. */
 .colour-card[data-palette="Japan"] :is(.strap-colour-dog,.strap-colour-leopard) { top:45.3%; }
+.colour-card[data-palette="Spain"] .braille-colour { color:#f4eddf; }
+.colour-card[data-palette="Spain"] .product-crest { mix-blend-mode:normal; }
 .colour-card:is([data-palette="Cobalt / Sunshine"],[data-palette="Ocean / Coral"],[data-palette="Raspberry / Mint"],[data-palette="Midnight Paris"],[data-palette="Web Hero"]) .product-crest,
 .colour-card:is([data-palette="Midnight Paris"],[data-palette="Safari Club"],[data-palette="Web Hero"],[data-palette="Pink Parade"]) .strap-print { color:#fff5de; mix-blend-mode:normal; }
 .colour-card[data-palette="Safari Club"] .product-crest { color:#35442e; }
