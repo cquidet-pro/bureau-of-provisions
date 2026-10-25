@@ -92,7 +92,11 @@ Exact message: **Stay a little unreasonable.** Preserve capital S and full stop.
 
 ## 8. “Two tones” collection rules
 
-Latest collection correction, 25 October 2026: retain the original Mint / Peach as edition 03. Add Turquoise / Orange as edition 20, with body #78e4e8, collar #ffa15e, and turquoise strap edges with one orange centre stripe. These are separate catalogue choices with separate registration values.
+Latest collection correction, 25 October 2026: retain the original Mint / Peach as edition 03. Edition 20 is now Turquoise / Lilac: retain turquoise #78e4e8 on the body and strap edges, with collar/latch and one centre strap stripe in the existing Lilac / Butter body colour #b5a1d0. This supersedes the earlier peach and orange accents, per the latest user correction. These are separate catalogue choices with separate registration values.
+
+Japan’s two red sun-circle motifs align horizontally with Canada’s maple-leaf motifs, around y945 in the common 1024×1536 frame.
+
+Latest strap correction: France and Italy keep unbroken tricolour bands across the foreground strap; never swap the outer stripe colours midway. The right hanging strap reads red/white/blue for France and red/white/green for Italy, so the same band follows the same physical edge through the bend. Website collection copy omits age ranges and colour counts.
 
 Flag studies added 25 October 2026: Greece (21), France (22), Union Jack (23), United States (24), Brazil (25), Japan (26), Canada (27), Italy (28), Spain (29). Preserve the common geometry, exact BoP branding and centred strap animals. The flag-inspired coating palettes and woven patterns are recorded in `docs/FLAG_EDITION_TEMPLATES.json`; these are design studies rather than official flag colour specifications.
 
@@ -125,6 +129,7 @@ This remains an illustrative design study. Do not infer or publish numeric dimen
 - Support touch and keyboard, reduced motion, hidden/offscreen suspension and clean reset when switching modes. Preserve fixed-camera geometry when switching straw positions; do not rotate the photograph sideways.
 - Show fine mist from the **rear-centre head**, not from the nearby flush hole or the silicone seal.
 - Recalibrate pointers, highlights and particles whenever the image/camera changes. Do not copy coordinates between views.
+- Main scene point **7 explains the inspirational braille message “Stay a little unreasonable.”** Its leader ends on the existing lower-body braille at approximately (776,805) in the 1536×1024 scene; its pin sits lower-left at (390,940), with its route below point 5. Keep all seven callouts touch and keyboard accessible.
 - Main scene point **1 stays on the left** and its leader points to the spray head, routing around the hood. Point 6 stays lower-right, routed below the other leaders.
 
 Current calibration: main photo1536×1024: spray point1 starts(390,170) and ends near(766,324). Enlarged lid1088×1445: highlight head near(592,732), mist leaves the middle of its right-hand vertical steel wall near(647,782) during the press and travels outward toward the “03 Spray” label. These coordinates are view-specific, not product measurements.

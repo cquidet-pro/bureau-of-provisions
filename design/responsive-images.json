@@ -837,5 +837,152 @@
         "width": 1024
       }
     ]
+  },
+  "/images/product/edition-20-turquoise-peach-v5.webp": {
+    "master_sha256": "897861fc854e47ff9a339f214d91b65d071121ed75464bd134072e6317c83782",
+    "variants": [
+      {
+        "src": "/images/product/responsive/edition-20-turquoise-peach-v5-256w.webp",
+        "width": 256
+      },
+      {
+        "src": "/images/product/responsive/edition-20-turquoise-peach-v5-480w.webp",
+        "width": 480
+      },
+      {
+        "src": "/images/product/responsive/edition-20-turquoise-peach-v5-768w.webp",
+        "width": 768
+      },
+      {
+        "src": "/images/product/edition-20-turquoise-peach-v5.webp",
+        "width": 1024
+      }
+    ]
+  },
+  "/images/product/edition-22-france-v2.webp": {
+    "master_sha256": "69568e7b28f0009daecb8bf6aefcdf28242d8562fb11d596a40eb7164d662521",
+    "variants": [
+      {
+        "src": "/images/product/responsive/edition-22-france-v2-256w.webp",
+        "width": 256
+      },
+      {
+        "src": "/images/product/responsive/edition-22-france-v2-480w.webp",
+        "width": 480
+      },
+      {
+        "src": "/images/product/responsive/edition-22-france-v2-768w.webp",
+        "width": 768
+      },
+      {
+        "src": "/images/product/edition-22-france-v2.webp",
+        "width": 1024
+      }
+    ]
+  },
+  "/images/product/edition-28-italy-v2.webp": {
+    "master_sha256": "d4fff5b5d9b70c30603867386837cd20c22929b3097fdee53d3d0df800f72a08",
+    "variants": [
+      {
+        "src": "/images/product/responsive/edition-28-italy-v2-256w.webp",
+        "width": 256
+      },
+      {
+        "src": "/images/product/responsive/edition-28-italy-v2-480w.webp",
+        "width": 480
+      },
+      {
+        "src": "/images/product/responsive/edition-28-italy-v2-768w.webp",
+        "width": 768
+      },
+      {
+        "src": "/images/product/edition-28-italy-v2.webp",
+        "width": 1024
+      }
+    ]
+  },
+  "/images/product/edition-20-turquoise-lilac-v6.webp": {
+    "master_sha256": "6ea7c65658f81b9ea25e895864c31de42d20c5c2de4cf01602d92d3b4c54b951",
+    "variants": [
+      {
+        "src": "/images/product/responsive/edition-20-turquoise-lilac-v6-256w.webp",
+        "width": 256
+      },
+      {
+        "src": "/images/product/responsive/edition-20-turquoise-lilac-v6-480w.webp",
+        "width": 480
+      },
+      {
+        "src": "/images/product/responsive/edition-20-turquoise-lilac-v6-768w.webp",
+        "width": 768
+      },
+      {
+        "src": "/images/product/edition-20-turquoise-lilac-v6.webp",
+        "width": 1024
+      }
+    ]
+  },
+  "/images/product/edition-22-france-v3.webp": {
+    "master_sha256": "8d9148bcbaaa145cd2202383008cd9185ef51e63080ae7cfe92e33ce9a085aaa",
+    "variants": [
+      {
+        "src": "/images/product/responsive/edition-22-france-v3-256w.webp",
+        "width": 256
+      },
+      {
+        "src": "/images/product/responsive/edition-22-france-v3-480w.webp",
+        "width": 480
+      },
+      {
+        "src": "/images/product/responsive/edition-22-france-v3-768w.webp",
+        "width": 768
+      },
+      {
+        "src": "/images/product/edition-22-france-v3.webp",
+        "width": 1024
+      }
+    ]
+  },
+  "/images/product/edition-28-italy-v3.webp": {
+    "master_sha256": "3f8814723f22c71d6affc3c7f61a8ad78083031b0793f631b9c54634e0da13f6",
+    "variants": [
+      {
+        "src": "/images/product/responsive/edition-28-italy-v3-256w.webp",
+        "width": 256
+      },
+      {
+        "src": "/images/product/responsive/edition-28-italy-v3-480w.webp",
+        "width": 480
+      },
+      {
+        "src": "/images/product/responsive/edition-28-italy-v3-768w.webp",
+        "width": 768
+      },
+      {
+        "src": "/images/product/edition-28-italy-v3.webp",
+        "width": 1024
+      }
+    ]
+  },
+  "/images/product/edition-26-japan-v2.webp": {
+    "master_sha256": "0505c7524d79cdefaf83ca0516503b889172e07f60a80d80fbed248bd7db5d3b",
+    "variants": [
+      {
+        "src": "/images/product/responsive/edition-26-japan-v2-256w.webp",
+        "width": 256
+      },
+      {
+        "src": "/images/product/responsive/edition-26-japan-v2-480w.webp",
+        "width": 480
+      },
+      {
+        "src": "/images/product/responsive/edition-26-japan-v2-768w.webp",
+        "width": 768
+      },
+      {
+        "src": "/images/product/edition-26-japan-v2.webp",
+        "width": 1024
+      }
+    ]
   }
 }

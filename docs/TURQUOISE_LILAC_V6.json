@@ -1,0 +1,11 @@
+{
+  "date": "2026-10-25",
+  "method": "built-in image_gen",
+  "reference": "public/images/product/edition-20-turquoise-peach-v5.png",
+  "lilac_reference": "public/images/product/edition-04-principles-v2.png",
+  "source": "/Users/cedric/.codex/generated_images/01a16f9a-d338-7873-9808-4ccbc11941b7/exec-3d330946-fb08-4e3f-8d1e-ca6c076492e5.png",
+  "output": "public/images/product/edition-20-turquoise-lilac-v6.png",
+  "body": "#78e4e8",
+  "accent": "#b5a1d0",
+  "prompt": "Use case: precise-object-edit. FIRST image is the turquoise/peach bottle edit target. SECOND image is a colour reference ONLY for its lilac body. Replace ONLY peach on the FIRST image with soft lilac #b5a1d0 matching the SECOND image's body colour: entire collar, latch loop, side lugs, and the single continuous narrow centre stripe along the turquoise woven strap. Keep FIRST IMAGE'S turquoise #78e4e8 body and turquoise outer strap bands exactly unchanged. Do not copy the second image's body colour onto the first body or its yellow parts anywhere. Retain the same 1024x1536 framing, exact silhouette, dimensions, background, lighting, camera, shadows, pristine fine weave, stitching, entire one-piece floor-reaching U strap route, two opening swivel snap hooks and D-rings. Preserve the sharp polished steel, clear open hood, colourless translucent silicone pad and neck, folded straw, drinking spout and rear-centre spray head. All body and upper strap areas remain blank because exact crest, both animals and braille are separate SVG layers on the website. No generated logos, lettering, dots or animals. Local peach-to-lilac colour replacement only; preserve every unaffected detail."
+}

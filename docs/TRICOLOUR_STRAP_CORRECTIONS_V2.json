@@ -1,0 +1,23 @@
+{
+  "date": "2026-10-25",
+  "method": "built-in image_gen",
+  "request": "Keep each tricolour band continuous across the foreground strap; no midpoint colour swap.",
+  "editions": [
+    {
+      "number": 22,
+      "name": "France",
+      "slug": "france",
+      "band": "#002654 navy blue",
+      "prompt": "Use case: precise-object-edit. Edit ONLY the continuous woven STRAP colour-band routing in the supplied France bottle photograph. Fix the incorrect colour swap in the middle of the bottom foreground strap. There must be THREE UNBROKEN LONGITUDINAL BANDS, following the same piece of webbing from the left hook all the way around the floor-level U bend to the right hook: #002654 navy blue, chalk white #f4f3ee, red #ed2939. Across the ENTIRE visible bottom foreground strap, from its left curve through its centre to its right curve, the upper band must remain #002654 navy blue, the middle band white, and the lower band red. NO midpoint seam, no colour switching sides, no crossfade, no splice, no checkerboard, no abrupt transverse boundary anywhere. Maintain stripe identity through both bends and up the right side; reverse the apparent left-to-right order on that hanging side if necessary so each band truly follows the SAME fabric edge. One single untwisted piece of three-colour webbing. Preserve the exact strap outline, width, weave, stitching, route, hooks, floor contact and position. Preserve all non-strap source pixels: bottle and lid colours, body, proportions, hardware, clear hood, translucent colourless silicone, polished steel, lighting, shadows, background, camera and 1024x1536 framing. No generated crest, animals, text or braille; those are separate exact website vector layers. Tiny local colour routing correction only, retain crisp lossless source detail.",
+      "source": "/Users/cedric/.codex/generated_images/01a16f9a-d338-7873-9808-4ccbc11941b7/exec-b5d0bdeb-24f6-4880-9f58-df3ea3bf3d97.png"
+    },
+    {
+      "number": 28,
+      "name": "Italy",
+      "slug": "italy",
+      "band": "#009246 green",
+      "prompt": "Use case: precise-object-edit. Edit ONLY the continuous woven STRAP colour-band routing in the supplied Italy bottle photograph. Fix the incorrect colour swap in the middle of the bottom foreground strap. There must be THREE UNBROKEN LONGITUDINAL BANDS, following the same piece of webbing from the left hook all the way around the floor-level U bend to the right hook: #009246 green, chalk white #f4f3ee, red #ce2b37. Across the ENTIRE visible bottom foreground strap, from its left curve through its centre to its right curve, the upper band must remain #009246 green, the middle band white, and the lower band red. NO midpoint seam, no colour switching sides, no crossfade, no splice, no checkerboard, no abrupt transverse boundary anywhere. Maintain stripe identity through both bends and up the right side; reverse the apparent left-to-right order on that hanging side if necessary so each band truly follows the SAME fabric edge. One single untwisted piece of three-colour webbing. Preserve the exact strap outline, width, weave, stitching, route, hooks, floor contact and position. Preserve all non-strap source pixels: bottle and lid colours, body, proportions, hardware, clear hood, translucent colourless silicone, polished steel, lighting, shadows, background, camera and 1024x1536 framing. No generated crest, animals, text or braille; those are separate exact website vector layers. Tiny local colour routing correction only, retain crisp lossless source detail.",
+      "source": "/Users/cedric/.codex/generated_images/01a16f9a-d338-7873-9808-4ccbc11941b7/exec-5828b9bb-ee63-4f49-a50f-1eece8e25c8a.png"
+    }
+  ]
+}

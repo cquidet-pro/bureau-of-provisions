@@ -1,4 +1,3 @@
-import "./style.css";
 import "./drinking-prototype.js";
 
 // A single feature can be explored by hover, keyboard focus, or tap.
@@ -225,6 +224,7 @@ function showPreorderForm(link) {
     const url = new URL('https://tally.so/embed/5BW7JN');
     url.searchParams.set('colour', selectedColour);
     url.searchParams.set('hideTitle', '1');
+    url.searchParams.set('alignLeft', '1');
     url.searchParams.set('transparentBackground', '1');
     url.searchParams.set('dynamicHeight', '1');
     formLoading.hidden = false;

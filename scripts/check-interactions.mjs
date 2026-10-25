@@ -51,6 +51,7 @@ for (const link of document.querySelectorAll('.colour-register')) {
   assert.equal(new URL(form.querySelector('iframe').src).searchParams.get('colour'), choice.dataset.colour);
   assert.equal(form.querySelector('[data-form-fallback]'), null);
   assert.equal(new URL(form.querySelector('iframe').src).searchParams.get('dynamicHeight'), '1');
+  assert.equal(new URL(form.querySelector('iframe').src).searchParams.get('alignLeft'), '1');
   assert.equal(form.querySelector('iframe').nextElementSibling.textContent.trim(), 'Registration of interest only. No payment is taken.');
   assert.equal(document.querySelectorAll('script[src="https://tally.so/widgets/embed.js"]').length, 1);
   assert.equal(document.querySelectorAll('.registration-row').length, 1);
@@ -66,6 +67,8 @@ click(one('.site-head [data-preorder]'));
 assert.equal(form.hidden, false);
 assert.equal(new URL(form.querySelector('iframe').src).searchParams.get('colour'), one('[data-colour]').dataset.colour);
 
+assert.equal(document.querySelectorAll('.feature-pin').length, 7);
+assert.ok(one('#feature-description-7').textContent.includes('Stay a little unreasonable.'));
 for (const pin of document.querySelectorAll('.feature-pin')) {
   click(pin);
   assert.equal(pin.getAttribute('aria-expanded'), 'true');
@@ -122,4 +125,4 @@ for (const path of ['dist/index.html','dist/thank-you/index.html']) {
   for (const button of d.querySelectorAll('button')) assert.ok(button.textContent.trim() || button.getAttribute('aria-label'));
   assert.equal(d.querySelectorAll('h1').length, 1);
 }
-console.log('Interaction checks passed: all 29 registrations, dynamic form height and notice, six feature panels, lid modes, reduced motion, dialog focus and page accessibility structure.');
+console.log('Interaction checks passed: all 29 registrations, dynamic form height and notice, seven feature panels, lid modes, reduced motion, dialog focus and page accessibility structure.');

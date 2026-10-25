@@ -1,0 +1,25 @@
+{
+  "date": "2026-10-25",
+  "method": "built-in image_gen",
+  "request": "France right strap must read red/white/blue; Italy right strap red/white/green. Keep each edge colour continuous around the U.",
+  "editions": [
+    {
+      "number": 22,
+      "name": "France",
+      "slug": "france",
+      "colour": "navy blue #002654",
+      "red": "#ed2939",
+      "prompt": "Use case: precise-object-edit. ONLY recolour the RIGHT-HAND HANGING STRAP AND ITS RIGHT UPPER STITCHED TAB in the supplied France bottle. The right hanging strap currently has wrong stripe order. SWAP its two coloured outer bands. Looking at the image, across the right hanging strap from LEFT (near bottle) to RIGHT (outside), the order MUST be RED #ed2939, WHITE #f4f3ee, NAVY BLUE #002654. On the right side, RED must touch the bottle-facing inner edge; navy blue #002654 must be at the outer right edge. Apply this red-white-navy blue #002654 order from the right upper stitched tab at y605 all the way down to the lower right curve near y1300. The LEFT hanging strap must stay navy blue #002654-white-red exactly as in source. The BOTTOM foreground horizontal strap must stay TOP=navy blue #002654, MIDDLE=white, BOTTOM=red all the way across. Connect the right-side colours naturally through its bend: right outer navy blue #002654 band feeds continuously into upper foreground navy blue #002654; right inner red feeds continuously into lower foreground red. No colour splice, sudden swap or midpoint seam. Do not change any band on left side or bottom foreground. Keep the source's exact physical strap shape, width, position, weave, folds, stitches, hardware and U route. Preserve ALL non-strap pixels and all other geometry, bottle coating, camera, lighting, background, clear hood, translucent silicone and polished steel. Full 1024x1536 same frame. Body and straps remain without logos/animals/text because separate exact vectors are retained on website. This is a local colour-band swap on RIGHT vertical fabric only, not a redesign.",
+      "source": "/Users/cedric/.codex/generated_images/01a16f9a-d338-7873-9808-4ccbc11941b7/exec-55b88451-3ff5-4e96-8df1-42445f365236.png"
+    },
+    {
+      "number": 28,
+      "name": "Italy",
+      "slug": "italy",
+      "colour": "green #009246",
+      "red": "#ce2b37",
+      "prompt": "Use case: precise-object-edit. ONLY recolour the RIGHT-HAND HANGING STRAP AND ITS RIGHT UPPER STITCHED TAB in the supplied Italy bottle. The right hanging strap currently has wrong stripe order. SWAP its two coloured outer bands. Looking at the image, across the right hanging strap from LEFT (near bottle) to RIGHT (outside), the order MUST be RED #ce2b37, WHITE #f4f3ee, GREEN #009246. On the right side, RED must touch the bottle-facing inner edge; green #009246 must be at the outer right edge. Apply this red-white-green #009246 order from the right upper stitched tab at y605 all the way down to the lower right curve near y1300. The LEFT hanging strap must stay green #009246-white-red exactly as in source. The BOTTOM foreground horizontal strap must stay TOP=green #009246, MIDDLE=white, BOTTOM=red all the way across. Connect the right-side colours naturally through its bend: right outer green #009246 band feeds continuously into upper foreground green #009246; right inner red feeds continuously into lower foreground red. No colour splice, sudden swap or midpoint seam. Do not change any band on left side or bottom foreground. Keep the source's exact physical strap shape, width, position, weave, folds, stitches, hardware and U route. Preserve ALL non-strap pixels and all other geometry, bottle coating, camera, lighting, background, clear hood, translucent silicone and polished steel. Full 1024x1536 same frame. Body and straps remain without logos/animals/text because separate exact vectors are retained on website. This is a local colour-band swap on RIGHT vertical fabric only, not a redesign.",
+      "source": "/Users/cedric/.codex/generated_images/01a16f9a-d338-7873-9808-4ccbc11941b7/exec-85b070d6-940a-4911-9bd5-7d715c8c44cf.png"
+    }
+  ]
+}

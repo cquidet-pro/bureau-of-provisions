@@ -1,0 +1,10 @@
+{
+  "date": "2026-10-25",
+  "method": "built-in image_gen",
+  "reference": "public/images/product/edition-26-japan-v1.png",
+  "alignment_reference": "public/images/product/edition-27-canada-v1.png",
+  "source": "/Users/cedric/.codex/generated_images/01a16f9a-d338-7873-9808-4ccbc11941b7/exec-2a3dfe6a-d2c4-4051-ac8f-69cd13987256.png",
+  "output": "public/images/product/edition-26-japan-v2.png",
+  "target_centre_y": 945,
+  "prompt": "Use case: precise-object-edit. FIRST image is Japan bottle EDIT TARGET. SECOND image is Canada bottle POSITION REFERENCE ONLY. Move BOTH red sun circles on the Japan strap DOWN so the circles' centres are on EXACTLY the same horizontal line as the centres of Canada's red maple-leaf motifs. In the 1024x1536 frame, target centre Y=945 pixels (61.5% of image height), left circle at approximately X=208, right circle at approximately X=815, centred across each existing strap at that height. Current circles are at y800: remove them there and restore the straight crimson centre stripe through their old positions. At y945 place the same existing small red circular motif with its clean white breathing space around it; continue the crimson centre stripe above and below this new circle. Keep the two circles aligned with EACH OTHER and with the maple leaves in SECOND image, not near the upper strap animals. Preserve all other FIRST image pixels: white body, red collar, exact bottle geometry, camera, framing, polished steel, clear hood, translucent silicone, single detachable full U-shaped woven strap, width, folds, stitching, hooks, texture, background and lighting. Do not copy Canada's red bottle or maple leaves. No logos, animals, letters, braille or dots other than the two requested red sun circles, as the exact native SVG brand layers are added on website. Move only the two red circles and their small white gaps from y800 to y945. Same circle size as source. Retain lossless sharp native detail."
+}

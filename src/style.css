@@ -1520,8 +1520,6 @@ body:has(.photo-dialog[open],.crest-dialog[open]) {
 .colour-card:is([data-palette="United States"],[data-palette="Brazil"],[data-palette="Canada"]) .braille-colour { color:#f4eddf; }
 .colour-card:is([data-palette="United States"],[data-palette="Brazil"],[data-palette="Canada"]) .product-crest,
 .colour-card[data-palette="Brazil"] .strap-print { mix-blend-mode:normal; }
-/* Leave a clear gap above Japan's woven sun circles. */
-.colour-card[data-palette="Japan"] :is(.strap-colour-dog,.strap-colour-leopard) { top:45.3%; }
 .colour-card[data-palette="Spain"] .braille-colour { color:#f4eddf; }
 .colour-card[data-palette="Spain"] .product-crest { mix-blend-mode:normal; }
 .colour-card:is([data-palette="Cobalt / Sunshine"],[data-palette="Ocean / Coral"],[data-palette="Raspberry / Mint"],[data-palette="Midnight Paris"],[data-palette="Web Hero"]) .product-crest,
@@ -1746,6 +1744,8 @@ body:has(.photo-dialog[open],.crest-dialog[open]) {
 .preorder-inline h3 { font-size:20px; margin:0 0 12px; }
 .preorder-inline iframe { display:block; width:100%; border:0; }
 .preorder-inline .form-loading,.preorder-inline .registration-note { font:12px/1.7 Inter,Arial,sans-serif; margin:8px 0 0; }
+/* Match Tally's alignLeft embed inset and tuck the notice under Submit's bottom spacing. */
+.preorder-inline .registration-note { position:relative; margin:-10px 8px 0; }
 
 /* Keep the selected bottle and its registration form together in the collection. */
 .registration-row { grid-column:1 / -1; display:grid; grid-template-columns:minmax(200px, 1fr) minmax(0, 2fr); gap:32px; align-items:center; margin:32px 0; scroll-margin-top:24px; }

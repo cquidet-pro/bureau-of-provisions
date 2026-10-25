@@ -1,0 +1,11 @@
+{
+  "date": "2026-10-25",
+  "method": "built-in image_gen",
+  "reference": "public/images/product/edition-03-mint-peach-v4.png",
+  "peach_reference": "public/images/product/edition-03-principles-v2.png",
+  "source": "/Users/cedric/.codex/generated_images/01a16f9a-d338-7873-9808-4ccbc11941b7/exec-31ca2bb3-5b23-468d-84a1-a88e7d28e3e5.png",
+  "output": "public/images/product/edition-20-turquoise-peach-v5.png",
+  "body": "#78e4e8",
+  "accent": "#f2ab85",
+  "prompt": "Use case: precise-object-edit. FIRST image is the edit target: turquoise bottle with orange collar and single orange centre stripe on turquoise woven strap. SECOND image is a COLOUR REFERENCE ONLY for the exact soft peach tone already used on its collar and strap. In FIRST image replace ONLY orange #ffa15e with the same soft peach #f2ab85 seen in SECOND image: entire coated collar, latch loop, side lugs, and the single narrow longitudinal centre stripe of the strap. Match second image's soft light peach in equivalent lighting, never vivid orange. KEEP FIRST IMAGE'S TURQUOISE #78e4e8 body and both outer turquoise strap bands exactly unchanged. Do not copy the second image's green mint body or plain peach strap. Preserve all source detail, exact geometry, camera, portrait 1024x1536 framing, background, shadows, fine woven fibres, stitches, strap folds/route/width. One continuous detachable U-shaped strap with opening oval swivel snap hooks at both ends. Mirror-polished steel, clear open hood, colourless translucent silicone seal and neck, straw, spout, spray head remain identical. No logos, animals, lettering, braille or dots; exact BoP vector layers are applied separately on the website. Colour replacement only, no regeneration of unaffected parts."
+}
