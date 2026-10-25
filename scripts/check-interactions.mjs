@@ -52,7 +52,8 @@ for (const link of document.querySelectorAll('.colour-register')) {
   assert.equal(form.querySelector('[data-form-fallback]'), null);
   assert.equal(new URL(form.querySelector('iframe').src).searchParams.get('dynamicHeight'), '1');
   assert.equal(new URL(form.querySelector('iframe').src).searchParams.get('alignLeft'), '1');
-  assert.equal(form.querySelector('iframe').nextElementSibling.textContent.trim(), 'Registration of interest only. No payment is taken.');
+  assert.equal(form.querySelector('.form-frame-wrap').nextElementSibling.textContent.trim(), 'Registration of interest only. No payment is taken.');
+  assert.ok(form.querySelector('.form-frame-cover[aria-hidden="true"]'));
   assert.equal(document.querySelectorAll('script[src="https://tally.so/widgets/embed.js"]').length, 1);
   assert.equal(document.querySelectorAll('.registration-row').length, 1);
   assert.equal(one('.registration-row').nextElementSibling, one('#bottle-questions'), 'Registration stays below the complete catalogue, immediately above the questions');
@@ -108,6 +109,7 @@ assert.equal(one('[data-drinking-particles]').children.length, 0);
 
 const contact = one('[data-contact-form]');
 const contactFrame = contact.querySelector('iframe');
+assert.ok(contact.querySelector('.form-frame-cover[aria-hidden="true"]'));
 assert.equal(contactFrame.getAttribute('src'), null, 'Contact form stays unloaded until opened');
 contact.open = true;
 contact.dispatchEvent(new window.Event('toggle'));

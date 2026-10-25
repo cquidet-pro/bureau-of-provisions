@@ -1770,6 +1770,10 @@ body:has(.photo-dialog[open],.crest-dialog[open]) {
 .contact-compose > summary span { float:right; }
 .contact-form-wrap { padding-bottom:20px; }
 .contact-form-wrap iframe { display:block; width:100%; border:0; }
+.form-frame-wrap { position:relative; --form-cover-colour:var(--paper); }
+.registration-frame-wrap { --form-cover-colour:#eee6d8; }
+/* Visual cover only: the embedded form remains untouched. Keep Submit on the left clear. */
+.form-frame-cover { position:absolute; z-index:1; right:0; bottom:0; width:min(185px,35%); height:60px; background:var(--form-cover-colour); pointer-events:auto; }
 .site-foot-minimal > div > a { display:block; margin-bottom:12px; }
 @media(max-width:760px) { .bureau-contact { grid-template-columns:1fr; gap:24px; } }
 
