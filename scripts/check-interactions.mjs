@@ -55,6 +55,7 @@ for (const link of document.querySelectorAll('.colour-register')) {
   assert.equal(form.querySelector('iframe').nextElementSibling.textContent.trim(), 'Registration of interest only. No payment is taken.');
   assert.equal(document.querySelectorAll('script[src="https://tally.so/widgets/embed.js"]').length, 1);
   assert.equal(document.querySelectorAll('.registration-row').length, 1);
+  assert.equal(one('.registration-row').nextElementSibling, one('#bottle-questions'), 'Registration stays below the complete catalogue, immediately above the questions');
   assert.equal(one('[data-registration-preview] .colour-register'), null);
   assert.equal(link.getAttribute('aria-expanded'), 'true');
   form.querySelector('iframe').dispatchEvent(new window.Event('load'));

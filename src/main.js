@@ -216,7 +216,7 @@ function showPreorderForm(link) {
     previewChoice.removeAttribute('data-colour');
     previewChoice.removeAttribute('data-colour-number');
     previewChoice.disabled = true;
-    document.querySelector('.colour-footer').before(registrationRow);
+    inlineForm.before(registrationRow);
     registrationRow.append(preview, inlineForm);
   }
   formSelection.textContent = `Your selection: ${selectedColour}`;

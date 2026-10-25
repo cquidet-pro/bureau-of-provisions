@@ -2,6 +2,10 @@
 
 Updated 25 October 2026.
 
+The selected-bottle preview and shared form appear after the entire colour
+catalogue, immediately above `#bottle-questions`. Their warm background band
+has inset top and bottom rules. Switching editions keeps this same position.
+
 - The separate “Open registration in a new tab” link is removed.
 - The existing notice, “Registration of interest only. No payment is taken.”,
   is immediately after the iframe, aligned to the left edge of its Submit button.
