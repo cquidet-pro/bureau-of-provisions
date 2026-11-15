@@ -964,14 +964,10 @@
     "height_basis": "V68 closed envelope including integral carry handle; source dimensions.json"
   },
   "preorder": {
-    "price_gbp": 25,
     "unit": "per bottle",
     "shipping": "Ships internationally",
     "registration_url": "https://tally.so/r/5BW7JN",
-    "price_eur": 30,
-    "price_usd": 33,
-    "shipping_included": false,
-    "display_price": "\u00a325 / \u20ac30 / $33 per bottle \u00b7 Excluding shipping"
+    "prices_visible": false
   },
   "current_geometry": {
     "version": "V68",

@@ -62,6 +62,6 @@ assert.ok(leaders.includes('941,630'), 'Carry leader must touch the approved nat
 const scene = deliveries.files.find(f => f.png.endsWith('/platform-native-v68.png'));
 assert.ok(scene.dimensions[0] >= 4608 && scene.dimensions[1] >= 3072, 'Re-render main product at display-appropriate resolution; do not enlarge old product pixels');
 assert.equal(design.quality_audit.v68_update.station_frame, 48, 'Main scene straw must stay raised');
-assert.deepEqual([design.preorder.price_gbp,design.preorder.price_eur,design.preorder.price_usd],[25,30,33]);
-assert.equal(design.preorder.shipping_included,false);
+assert.equal(design.preorder.prices_visible,false);
+assert.ok(!/£\d|€\d|\$\d/.test(html), 'Current site must not show a price');
 console.log('Presentation rules passed: raised straw, small edge dots, strap leader, discreet catalogue braille, no cutaway braille and high-resolution scene.');
