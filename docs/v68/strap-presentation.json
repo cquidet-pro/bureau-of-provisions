@@ -1,0 +1,42 @@
+{
+  "button_finish": "polished stainless steel; metallic 1, roughness 0.12",
+  "checks": [
+    {
+      "side": -1,
+      "camera": "catalogue",
+      "lower_bar_covered": true
+    },
+    {
+      "side": -1,
+      "camera": "scene",
+      "lower_bar_covered": true
+    },
+    {
+      "side": -1,
+      "camera": "macro",
+      "lower_bar_covered": true
+    },
+    {
+      "side": 1,
+      "camera": "catalogue",
+      "lower_bar_covered": true
+    },
+    {
+      "side": 1,
+      "camera": "scene",
+      "lower_bar_covered": true
+    },
+    {
+      "side": 1,
+      "camera": "macro",
+      "lower_bar_covered": true
+    }
+  ],
+  "release_lever": "above on both hooks",
+  "texture_mapping": "cumulative physical arc length; square physical texture pixels",
+  "texture_height": 8264,
+  "canada_folds": "both plain ivory, no red texture",
+  "cap_body_interface_z_mm": 179.5,
+  "joint_line_width_mm": 0.14000000373926014,
+  "lid_optics": "single unbent path, zero roughness; no reflected/offset duplicate images"
+}

@@ -15,8 +15,10 @@ if (prototype) {
   const status = find('[data-drinking-status]');
   const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
   const pressedHead = find('[data-mist-pressed]');
+  const lidToggle=find('[data-lid-toggle]'),closedLid=find('[data-lid-closed]');
+  let lidClosed=false;
   // Outlet centred on the right-hand vertical steel wall, below the rim.
-  const pump = {down:140, burstEnd:280, returned:500, count:650, x:692, y:480};
+  const pump = {down:140, burstEnd:280, returned:500, count:650, x:624, y:722};
   let method='straw', pumping=false, frame=0, pumpStarted=null, drops=[], puffs=[];
   let releaseTimer, clearTimer;
   function headPose(amount, phase) {
@@ -34,7 +36,7 @@ if (prototype) {
     prototype.dataset.strawPosition=up?'up':'flat';
     prototype.querySelectorAll('[data-straw-position]').forEach(button=>button.setAttribute('aria-pressed',String(button.dataset.strawPosition===(up?'up':'flat'))));
     if(method==='straw') {
-      find('[data-straw-leader]').setAttribute('d',up?'M180 824H270L377 668':'M180 824H270L420 594');
+      find('[data-straw-leader]').setAttribute('d',up?'M180 824H270L459 844':'M180 824H270L459 799');
       status.textContent=up?'Up. Ready for a sip.':'Flat. Folded away.';
     }
   }
@@ -139,8 +141,17 @@ if (prototype) {
     for(let i=0;i<pump.count;i++) emit(pumpStarted+pump.down+i*(pump.burstEnd-pump.down)/pump.count);
     if(!frame) frame=requestAnimationFrame(tick);
   }
+  function setLidClosed(closed) {
+    stop();lidClosed=closed;prototype.dataset.lidState=closed?'closed':'open';
+    closedLid.style.display=closed?'':'none';lidToggle.textContent=closed?'Open lid':'Close lid';lidToggle.setAttribute('aria-expanded',String(!closed));
+    controls.hidden=closed||method==='gulp';strawControls.hidden=closed||method!=='straw';play.hidden=closed||method!=='spray';
+    strawPose(!closed&&method==='straw');
+    if(closed)status.textContent='Lid closed. Straw folded safely inside.';
+    find('.drinking-closeup').setAttribute('aria-label',closed?'Closed lid with straw folded inside.':`Overhead lid study highlighting ${options[method].detail.toLowerCase()}.`);
+  }
+  lidToggle.addEventListener('click',()=>setLidClosed(!lidClosed));
   function select(next) {
-    stop();method=next;const item=options[method];prototype.dataset.method=method;
+    stop();method=next;lidClosed=false;prototype.dataset.lidState='open';closedLid.style.display='none';lidToggle.textContent='Close lid';lidToggle.setAttribute('aria-expanded','true');const item=options[method];prototype.dataset.method=method;
     prototype.querySelectorAll('[data-drinking-method],[data-drinking-part]').forEach(button=>button.setAttribute('aria-pressed',String((button.dataset.drinkingMethod||button.dataset.drinkingPart)===method)));
     find('[data-drinking-title]').textContent=item.title;find('[data-drinking-description]').textContent=item.description;
     find('[data-drinking-action]').textContent=item.action;find('[data-drinking-detail]').textContent=item.detail;

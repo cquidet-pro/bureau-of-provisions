@@ -1,0 +1,44 @@
+{
+  "catalogue": {
+    "position_m": [
+      0,
+      -0.433503,
+      0.29
+    ],
+    "target_m": [
+      0,
+      0,
+      0.127
+    ],
+    "horizontal_view_degrees": 0,
+    "orthographic_scale_m": 0.3
+  },
+  "lid": {
+    "position_m": [
+      0,
+      -0.241197,
+      0.365
+    ],
+    "target_m": [
+      0,
+      0,
+      0.218
+    ],
+    "horizontal_view_degrees": 0,
+    "orthographic_scale_m": 0.205
+  },
+  "main_scene": {
+    "position_m": [
+      0,
+      -0.65,
+      0.22037
+    ],
+    "target_m": [
+      0,
+      0,
+      0.1635
+    ],
+    "horizontal_view_degrees": 0,
+    "orthographic_scale_m": 0.58
+  }
+}

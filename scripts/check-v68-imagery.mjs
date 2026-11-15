@@ -37,7 +37,7 @@ assert.ok(html.includes('class="scene-character-details"'), 'Native product cove
 assert.equal(design.references.strap_attachment, 'docs/v68/SWIVEL_SNAP_HOOK_REFERENCE.png');
 assert.ok(html.includes('249.1 mm') && html.includes('179.5 mm') && html.includes('73 mm'));
 assert.ok(!html.includes('207.7 mm') && !html.includes('185.4 mm') && !html.includes('Body Ø 65 mm'));
-assert.equal(deliveries.lossless_file_count, 35);
+assert.equal(deliveries.lossless_file_count, 36);
 const sha = bytes => createHash('sha256').update(bytes).digest('hex');
 assert.equal(sha(readFileSync('scripts/render-v68/native-studio.py')), hookFit.render_setup_sha256, 'Hook clearance requires rechecking after render geometry changes');
 for (const file of deliveries.files) {
@@ -45,7 +45,7 @@ for (const file of deliveries.files) {
   assert.equal(sha(readFileSync('public' + file.png)), file.png_sha256, `Unreviewed master: ${file.png}`);
   assert.equal(sha(readFileSync('public' + file.webp)), file.webp_sha256, `Changed lossless delivery: ${file.webp}`);
 }
-console.log('V68 checks passed: 29 native editions, source mesh integrity, current dimensions and 35 verified lossless deliveries.');
+console.log('V68 checks passed: 29 native editions, source mesh integrity, current dimensions and 36 verified lossless deliveries.');
 // User-corrected presentation rules: enforce these before every deployment.
 assert.ok(!html.includes('braille-cutaway'), 'Anatomy view must not contain braille');
 assert.match(html, /data-straw-position="up" aria-pressed="true"/, 'Straw must start Up');
@@ -55,13 +55,36 @@ const brailleRule = css.match(/\.colour-render-sharp \.braille-colour\s*\{([^}]+
 const brailleWidth = Number(brailleRule?.match(/width:([\d.]+)%/)?.[1]);
 assert.ok(brailleWidth >= 16 && brailleWidth <= 20, 'Catalogue braille must remain discreet relative to bottle width');
 const leaders = html.match(/<svg class="product-leaders"[\s\S]*?<\/svg>/)?.[0];
-for (const [cx,cy] of [[719,339],[825,324]]) {
+for (const [cx,cy] of [[722,388],[821,384]]) {
   assert.ok(leaders.includes(`<circle cx="${cx}" cy="${cy}" r="2"/>`), 'Small straw/spout dots must stay beside openings');
 }
-assert.ok(leaders.includes('941,630'), 'Carry leader must touch the approved native strap position');
+assert.ok(leaders.includes('929,690'), 'Carry leader must touch the approved native strap position');
 const scene = deliveries.files.find(f => f.png.endsWith('/platform-native-v68.png'));
 assert.ok(scene.dimensions[0] >= 4608 && scene.dimensions[1] >= 3072, 'Re-render main product at display-appropriate resolution; do not enlarge old product pixels');
 assert.equal(design.quality_audit.v68_update.station_frame, 48, 'Main scene straw must stay raised');
 assert.equal(design.preorder.prices_visible,false);
 assert.ok(!/£\d|€\d|\$\d/.test(html), 'Current site must not show a price');
 console.log('Presentation rules passed: raised straw, small edge dots, strap leader, discreet catalogue braille, no cutaway braille and high-resolution scene.');
+
+const cameras=read('docs/v68/front-camera-record.json');
+for (const name of ['catalogue','lid','main_scene']) {
+ assert.equal(cameras[name].horizontal_view_degrees,0);
+ assert.equal(cameras[name].position_m[0],0);
+ assert.equal(cameras[name].target_m[0],0);
+}
+assert.equal(read('docs/v68/section-record.json').open_lid_pose_degrees,90);
+assert.ok(html.includes('lid-closed-native-v68.webp'));
+const presentation=read('docs/v68/strap-presentation.json');
+assert.equal(presentation.release_lever,'above on both hooks');
+assert.ok(presentation.checks.every(c=>c.lower_bar_covered));
+console.log('Approved corrections passed: front-facing views, 90-degree open lid, closed lid control and concealed strap hardware.');
+
+const calibration=read('docs/v68/catalogue-branding-calibration.json');
+for(const [name,selector] of [['greyhound','strap-colour-dog'],['leopard','strap-colour-leopard']]) {
+ const rule=css.match(new RegExp('\\.'+selector+'\\s*\\{([^}]+)\\}'))?.[1];
+ assert.ok(rule);
+ for(const [property,key] of [['left','left_percent'],['top','top_percent']]) {
+  const value=Number(rule.match(new RegExp(property+':([\\d.]+)%'))?.[1]);
+  assert.ok(Math.abs(value-calibration[name][key])<.003,selector+' must stay centred on its projected strap');
+ }
+}

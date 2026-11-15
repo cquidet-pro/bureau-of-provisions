@@ -10,13 +10,14 @@ try {
   const target=join(fixture,file);mkdirSync(dirname(target),{recursive:true});copyFileSync(join(root,file),target);
  }
  symlinkSync(join(root,'node_modules'),join(fixture,'node_modules'),'dir');
- for(const name of ['edition-09-native-v68.webp','platform-native-v68.webp','bottle-cutaway-native-v68.webp','lid-native-v68.webp','straw-up-native-v68.webp','spray-pressed-native-v68.webp']) {
+ for(const name of ['edition-09-native-v68.webp','platform-native-v68.webp','bottle-cutaway-native-v68.webp','lid-native-v68.webp','straw-up-native-v68.webp','spray-pressed-native-v68.webp','lid-closed-native-v68.webp','edition-02-native-v68.webp','edition-23-native-v68.webp','edition-26-native-v68.webp','edition-27-native-v68.webp']) {
   const p=join(fixture,'public/images/product',name);mkdirSync(dirname(p),{recursive:true});writeFileSync(p,'test-only image placeholder');
  }
  mkdirSync(join(fixture,'docs/v68'),{recursive:true});writeFileSync(join(fixture,'docs/v68/snap-hook-render.png'),'test-only detail placeholder');
- const run=(...args)=>spawnSync(process.execPath,[join(fixture,'scripts/render-v68/review.mjs'),...args],{cwd:fixture,encoding:'utf8'});
+ const fixtureEnv={...process.env};delete fixtureEnv.BOP_REVIEW_OUT;
+ const run=(...args)=>spawnSync(process.execPath,[join(fixture,'scripts/render-v68/review.mjs'),...args],{cwd:fixture,env:fixtureEnv,encoding:'utf8'});
  assert.notEqual(run('--check-approval').status,0,'Unapproved batch must be refused');
- assert.equal(run('--from-current').status,0,'Current-source review must generate');
+ const generated=run('--from-current');assert.equal(generated.status,0,'Current-source review must generate: '+generated.stderr);
  assert.notEqual(run('--approve').status,0,'Approval needs an identified reviewer');
  assert.equal(run('--approve','--reviewer','TEST FIXTURE ONLY').status,0);
  assert.equal(run('--check-approval').status,0,'Matching receipt should pass');

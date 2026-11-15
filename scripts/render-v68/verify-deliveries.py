@@ -12,7 +12,7 @@ for p in sorted((root/'public/images/product').glob('*-native-v68.png')):
   assert a.size==b.size and a.convert('RGBA').tobytes()==b.convert('RGBA').tobytes(),str(p)
   size=a.size
  files.append({'png':'/'+str(p.relative_to(root/'public')),'webp':'/'+str(w.relative_to(root/'public')),'dimensions':size,'png_sha256':sha(p),'webp_sha256':sha(w),'pixel_identical':True})
-for name in ['source-geometry-integrity.json','dimension-audit.json','view-anchors.json','section-record.json','catalogue-branding-calibration.json']:
+for name in ['source-geometry-integrity.json','dimension-audit.json','view-anchors.json','section-record.json','catalogue-branding-calibration.json','front-camera-record.json','strap-presentation.json']:
  source=root/'output/design-v68/native'/name
  if source.exists():shutil.copy2(source,root/'docs/v68'/name)
 proof=read('docs/v68/source-geometry-integrity.json');assert proof['unchanged'] and proof['before']==proof['after']

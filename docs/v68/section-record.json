@@ -1,7 +1,10 @@
 {
   "body_source": "01-Body",
   "section": "right half removed by plane cut of a copy, only in illustrative cutaway",
-  "lid_translation_mm": 24,
+  "lid_translation_mm": 34,
+  "open_lid_pose_degrees": 90,
+  "pickup_attachment": "12-Metal-pickup lifted with upper deck by the same 34 mm; metallic continuation reaches hidden socket; no body-fixed duplicate",
+  "connector": "metallic thread only; plastic neck projection trimmed in illustration",
   "removed_half_interior": [
     "20-Spray-pickup"
   ],

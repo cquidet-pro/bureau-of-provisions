@@ -28,9 +28,9 @@ try:
  if any(d.type=='METAL' for d in prefs.devices):s.cycles.device='GPU'
  print('RENDER DEVICES',[(d.name,d.type,d.use) for d in prefs.devices],flush=True)
 except Exception as exc:print('CPU rendering',str(exc),flush=True)
-s.cycles.max_bounces=12;s.cycles.transmission_bounces=10;s.cycles.transparent_max_bounces=12
+s.cycles.max_bounces=12;s.cycles.transmission_bounces=10;s.cycles.transparent_max_bounces=64;s.cycles.min_transparent_bounces=64
 s.render.resolution_x=1024;s.render.resolution_y=1536;s.render.resolution_percentage=100;s.render.image_settings.file_format='PNG';s.render.image_settings.color_mode='RGBA';s.render.film_transparent=True
-s.view_settings.view_transform='AgX';s.view_settings.look='AgX - Medium High Contrast';s.view_settings.exposure=-2.5
+s.view_settings.view_transform='Standard';s.view_settings.look='None';s.view_settings.exposure=-2.9
 for o in s.objects:
  if o.type=='LIGHT':o.hide_render=True
  if o.type=='MESH' and 'logo' in o.name.lower():o.hide_render=True
@@ -38,33 +38,39 @@ for o in s.objects:
 for mat in bpy.data.materials:
  if not mat.use_nodes:continue
  for p in [n for n in mat.node_tree.nodes if n.type=='BSDF_PRINCIPLED']:
-  if 'stainless' in mat.name.lower():p.inputs['Metallic'].default_value=1;p.inputs['Roughness'].default_value=.12;p.inputs['Base Color'].default_value=(.65,.69,.72,1)
-  if mat.name=='Clear hood':p.inputs['Roughness'].default_value=.025;p.inputs['Transmission Weight'].default_value=1;p.inputs['IOR'].default_value=1.46;p.inputs['Base Color'].default_value=(.97,.99,1,1)
+  if 'stainless' in mat.name.lower() or mat.name=='Button · satin silver metal touch':p.inputs['Metallic'].default_value=1;p.inputs['Roughness'].default_value=.12;p.inputs['Base Color'].default_value=(.65,.69,.72,1)
+  if mat.name=='Clear hood':p.inputs['Specular IOR Level'].default_value=0;p.inputs['Coat Weight'].default_value=0;p.inputs['Roughness'].default_value=.025;p.inputs['Transmission Weight'].default_value=1;p.inputs['IOR'].default_value=1.46;p.inputs['Base Color'].default_value=(.97,.99,1,1)
   if mat.name=='Bureau cream':p.inputs['Roughness'].default_value=.42;p.inputs['Specular IOR Level'].default_value=.25
+# Clear photographic lid: one unbent transmission path prevents doubled
+# images of the drinking parts. A subtle grazing-angle tint keeps its rim
+# and handle visible without reflecting studio lights or blurring the view.
+hoodmat=bpy.data.materials['Clear hood'];hn=hoodmat.node_tree.nodes;hl=hoodmat.node_tree.links;hn.clear()
+output=hn.new('ShaderNodeOutputMaterial');transmission=hn.new('ShaderNodeBsdfTransparent');transmission.name='WEB-Crisp clear lid transmission'
+fresnel=hn.new('ShaderNodeFresnel');fresnel.inputs['IOR'].default_value=1.46
+edge=hn.new('ShaderNodeMixRGB');edge.blend_type='MIX';edge.inputs[1].default_value=(.90,.92,.93,1);edge.inputs[2].default_value=(.60,.65,.70,1)
+hl.new(fresnel.outputs[0],edge.inputs[0]);hl.new(edge.outputs[0],transmission.inputs['Color']);hl.new(transmission.outputs[0],output.inputs['Surface'])
 s.world.use_nodes=True;s.world.node_tree.nodes['Background'].inputs['Color'].default_value=(.7,.68,.62,1);s.world.node_tree.nodes['Background'].inputs['Strength'].default_value=.22
 for name,loc,power,size in [('Key',(-.20,-.25,.37),9,.23),('Fill',(.18,-.12,.22),3,.18),('Rim',(.06,.18,.36),11,.20)]:
  d=bpy.data.lights.new('WEB-'+name,'AREA');d.energy=power;d.shape='DISK';d.size=size;o=bpy.data.objects.new('WEB-'+name,d);s.collection.objects.link(o);o.location=loc;o.rotation_euler=(Vector((0,0,.13))-o.location).to_track_quat('-Z','Y').to_euler()
 def material(name,color,metal=0,rough=.4):
  m=bpy.data.materials.new('WEB-'+name);m.use_nodes=True;p=m.node_tree.nodes.get('Principled BSDF');p.inputs['Base Color'].default_value=(*color,1);p.inputs['Metallic'].default_value=metal;p.inputs['Roughness'].default_value=rough;return m
+# A small dedicated strip gives the flat steel button a readable highlight.
+d=bpy.data.lights.new('WEB-Button soft reflection strip','AREA');d.energy=.35;d.shape='RECTANGLE';d.size=.08;d.size_y=.16
+lamp=bpy.data.objects.new('WEB-Button soft reflection strip',d);s.collection.objects.link(lamp);lamp.location=(-.035,-.30,.10);lamp.rotation_euler=(Vector((0,-.031,.194))-lamp.location).to_track_quat('-Z','Y').to_euler()
+receiver=bpy.data.collections.new('WEB-Button reflection receiver');receiver.objects.link(s.objects['05-Button']);lamp.light_linking.receiver_collection=receiver
 floor=material('ivory backdrop',(.66,.59,.48),rough=.8)
 bpy.ops.mesh.primitive_plane_add(size=200,location=(0,0,-.0002));o=bpy.context.object;o.name='WEB-Studio-floor';o.data.materials.append(floor);o.is_shadow_catcher=True
-ng=bpy.data.node_groups.new('WEB-Studio composite','CompositorNodeTree');ng.interface.new_socket(name='Image',in_out='OUTPUT',socket_type='NodeSocketColor');s.compositing_node_group=ng;s.use_nodes=True;s.render.use_compositing=True;cn=ng.nodes;cl=ng.links;rl=cn.new('CompositorNodeRLayers');bg=cn.new('CompositorNodeRGB');bg.outputs[0].default_value=(8.0,7.0,5.5,1);over=cn.new('CompositorNodeAlphaOver');over.inputs['Factor'].default_value=1;cl.new(bg.outputs[0],over.inputs['Background']);cl.new(rl.outputs['Image'],over.inputs['Foreground']);comp=cn.new('NodeGroupOutput');cl.new(over.outputs[0],comp.inputs[0])
+ng=bpy.data.node_groups.new('WEB-Studio composite','CompositorNodeTree');ng.interface.new_socket(name='Image',in_out='OUTPUT',socket_type='NodeSocketColor');s.compositing_node_group=ng;s.use_nodes=True;s.render.use_compositing=True;cn=ng.nodes;cl=ng.links;rl=cn.new('CompositorNodeRLayers');bg=cn.new('CompositorNodeRGB');bg.outputs[0].default_value=(6.76,6.32,5.51,1);over=cn.new('CompositorNodeAlphaOver');over.inputs['Factor'].default_value=1;cl.new(bg.outputs[0],over.inputs['Background']);cl.new(rl.outputs['Image'],over.inputs['Foreground']);comp=cn.new('NodeGroupOutput');cl.new(over.outputs[0],comp.inputs[0])
 steel=material('strap polished steel',(.65,.69,.72),1,.12)
 cloth=material('woven strap',(.75,.70,.60),rough=.68)
 # An explicit UV ribbon keeps stripes on the same physical edge through the U.
-knots=[(-.050,-.001,.136),(-.058,-.003,.108),(-.069,-.006,.063),(-.075,-.012,.030),(-.070,-.037,.008),(-.052,-.058,.003),(-.023,-.065,.003),(0,-.066,.003),(.023,-.065,.003),(.052,-.058,.003),(.070,-.037,.008),(.075,-.012,.030),(.069,-.006,.063),(.058,-.003,.108),(.050,-.001,.136)]
-points=[]
-for i in range(len(knots)-1):
- p0=Vector(knots[max(0,i-1)]);p1=Vector(knots[i]);p2=Vector(knots[i+1]);p3=Vector(knots[min(len(knots)-1,i+2)])
- for j in range(18):
-  t=j/18;points.append(.5*((2*p1)+(-p0+p2)*t+(2*p0-5*p1+4*p2-p3)*t*t+(-p0+3*p1-3*p2+p3)*t*t*t))
-points.append(Vector(knots[-1]));verts=[];uv=[];faces=[];edges=[[],[]]
+route=__import__('runpy').run_path(str(Path(__file__).resolve().parent/'strap_path.py'));points=[Vector(p) for p in route['POINTS']];path_distances=route['DISTANCES'];path_length=route['LENGTH'];verts=[];uv=[];faces=[];edges=[[],[]]
 for i,p in enumerate(points):
  t=(points[min(i+1,len(points)-1)]-points[max(0,i-1)]).normalized();w=Vector((0,-1,0)).cross(t).normalized()
  # Turn naturally onto the floor; keep one continuous band orientation.
  blend=max(0,min(1,(.025-p.z)/.02));floorw=Vector((0,1,0));w=(w*(1-blend)+floorw*blend).normalized()
  for side in (0,1):
-  v=p+w*((side-.5)*.014);verts.append(tuple(v));uv.append((side,i/(len(points)-1)));edges[side].append(tuple(v+Vector((0,-.00015,.00015))))
+  v=p+w*((side-.5)*.014);verts.append(tuple(v));uv.append((side,path_distances[i]/path_length));edges[side].append(tuple(v+Vector((0,-.00015,.00015))))
  if i:faces.append((2*i-2,2*i-1,2*i+1,2*i))
 mesh=bpy.data.meshes.new('WEB-webbing');mesh.from_pydata(verts,[],faces);mesh.update();ob=bpy.data.objects.new('WEB-One-continuous-strap',mesh);s.collection.objects.link(ob);ob.data.materials.append(cloth)
 uvlayer=mesh.uv_layers.new(name='UVMap')
@@ -99,7 +105,7 @@ for side in (-1,1):
   me=bpy.data.meshes.new('WEB-'+name);me.from_pydata(vs,[],fs);me.update();obj=bpy.data.objects.new('WEB-'+name,me);s.collection.objects.link(obj);obj.data.materials.append(steel);be=obj.modifiers.new('Snap casting edge radius','BEVEL');be.width=.00012 if "trigger-lever" in name else .0003;be.segments=5
   return obj
  plate('flat-snap-body-'+str(side),[(.002786,-.002118),(.0038,-.0022),(.0075,-.0021),(.0106,-.00165),(.0124,-.00085),(.0124,.00085),(.0105,.0017),(.0062,.0023),(.0036,.00215),(.002786,.002118)])
- plate('snap-trigger-lever-'+str(side),[(.0035,-.00155),(.00445,-.00175),(.00515,-.0023),(.0055,-.0032),(.0055,-.00425),(.00525,-.0046),(.00465,-.0046),(.00445,-.0042),(.00445,-.0031),(.00415,-.00265),(.0035,-.0024)],.0009)
+ plate('snap-trigger-lever-'+str(side),[(u,-v) for u,v in [(.0035,-.00155),(.00445,-.00175),(.00515,-.0023),(.0055,-.0032),(.0055,-.00425),(.00525,-.0046),(.00465,-.0046),(.00445,-.0042),(.00445,-.0031),(.00415,-.00265),(.0035,-.0024)]],.0009)
  rivet=hookpoint(.0080,0,-.00075);bpy.ops.mesh.primitive_cylinder_add(vertices=24,radius=.00055,depth=.0004,location=rivet,rotation=(math.pi/2,0,0));rv=bpy.context.object;rv.name='WEB-Snap-trigger-rivet-'+str(side);rv.data.materials.append(steel)
  stem_start=hookpoint(.0124,0);stem_end=Vector((side*.047,-.001,.157));tube('short-snap-swivel-'+str(side),[tuple(stem_start),tuple(stem_end)],.00065)
  middle=stem_start.lerp(stem_end,.56);bpy.ops.mesh.primitive_cylinder_add(vertices=24,radius=.0011,depth=.0014,location=middle);sw=bpy.context.object;sw.name='WEB-Snap-swivel-collar-'+str(side);sw.rotation_euler=(stem_end-stem_start).to_track_quat('Z','Y').to_euler();sw.data.materials.append(steel)
@@ -110,15 +116,26 @@ for side in (-1,1):
    a=start-(math.pi/2)*k/10;coords.append((cx+ox+.002*math.cos(a),-.001,.154+oz+.002*math.sin(a)))
  tube('separate-D-ring-'+str(side),coords,.00065,closed=True)
  # Slim folded same-fabric tabs and fine rectangular stitching, below D rings.
- bpy.ops.mesh.primitive_cube_add(size=1,location=(side*.0485,-.001,.14325));tab=bpy.context.object;tab.name='WEB-Folded-tab-'+str(side);tab.dimensions=(.014,.0011,.0175);bpy.ops.object.transform_apply(location=False,rotation=False,scale=True);tab.data.materials.append(cloth);tab.rotation_euler.y=-side*math.atan(.003/.0175);bpy.context.view_layer.update()
+ bpy.ops.mesh.primitive_cube_add(size=1,location=(side*.0485,-.0013,.14325));tab=bpy.context.object;tab.name='WEB-Folded-tab-'+str(side);tab.dimensions=(.014,.0022,.0175);bpy.ops.object.transform_apply(location=False,rotation=False,scale=True);tab.data.materials.append(cloth);tab.rotation_euler.y=-side*math.atan(.003/.0175);bpy.context.view_layer.update()
  for loop in tab.data.uv_layers.active.data:loop.uv.y*=.025
  be=tab.modifiers.new('Soft fabric fold','BEVEL');be.width=.0005;be.segments=3
  thread=material('ivory sewing thread '+str(side),(.65,.61,.54),rough=.85)
- tube('tab-stitch-'+str(side),[tuple(tab.matrix_world@Vector((u,-.00075,v))) for u,v in [(-.0058,.0065),(.0058,.0065),(.0058,-.0065),(-.0058,-.0065)]],.00012,thread,closed=True)
+ tube('tab-stitch-'+str(side),[tuple(tab.matrix_world@Vector((u,-.00125,v))) for u,v in [(-.0058,.0065),(.0058,.0065),(.0058,-.0065),(-.0058,-.0065)]],.00012,thread,closed=True)
+# Subtle visual registration of the existing cap/body interface, not a gasket.
+seammat=material('cap body joint shadow',(.055,.055,.052),rough=.8)
+tube('cap-body-interface',[(.03023077*math.cos(i*2*math.pi/192),.03023077*math.sin(i*2*math.pi/192),.1795) for i in range(192)],.00007,seammat,closed=True)
 # Camera is fixed for all editions; source model is never rescaled.
 def camera(pos,target,scale):
  c.location=pos;c.rotation_euler=(Vector(target)-c.location).to_track_quat('-Z','Y').to_euler();c.data.type='ORTHO';c.data.ortho_scale=scale
-camera((.055,-.43,.29),(0,0,.127),.30)
+def front_camera(pos,target,scale):
+ assert abs(pos[0])<1e-9 and abs(target[0])<1e-9,'Non-cutaway views must face the native front without horizontal rotation'
+ camera(pos,target,scale)
+ record_path=BASE/'front-camera-record.json'
+ records=json.loads(record_path.read_text()) if record_path.exists() else {}
+ name={.127:'catalogue',.218:'lid',.1635:'main_scene'}.get(target[2],str(target[2]))
+ records[name]={'position_m':pos,'target_m':target,'horizontal_view_degrees':0,'orthographic_scale_m':scale}
+ record_path.write_text(json.dumps(records,indent=2)+'\n')
+front_camera((0,-.433503,.29),(0,0,.127),.30)
 # Appearance-only colourways. Hex values converted from display sRGB.
 def rgb(h):
  vals=[int(h[i:i+2],16)/255 for i in (1,3,5)];return tuple(v/12.92 if v<=.04045 else ((v+.055)/1.055)**2.4 for v in vals)
@@ -132,6 +149,17 @@ def palette(e):
  bpy.data.materials['Cream silicone foot'].node_tree.nodes['Principled BSDF'].inputs['Base Color'].default_value=(*rgb(e['body'] if e['number']==10 else '#f4f3ee'),1)
  bodymat.node_tree.nodes['Principled BSDF'].inputs['Base Color'].default_value=(*rgb(e['body']),1);capmat.node_tree.nodes['Principled BSDF'].inputs['Base Color'].default_value=(*rgb(e['accent']),1)
  p.inputs['Base Color'].default_value=(*rgb(e['accent']),1)
+ # Canada's folded tabs stay plain ivory, including the upper fold surface.
+ for ob in s.objects:
+  if ob.name.startswith('WEB-Folded-tab'):
+   if e['number']==27:
+    tabmat=bpy.data.materials.get('WEB-Canada plain ivory fold')
+    if tabmat is None:
+     tabmat=cloth.copy();tabmat.name='WEB-Canada plain ivory fold';bs=tabmat.node_tree.nodes['Principled BSDF']
+     for link in list(bs.inputs['Base Color'].links):tabmat.node_tree.links.remove(link)
+     bs.inputs['Base Color'].default_value=(*rgb('#f4f3ee'),1)
+    ob.data.materials[0]=tabmat
+   else:ob.data.materials[0]=cloth
  texpath=ROOT/'design/v68-strap-textures'/f"edition-{e['number']:02}.png"
  if texpath.exists():
   im=nodes.get('Edition textile texture') or nodes.new('ShaderNodeTexImage');im.name='Edition textile texture';im.image=bpy.data.images.load(str(texpath),check_existing=True);links.new(tex.outputs['UV'],im.inputs['Vector']);shade=nodes.get('Weave shade') or nodes.new('ShaderNodeMath');shade.name='Weave shade';shade.operation='MULTIPLY_ADD';shade.inputs[1].default_value=.06;shade.inputs[2].default_value=.88;links.new(add.outputs[0],shade.inputs[0]);mix=nodes.get('Woven albedo') or nodes.new('ShaderNodeMixRGB');mix.name='Woven albedo';mix.blend_type='MULTIPLY';mix.inputs[0].default_value=1;links.new(im.outputs['Color'],mix.inputs[1]);links.new(shade.outputs[0],mix.inputs[2]);links.new(mix.outputs[0],p.inputs['Base Color'])

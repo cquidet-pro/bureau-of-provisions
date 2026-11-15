@@ -17,10 +17,12 @@ The scripts support `--source /path/to/source.blend` and `--blender /path/to/ble
 
 ## Review page
 
-Check the neutral bottle proportions, special recessed hook attachment and underside lever, lid handle and 220° opening, recessed straw poses, round button, cut boundaries and continuous water. Compare branding relative to the bottle, not the full frame. Keep both crest supporters, discreet catalogue braille, no anatomy braille, two unprinted macro tabs and all other exact prints. Check the small leader dots beside the openings and the carry leader on the strap. Inspect at desktop and phone sizes, including high-density display sharpness.
+Check the neutral bottle proportions, special recessed hook attachment and upper release lever, lid handle and 90° photographic opening, recessed straw poses, round button, cut boundaries and continuous water. Compare branding relative to the bottle, not the full frame. Keep both crest supporters, discreet catalogue braille, no anatomy braille, two unprinted macro tabs and all other exact prints. Check the small leader dots beside the openings and the carry leader on the strap. Inspect at desktop and phone sizes, including high-density display sharpness.
 
 A correction invalidates the proof's input fingerprint. Regenerate the page and obtain fresh explicit approval before the full batch. Candidate assets changing after approval are also rejected when recording a receipt. No approval is inferred automatically and the scripts do not deploy.
 
 The initial 15 November production update predates this proof gate and is not retroactively labelled as signed off. Its user-directed corrections and validation evidence are recorded separately. Future full batches must use this gate.
 
 Generated previews are ignored machine-local outputs. Commit the maintained scripts, explicit approval receipt when one exists, final masters, delivery assets, design rules and proof records. See `V68_SESSION_LESSONS.md` for the reason for these gates and `BLENDER_STRAP_HANDOFF.md` for next-session modelling instructions.
+
+Input fingerprints cover maintained rendering code, native source hash, palettes, authored flag/crest artwork, photographic backgrounds, masks, markup and styles. Generated cooling mist is a render output derived from native anchors and the maintained script; it must not invalidate its own batch approval when regenerated. Final PNG/WebP output hashes are verified separately. The test fixture isolates BOP_REVIEW_OUT from the calling shell.

@@ -1,0 +1,23 @@
+{
+  "created_at": "2026-11-15T17:57:24.858Z",
+  "input_sha256": "e42ba7b5ecf03d91017141b4fccd285b641e03ca3dbb76d9b55044ee46213971",
+  "snapshot_sha256": "ceae63ccd7301efbc9f05daf9452d72fcafae996d062440cad5adaf0e8795d50",
+  "image_types": [
+    "edition-09-native-v68.webp",
+    "platform-native-v68.webp",
+    "bottle-cutaway-native-v68.webp",
+    "lid-native-v68.webp",
+    "straw-up-native-v68.webp",
+    "spray-pressed-native-v68.webp",
+    "lid-closed-native-v68.webp",
+    "edition-02-native-v68.webp",
+    "edition-23-native-v68.webp",
+    "edition-26-native-v68.webp",
+    "edition-27-native-v68.webp"
+  ],
+  "production_unchanged": true,
+  "source": "isolated candidate render",
+  "reviewer": "Cedric",
+  "approved_at": "2026-11-15T17:57:25.064Z",
+  "authorization": "Operator records an explicit user sign-off; this command does not infer approval."
+}

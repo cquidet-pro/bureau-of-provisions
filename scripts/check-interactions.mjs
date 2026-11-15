@@ -82,6 +82,15 @@ for (const pin of document.querySelectorAll('.feature-pin')) {
 }
 
 assert.equal(one('button[data-straw-position="up"]').getAttribute('aria-pressed'), 'true', 'Straw starts raised');
+click(one('[data-lid-toggle]'));
+assert.equal(one('[data-drinking-prototype]').dataset.lidState,'closed');
+assert.equal(one('[data-lid-closed]').style.display,'');
+assert.equal(one('button[data-straw-position="flat"]').getAttribute('aria-pressed'),'true');
+assert.equal(one('.drinking-controls').hidden,true);
+click(one('[data-lid-toggle]'));
+assert.equal(one('[data-drinking-prototype]').dataset.lidState,'open');
+assert.equal(one('[data-lid-closed]').style.display,'none');
+assert.equal(one('button[data-straw-position="up"]').getAttribute('aria-pressed'),'true');
 assert.equal(one('[data-straw-up]').style.display, '');
 click(one('button[data-straw-position="up"]'));
 assert.equal(one('[data-straw-up]').style.display, '');
@@ -147,4 +156,21 @@ for (const path of ['dist/index.html','dist/thank-you/index.html']) {
   for (const button of d.querySelectorAll('button')) assert.ok(button.textContent.trim() || button.getAttribute('aria-label'));
   assert.equal(d.querySelectorAll('h1').length, 1);
 }
-console.log('Interaction checks passed: all 29 registrations, dynamic form height and notice, seven feature panels, lid modes, reduced motion, dialog focus and page accessibility structure.');
+
+// A percentage-positioned label and its SVG leader share one photo space.
+const sourceCss = (await import('node:fs')).readFileSync('src/style.css','utf8');
+const sprayRules=[...sourceCss.matchAll(/\.part-spray\s*\{([^}]+)\}/g)];
+assert.equal(sprayRules.length,1,'Keep one authoritative spray-label position');
+const sprayTop=Number(sprayRules[0][1].match(/top:([\d.]+)%/)[1]);
+const leaderY=Number(document.querySelector('.overhead-leaders').innerHTML.match(/M960 (\d+)H850/)[1]);
+assert.ok(Math.abs(leaderY-1445*sprayTop/100)<1,'Mist leader must meet the spray-label centre');
+const gulpRules=[...sourceCss.matchAll(/\.part-gulp\s*\{([^}]+)\}/g)];
+assert.equal(gulpRules.length,1,'Keep one authoritative spout-label position');
+const gulpTop=Number(gulpRules[0][1].match(/top:([\d.]+)%/)[1]);
+const gulpLeaderY=Number(document.querySelector('.overhead-leaders').innerHTML.match(/M960 (\d+)H840/)[1]);
+assert.ok(Math.abs(gulpLeaderY-1445*gulpTop/100)<1,'Spout leader must meet the spout-label centre');
+// At a narrow 240px image width, retain the 44px buttons plus an 8px gap.
+assert.ok((gulpTop-sprayTop)/100*(240*1445/1088)>=52,'Spray and Spout labels must not overlap on narrow screens');
+
+
+console.log('Interaction checks passed: all 29 registrations, seven feature panels, lid modes, mist leader alignment, reduced motion, dialog focus and page accessibility structure.');

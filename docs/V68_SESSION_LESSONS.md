@@ -20,3 +20,11 @@ Automated checks verify specified dimensions, source fingerprints, watertight so
 ## Reproduction
 
 See `NATIVE_V68_RENDERING.md` and run `python3 scripts/render-v68/rebuild.py --help`. The source Blender file remains in the sibling design repository; its exact path and hash are recorded in the manifest. Python dependencies are listed in `scripts/render-v68/requirements.txt`. The pipeline fails immediately on Blender Python exceptions or failed checks and never deploys automatically.
+
+## Final workflow improvements from the correction round
+
+- Freeze geometry/camera before palette work. Zero horizontal camera angle is enforced for non-cutaway views; retain a 90-degree photographic open cover.
+- Review a single edition for material changes. Physical smoke trials were rejected; keep the approved previous-proof lid shader. Never promote an experiment merely because it rendered successfully.
+- Match overlay centres, not top anchors, to curved/sloping straps. Keep one authoritative CSS position per label and check separation at narrow widths. CSS/vector fixes need no Blender render.
+- Preserve reusable evidence and the current packed Blender accessory. Full rebuild refreshes both alongside deliveries. Record explicit user approval and deploy only after full checks.
+- Use NEXT_SESSION_START.md for the current baseline, scope matrix and fastest commands. Consolidate final decisions instead of stacking contradictory latest paragraphs.

@@ -15,7 +15,7 @@ for o in list(s.objects):
 # Embed the neutral textile so the library has no external image dependency.
 palette({'number':9,'body':'#f4f3ee','accent':'#f4f3ee'})
 for image in bpy.data.images:
- if image.source=='FILE' and image.has_data:image.pack()
+ if image.source=='FILE' and image.filepath and Path(bpy.path.abspath(image.filepath)).is_file():image.pack()
 out=ROOT/'design/blender-assets/v68-strap-system.blend';out.parent.mkdir(parents=True,exist_ok=True)
 bpy.data.libraries.write(str(out),{collection},fake_user=True,compress=True)
 print('Exported',len(collection.objects),'accessory objects to',out)

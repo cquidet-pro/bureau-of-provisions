@@ -937,7 +937,7 @@
       "background_repair": "Masked local clean plate; original people and independent native-detail layers preserved.",
       "strap_fit_evidence": "docs/v68/hook-clearance.json",
       "default_straw_position": "up",
-      "cutaway_correction": "Remove native spray pickup in removed positive-X half; expose actual wall section at right boundary.",
+      "cutaway_correction": "Metal pickup lifts with upper deck; metallic continuation into hidden socket; only metallic exposed thread; double-wall gap; crest half-clipped; no braille",
       "station_frame": 48,
       "scene_motion_intervals_seconds": {
         "newspaper": [
@@ -945,7 +945,17 @@
           11
         ],
         "lamp": 12
-      }
+      },
+      "photographic_open_lid_degrees": 90,
+      "horizontal_camera_degrees": {
+        "catalogue": 0,
+        "lid": 0,
+        "main_scene": 0
+      },
+      "approved_lid_finish": "Previous proof: sharp unbent transmission with subtle smoky edge tint; dark physical trials rejected",
+      "button_finish": "Polished stainless touch face; edition-coloured surround",
+      "strap_corrections": "Levers above; folded fabric conceals lower D-ring bars; physical arc-length pattern UV; exact approved Canada leaf; centred vector animals",
+      "approval": "User explicitly approved all corrections and authorised the whole website update on 2026-11-15"
     }
   },
   "interaction_rules": {

@@ -3,9 +3,19 @@ import {readFileSync,writeFileSync,mkdirSync,copyFileSync,readdirSync,existsSync
 import {resolve,relative,join} from 'node:path';
 import {createHash} from 'node:crypto';
 import {parseHTML} from 'linkedom';
-const root=resolve(import.meta.dirname,'../..'),out=join(root,'output/design-v68/review'),assets=join(out,'assets');
+const root=resolve(import.meta.dirname,'../..'),out=resolve(process.env.BOP_REVIEW_OUT||join(root,'output/design-v68/review')),assets=join(out,'assets');
 const read=p=>readFileSync(join(root,p),'utf8'),sha=b=>createHash('sha256').update(b).digest('hex');
 const trackedInputs=['design/product-design.json','index.html','src/style.css','src/drinking-prototype.js',...readdirSync(join(root,'scripts/render-v68')).filter(n=>/\.(py|mjs)$/.test(n)).sort().map(n=>'scripts/render-v68/'+n)];
+// Fingerprint actual artwork/compositor inputs as well as rendering code.
+const artworkDir=join(root,'design/flag-artwork');
+if(existsSync(artworkDir))trackedInputs.push(...readdirSync(artworkDir).sort().map(n=>'design/flag-artwork/'+n));
+for(const file of ['design/v68-station-repair-mask.png','design/v68-station-repair-mask.svg','docs/v68/station-clean-plate.png','public/images/product/platform-strap-reference-v18.png'])if(existsSync(join(root,file)))trackedInputs.push(file);
+for(const match of read('index.html').matchAll(/\/images\/product\/[\w.-]+\.svg/g)) {
+ // Mist is generated from native anchors by the fingerprinted compositor script.
+ // It is a render output, not an authored source; batch rendering changes it.
+ if(match[0]==='/images/product/cooling-mist-native-v68.svg')continue;
+ const file='public'+match[0];if(existsSync(join(root,file))&&!trackedInputs.includes(file))trackedInputs.push(file);
+}
 const inputHash=()=>{
  const design=JSON.parse(read('design/product-design.json'));
  const native=resolve(root,'../water-bottle-design',design.current_geometry.native_file);
@@ -30,7 +40,7 @@ if(process.argv.includes('--check-approval')) {
 } else {
  mkdirSync(assets,{recursive:true});
  const current=process.argv.includes('--from-current');
- const names=['edition-09-native-v68.webp','platform-native-v68.webp','bottle-cutaway-native-v68.webp','lid-native-v68.webp','straw-up-native-v68.webp','spray-pressed-native-v68.webp'];
+ const names=['edition-09-native-v68.webp','platform-native-v68.webp','bottle-cutaway-native-v68.webp','lid-native-v68.webp','straw-up-native-v68.webp','spray-pressed-native-v68.webp','lid-closed-native-v68.webp','edition-02-native-v68.webp','edition-23-native-v68.webp','edition-26-native-v68.webp','edition-27-native-v68.webp'];
  if(current) for(const n of names)copyFileSync(join(root,'public/images/product',n),join(assets,n));
  if(current)copyFileSync(join(root,'docs/v68/snap-hook-render.png'),join(assets,'snap-hook-render.png'));
  for(const n of [...names,'snap-hook-render.png'])if(!existsSync(join(assets,n)))throw Error('Missing proof asset: '+n);
@@ -38,12 +48,14 @@ if(process.argv.includes('--check-approval')) {
  const scene=document.querySelector('.product-scene-visual').cloneNode(true);scene.querySelector('.feature-hotspots')?.remove();
  const neutral=document.querySelector('[data-colour-number="9"] .colour-render')||document.querySelector('[data-palette="All White"] .colour-render');
  if(!neutral)throw Error('Neutral edition missing');
+ const samples=[2,23,26,27].map(n=>{const button=document.querySelector(`[data-colour-number="${String(n).padStart(2,'0')}"]`),card=button.closest('.colour-card');return `<section><h3>${card.dataset.palette}</h3><div class="proof-neutral colour-card" data-palette="${card.dataset.palette}">${button.querySelector('.colour-render').outerHTML}</div></section>`;}).join('');
  const anatomy=document.querySelector('.anatomy-drawing').outerHTML;
  const lid=document.querySelector('[data-drinking-prototype]').outerHTML;
- const html=`<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>BoP design proof — local review</title><link rel="stylesheet" href="/src/style.css"><link rel="stylesheet" href="/fonts/fonts.css"><style>body{padding:24px}main{max-width:1000px;margin:auto}section{margin:40px 0}h1{font-size:32px}h2{font-size:25px}.proof-neutral,.anatomy-drawing{max-width:430px;margin:auto}.proof-hook{display:block;max-width:700px;width:100%;margin:auto}.proof-note{padding:16px;border:1px solid #713b44}.proof-neutral .colour-render{display:block;position:relative}.proof-neutral img{max-width:100%}.anatomy-drawing{position:relative}.feature-popover{display:none}</style></head><body><main><h1>Design proof / One approved geometry</h1><p class="proof-note">Local review only. This page does not approve or publish anything. Review each image type and explicitly sign off before a full batch. Browser review at desktop and phone widths remains required when available. ${current?'This snapshot uses current completed masters.':'These are isolated candidate renders; the production masters were not replaced.'}</p><section><h2>01 / One neutral colourway</h2><div class="proof-neutral">${neutral.outerHTML}</div></section><section><h2>02 / Recessed snap hook</h2><img class="proof-hook" src="assets/snap-hook-render.png" alt="Snap hook seated in native recess"></section><section><h2>03 / Main scene, artwork and leaders</h2>${scene.outerHTML}</section><section><h2>04 / Cutaway</h2>${anatomy}</section><section><h2>05 / Lid, Flat / Up and spray press</h2>${lid}</section><p class="proof-note">Check: native features and proportions; hook reference and clearance; cut edge and water; both crest supporters; discreet braille only where intended; small edge dots; sharpness at intended size. Report corrections, or explicitly approve this proof.</p></main><script type="module" src="/src/drinking-prototype.js"></script></body></html>`;
- let page=html;
- for(const n of names)page=page.replaceAll('/images/product/'+n,'assets/'+n);
+ const html=`<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>BoP design proof — local review</title><link rel="stylesheet" href="/src/style.css"><link rel="stylesheet" href="/fonts/fonts.css"><style>body{padding:24px}main{max-width:1000px;margin:auto}section{margin:40px 0}h1{font-size:32px}h2{font-size:25px}.proof-neutral,.anatomy-drawing{max-width:430px;margin:auto}.proof-hook{display:block;max-width:700px;width:100%;margin:auto}.proof-note{padding:16px;border:1px solid #713b44}.proof-neutral .colour-render{display:block;position:relative}.proof-neutral img{max-width:100%}.anatomy-drawing{position:relative}.feature-popover{display:none}</style></head><body><main><h1>Design proof / One approved geometry</h1><p class="proof-note">Local review only. This page does not approve or publish anything. Review each image type and explicitly sign off before a full batch. Browser review at desktop and phone widths remains required when available. ${current?'This snapshot uses current completed masters.':'These are isolated candidate renders; the production masters were not replaced.'}</p><section><h2>01 / One neutral colourway</h2><div class="proof-neutral">${neutral.outerHTML}</div></section><section><h2>Colour and flag checks</h2>${samples}</section><section><h2>02 / Recessed snap hook</h2><img class="proof-hook" src="assets/snap-hook-render.png" alt="Snap hook seated in native recess"></section><section><h2>03 / Main scene, artwork and leaders</h2>${scene.outerHTML}</section><section><h2>04 / Cutaway</h2>${anatomy}</section><section><h2>05 / Lid, Flat / Up and spray press</h2>${lid}</section><p class="proof-note">Check: native features and proportions; hook reference and clearance; cut edge and water; both crest supporters; discreet braille only where intended; small edge dots; sharpness at intended size. Report corrections, or explicitly approve this proof.</p></main><script type="module" src="/src/drinking-prototype.js"></script></body></html>`;
+ let page=html;const cacheKey=snapshotHash().slice(0,16);
+ for(const n of names)page=page.replaceAll('/images/product/'+n,'assets/'+n+'?proof='+cacheKey);
+ page=page.replace('assets/snap-hook-render.png','assets/snap-hook-render.png?proof='+cacheKey);
  writeFileSync(join(out,'index.html'),page);
  writeFileSync(manifest,JSON.stringify({created_at:new Date().toISOString(),input_sha256:inputHash(),snapshot_sha256:snapshotHash(),image_types:names,production_unchanged:!current,source:current?'current completed masters':'isolated candidate render'},null,2)+'\n');
- console.log('Review at http://localhost:4173/output/design-v68/review/ (start npm run dev -- --port 4173). No sign-off recorded.');
+ console.log(`Review at http://localhost:4173/${relative(root,out).split('\\').join('/')}/ (start npm run dev -- --port 4173). No sign-off recorded.`);
 }

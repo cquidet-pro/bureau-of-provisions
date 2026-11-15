@@ -17,7 +17,10 @@
     "scripts/render-v68/review.mjs",
     "scripts/render-v68/audit-source.py",
     "scripts/render-v68/export-strap-asset.py",
-    "scripts/render-v68/import-strap-asset.py"
+    "scripts/render-v68/import-strap-asset.py",
+    "scripts/render-v68/check-strap-presentation.py",
+    "scripts/render-v68/strap_path.py",
+    "scripts/render-v68/trace-approved-maple.py"
   ],
   "physical_geometry": [
     "Lid-mounted integral handle",
@@ -25,16 +28,18 @@
     "73 mm body; 249.1 mm closed envelope including handle",
     "Recessed body strap mounts",
     "13 mm round button; 2.2 mm surrounding wall and safety loop section",
-    "Compact rear hinge and actual 220 degree open pose"
+    "Compact rear hinge; native mechanism travel 220 degrees, photographic open pose 90 degrees"
   ],
   "source_evidence": [
     "docs/v68/source-geometry-integrity.json",
     "docs/v68/dimension-audit.json",
     "docs/v68/view-anchors.json",
-    "docs/v68/hook-clearance.json"
+    "docs/v68/hook-clearance.json",
+    "docs/v68/front-camera-record.json",
+    "docs/v68/strap-presentation.json"
   ],
   "accessory": "The existing approved long detachable strap concept is a separate WEB-prefixed rendering accessory, attached at the native body recesses. It adds no collar lugs and changes no source bottle mesh. No accessory dimensions are published.",
-  "anatomy": "A plane-cut copy of the native body, foot and body O-ring; exact lid meshes translated 24 mm for the illustrative exploded view. Water's lower profile is derived from actual inner-body mesh sections. No screw threads or other construction absent from the source are generated. Internal spray pickup lies entirely in the removed positive-X half and is hidden only in the cutaway; leaving it visible created a misleading vertical steel line through the water.",
+  "anatomy": "A sectioned copy of the native body, foot and O-ring. Upper assembly and native metal pickup lift together by 34 mm. A metallic continuation reaches the hidden silicone socket; no exposed white neck/socket or body-fixed duplicate. Visible matching stainless threads are explicitly requested WEB-only illustration additions, never native machining claims. Water reaches the source-derived curved floor, both steel skins and a gap are visible, the crest is half-clipped and braille is absent. Removed-half spray pickup is hidden.",
   "spray_press": "Existing illustrative website gesture: the same native spray mesh is translated 2 mm for the pressed still. This does not add or validate a manufacturing mechanism.",
   "background": {
     "method": "Built-in image_gen local clean plate, used only through a maintained SVG repair mask. The original scene supplies all remaining background pixels; the native product is composited separately in Blender. Independent original high-resolution character/window/background layers remain registered.",
@@ -49,9 +54,9 @@
     "reference": "docs/v68/SWIVEL_SNAP_HOOK_REFERENCE.png",
     "correction_date": "2026-11-15",
     "type": "Round opening jaw, flat tapered trigger body, small lever/rivet, short swivel and separate rounded D-ring",
-    "rejected": "Oval wire-loop clip shown in the first native draft; first trigger draft intersecting the body and placing lever above it",
+    "rejected": "Oval wire-loop draft; hardware intersecting the body; lower release lever; exposed lower D-ring bar",
     "scope": "All 29 editions, main scene, macro states and cutaway; body geometry and recessed attachment locations unchanged",
-    "fit": "Round jaw wraps native recessed bridge; curved lever below tapered body. 16 evaluated watertight metal parts, zero body intersection, minimum depicted clearance 0.305 mm. No source mesh change."
+    "fit": "Round jaw wraps recessed bridge; lever above; folded fabric conceals lower D-ring bars. Sixteen evaluated watertight metal parts have zero body intersection, minimum depicted clearance 0.305 mm. Source mesh unchanged."
   },
   "main_scene_quality": {
     "native_product_render": [
@@ -61,5 +66,7 @@
     "samples": 128,
     "background": "Original background scaled 3x for composition; original independent detail layers retained. No claimed new background detail.",
     "detail_evidence": "docs/v68/main-lid-detail.png"
-  }
+  },
+  "approved_material": "Previous proof sharp translucent lid; rejected physical-smoke experiments removed. Polished stainless button face with coloured surround.",
+  "approval": "design/render-approval.json"
 }

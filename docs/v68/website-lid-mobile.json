@@ -1,0 +1,11 @@
+{
+  "viewport": [
+    390,
+    1800
+  ],
+  "labels_separated": true,
+  "mist_control_clear": true,
+  "closed": true,
+  "opened": true,
+  "no_horizontal_overflow": true
+}

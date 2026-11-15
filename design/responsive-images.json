@@ -1,6 +1,6 @@
 {
   "/images/product/bottle-cutaway-native-v68.webp": {
-    "master_sha256": "26301d2b16651dfe979b93fa2474806bb316f6357b9e32661afb11f0c9174986",
+    "master_sha256": "888f793514d94845f7adffdde6cd252312eaf3e6ae13fa69d2e4b37a23421e4b",
     "variants": [
       {
         "src": "/images/product/responsive/bottle-cutaway-native-v68-256w.webp",
@@ -21,7 +21,7 @@
     ]
   },
   "/images/product/edition-01-native-v68.webp": {
-    "master_sha256": "0240b9bb1cbae941dcfbdd4e6b426715ad46a5210134140b93e603a418805d73",
+    "master_sha256": "cc452d5a004b026f7941374ea56ad6aaa0fd09e1210a5dcb31c79c6df57a90f0",
     "variants": [
       {
         "src": "/images/product/responsive/edition-01-native-v68-256w.webp",
@@ -42,7 +42,7 @@
     ]
   },
   "/images/product/edition-02-native-v68.webp": {
-    "master_sha256": "14e2048e8045bc328a1af4b42656c04a9e2fb9023d5bffa75c4ffcf5c56971d5",
+    "master_sha256": "15c2711808bd39cf45e211e810d7473d4478ad50fde0d313ff0a30ec6bebd76a",
     "variants": [
       {
         "src": "/images/product/responsive/edition-02-native-v68-256w.webp",
@@ -63,7 +63,7 @@
     ]
   },
   "/images/product/edition-03-native-v68.webp": {
-    "master_sha256": "7e678735ad13a7a85a760367715a126ae797d2c960b96f28e4388d356f2298d3",
+    "master_sha256": "d57b62d99c5bc3b1c87fb018842749333bf80ee374fab9d6d327db7632496757",
     "variants": [
       {
         "src": "/images/product/responsive/edition-03-native-v68-256w.webp",
@@ -84,7 +84,7 @@
     ]
   },
   "/images/product/edition-04-native-v68.webp": {
-    "master_sha256": "0cc7c9268dac4685d25c2c53a2b2567b05c7e292b3f554fd510ff87a6444ee51",
+    "master_sha256": "b876e3ef80c100828c44e8f0a443f9327789c1ed15d1154d6a3888859e1ab464",
     "variants": [
       {
         "src": "/images/product/responsive/edition-04-native-v68-256w.webp",
@@ -105,7 +105,7 @@
     ]
   },
   "/images/product/edition-05-native-v68.webp": {
-    "master_sha256": "69daac4048579afa59e199b20a2cd5a4570f36b89f0fe753eeeb7787d45d1c07",
+    "master_sha256": "89387945740afcf1fd2b1190e0ae8784cb985dd481aa28e5e972593b1fd930f5",
     "variants": [
       {
         "src": "/images/product/responsive/edition-05-native-v68-256w.webp",
@@ -126,7 +126,7 @@
     ]
   },
   "/images/product/edition-06-native-v68.webp": {
-    "master_sha256": "6da8f4ec39613bcf40f1eb704b63ebfbc51e1497eeac3834414ebb927733da02",
+    "master_sha256": "224dac148d8a2244fe3841721bd5bb233972d74fa268ec3443b2c663be6bd94e",
     "variants": [
       {
         "src": "/images/product/responsive/edition-06-native-v68-256w.webp",
@@ -147,7 +147,7 @@
     ]
   },
   "/images/product/edition-07-native-v68.webp": {
-    "master_sha256": "937fa71adb99d3645517ed67801189eeabf8372cdd66cdc7f2f52158066aa52a",
+    "master_sha256": "457c28f26051f7b56308a10275712eb9a3eee7063e46416863e0a817e3124574",
     "variants": [
       {
         "src": "/images/product/responsive/edition-07-native-v68-256w.webp",
@@ -168,7 +168,7 @@
     ]
   },
   "/images/product/edition-08-native-v68.webp": {
-    "master_sha256": "fa4c11398fa78f8526a0495ab599745535bc8e465e6949b756003f15165706eb",
+    "master_sha256": "70c58ddd67eed209d25abb503bbcf4ed62ce15393ba4daa0b27013de8186fae1",
     "variants": [
       {
         "src": "/images/product/responsive/edition-08-native-v68-256w.webp",
@@ -189,7 +189,7 @@
     ]
   },
   "/images/product/edition-09-native-v68.webp": {
-    "master_sha256": "128afe5a202912bc8bd9af3125516a62cc4d926986f6f514fe72097ea2f8a38d",
+    "master_sha256": "4f16afdcc68fcd305e88d1218559c3621c24ad9c703b0b7da3a5aac31752da89",
     "variants": [
       {
         "src": "/images/product/responsive/edition-09-native-v68-256w.webp",
@@ -210,7 +210,7 @@
     ]
   },
   "/images/product/edition-10-native-v68.webp": {
-    "master_sha256": "2223e84b01c0c24570baaf7ea206ed424b8bcbcf5629a62c19d1ca9a301c750d",
+    "master_sha256": "09ace5fffcffd00497c453d3dd9bb0f9dffd901a2f75a2027e2526d1c6ad1f90",
     "variants": [
       {
         "src": "/images/product/responsive/edition-10-native-v68-256w.webp",
@@ -231,7 +231,7 @@
     ]
   },
   "/images/product/edition-11-native-v68.webp": {
-    "master_sha256": "0d0a4f3443d0585f929b9a2943f1c7df7631a25c4c7baee3004a48f402ca126f",
+    "master_sha256": "247ad525f9817aa9d0867e9e1f326fc1b09cac10fcc62b038b3d3bfef37a333d",
     "variants": [
       {
         "src": "/images/product/responsive/edition-11-native-v68-256w.webp",
@@ -252,7 +252,7 @@
     ]
   },
   "/images/product/edition-12-native-v68.webp": {
-    "master_sha256": "2a960a1e406be74e3f3c37320989ee113c328d1116e07c68b85bf8b5a0a8783a",
+    "master_sha256": "44196ced305b7dca0e058a61f220681ebf061d97e4f2c43b250a6f9f2eec04ab",
     "variants": [
       {
         "src": "/images/product/responsive/edition-12-native-v68-256w.webp",
@@ -273,7 +273,7 @@
     ]
   },
   "/images/product/edition-13-native-v68.webp": {
-    "master_sha256": "68ddff86282958cc89c81149f18906ab7c5ee5d0a39dee44567ca8a1bd83bdf2",
+    "master_sha256": "1094ad20e491a24272d9892ee7ceb9d9449c7f8eb2bc25007d81dc335abf1a8b",
     "variants": [
       {
         "src": "/images/product/responsive/edition-13-native-v68-256w.webp",
@@ -294,7 +294,7 @@
     ]
   },
   "/images/product/edition-14-native-v68.webp": {
-    "master_sha256": "6873ab5bb4bf7ac7375f047d3cfd0c74cf9d3ccfacb4ca1c7765e536b5133986",
+    "master_sha256": "f6fdee173c6021c657f6ef668a88cdf7aad5df1820f46863ebfe2870772fd922",
     "variants": [
       {
         "src": "/images/product/responsive/edition-14-native-v68-256w.webp",
@@ -315,7 +315,7 @@
     ]
   },
   "/images/product/edition-15-native-v68.webp": {
-    "master_sha256": "48628f37e5a8d82b97dd4fbff039c4f017772df99f2b87d686460c3f25e42882",
+    "master_sha256": "eb1ab0a8d70ba826eae2b8c562e12c9efa216a900841701ad6ed36600314847c",
     "variants": [
       {
         "src": "/images/product/responsive/edition-15-native-v68-256w.webp",
@@ -336,7 +336,7 @@
     ]
   },
   "/images/product/edition-16-native-v68.webp": {
-    "master_sha256": "a4685f923fff72d8a8bf01aa69c5608111a58de872419f1ca2dcc2208446f479",
+    "master_sha256": "104f3107c95af087f35a4acc42c5c55746f7b361bb56f07646534c0fd65d17cd",
     "variants": [
       {
         "src": "/images/product/responsive/edition-16-native-v68-256w.webp",
@@ -357,7 +357,7 @@
     ]
   },
   "/images/product/edition-17-native-v68.webp": {
-    "master_sha256": "884fd14d5fbec7df8723bf72762c39a98712211b19339412e52892fe774d4796",
+    "master_sha256": "03194996b3b90386025516b02f1210c67189a1c4cc03ef22aae30d028c735403",
     "variants": [
       {
         "src": "/images/product/responsive/edition-17-native-v68-256w.webp",
@@ -378,7 +378,7 @@
     ]
   },
   "/images/product/edition-18-native-v68.webp": {
-    "master_sha256": "5ab28b7add7394b4971f739eb26d51d46ca315fc667cb5b4a23317c1571fc7a0",
+    "master_sha256": "6490c07e97e518c6fd61d1b8f0f4d517ef9f5d19e0b4bc6c8dd9a4eb278184be",
     "variants": [
       {
         "src": "/images/product/responsive/edition-18-native-v68-256w.webp",
@@ -399,7 +399,7 @@
     ]
   },
   "/images/product/edition-19-native-v68.webp": {
-    "master_sha256": "b4567f73af4d74837c07ca489d7bb5da9996e26e2432a22257d16fef1b035a9b",
+    "master_sha256": "c03c7a0c81fa26bf14bb96baf65925d58640266f0461a6616a2a8597fc074d92",
     "variants": [
       {
         "src": "/images/product/responsive/edition-19-native-v68-256w.webp",
@@ -420,7 +420,7 @@
     ]
   },
   "/images/product/edition-20-native-v68.webp": {
-    "master_sha256": "8df5f45e7d14e05b5c33b15417b3ee77e5e1bda1ee025b2eadf1afb8b61993e1",
+    "master_sha256": "0f5f4a4943d7b84e0f2a271aaf95fc9e08f1d8796830aa7e0c4fe385fe7bd039",
     "variants": [
       {
         "src": "/images/product/responsive/edition-20-native-v68-256w.webp",
@@ -441,7 +441,7 @@
     ]
   },
   "/images/product/edition-21-native-v68.webp": {
-    "master_sha256": "5954151c7fe8493e0e6a971d76bf09588acf9cb12684892271fc0808ffe2380b",
+    "master_sha256": "a03d65bf44cb39c1356d5496354d1de3c19f01262591444e3c84b8563d53cb19",
     "variants": [
       {
         "src": "/images/product/responsive/edition-21-native-v68-256w.webp",
@@ -462,7 +462,7 @@
     ]
   },
   "/images/product/edition-22-native-v68.webp": {
-    "master_sha256": "f2779a2b2e4ae4c4b8bb412bf60bc837c37d747bb5c7c228595790541840deeb",
+    "master_sha256": "ad6f934ab792f576c9b0714643e0dd92ef18156fc0e3ccc16e9d537d27095765",
     "variants": [
       {
         "src": "/images/product/responsive/edition-22-native-v68-256w.webp",
@@ -483,7 +483,7 @@
     ]
   },
   "/images/product/edition-23-native-v68.webp": {
-    "master_sha256": "44c7431248c2a8b1840af78c7902d2976b4b6e59b1fdc07c8e86cf4db4d1fef4",
+    "master_sha256": "5ed13df7514dc6d411e1cee6be1d80c2789da39aea066dab4835399226608041",
     "variants": [
       {
         "src": "/images/product/responsive/edition-23-native-v68-256w.webp",
@@ -504,7 +504,7 @@
     ]
   },
   "/images/product/edition-24-native-v68.webp": {
-    "master_sha256": "7f0fe548ee6a4de83d688fb9e883ddc8142a61e3590a70d7eb4a41255b8437db",
+    "master_sha256": "f6209203a9233b1d4a9e4d7d52edeb1a6dfe1a4fbe2a3ead73b45792ba80e590",
     "variants": [
       {
         "src": "/images/product/responsive/edition-24-native-v68-256w.webp",
@@ -525,7 +525,7 @@
     ]
   },
   "/images/product/edition-25-native-v68.webp": {
-    "master_sha256": "05024487b2b45a48e93771c400c02689199112e7966c35e2ff140ba7f367b7dd",
+    "master_sha256": "2e8ac6845a6f9dc7890323f7d16aec5ab6ed3e04c2bb419e86a2a284b6b5a73d",
     "variants": [
       {
         "src": "/images/product/responsive/edition-25-native-v68-256w.webp",
@@ -546,7 +546,7 @@
     ]
   },
   "/images/product/edition-26-native-v68.webp": {
-    "master_sha256": "c0825be1c3b6e1c1508729d165dbe8e7c9664af2029d6f648be3d6f4847b1669",
+    "master_sha256": "3ccb280b1f43e4c913f894ec71481e0359c40a63e9ef9fdabc1c82f279f9c678",
     "variants": [
       {
         "src": "/images/product/responsive/edition-26-native-v68-256w.webp",
@@ -567,7 +567,7 @@
     ]
   },
   "/images/product/edition-27-native-v68.webp": {
-    "master_sha256": "a8f4ff10e572d89f6c3f92573297ff626b822ecf6ad2b7039a668cb99c03cb49",
+    "master_sha256": "d18bf67d270751a1734cd4989ee4b9e93d99d50f5efe7dc7da85f7cb472865f4",
     "variants": [
       {
         "src": "/images/product/responsive/edition-27-native-v68-256w.webp",
@@ -588,7 +588,7 @@
     ]
   },
   "/images/product/edition-28-native-v68.webp": {
-    "master_sha256": "1acd519ac5174962cab21292647d19e8081e350be5d2f953ac3f32630da24f34",
+    "master_sha256": "334ad6ac8a23d0260b2a32b87a3511941280a1834f630b652a0712569d71f796",
     "variants": [
       {
         "src": "/images/product/responsive/edition-28-native-v68-256w.webp",
@@ -609,7 +609,7 @@
     ]
   },
   "/images/product/edition-29-native-v68.webp": {
-    "master_sha256": "27a412a144949596a76c1d4de9069ae3ea40a5f4732c012f03e0502ddb077b84",
+    "master_sha256": "49319412c8644aacc54d5da7af77fd7c60c2e5c4a6897a654ca5c304b7c799ff",
     "variants": [
       {
         "src": "/images/product/responsive/edition-29-native-v68-256w.webp",
@@ -655,7 +655,7 @@
     ]
   },
   "/images/product/platform-native-v68.webp": {
-    "master_sha256": "ef1dc38b08786c7544ee4ce5b9fdffb5b752805579c3bc277691bd99896d77a1",
+    "master_sha256": "4ecb8bf94efbfbc9cef8bd259e151683cd3d87535b628665c6572ff6ea0cfe37",
     "variants": [
       {
         "src": "/images/product/responsive/platform-native-v68-256w.webp",

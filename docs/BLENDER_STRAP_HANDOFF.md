@@ -12,7 +12,7 @@ Alternatively use File → Append → `v68-strap-system.blend` → Collection �
 
 ## Exact reference and fit
 
-The user's full reference is `docs/v68/SWIVEL_SNAP_HOOK_REFERENCE.png`; the rendered close-up is `docs/v68/snap-hook-render.png`. Keep the round opening jaw, tapered flat body, curved lifting lever underneath, small flush rivet, short swivel, separate rounded rectangular D-ring and slim folded same-fabric tab. The jaw wraps the bridge through the special native recess; it does not pass through solid metal.
+The user's full reference is `docs/v68/SWIVEL_SNAP_HOOK_REFERENCE.png`; the rendered close-up is `docs/v68/snap-hook-render.png`. Keep the round opening jaw, tapered flat body, curved lifting lever above, small flush rivet, short swivel, separate rounded rectangular D-ring and slim folded same-fabric tab. The jaw wraps the bridge through the special native recess; it does not pass through solid metal.
 
 Coordinates use metres. Jaw centres are `(±0.0327, -0.001, 0.16395)`; centreline radius 0.0035 and section radius 0.00045. The separate D-ring is centred approximately `(±0.047, -0.001, 0.154)`. These are accessory setup dimensions, not published engineering specifications. Do not alter the native body to fit a mispositioned hook.
 

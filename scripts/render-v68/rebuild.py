@@ -34,9 +34,12 @@ def python(script):run([sys.executable,script])
 python(SCRIPTS/'strap-textures.py')
 blender('audit-source.py')
 blender('export-hook-clearance.py');python(SCRIPTS/'check-hook-clearance.py')
+blender('check-strap-presentation.py')
 blender('calibrate.py')
+if a.part=='all':
+ blender('export-strap-asset.py');blender('hook-review.py')
 if a.part in ('all','catalogue','proof'):
- blender('native-studio.py',{'BOP_RENDER_MODE':'catalogue',**({'BOP_EDITION_IDS':'9'} if a.part=='proof' else {})})
+ blender('native-studio.py',{'BOP_RENDER_MODE':'catalogue',**({'BOP_EDITION_IDS':'9,2,23,26,27'} if a.part=='proof' else {})})
 if a.part in ('all','views','hero','section','proof'):
  part='all' if a.part in ('all','views','proof') else a.part
  blender('native-views.py',{'BOP_VIEWS_PART':part})
