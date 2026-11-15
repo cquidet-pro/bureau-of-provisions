@@ -25,12 +25,21 @@ photos = Photos()
 photos.feed(Path('index.html').read_text())
 output = Path('public/images/product/responsive')
 output.mkdir(exist_ok=True)
+manifest_path = Path('design/responsive-images.json')
+previous = json.loads(manifest_path.read_text()) if manifest_path.exists() else {}
 manifest = {}
 for url in sorted(photos.paths):
     master = Path('public' + url).with_suffix('.png')
+    master_hash = sha256(master.read_bytes()).hexdigest()
+    cached = previous.get(url)
+    if cached and cached['master_sha256'] == master_hash and all(
+            Path('public' + variant['src']).exists() for variant in cached['variants']):
+        manifest[url] = cached
+        print(master.name, '→ unchanged', flush=True)
+        continue
     with Image.open(master) as image:
         variants = []
-        for width in (256, 480, 768, 1024):
+        for width in ((256, 480, 768, 1024, 1536, 2048, 3072) if master.stem == 'platform-native-v68' else (256, 480, 768, 1024)):
             if width >= image.width:
                 continue
             height = round(image.height * width / image.width)
@@ -39,11 +48,13 @@ for url in sorted(photos.paths):
                 target, 'WEBP', lossless=True, method=6, exact=True)
             variants.append({'src': '/' + str(target.relative_to('public')), 'width': width})
         variants.append({'src': url, 'width': image.width})
-        manifest[url] = {'master_sha256': sha256(master.read_bytes()).hexdigest(), 'variants': variants}
+        manifest[url] = {'master_sha256': master_hash, 'variants': variants}
     print(master.name, '→', len(variants), 'delivery sizes', flush=True)
 
 # An animation previously delivered the original PNG on every fresh visit.
-with Image.open('public/images/product/family-newspaper-turn-v1.png') as image:
-    image.save('public/images/product/family-newspaper-turn-v1.webp',
-               'WEBP', lossless=True, method=6, exact=True)
-Path('design/responsive-images.json').write_text(json.dumps(manifest, indent=2) + '\n')
+newspaper_master = Path('public/images/product/family-newspaper-turn-v1.png')
+newspaper_delivery = newspaper_master.with_suffix('.webp')
+if not newspaper_delivery.exists() or newspaper_delivery.stat().st_mtime < newspaper_master.stat().st_mtime:
+    with Image.open(newspaper_master) as image:
+        image.save(newspaper_delivery, 'WEBP', lossless=True, method=6, exact=True)
+manifest_path.write_text(json.dumps(manifest, indent=2) + '\n')

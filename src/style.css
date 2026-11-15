@@ -1455,7 +1455,6 @@ body:has(.photo-dialog[open],.crest-dialog[open]) {
 .colour-preorder p { font:11px/1.6 var(--mono); color:var(--wine); }
 .bottle-braille { position:absolute; height:auto; pointer-events:none; color:#34414a; opacity:.76; filter:drop-shadow(.4px .5px .25px #fff7); }
 .braille-scene { left:46.5%; top:75.5%; width:8%; z-index:1; }
-.braille-cutaway { left:36.7%; top:78.5%; width:11.5%; }
 .braille-colour { left:32%; top:76%; width:36%; }
 .colour-card:is([data-palette="Cobalt / Sunshine"],[data-palette="Ocean / Coral"],[data-palette="Raspberry / Mint"],[data-palette="Midnight Paris"],[data-palette="Web Hero"]) .braille-colour { color:#f4eddf; }
 .site-foot-minimal { justify-content:space-between; gap:30px; }
@@ -1503,17 +1502,17 @@ body:has(.photo-dialog[open],.crest-dialog[open]) {
 .site-head .product-actions { margin:0; gap:10px; justify-self:end; }
 .site-head .product-actions .button { white-space:nowrap; }
 .product-crest,.strap-print { position:absolute; pointer-events:none; color:#213b50; mix-blend-mode:multiply; opacity:.92; }
-.crest-scene { left:45.55%; top:51.7%; width:8.55%; z-index:1; }
-.strap-scene-dog { left:41%; top:54.5%; width:1%; transform:translateX(-50%) rotate(7deg); z-index:1; }
-.strap-scene-leopard { left:58.7%; top:54.5%; width:1.05%; transform:translateX(-50%) rotate(-7deg); z-index:1; }
-.crest-cutaway { left:33.8%; top:52%; width:14.5%; }
-.strap-cutaway-dog { left:27.6%; top:56%; width:2.8%; transform:translateX(-50%) rotate(8deg); }
+.crest-scene { left:45.55%; top:53.4%; width:8.55%; z-index:1; }
+.strap-scene-dog { left:39.75%; top:55.0%; width:1%; transform:translateX(-50%) rotate(17deg); z-index:1; }
+.strap-scene-leopard { left:60.25%; top:55.0%; width:1.05%; transform:translateX(-50%) rotate(-17deg); z-index:1; }
+.crest-cutaway { left:33.5%; top:52%; width:9.5%; }
+.strap-cutaway-dog { left:26.5%; top:52.5%; width:2.8%; transform:translateX(-50%) rotate(8deg); }
 .colour-render-sharp { aspect-ratio:2/3; }
 .colour-render-sharp>img:not([data-brand-symbol]) { position:static; width:100%; height:100%; object-fit:contain; }
 .crest-colour { left:36%; top:45%; width:28%; }
-.strap-colour-dog { left:23.5%; top:46.8%; width:4.3%; transform:translateX(-50%) rotate(10deg); }
-.strap-colour-leopard { left:76.5%; top:46.8%; width:4.1%; transform:translateX(-50%) rotate(-10deg); }
-.colour-render-sharp .braille-colour { left:33%; top:79%; width:34%; }
+.strap-colour-dog { left:22.408%; top:49.869%; width:4.3%; transform:translateX(-50%) rotate(16.952deg); }
+.strap-colour-leopard { left:77.298%; top:51.599%; width:4.1%; transform:translateX(-50%) rotate(-15.557deg); }
+.colour-render-sharp .braille-colour { left:40.25%; top:79%; width:19.5%; }
 .colour-card:is([data-palette="Greece"],[data-palette="Union Jack"]) .braille-colour { color:#f4eddf; }
 .colour-card:is([data-palette="Greece"],[data-palette="Union Jack"]) .product-crest,
 .colour-card[data-palette="Union Jack"] .strap-print { mix-blend-mode:normal; }
@@ -1680,9 +1679,9 @@ body:has(.photo-dialog[open],.crest-dialog[open]) {
 
 /* The original solid-view camera exposes the low straw and flush mist hole. */
 .drinking-overhead-layout .drinking-closeup-wrap { max-width:570px; margin:12px auto; }
-.part-straw { left:14%; top:65%; }
-.part-gulp { left:88%; top:65%; }
-.part-spray { left:88%; top:48%; }
+.part-straw { left:14%; top:57%; }
+.part-gulp { left:88%; top:52%; }
+.part-spray { left:88%; top:27%; }
 
 /* Native-resolution local restorations preserve the approved product master. */
 .scene-character-detail { position:absolute; display:block; pointer-events:none; object-fit:fill; z-index:0; }
@@ -1703,8 +1702,8 @@ body:has(.photo-dialog[open],.crest-dialog[open]) {
   mask-composite:intersect;
 }
 
-/* Independent native-detail background tiles; the product remains the v18 master. */
-.scene-background-details { position:absolute; inset:0; pointer-events:none; z-index:0; -webkit-mask:url('/images/product/station-background-coverage-v1.svg') 0 0/100% 100% no-repeat; mask:url('/images/product/station-background-coverage-v1.svg') 0 0/100% 100% no-repeat; }
+/* Independent native-detail background tiles; the product comes from unchanged V68 native meshes. */
+.scene-background-details { position:absolute; inset:0; pointer-events:none; z-index:0; -webkit-mask:url('/images/product/station-background-coverage-native-v68.svg') 0 0/100% 100% no-repeat; mask:url('/images/product/station-background-coverage-native-v68.svg') 0 0/100% 100% no-repeat; }
 .station-detail { position:absolute; display:block; object-fit:fill; }
 .station-detail-left { left:0; top:0; width:42.3177083%; height:100%; -webkit-mask-image:linear-gradient(to right,#000 96%,transparent); mask-image:linear-gradient(to right,#000 96%,transparent); }
 .station-detail-right { left:57.9427083%; top:0; width:42.0572917%; height:100%; -webkit-mask-image:linear-gradient(to right,transparent,#000 4%); mask-image:linear-gradient(to right,transparent,#000 4%); }
@@ -1714,8 +1713,8 @@ body:has(.photo-dialog[open],.crest-dialog[open]) {
 
 /* Actions sit immediately above the selected outlet label, within the photo. */
 .drinking-closeup-wrap .drinking-controls { position:absolute; z-index:2; margin:0; transform:translateY(calc(-100% - 32px)); flex-wrap:nowrap; }
-[data-method="straw"] .drinking-closeup-wrap .drinking-controls { left:clamp(8px,calc(14% - 48px),80px); top:65%; }
-[data-method="spray"] .drinking-closeup-wrap .drinking-controls { right:2%; top:48%; }
+[data-method="straw"] .drinking-closeup-wrap .drinking-controls { left:clamp(8px,calc(14% - 48px),80px); top:57%; }
+[data-method="spray"] .drinking-closeup-wrap .drinking-controls { right:2%; top:27%; }
 .drinking-closeup-wrap .straw-positions { gap:4px; }
 .drinking-closeup-wrap .drinking-controls button { background:var(--paper); min-width:44px; }
 .drinking-closeup-wrap .straw-positions button[aria-pressed="true"],.drinking-closeup-wrap .drinking-controls [data-drinking-play] { background:var(--wine); color:var(--paper); }
@@ -1839,3 +1838,7 @@ body:has(.photo-dialog[open],.crest-dialog[open]) {
 
 .colourways .edition-intro > p { font-size:clamp(14px,1.4vw,20px); line-height:1.6; }
 .anatomy-spread > .section-heading > p { font:clamp(13px,1.1vw,16px)/1.6 var(--mono); }
+
+/* Keep the new native product in front of the registered source-detail plates. */
+.scene-character-details { position:absolute; inset:0; pointer-events:none; z-index:0; -webkit-mask:url("/images/product/station-background-coverage-native-v68.svg") 0 0/100% 100% no-repeat; mask:url("/images/product/station-background-coverage-native-v68.svg") 0 0/100% 100% no-repeat; }
+.scene-mist { position:absolute; inset:0; width:100%; height:100%; pointer-events:none; z-index:1; }

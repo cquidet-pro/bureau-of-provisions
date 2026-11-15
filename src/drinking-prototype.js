@@ -2,9 +2,9 @@
 const prototype = document.querySelector('[data-drinking-prototype]');
 if (prototype) {
   const options = {
-    straw: {title:'01 / Straw. A proper sip.', description:'Lift the folding straw for an upright sip, then fold it flat beneath the clear hood. Choose Flat or Up to see both positions.', action:'Unfold. Sip. Fold away.', detail:'Folding stainless steel straw', ready:'Flat. Folded away.'},
+    straw: {title:'01 / Straw. A proper sip.', description:'Lift the folding straw for an upright sip, then fold it flat beneath the clear hood. Choose Flat or Up to see both positions.', action:'Unfold. Sip. Fold away.', detail:'Folding stainless steel straw', ready:'Up. Ready for a sip.'},
     gulp: {title:'02 / Spout. A big gulp.', description:'Tilt the bottle and drink directly through the wide stainless steel spout. A larger opening for a fuller mouthful.', action:'Tilt to drink', detail:'Wide stainless steel drinking spout', ready:'Tilt to drink.'},
-    spray: {title:'03 / Spray. A little weather.', description:'Press once: the rear-centre spray head moves down and releases one short burst of cooling mist. It returns to rest while the droplets travel away. Available with the optional mist lid.', action:'Press. Mist. Much better.', detail:'Rear-centre cooling spray head', ready:'Forecast: locally refreshing.'}
+    spray: {title:'03 / Spray. A little weather.', description:'Press once: the rear-centre spray head moves down and releases one short burst of cooling mist. It returns to rest while the droplets travel away.', action:'Press. Mist. Much better.', detail:'Rear-centre cooling spray head', ready:'Forecast: locally refreshing.'}
   };
   const find = selector => prototype.querySelector(selector);
   const play = find('[data-drinking-play]');
@@ -16,7 +16,7 @@ if (prototype) {
   const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
   const pressedHead = find('[data-mist-pressed]');
   // Outlet centred on the right-hand vertical steel wall, below the rim.
-  const pump = {down:140, burstEnd:280, returned:500, count:650, x:647, y:782};
+  const pump = {down:140, burstEnd:280, returned:500, count:650, x:692, y:480};
   let method='straw', pumping=false, frame=0, pumpStarted=null, drops=[], puffs=[];
   let releaseTimer, clearTimer;
   function headPose(amount, phase) {
@@ -34,8 +34,8 @@ if (prototype) {
     prototype.dataset.strawPosition=up?'up':'flat';
     prototype.querySelectorAll('[data-straw-position]').forEach(button=>button.setAttribute('aria-pressed',String(button.dataset.strawPosition===(up?'up':'flat'))));
     if(method==='straw') {
-      find('[data-straw-leader]').setAttribute('d',up?'M180 940H340L435 875':'M180 940H350L430 965');
-      status.textContent=up?'Up. Ready for a sip.':options.straw.ready;
+      find('[data-straw-leader]').setAttribute('d',up?'M180 824H270L377 668':'M180 824H270L420 594');
+      status.textContent=up?'Up. Ready for a sip.':'Flat. Folded away.';
     }
   }
   function stop() {
@@ -146,7 +146,7 @@ if (prototype) {
     find('[data-drinking-action]').textContent=item.action;find('[data-drinking-detail]').textContent=item.detail;
     find('.drinking-closeup').setAttribute('aria-label',`Overhead lid study highlighting ${item.detail.toLowerCase()}.`);
     controls.hidden=method==='gulp';strawControls.hidden=method!=='straw';play.hidden=method!=='spray';status.hidden=method==='gulp';
-    strawPose(false);status.textContent=item.ready;
+    strawPose(method==='straw');status.textContent=item.ready;
   }
   prototype.querySelectorAll('[data-drinking-method],[data-drinking-part]').forEach(button=>button.addEventListener('click',()=>select(button.dataset.drinkingMethod||button.dataset.drinkingPart)));
   prototype.querySelectorAll('[data-straw-position]').forEach(button=>button.addEventListener('click',()=>strawPose(button.dataset.strawPosition==='up')));

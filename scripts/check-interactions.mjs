@@ -81,6 +81,8 @@ for (const pin of document.querySelectorAll('.feature-pin')) {
   assert.equal(document.activeElement, pin);
 }
 
+assert.equal(one('button[data-straw-position="up"]').getAttribute('aria-pressed'), 'true', 'Straw starts raised');
+assert.equal(one('[data-straw-up]').style.display, '');
 click(one('button[data-straw-position="up"]'));
 assert.equal(one('[data-straw-up]').style.display, '');
 click(one('button[data-straw-position="flat"]'));
@@ -101,7 +103,7 @@ assert.equal(one('[data-drinking-particles]').children.length, 0);
 click(one('[data-drinking-play]'));
 click(one('[data-drinking-method="straw"]'));
 assert.equal(one('[data-drinking-particles]').children.length, 0);
-assert.equal(one('button[data-straw-position="flat"]').getAttribute('aria-pressed'), 'true');
+assert.equal(one('button[data-straw-position="up"]').getAttribute('aria-pressed'), 'true', 'Returning to Straw defaults to Up');
 media.matches = true;
 click(one('[data-drinking-method="spray"]')); click(one('[data-drinking-play]'));
 for (const fn of [...timers.values()]) fn();

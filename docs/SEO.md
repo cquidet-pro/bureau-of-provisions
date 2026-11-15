@@ -38,7 +38,7 @@ Update sitemap `lastmod` only when the page has a significant content change. Do
 
 The custom domain is reflected in the canonical, Open Graph URLs, JSON-LD IDs/URLs, sitemap and llms links. If the production hostname changes again, update these together and redirect old hostnames consistently. Do not deploy placeholder domains or verification tokens.
 
-When sales open, add verified specifications, price/availability and appropriate Offer data. The page now includes approved CAD dimensions, nominal capacity, £39 pre-order price, international shipping and dishwasher-safe cleaning. Add validated insulation performance, detailed cleaning guidance, replacement parts, warranty and other buying/care content only after these details are established. Dedicated product and care pages will then be useful, following the competitors' category-and-guide approach.
+When sales open, add verified specifications, price/availability and appropriate Offer data. The page now includes approved CAD dimensions, nominal capacity, £25 / €30 / $33 pre-order prices (excluding shipping), international shipping and dishwasher-safe cleaning. Add validated insulation performance, detailed cleaning guidance, replacement parts, warranty and other buying/care content only after these details are established. Dedicated product and care pages will then be useful, following the competitors' category-and-guide approach.
 
 ## Account setup and follow-up
 

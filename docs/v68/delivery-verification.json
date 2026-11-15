@@ -1,0 +1,393 @@
+{
+  "source_model_sha256": "63d66f1b611b1b80a6bcdc687041e085724739e1e398d2e49dc55212f92bb496",
+  "source_geometry_unchanged": true,
+  "strap_hook_reference": "docs/v68/SWIVEL_SNAP_HOOK_REFERENCE.png",
+  "lossless_file_count": 35,
+  "files": [
+    {
+      "png": "/images/product/bottle-cutaway-native-v68.png",
+      "webp": "/images/product/bottle-cutaway-native-v68.webp",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "png_sha256": "26301d2b16651dfe979b93fa2474806bb316f6357b9e32661afb11f0c9174986",
+      "webp_sha256": "5cce512e12c5da8dfcaf92af7877c38f633d1f190726e24de4a7c6340e16c6ec",
+      "pixel_identical": true
+    },
+    {
+      "png": "/images/product/edition-01-native-v68.png",
+      "webp": "/images/product/edition-01-native-v68.webp",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "png_sha256": "0240b9bb1cbae941dcfbdd4e6b426715ad46a5210134140b93e603a418805d73",
+      "webp_sha256": "0ab625adbca5a94a3bcf51afc40ab78507edf1957ea794c0d83709e396c031c1",
+      "pixel_identical": true
+    },
+    {
+      "png": "/images/product/edition-02-native-v68.png",
+      "webp": "/images/product/edition-02-native-v68.webp",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "png_sha256": "14e2048e8045bc328a1af4b42656c04a9e2fb9023d5bffa75c4ffcf5c56971d5",
+      "webp_sha256": "da1938cfcffda5d7d1e7246fb40cfa537e331114290b96234cf0526edc6a4aeb",
+      "pixel_identical": true
+    },
+    {
+      "png": "/images/product/edition-03-native-v68.png",
+      "webp": "/images/product/edition-03-native-v68.webp",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "png_sha256": "7e678735ad13a7a85a760367715a126ae797d2c960b96f28e4388d356f2298d3",
+      "webp_sha256": "db7c64ad4574028cfab8c07311ecbca4bdfd2f0e295f672bc0b5c4833f53de10",
+      "pixel_identical": true
+    },
+    {
+      "png": "/images/product/edition-04-native-v68.png",
+      "webp": "/images/product/edition-04-native-v68.webp",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "png_sha256": "0cc7c9268dac4685d25c2c53a2b2567b05c7e292b3f554fd510ff87a6444ee51",
+      "webp_sha256": "59a817780142b063d15e2674148ca8f3617b0c9090ec4e83d2684112aebd341e",
+      "pixel_identical": true
+    },
+    {
+      "png": "/images/product/edition-05-native-v68.png",
+      "webp": "/images/product/edition-05-native-v68.webp",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "png_sha256": "69daac4048579afa59e199b20a2cd5a4570f36b89f0fe753eeeb7787d45d1c07",
+      "webp_sha256": "3cef07dd3b104245cd71de4a4281af43f4e42c6ae90aef09397b7111f806fee8",
+      "pixel_identical": true
+    },
+    {
+      "png": "/images/product/edition-06-native-v68.png",
+      "webp": "/images/product/edition-06-native-v68.webp",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "png_sha256": "6da8f4ec39613bcf40f1eb704b63ebfbc51e1497eeac3834414ebb927733da02",
+      "webp_sha256": "786078f2df7be973baa760609ba94da42985994c9ced492e273d5a9cfd390cae",
+      "pixel_identical": true
+    },
+    {
+      "png": "/images/product/edition-07-native-v68.png",
+      "webp": "/images/product/edition-07-native-v68.webp",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "png_sha256": "937fa71adb99d3645517ed67801189eeabf8372cdd66cdc7f2f52158066aa52a",
+      "webp_sha256": "580e87cf24850821cacec8102935e338366e28201ece77fed04396c8128a49fd",
+      "pixel_identical": true
+    },
+    {
+      "png": "/images/product/edition-08-native-v68.png",
+      "webp": "/images/product/edition-08-native-v68.webp",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "png_sha256": "fa4c11398fa78f8526a0495ab599745535bc8e465e6949b756003f15165706eb",
+      "webp_sha256": "311ec7954a408c17bcadf3a42f150d3a9071ff73e6009be4b94ca723aa3acde0",
+      "pixel_identical": true
+    },
+    {
+      "png": "/images/product/edition-09-native-v68.png",
+      "webp": "/images/product/edition-09-native-v68.webp",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "png_sha256": "128afe5a202912bc8bd9af3125516a62cc4d926986f6f514fe72097ea2f8a38d",
+      "webp_sha256": "0a8ad348643923e5282ef9a680ea171b6011b3ca7ca88e1cf11bbb342cf12d82",
+      "pixel_identical": true
+    },
+    {
+      "png": "/images/product/edition-10-native-v68.png",
+      "webp": "/images/product/edition-10-native-v68.webp",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "png_sha256": "2223e84b01c0c24570baaf7ea206ed424b8bcbcf5629a62c19d1ca9a301c750d",
+      "webp_sha256": "0a67c95e69f8c7f8def92c708c1dd96463fbc2ed30a8a3992b234d6edb013026",
+      "pixel_identical": true
+    },
+    {
+      "png": "/images/product/edition-11-native-v68.png",
+      "webp": "/images/product/edition-11-native-v68.webp",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "png_sha256": "0d0a4f3443d0585f929b9a2943f1c7df7631a25c4c7baee3004a48f402ca126f",
+      "webp_sha256": "fa57c170aaeca70c9360dc2c822cb5e41ca9f21c6c62c0eacf45d2c27eb40982",
+      "pixel_identical": true
+    },
+    {
+      "png": "/images/product/edition-12-native-v68.png",
+      "webp": "/images/product/edition-12-native-v68.webp",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "png_sha256": "2a960a1e406be74e3f3c37320989ee113c328d1116e07c68b85bf8b5a0a8783a",
+      "webp_sha256": "74999f0d062895275823789292ad3429eccc8f7e6edb857cf72c0f401b79a3d9",
+      "pixel_identical": true
+    },
+    {
+      "png": "/images/product/edition-13-native-v68.png",
+      "webp": "/images/product/edition-13-native-v68.webp",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "png_sha256": "68ddff86282958cc89c81149f18906ab7c5ee5d0a39dee44567ca8a1bd83bdf2",
+      "webp_sha256": "a2348091a280de9816b2be585747e7022af3c36be8bcd3d37c5675776b71dab7",
+      "pixel_identical": true
+    },
+    {
+      "png": "/images/product/edition-14-native-v68.png",
+      "webp": "/images/product/edition-14-native-v68.webp",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "png_sha256": "6873ab5bb4bf7ac7375f047d3cfd0c74cf9d3ccfacb4ca1c7765e536b5133986",
+      "webp_sha256": "6b59df7a573a0d4c32cf76a4d86662d1e55f628b74749597d2c00defb962c83a",
+      "pixel_identical": true
+    },
+    {
+      "png": "/images/product/edition-15-native-v68.png",
+      "webp": "/images/product/edition-15-native-v68.webp",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "png_sha256": "48628f37e5a8d82b97dd4fbff039c4f017772df99f2b87d686460c3f25e42882",
+      "webp_sha256": "979ac2c2efcbf2a308b8ff8eb682b06b7f131228149f24443e6a4236fb4a288f",
+      "pixel_identical": true
+    },
+    {
+      "png": "/images/product/edition-16-native-v68.png",
+      "webp": "/images/product/edition-16-native-v68.webp",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "png_sha256": "a4685f923fff72d8a8bf01aa69c5608111a58de872419f1ca2dcc2208446f479",
+      "webp_sha256": "c6649630ce3b366152638fbe70491427d4e2681ab8b372c606d3814338b5f407",
+      "pixel_identical": true
+    },
+    {
+      "png": "/images/product/edition-17-native-v68.png",
+      "webp": "/images/product/edition-17-native-v68.webp",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "png_sha256": "884fd14d5fbec7df8723bf72762c39a98712211b19339412e52892fe774d4796",
+      "webp_sha256": "1809a3fc3ff9a4efd33cdf2a1a027b835b72b3b23581172417a7b0897c641997",
+      "pixel_identical": true
+    },
+    {
+      "png": "/images/product/edition-18-native-v68.png",
+      "webp": "/images/product/edition-18-native-v68.webp",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "png_sha256": "5ab28b7add7394b4971f739eb26d51d46ca315fc667cb5b4a23317c1571fc7a0",
+      "webp_sha256": "9b29b4a192b42a5290d774faebd388f6d58d476fcb45b66b9f2a5babaaaf1578",
+      "pixel_identical": true
+    },
+    {
+      "png": "/images/product/edition-19-native-v68.png",
+      "webp": "/images/product/edition-19-native-v68.webp",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "png_sha256": "b4567f73af4d74837c07ca489d7bb5da9996e26e2432a22257d16fef1b035a9b",
+      "webp_sha256": "e91a403bfd5d7d2c0055bcd94e73555331174cd69646dbc4f06b988f70999b45",
+      "pixel_identical": true
+    },
+    {
+      "png": "/images/product/edition-20-native-v68.png",
+      "webp": "/images/product/edition-20-native-v68.webp",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "png_sha256": "8df5f45e7d14e05b5c33b15417b3ee77e5e1bda1ee025b2eadf1afb8b61993e1",
+      "webp_sha256": "d69edc0673f57afbfae87c7816db2d3944501b83b0068c5df61a0920a567622d",
+      "pixel_identical": true
+    },
+    {
+      "png": "/images/product/edition-21-native-v68.png",
+      "webp": "/images/product/edition-21-native-v68.webp",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "png_sha256": "5954151c7fe8493e0e6a971d76bf09588acf9cb12684892271fc0808ffe2380b",
+      "webp_sha256": "3a4d4af200256a8ed70e25c26305aacab6e564906afee8af6b685ff722b0dfa0",
+      "pixel_identical": true
+    },
+    {
+      "png": "/images/product/edition-22-native-v68.png",
+      "webp": "/images/product/edition-22-native-v68.webp",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "png_sha256": "f2779a2b2e4ae4c4b8bb412bf60bc837c37d747bb5c7c228595790541840deeb",
+      "webp_sha256": "071daf6abb42e913ee0121cb3d2c102c5cfd6cfef168c35b33dc30fd7ad9789d",
+      "pixel_identical": true
+    },
+    {
+      "png": "/images/product/edition-23-native-v68.png",
+      "webp": "/images/product/edition-23-native-v68.webp",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "png_sha256": "44c7431248c2a8b1840af78c7902d2976b4b6e59b1fdc07c8e86cf4db4d1fef4",
+      "webp_sha256": "2f0c2be49e078fccd466b72bf26dd0802db064c0fc3a83c268ad58978e9ffdaf",
+      "pixel_identical": true
+    },
+    {
+      "png": "/images/product/edition-24-native-v68.png",
+      "webp": "/images/product/edition-24-native-v68.webp",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "png_sha256": "7f0fe548ee6a4de83d688fb9e883ddc8142a61e3590a70d7eb4a41255b8437db",
+      "webp_sha256": "87548cf099fe7a12737681b94e7f8b85e83cb54802f9bd989806c42e4af33407",
+      "pixel_identical": true
+    },
+    {
+      "png": "/images/product/edition-25-native-v68.png",
+      "webp": "/images/product/edition-25-native-v68.webp",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "png_sha256": "05024487b2b45a48e93771c400c02689199112e7966c35e2ff140ba7f367b7dd",
+      "webp_sha256": "92f942c450410ec76a32c433f976040edc18c9659c2b0646331f0ba49d8e906a",
+      "pixel_identical": true
+    },
+    {
+      "png": "/images/product/edition-26-native-v68.png",
+      "webp": "/images/product/edition-26-native-v68.webp",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "png_sha256": "c0825be1c3b6e1c1508729d165dbe8e7c9664af2029d6f648be3d6f4847b1669",
+      "webp_sha256": "d329d8b8660f391f65048b3affaf13e23b8b706527eeb0ac8cfda7baa060a0fb",
+      "pixel_identical": true
+    },
+    {
+      "png": "/images/product/edition-27-native-v68.png",
+      "webp": "/images/product/edition-27-native-v68.webp",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "png_sha256": "a8f4ff10e572d89f6c3f92573297ff626b822ecf6ad2b7039a668cb99c03cb49",
+      "webp_sha256": "c42bda563e64a8cf429cf7331d8f166dda88591e254eaecd1948c014ce26957e",
+      "pixel_identical": true
+    },
+    {
+      "png": "/images/product/edition-28-native-v68.png",
+      "webp": "/images/product/edition-28-native-v68.webp",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "png_sha256": "1acd519ac5174962cab21292647d19e8081e350be5d2f953ac3f32630da24f34",
+      "webp_sha256": "a607d11e5a5f2a46eca6e5232404bad05f72fed24a12235aba6d27b3beaeb62f",
+      "pixel_identical": true
+    },
+    {
+      "png": "/images/product/edition-29-native-v68.png",
+      "webp": "/images/product/edition-29-native-v68.webp",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "png_sha256": "27a412a144949596a76c1d4de9069ae3ea40a5f4732c012f03e0502ddb077b84",
+      "webp_sha256": "1a8cebbcc8c304fecdf2985eed12ca7e920189a9ab23db348bd9c2699c3ef865",
+      "pixel_identical": true
+    },
+    {
+      "png": "/images/product/lid-native-v68.png",
+      "webp": "/images/product/lid-native-v68.webp",
+      "dimensions": [
+        1088,
+        1445
+      ],
+      "png_sha256": "7728f99b1796550226780527a711f53e4d42e51766278d75ef299bae98c0861e",
+      "webp_sha256": "ae62778532392774d89065b29cd5fdea166d5536d740c1ed9720059f8de34fc8",
+      "pixel_identical": true
+    },
+    {
+      "png": "/images/product/platform-native-v68.png",
+      "webp": "/images/product/platform-native-v68.webp",
+      "dimensions": [
+        4608,
+        3072
+      ],
+      "png_sha256": "ef1dc38b08786c7544ee4ce5b9fdffb5b752805579c3bc277691bd99896d77a1",
+      "webp_sha256": "5c2e0b0569d2e689c1d4058968b843c668f9f3cdf5b155bbe2a1afdcc791c1f6",
+      "pixel_identical": true
+    },
+    {
+      "png": "/images/product/platform-product-native-v68.png",
+      "webp": "/images/product/platform-product-native-v68.webp",
+      "dimensions": [
+        4608,
+        3072
+      ],
+      "png_sha256": "74cffafccc198ae35b75c618d6a96c6df7417abaef0ee91350cc704fd47ad078",
+      "webp_sha256": "c27eadd809e0063b2e902f7aad765b1b6b0b86eede3317164598646566f19183",
+      "pixel_identical": true
+    },
+    {
+      "png": "/images/product/spray-pressed-native-v68.png",
+      "webp": "/images/product/spray-pressed-native-v68.webp",
+      "dimensions": [
+        1088,
+        1445
+      ],
+      "png_sha256": "6e6ff8b21f32afa07afa1e863505e3f2d9cf534654593bb8380f548c6aef8fe0",
+      "webp_sha256": "6ab9a8b23ba5feddce1d185f032d3cbac891a17ed6d0a03f011510c5a3950380",
+      "pixel_identical": true
+    },
+    {
+      "png": "/images/product/straw-up-native-v68.png",
+      "webp": "/images/product/straw-up-native-v68.webp",
+      "dimensions": [
+        1088,
+        1445
+      ],
+      "png_sha256": "1a4f27305fa74c45d7cef1a01497ffa13c8737eaf3f4e755794c26834a09b8fb",
+      "webp_sha256": "6d4f8da567cfdb208092a5ab62dcf541fe4eb8a845ec546d02814f6ae918f5b5",
+      "pixel_identical": true
+    }
+  ]
+}

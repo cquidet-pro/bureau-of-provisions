@@ -1,0 +1,17 @@
+{
+  "body_source": "01-Body",
+  "section": "right half removed by plane cut of a copy, only in illustrative cutaway",
+  "lid_translation_mm": 24,
+  "removed_half_interior": [
+    "20-Spray-pickup"
+  ],
+  "steel_boundary": "native body section edge; no pickup retained in removed positive-X half",
+  "water_profile_derived_from_source_edges": true,
+  "water_floor_z_mm": 9.000000000000002,
+  "water_top_z_mm": 125,
+  "straw_poses": {
+    "flat": 24,
+    "up": 48
+  },
+  "spray_press": "same native spray mesh translated 2mm for existing illustrative gesture; no additional mechanism"
+}

@@ -116,7 +116,7 @@ function schedulePageTurn() {
       sceneVisual.classList.remove('is-turning');
       schedulePageTurn();
     }, 2250);
-  }, 14000 + Math.random() * 16000);
+  }, 7000 + Math.random() * 4000);
 }
 function scheduleLampToggle() {
   clearTimeout(lampToggleTimer);
@@ -126,7 +126,7 @@ function scheduleLampToggle() {
     lampChangeTimer = setTimeout(() => sceneVisual.classList.toggle('lamp-off'), 650);
     lampGestureTimer = setTimeout(() => sceneVisual.classList.remove('is-switching-light'), 2200);
     scheduleLampToggle();
-  }, 30000);
+  }, 12000);
 }
 function restartSceneMotion() {
   stopSceneMotion();

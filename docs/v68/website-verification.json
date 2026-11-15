@@ -1,0 +1,41 @@
+{
+  "date": "2026-11-15",
+  "status": "local_build_passed_browser_visual_review_pending",
+  "product_source": "V68 direct native Blender renders; source file and evaluated source meshes unchanged",
+  "hook_reference": "docs/v68/SWIVEL_SNAP_HOOK_REFERENCE.png",
+  "hook_fit": "docs/v68/hook-clearance.json",
+  "lossless_deliveries": "docs/v68/delivery-verification.json",
+  "masters_inspected": [
+    "hook close-up",
+    "all 29 editions on collection contact sheet",
+    "Flat and Up lid views",
+    "cutaway",
+    "station product composite"
+  ],
+  "build": "npm run build passed: SEO, collection, asset delivery, cache changes, interactions, V68 source alignment and lossless deliveries",
+  "browser_visual_review": {
+    "status": "blocked",
+    "attempts": [
+      "Safari display name",
+      "Google Chrome display name",
+      "Safari bundle ID"
+    ],
+    "error": "Computer Use server error -10005: cgWindowNotFound",
+    "browser_provider": "Browser access host unavailable",
+    "claim": "No final Safari/Chromium visual pass is claimed."
+  },
+  "deployment": "Not published",
+  "latest_corrections": [
+    "Cutaway: spray pickup in removed half hidden; native wall boundary remains at right edge",
+    "Straw: Up on initial paint and when selecting Straw; Flat remains available",
+    "Main station straw raised; point 4 endpoint placed on strap centre near (941,630)",
+    "Scene animation waits shortened: newspaper 7\u201311 seconds, lamp 12 seconds",
+    "Prices \u00a325 / \u20ac30 / $33 per bottle, excluding shipping",
+    "Native high-resolution main product at 4608x3072, 128 samples",
+    "Catalogue braille reduced; anatomy braille removed",
+    "Local isolated one-colour proof page and explicit sign-off gate",
+    "Reusable guarded Blender strap library and import/export scripts"
+  ],
+  "self_review": "docs/SELF_REVIEW_2026-11-15.md",
+  "proof_page": "http://localhost:4173/output/design-v68/review/"
+}

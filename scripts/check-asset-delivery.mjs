@@ -13,6 +13,7 @@ assert.equal(photos.length, 38);
 assert.ok(photos.every(i => i.sizes && i.width && i.height));
 assert.equal(images.find(i => i.class === 'station-scene').fetchpriority, 'high');
 assert.ok(!existsSync('dist/images/product/platform-strap-reference-v18.png'));
+assert.ok(!existsSync('dist/images/product/platform-native-v68.png'));
 assert.ok(!existsSync('dist/images/product/crest-vector-v11.svg'));
 const backgrounds = [...html.matchAll(/url\(["']?(\/images\/[^)"']+)/g)].map(m => m[1]);
 assert.ok(backgrounds.length >= 3);
@@ -31,7 +32,10 @@ if (process.env.ASSET_CDN !== 'off') {
     const attrs = {...initial};
     return {attrs, getAttribute:k => attrs[k] ?? null, removeAttribute:k => delete attrs[k], setAttribute:(k,v) => {attrs[k] = v;}};
   };
-  const photo = photos[0];
+  // Fresh uncommitted masters use content-versioned local URLs. Exercise CDN
+  // recovery on a photo that actually has an immutable CDN delivery.
+  const photo = photos.find(photo => photo['data-local-src']);
+  assert.ok(photo, 'Expected an unchanged photo with a CDN fallback');
   const target = fixture(photo);
   onError({target});
   assert.equal(target.attrs.src, photo['data-local-src']);
@@ -40,9 +44,13 @@ if (process.env.ASSET_CDN !== 'off') {
   const restored = {...target.attrs};
   onError({target});
   assert.deepEqual(target.attrs, restored, 'A local failure must not cause a retry loop');
-  const svg = fixture({href:'https://cdn.example/image.webp', 'data-local-href':'/images/product/lid-strap-reference-v8.webp'});
+  const localPhoto = fixture(photos.find(photo => !photo['data-local-src']));
+  const localBefore = {...localPhoto.attrs};
+  onError({target:localPhoto});
+  assert.deepEqual(localPhoto.attrs, localBefore, 'Local-only assets must not enter a CDN retry');
+  const svg = fixture({href:'https://cdn.example/image.webp', 'data-local-href':'/images/product/lid-native-v68.webp'});
   onError({target:svg});
-  assert.equal(svg.attrs.href, '/images/product/lid-strap-reference-v8.webp');
+  assert.equal(svg.attrs.href, '/images/product/lid-native-v68.webp');
   assert.ok(!svg.attrs['data-local-href']);
 }
 console.log('Asset checks passed: responsive photos, lazy branding, source exclusion and CDN recovery without retry loops.');

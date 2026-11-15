@@ -1,24 +1,34 @@
 # Bureau of Provisions — reusable product design guide
 
-Version: 19 October 2026. Applies to website visuals, product studies, colour editions, prompts and future design work.
+Version: 15 November 2026. Applies to website visuals, product studies, colour editions, prompts and future design work.
+
+## Current geometry revision — V68
+
+The November website update follows design thread `01a1dc0c-b9c7-7fa3-bade-ddc76ad6cf20` and the current model in `../water-bottle-design/output/prototype-v68/Bureau-73mm-V68-2p2mm-Button-Surround-REVIEW.blend`. See [migration specification](WEBSITE_V68_UPDATE.md). This supersedes the October geometry references and dimensions below wherever they disagree. Production images use the actual native meshes, as documented in [native rendering and alignment](NATIVE_V68_RENDERING.md). Previous photographs remain references for photographic finish, scene registration, straps and exact vector artwork only.
+
+Current geometry: 73 mm body diameter, tapered shoulder, 179.5 mm body plus base, 20 mm collar, clear cylindrical hood with integrated rectangular carry handle and compact rear hinge (9.9 mm nominal projection). The closed envelope including handle is 249.1 mm. The hood opens 220°. A round 13 mm stainless push button replaces the old oval slotted latch; its 2.2 mm annular surround matches the slim safety loop section. Do not restore the older oval latch or upright flat circular hood.
+
+The 27 mm stainless straw folds horizontally into a narrow deck recess, flush except for its rounded lifting paddle. It rotates to 135°, contacting a fixed translucent silicone interface. There are no old raised external bracket cheeks or long side-seat recesses. The hood's drinking and vent seals are two independent translucent silicone pads; no connecting bridge or long sealing arm. Preserve the rear-centre spray and hourglass gulp spout. All colour editions use the same current geometry, including collar, shoulder, hood, button and recessed straw. Only the palette and approved strap pattern vary.
+
+All existing strap, quality, branding, cutaway, scene, interaction and edition rules below continue to apply. Recalibrate view-specific branding, leaders and spray coordinates to the new accepted photographs; old coordinates are not geometry authority.
 
 This is the **current specification**. It consolidates the user's approved corrections; it is not a history of every experiment. Earlier interpretations are archived in [PRODUCT_DESIGN_HISTORY.md](PRODUCT_DESIGN_HISTORY.md). Machine-readable rules and all twenty-nine edition palettes are in [product-design.json](../design/product-design.json).
 
 ## 1. Source hierarchy
 
 1. The user's latest explicit instruction takes precedence.
-2. Original solid Blender screenshots govern physical geometry. Use [front/elevated reference](ORIGINAL_SOLID_LID_REFERENCE.png) and [three-quarter reference](ORIGINAL_CUTAWAY_LID_REFERENCE.png).
+2. Current V68 Blender geometry governs physical construction. Use [full open reference](v68/full-open.png), [macro reference](v68/lid-open.png) and [raised straw reference](v68/lid-raised.png). October screenshots are historical references.
 3. Approved finished renders govern materials, lighting and visual treatment. They do **not** override Blender geometry.
 4. This guide, the palette manifest and render prompt template apply to all new work.
 5. Superseded generated images are not product references. A different camera, colour or audience is never permission to invent hardware.
 
-Reference renders: `platform-strap-reference-v18.webp`, `lid-strap-reference-v8.webp`, `bottle-cutaway-strap-reference-v9.webp`, all under `public/images/product/`. The collection uses the corrected neutral studio master and its colour-only variants listed in the manifest.
+Reference renders: `platform-native-v68.webp`, `lid-native-v68.webp`, `bottle-cutaway-native-v68.webp`, all under `public/images/product/`. The collection uses direct V68 native renders with one fixed camera/pose and the edition material palettes listed in the manifest.
 
 ## 2. One product; fixed construction
 
 - Preserve the tall, slim body, shoulder, base, collar diameter and proportions. Every collection image has the same scale, camera, crop and ground plane.
-- Preserve the smooth circular hinged hood, its narrow rim and original hinge/clasp arrangement. Do not invent ornate, fragmented, faceted or oversized fittings.
-- The front latch is an oval piece with a small horizontal inset. It is not a new handle, bumper or large decorative plate.
+- Preserve the current clear cylindrical hood, integrated rectangular carry handle and compact V68 rear hinge. Do not invent ornate, fragmented, faceted or oversized fittings.
+- The front latch uses a round 13 mm stainless push button, slim 2.2 mm annular surround and matching slim safety loop. Do not restore the previous oval slotted latch.
 - Keep the exact component count, their positions and proportions. Use the Blender references rather than interpreting reflections as extra components.
 - No new grips, recesses, extra carry handles, shortened bodies, widened silhouettes or alternate lid mechanisms for kids' editions.
 
@@ -30,7 +40,7 @@ Reference renders: `platform-strap-reference-v18.webp`, `lid-strap-reference-v8.
 | Big gulp | Squat, rounded hourglass-shaped open steel spout at the front/right | Tilt to drink through the broad opening. Do not make it an elongated tube. |
 | Cooling spray | **Short rear-centre cylindrical spray head** | Label this head and originate mist here. The adjacent tiny flush dark hole is **not the spray**. |
 
-These are **two drinking methods plus one cooling spray**, not three drinking methods. The round pad and its neck mounted inside the hood are a silicone sealing part, not an extra steel mouthpiece or spray head.
+These are **two drinking methods plus one cooling spray**, not three drinking methods. The two independent pads inside the hood are translucent silicone drinking/vent seals, not extra steel mouthpieces or spray heads. They have no connecting bridge.
 
 ## 4. Materials and photographic realism
 
@@ -38,7 +48,7 @@ These are **two drinking methods plus one cooling spray**, not three drinking me
 | --- | --- | --- |
 | Drinking metal and spray head | Smooth **mirror-polished stainless steel**, with crisp light/dark reflections and realistic highlights | Brushed grain, radial machining rings, satin/matte steel, white plastic-looking metal |
 | Hood | Clear/translucent plastic, smooth edge, restrained realistic reflections | Cloudy opaque cover, broken faceted ring, glass shards, oversized chrome rim |
-| Hood-mounted round seal and neck | Softly frosted **translucent colourless silicone**, with the background faintly visible through it | Solid black, opaque white or chrome disc; a ball on a tall vertical stalk |
+| Hood-mounted independent seals | Softly frosted **translucent colourless silicone**, with the background faintly visible through it | Solid black, opaque white or chrome disc; a ball on a tall vertical stalk |
 | Body and coloured collar | Refined satin coating in the edition's specified colours | Inflated plastic toy appearance, glitter or texture that hides branding |
 | Strap | Real woven fabric, visible fibres and stitching, stripes woven along the material's route | Flat stickers, floating emblems, a printed badge background |
 | Hardware | Plausible polished side rings and detachable swivel snap hooks | Closed chain links masquerading as detachable clips |
@@ -61,7 +71,7 @@ Use coherent light, reflections, contact shadows and refraction. Preserve these 
 
 There is **one continuous detachable fabric strap**, with one opening snap hook at each end connecting to the two side rings. Two visible sides are not two independent straps. Show the spring gates/release levers clearly. The stitched fabric tabs attach to the clip hardware, not directly to the bottle. The strap reaches the ground and drapes naturally; its visible U route is part of the full-product view.
 
-**Attachment shape reference:** [STRAP_ATTACHMENT_REFERENCE.png](STRAP_ATTACHMENT_REFERENCE.png), supplied 18 October 2026. From bottle to fabric: small side lug → slim angled connector → rounded oval/teardrop opening clip → short swivel stem → separate wide rounded rectangular D-ring → stitched fabric tab. Preserve this order and the slender polished round-section metal. A flat rectangular clip plate, chunky trigger hook, circular lower ring or fabric sewn straight to the bottle does not match this reference. Adapt perspective to each view; do not copy the reference's purple colour onto ivory studies. This correction applies to Fig. 03 and the inside-story cutaway, while retaining the cutaway's flat cut strap and existing exact vector branding.
+**Latest attachment reference, 15 November 2026:** [requested swivel snap hook](v68/SWIVEL_SNAP_HOOK_REFERENCE.png). The user explicitly rejected the oval wire-loop hook visible in the first native draft. Use a small round opening jaw, flat tapered trigger body, small lever/rivet, short swivel connection and a separate rounded D-ring. The clip engages the V68 recessed body mount; do not add the old collar lugs. The reference governs hook type, not a change to the edition colour, webbing or printed artwork. The original [strap construction reference](STRAP_ATTACHMENT_REFERENCE.png) still governs pristine woven fabric and slim stitched tabs, but its earlier oval-wire hook interpretation is superseded. This applies to the station scene, all 29 editions, macro and cutaway, retaining the cutaway-only flat strap exception.
 
 **Entire strap construction and condition:** the same reference governs the fabric, folded end tabs and hardware in the main scene, Fig. 03 and the cutaway. Use plain finely woven webbing, neat straight stitched edges and a slim same-fabric folded tab with a simple rectangular stitch outline. No thick leather-like reinforcement patch, padded inset, ornate raised geometric/triangular jacquard, fraying, ragged waves, dirty specks, stains or aged yellowing. Present it as pristine, new premium fabric. Retain ivory in the ivory scenes; retain each edition's palette and approved longitudinal stripes in the collection. Keep exact strap animal SVGs centred on the fabric. A strap correction changes neither the bottle nor the scene. Full views keep one continuous floor-reaching U drape; only the half-cut view uses the flat cut-strip exception below.
 
@@ -94,7 +104,7 @@ Exact message: **Stay a little unreasonable.** Preserve capital S and full stop.
 
 Latest collection correction, 25 October 2026: retain the original Mint / Peach as edition 03. Edition 20 is now Turquoise / Lilac: retain turquoise #78e4e8 on the body and strap edges, with collar/latch and one centre strap stripe in the existing Lilac / Butter body colour #b5a1d0. This supersedes the earlier peach and orange accents, per the latest user correction. These are separate catalogue choices with separate registration values.
 
-Japan’s two red sun-circle motifs align horizontally with Canada’s maple-leaf motifs, around y945 in the common 1024×1536 frame.
+Japan’s two red sun-circle motifs align horizontally with Canada’s maple-leaf motifs, around y945 in the common 1024×1536 frame; native textile coordinates are shared with Canada.
 
 Latest strap correction: France and Italy keep unbroken tricolour bands across the foreground strap; never swap the outer stripe colours midway. The right hanging strap reads red/white/blue for France and red/white/green for Italy, so the same band follows the same physical edge through the bend. Website collection copy omits age ranges and colour counts.
 
@@ -113,7 +123,7 @@ See the machine-readable twenty-nine-entry manifest for colour values, strap tre
 
 Keep the stylish longitudinal half-cut: visible inner/outer steel walls, continuous internal straw and a credible curved inner floor. Water runs from its existing upper surface **all the way to that floor**, with no false second meniscus or empty-looking air gap at the bottom. Steel base/wall thickness remains visible outside the water chamber.
 
-The exploded lid and neck show a meaningful matching screw connection: several complete evenly pitched female thread turns and a corresponding male screw skirt, with matching diameter/pitch and a clear exploded gap. Do not draw intersecting parts or merely shallow decorative rings. Keep the lid's original Blender hardware and appropriate folded-back hood pose.
+The exploded view uses exact V68 lid and neck surfaces with a clear illustrative gap. Do not add screw threads, extra rings or construction that is absent from the source model. Section the native foot and body O-ring with the body so full rings do not float in the removed half. Keep the actual current rear hinge and fully folded-back hood pose.
 
 This remains an illustrative design study. Do not infer or publish numeric dimensions, thread specifications, volume, thermal performance or manufacturing validation from generated pictures.
 
@@ -123,7 +133,7 @@ This remains an illustrative design study. Do not infer or publish numeric dimen
 - Place Flat/Up directly above the Straw label and Press to mist. directly above the Spray label on the image, rather than below the explanatory copy. Keep the selected labels and pointer lines; no dotted or shaded outlet ring.
 - Feature hover panels must remain within the viewport. Flip the opening direction at side edges and clamp vertically/horizontally, including panels2 and5; reposition on resize and scroll.
 - Use the approved photographed hardware; do not replace it with a rough generic procedural 3D bottle.
-- Straw: **two still positions only**, Flat (initial) and Up (the final raised reference). Use a Flat / Up switch; no animation, interpolation, automatic folding, playback, hold or Reset buttons. The camera, bottle and all other parts remain fixed. Use [raised overhead reference](STRAW_RAISED_OVERHEAD_REFERENCE.png) for the Up pose: the short open drinking bore faces the viewer within its stationary hinge assembly. The [three-quarter reference](STRAW_45_DEGREE_REFERENCE.png) clarifies the hinge angle; it does not authorize changing the overhead camera. Intermediate motion experiments are superseded.
+- Straw: **two still positions only**, Flat (initial) and Up (the final raised reference). Use a Flat / Up switch; no animation, interpolation, automatic folding, playback, hold or Reset buttons. The camera, bottle and all other parts remain fixed. Use [raised overhead reference](v68/lid-raised.png) for the Up pose: the short open drinking bore faces the viewer within its stationary hinge assembly. The [current raised reference](v68/lid-raised.png) clarifies the 135° position; it does not authorize changing the photographic camera. Intermediate motion experiments are superseded.
 - Spout: explanation and “Tilt to drink” only; no playback, hold or reset controls.
 - Mist: label the action **“Press to mist.”**. Each click demonstrates one pump: head depresses, emits one short burst, returns to rest, then a dense white plume with fine droplets and soft edges, matching the main-page mist, continues outward toward the “03 Spray” label and fades. No continuous spray, Stop toggle, hold button or Reset. Keep the visible action rectangle compact and clear of the hood on phones, with additional invisible tap space above it. Flat/Up use the same compact height, typography and padding as the mist action. Preserve the fixed camera and all other hardware. Use the local pressed-pose image, not a full-scene regeneration.
 - Support touch and keyboard, reduced motion, hidden/offscreen suspension and clean reset when switching modes. Preserve fixed-camera geometry when switching straw positions; do not rotate the photograph sideways.
@@ -132,7 +142,7 @@ This remains an illustrative design study. Do not infer or publish numeric dimen
 - Main scene point **7 explains the inspirational braille message “Stay a little unreasonable.”** Its leader ends on the existing lower-body braille at approximately (776,805) in the 1536×1024 scene; its pin sits lower-left at (390,940), with its route below point 5. Keep all seven callouts touch and keyboard accessible.
 - Main scene point **1 stays on the left** and its leader points to the spray head, routing around the hood. Point 6 stays lower-right, routed below the other leaders.
 
-Current calibration: main photo1536×1024: spray point1 starts(390,170) and ends near(766,324). Enlarged lid1088×1445: highlight head near(592,732), mist leaves the middle of its right-hand vertical steel wall near(647,782) during the press and travels outward toward the “03 Spray” label. These coordinates are view-specific, not product measurements.
+Current calibration is recorded in [native projected anchors](v68/view-anchors.json). The main spray pin remains on the left and points to the projected native outlet. In the1088×1445 macro, the native outlet is approximately(692,462); the illustrative pressed emission starts near(692,480). The Spray label sits at27% frame height. The straw patch is confined to(300,500)–(520,840); the pressed spray patch to(470,340)–(730,660). These coordinates are view-specific, not product measurements.
 
 ## 11. Site art direction and copy
 
@@ -159,15 +169,15 @@ Copy pairs a short dry line with a precise benefit. Examples: “Big thirst. Zer
 
 The family scene keeps the girl in preppy clothes, dark ringlet ponytail and no glasses; mother sits independently beside her; boy sits beside his father. Preserve people and scene positions during bottle/material edits. The conductor stands at a generous **open arched ticket-service window**, framed in mahogany and slim brass, with no bars across his face, torso or counter. This latest user correction supersedes the previous full grille. The lamp-switch alternate pose must use the same open arch; do not reintroduce the old barred gesture or foreground grille. Preserve the painting position, page-turn and light animations unless explicitly asked to change them.
 
-Every bottle keeps “Register to pre-order” carrying its selected name to the existing Tally interest form. Registration is not a paid checkout. Dishwasher safe is a user-provided feature. Current Original/Mist V55 CAD gives a 65 mm body diameter, 185.4 mm body height from the protective-foot datum, and 207.7 mm closed overall envelope including the silicone insert (hood top:207.5 mm). The model labels 500 mL as nominal design capacity; do not describe it as measured liquid volume. Source bounds, native-file hash and the reason the inherited 231 mm label is stale are recorded in [cad-specifications.json](../design/cad-specifications.json). Unconfirmed performance claims remain pending. Pre-order price is £39 per bottle; ships internationally. Registration still uses the existing interest form.
+Every bottle keeps “Register to pre-order” carrying its selected name to the existing Tally interest form. Registration is not a paid checkout. Dishwasher safe is a user-provided feature. Current V68 design gives a 73 mm body diameter, 179.5 mm body-plus-base height and 249.1 mm closed envelope including the integrated carry handle. The inherited design target remains 500 mL nominal capacity; do not describe it as measured liquid volume. Current dimensions, native-file hash and preserved historical specifications are recorded in [cad-specifications.json](../design/cad-specifications.json). Unconfirmed performance claims remain pending. Pre-order price is £25 / €30 / $33 per bottle, excluding shipping; ships internationally. Registration still uses the existing interest form.
 
 ## 12. Reusable production workflow
 
 1. Read this guide and select the correct view context: full bottle, macro lid or sectional anatomy.
-2. Use the original Blender screenshot for geometry and the current approved render for finish/lighting.
-3. Establish one corrected neutral studio master. A colour variant changes palette/pattern only; never re-invent the model per colour.
+2. Use the current V68 Blender references for geometry and the current approved render for finish/lighting.
+3. Establish one native studio setup. Every colour edition reuses the same meshes, camera and pose; only shader palettes and textile patterns change.
 4. Use [PRODUCT_RENDER_TEMPLATE.md](prompts/PRODUCT_RENDER_TEMPLATE.md), filling the edition palette from the JSON manifest. Explicitly identify each reference's role.
-5. Generate/edit bitmap product photographs with imagegen. Keep native SVG branding, icons and braille as native assets. No generated lettering or animal replacements.
+5. Render bottle geometry directly from the V68 Blender meshes. Imagegen may repair a local background clean plate, never reinterpret the product. Keep native SVG branding, icons and braille as native assets. No generated lettering or animal replacements.
 6. Save versioned source PNGs plus lossless WebP web assets. Preserve originals. Store actual prompts, references and output provenance.
 7. Reuse existing exact logo/strap/braille layers; check their positions at full size. Preserve all card links and selection controls.
 8. Inspect every output, then inspect it in the browser at desktop and mobile sizes. Compare silhouette, mouthpiece layout, silicone, polished reflections, clip gates, strap route, branding and registration links.
@@ -179,9 +189,23 @@ Every bottle keeps “Register to pre-order” carrying its selected name to the
 - [ ] Correct low folding straw, hourglass spout and rear-centre spray head.
 - [ ] Clear smooth hood; translucent silicone pad/neck; mirror-polished steel.
 - [ ] One continuous detachable strap and two opening clip gates in full-product views.
-- [ ] Cutaway-only strap exception, water to floor and plausible mating threads.
+- [ ] Cutaway-only strap exception, water to the native floor and source-modelled neck connection.
 - [ ] Exact body logo, both supporters, centred strap animals and exact braille retained.
 - [ ] Palette/stripe changes only; no invented kids geometry or accessories.
 - [ ] Spray labels/animation point to the actual head; point1 remains left.
 - [ ] Same names, twenty-nine cards, individual registration links and accessible selection controls.
 - [ ] No invented dimensions/performance claims; source/prompt/output provenance saved.
+
+The round jaw wraps the bridge through the existing body recess; it must never intersect the bottle wall. The small curved lifting lever is underneath the tapered snap body. Preserve the native body unchanged and verify evaluated solid clearance before batch rendering; see [current fit evidence](v68/hook-clearance.json).
+
+Latest website corrections, 15 November 2026: Fig. 03 starts with the straw Up, including its active button, leader and image on first paint; Flat remains selectable. In the half-cut illustration, remove internal components lying entirely in the removed half, including `20-Spray-pickup`, so they do not appear as a false steel cut edge through the water. The exposed native wall boundary stays at the right of the opening; never move source tubes to fake a wall edge.
+
+Latest main-scene correction: show the straw Up using source frame 48 and point the straw leader to that pose. The carry-strap leader endpoint must touch the strap. Newspaper gestures recur after 7–11 seconds and lamp gestures every 12 seconds, preserving pause and reduced-motion behaviour. Current pre-order prices are £25 / €30 / $33 per bottle, excluding shipping.
+
+Main-scene straw and spout leader dots are small (2 source pixels radius) and sit beside the outer edges of the openings, leaving both drinking openings visible.
+
+Latest braille correction, 15 November 2026: catalogue braille is discreet and matches the main scene relative to body width (19.5% of the full portrait frame, approximately 60% of body width). Preserve its exact vector message. The half-cut anatomy view has no braille; this explicit exception supersedes the earlier requirement to retain braille there.
+
+## Proof and sign-off gate
+
+For a new design update, follow [the local proof workflow](DESIGN_REVIEW_WORKFLOW.md). Render one neutral edition and each image type into isolated candidate output, obtain explicit user sign-off, and record the matching input fingerprint before the full catalogue. Use selective rebuilds for authorised small corrections. [Session lessons](V68_SESSION_LESSONS.md) explain the visual review gate; [Blender strap handoff](BLENDER_STRAP_HANDOFF.md) contains the reusable accessory and safe import instructions.

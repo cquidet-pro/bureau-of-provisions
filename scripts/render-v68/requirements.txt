@@ -1,0 +1,4 @@
+Pillow>=11,<13
+numpy>=2,<3
+trimesh>=4,<5
+manifold3d>=3,<4

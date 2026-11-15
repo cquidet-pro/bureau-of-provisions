@@ -1,0 +1,73 @@
+{
+  "method": "Evaluated native meshes in millimetres; watertight oriented solids; Manifold intersection and minimum gap. Gap search capped at 2 mm.",
+  "mesh_export_sha256": "2b4dae3d6492276d4802c9b6ffb14e8509e1dc8138cd2c45781782e289bd55f9",
+  "render_setup_sha256": "c588610d2cfcbbfbf38ae3419bf54e46dc2e49725d8bbfdbe9987255265144f6",
+  "scope": "Depicted closed snap fit against original body; no strength, manufacturing tolerance or opening-motion certification.",
+  "parts": {
+    "WEB-round-opening-snap-jaw--1": {
+      "intersection_mm3": 0.0,
+      "minimum_gap_mm_capped_2": 0.30589910163246603
+    },
+    "WEB-snap-spring-gate--1": {
+      "intersection_mm3": 0.0,
+      "minimum_gap_mm_capped_2": 0.9730751333725149
+    },
+    "WEB-flat-snap-body--1": {
+      "intersection_mm3": 0.0,
+      "minimum_gap_mm_capped_2": 1.3125661353649412
+    },
+    "WEB-snap-trigger-lever--1": {
+      "intersection_mm3": 0.0,
+      "minimum_gap_mm_capped_2": 2.0
+    },
+    "WEB-Snap-trigger-rivet--1": {
+      "intersection_mm3": 0.0,
+      "minimum_gap_mm_capped_2": 2.0
+    },
+    "WEB-short-snap-swivel--1": {
+      "intersection_mm3": 0.0,
+      "minimum_gap_mm_capped_2": 2.0
+    },
+    "WEB-Snap-swivel-collar--1": {
+      "intersection_mm3": 0.0,
+      "minimum_gap_mm_capped_2": 2.0
+    },
+    "WEB-separate-D-ring--1": {
+      "intersection_mm3": 0.0,
+      "minimum_gap_mm_capped_2": 2.0
+    },
+    "WEB-round-opening-snap-jaw-1": {
+      "intersection_mm3": 0.0,
+      "minimum_gap_mm_capped_2": 0.30511980938685274
+    },
+    "WEB-snap-spring-gate-1": {
+      "intersection_mm3": 0.0,
+      "minimum_gap_mm_capped_2": 0.9730772031191147
+    },
+    "WEB-flat-snap-body-1": {
+      "intersection_mm3": 0.0,
+      "minimum_gap_mm_capped_2": 1.3125666475709385
+    },
+    "WEB-snap-trigger-lever-1": {
+      "intersection_mm3": 0.0,
+      "minimum_gap_mm_capped_2": 2.0
+    },
+    "WEB-Snap-trigger-rivet-1": {
+      "intersection_mm3": 0.0,
+      "minimum_gap_mm_capped_2": 2.0
+    },
+    "WEB-short-snap-swivel-1": {
+      "intersection_mm3": 0.0,
+      "minimum_gap_mm_capped_2": 2.0
+    },
+    "WEB-Snap-swivel-collar-1": {
+      "intersection_mm3": 0.0,
+      "minimum_gap_mm_capped_2": 2.0
+    },
+    "WEB-separate-D-ring-1": {
+      "intersection_mm3": 0.0,
+      "minimum_gap_mm_capped_2": 2.0
+    }
+  },
+  "minimum_gap_mm": 0.30511980938685274
+}

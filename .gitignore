@@ -4,3 +4,6 @@ dist
 *.log
 .firebase/
 the-bop-reference-for-website/
+output/design-v68/
+**/__pycache__/
+*.pyc
