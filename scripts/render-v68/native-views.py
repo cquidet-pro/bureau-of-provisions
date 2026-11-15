@@ -194,6 +194,14 @@ assert s.objects['12-Metal-pickup'].hide_render and s.objects.get('WEB-Section-n
 cap_bottom=bounds_world(s.objects['WEB-Exploded-03-Fixed-cap'])[0][2]
 assert bounds_world(s.objects['WEB-Exploded-19-Water-shoulder'])[0][2]>=cap_bottom-1e-6,'No extra white thread projection below the cap'
 assert abs(bounds_world(s.objects['WEB-Illustrative-steel-thread-sleeve'])[1][2]-cap_bottom)<1e-6
+# The exploded button is a new object: light linking does not follow its
+# source. Include it explicitly and place the reflection strip opposite the
+# oblique camera so the polished face reads as steel in this view too.
+button=s.objects['WEB-Exploded-05-Button']
+receiver.objects.link(button)
+lamp.location=(-.17,-.30,.15)
+button_target=Vector((0,-.031,.228))
+lamp.rotation_euler=(button_target-lamp.location).to_track_quat('-Z','Y').to_euler()
 witnesses('cutaway');render('bottle-cutaway-native-v68')
 (BASE/'view-anchors.json').write_text(json.dumps(anchors,indent=2))
 (BASE/'section-record.json').write_text(json.dumps({'body_source':'01-Body','section':'right half removed by plane cut of a copy, only in illustrative cutaway','lid_translation_mm':34,'open_lid_pose_degrees':90,'pickup_attachment':'12-Metal-pickup lifted with upper deck by the same 34 mm; metallic continuation reaches hidden socket; no body-fixed duplicate','connector':'metallic thread only; plastic neck projection trimmed in illustration','removed_half_interior':['20-Spray-pickup'],'steel_boundary':'native body section edge; no pickup retained in removed positive-X half','water_profile_derived_from_source_edges':True,'water_floor_z_mm':profile[0][0]*1000 if profile else None,'water_top_z_mm':125,'straw_poses':{'flat':24,'up':48},'spray_press':'same native spray mesh translated 2mm for existing illustrative gesture; no additional mechanism'},indent=2))
