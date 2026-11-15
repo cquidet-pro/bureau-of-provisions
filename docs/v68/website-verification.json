@@ -1,6 +1,6 @@
 {
   "date": "2026-11-15",
-  "status": "approved_full_build_and_chromium_layout_passed",
+  "status": "published_and_live_verified",
   "approval": "design/render-approval.json",
   "product_source": "Native V68 .blend unchanged; evaluated geometry fingerprints and dimensions verified",
   "hook_fit": "docs/v68/hook-clearance.json",
@@ -24,10 +24,16 @@
   "blender_handoff": {
     "library": "design/blender-assets/v68-strap-system.blend",
     "validation": "21 objects imported into V68 with packed neutral textile; source not saved",
-    "design_repo_note": "../water-bottle-design/docs/WEBSITE_V68_STRAP_HANDOFF.md"
+    "design_repo_note": "../water-bottle-design/docs/WEBSITE_V68_STRAP_HANDOFF.md",
+    "design_repository_commit": "5c327d1"
   },
   "deployment": {
-    "status": "ready_for_github_actions_release"
+    "status": "success",
+    "release_commit": "ee24fa5ad58f42adbcc84ff6f3d71b3dc298ed22",
+    "url": "https://bureauofprovisions.web.app/",
+    "workflow": "https://github.com/cquidet-pro/bureau-of-provisions/actions/runs/43744257619",
+    "verified_at": "2026-11-15T18:02:44.951Z",
+    "live_evidence": "docs/v68/live-release-verification.json"
   },
   "current_prices_visible": false,
   "archive": "/old unchanged"

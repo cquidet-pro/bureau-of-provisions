@@ -23,3 +23,7 @@ Coordinates use metres. Jaw centres are `(±0.0327, -0.001, 0.16395)`; centrelin
 Run Blender with the authoritative source and `--python-exit-code 1 --python scripts/render-v68/export-strap-asset.py`. It reconstructs the accessory from maintained native code and writes only the library; the source model is never saved. Before accepting a changed library, run `export-hook-clearance.py` in Blender followed by `check-hook-clearance.py` in the configured Python environment. Record an updated close-up and use the local proof page for explicit sign-off before batch images.
 
 The library includes the long website strap concept as a separate visual accessory. If the next modelling task needs only the hooks, hide `WEB-One-continuous-strap` rather than deleting or silently redesigning it. Preserve one detachable strap, both release systems and exact artwork rules.
+
+## Cross-repository continuation
+
+The design repo now carries `docs/WEBSITE_V68_STRAP_HANDOFF.md`, linked from its SESSION_HANDOFF.md and README.md, in commit `5c327d1`. It pins the website release `ee24fa5ad58f42adbcc84ff6f3d71b3dc298ed22` and the packed library checksum, explains what remains separate from native V68, and lists the import and validation steps. The V68 source file is unchanged. Final packed import evidence is in `docs/v68/library-import-verification.json`.

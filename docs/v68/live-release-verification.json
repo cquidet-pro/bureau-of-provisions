@@ -1,0 +1,33 @@
+{
+  "release": "ee24fa5ad58f42adbcc84ff6f3d71b3dc298ed22",
+  "checked_at": "2026-11-15T18:02:44.951Z",
+  "results": [
+    {
+      "path": "/",
+      "status": 200,
+      "bytes": 217035
+    },
+    {
+      "path": "/old/",
+      "status": 200,
+      "bytes": 185594
+    },
+    {
+      "path": "/images/product/edition-26-native-v68.webp",
+      "status": 200,
+      "bytes": 720092
+    },
+    {
+      "path": "/images/product/lid-closed-native-v68.webp",
+      "status": 200,
+      "bytes": 601390
+    },
+    {
+      "path": "/images/product/platform-native-v68.webp",
+      "status": 200,
+      "bytes": 9078402
+    }
+  ],
+  "workflow": "https://github.com/cquidet-pro/bureau-of-provisions/actions/runs/43744257619",
+  "workflow_conclusion": "success"
+}

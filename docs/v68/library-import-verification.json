@@ -1,0 +1,10 @@
+{
+  "source_model_sha256": "63d66f1b611b1b80a6bcdc687041e085724739e1e398d2e49dc55212f92bb496",
+  "library_sha256": "83d8ba23046f73568fd677d682b3735c05a68f7cca089ac26a3a114f7a7edaec",
+  "accessory_object_count": 21,
+  "neutral_textile_packed": true,
+  "headless_import_verified": true,
+  "source_blend_saved": false,
+  "design_repository_handoff_commit": "5c327d1",
+  "scope": "Packed visual accessory; no engineering strength, opening-motion or tolerance certification"
+}
