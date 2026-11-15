@@ -32,7 +32,7 @@ writeFileSync(page, html);
 function prepareOtherPages(dir) {
   for (const entry of readdirSync(dir, {withFileTypes:true})) {
     const path = resolve(dir, entry.name);
-    if (entry.isDirectory()) prepareOtherPages(path);
+    if (entry.isDirectory() && !(dir === output && entry.name === 'old')) prepareOtherPages(path);
     else if (entry.name.endsWith('.html') && path !== page) {
       writeFileSync(path, prepareAssetDelivery(inlineFonts(readFileSync(path, 'utf8'))));
     }
@@ -45,7 +45,7 @@ let references = '';
 function gather(dir) {
   for (const entry of readdirSync(dir, {withFileTypes:true})) {
     const path = resolve(dir, entry.name);
-    if (entry.isDirectory()) gather(path);
+    if (entry.isDirectory() && !(dir === output && entry.name === 'old')) gather(path);
     else if (/\.(html|css|js|svg)$/.test(entry.name)) references += readFileSync(path, 'utf8');
   }
 }
