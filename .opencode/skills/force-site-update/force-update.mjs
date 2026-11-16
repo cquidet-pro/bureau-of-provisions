@@ -1,116 +1,56 @@
 #!/usr/bin/env node
-// Post-deploy checklist: verify the deploy landed, clear caches, report status.
-// Run this after `gh run watch` confirms a green deploy.
-import fs from "fs";
-import { execSync } from "child_process";
+// Read-only verification of a specific Firebase release and its delivered bytes.
+import {readFileSync, readdirSync} from 'node:fs';
+import {resolve, basename} from 'node:path';
+import {execFileSync} from 'node:child_process';
+import {createHash} from 'node:crypto';
 
-// TODO: set once Firebase Hosting is created for the Bureau of Provisions.
-const LIVE_URL = process.env.LIVE_URL || "https://bureauofprovisions.com";
-const SW_FILE = "public/sw.js";
-const VERSION_REGEX = /const VERSION = "([^"]+)"/;
-
-// ── helpers ──
-
-function green(s)  { return `\x1b[32m${s}\x1b[0m`; }
-function red(s)    { return `\x1b[31m${s}\x1b[0m`; }
-function yellow(s) { return `\x1b[33m${s}\x1b[0m`; }
-function fetchJS() {
-  const html = execSync(`curl -s "${LIVE_URL}/"`, { encoding: "utf8", timeout: 15000 });
-  const match = html.match(/assets\/index-[A-Za-z0-9]+\.js/);
-  return match ? match[0] : null;
+const repo='cquidet-pro/bureau-of-provisions';
+const args=process.argv.slice(2),assets=[];
+let commit='HEAD';
+for(let i=0;i<args.length;i++) {
+  if(['--verify','-v'].includes(args[i]))continue;
+  if(args[i]==='--commit'&&args[i+1])commit=args[++i];
+  else if(args[i]==='--asset'&&args[i+1])assets.push(args[++i]);
+  else throw Error(`Unknown or incomplete option: ${args[i]}. This helper is read-only; use --verify, --commit SHA and --asset /images/… only.`);
 }
-
-// ── step 1: CI status ──
-
-function ciStatus() {
-  try {
-    const out = execSync(
-      'gh run list --branch main --limit 1 --json databaseId,status,conclusion,headSha -q \'.[0] | "\\(.status) \\(.conclusion) \\(.headSha[0:8])"\'',
-      { encoding: "utf8", timeout: 10000 }
-    ).trim();
-    const [status, conclusion, sha] = out.split(" ");
-    const ok = status === "completed" && conclusion === "success";
-    console.log(ok ? green(`✅ CI deploy: ${status} ${conclusion} (${sha})`)
-                   : red(`❌ CI deploy: ${status} ${conclusion} (${sha})`));
-    return ok;
-  } catch (e) {
-    console.log(red(`❌ Cannot check CI: ${e.message}`));
-    return false;
+const root=resolve(import.meta.dirname,'../../..');
+const git=(...argv)=>execFileSync('git',argv,{cwd:root,encoding:'utf8'}).trim();
+const sha=bytes=>createHash('sha256').update(bytes).digest('hex');
+const origin=new URL(process.env.LIVE_URL||'https://bureauofprovisions.com');
+if(!['https:','http:'].includes(origin.protocol)||origin.username||origin.password)throw Error('LIVE_URL must be an HTTP(S) origin without credentials');
+const fetchBytes=async path=>{
+  const response=await fetch(new URL(path,origin),{headers:{'Cache-Control':'no-cache'},signal:AbortSignal.timeout(60000)});
+  if(!response.ok)throw Error(`HTTP ${response.status}: ${response.url}`);
+  return {response,bytes:Buffer.from(await response.arrayBuffer())};
+};
+try {
+  const expected=git('rev-parse','--verify',`${commit}^{commit}`);
+  const runs=JSON.parse(execFileSync('gh',['run','list','--repo',repo,'--commit',expected,'--workflow','firebase-deploy.yml','--limit','5','--json','headSha,status,conclusion,url'],{encoding:'utf8',timeout:20000}));
+  const run=runs.find(r=>r.headSha===expected);
+  if(!run)throw Error(`No deployment run for ${expected.slice(0,8)}. A docs-only commit may be excluded; pass the actual site commit.`);
+  if(run.status!=='completed'||run.conclusion!=='success')throw Error(`Deployment is ${run.status}/${run.conclusion||'pending'}: ${run.url}`);
+  const {response,bytes}=await fetchBytes('/');
+  if(!response.headers.get('cache-control')?.includes('no-cache'))throw Error('Homepage lacks Cache-Control: no-cache');
+  const html=bytes.toString('utf8');
+  const path=html.match(/(?:src|href)=["']([^"']*\/assets\/index-[\w-]+\.js)["']/)?.[1];
+  if(!path)throw Error('No Vite entry bundle found in live HTML');
+  const localBundles=readdirSync(resolve(root,'dist/assets')).filter(n=>/^index-[\w-]+\.js$/.test(n));
+  if(localBundles.length!==1)throw Error('Run npm run build; expected one local Vite entry bundle');
+  const local=readFileSync(resolve(root,'dist/assets',localBundles[0]));
+  const live=(await fetchBytes(path)).bytes;
+  if(sha(local)!==sha(live))throw Error(`Live JS bytes differ from the local build (${basename(path)} vs ${localBundles[0]})`);
+  console.log(`Verified successful deploy ${expected.slice(0,8)}, root no-cache header and identical JS bytes.`);
+  for(const path of assets) {
+    if(!/^\/images\/[\w./-]+$/.test(path)||path.split('/').includes('..'))throw Error(`Invalid public asset path: ${path}`);
+    const local=readFileSync(resolve(root,'public',path.slice(1))),hash=sha(local);
+    const live=(await fetchBytes(`${path}?v=${hash.slice(0,16)}`)).bytes;
+    if(sha(live)!==hash)throw Error(`Live asset differs: ${path}`);
+    if(html.includes(path)&&!html.includes(`${path}?v=${hash.slice(0,16)}`))throw Error(`Homepage lacks the current content cache key: ${path}`);
+    console.log(`Verified live asset bytes and applicable cache key: ${path}`);
   }
+  console.log(`Live: ${origin.origin}/`);
+} catch(error) {
+  console.error(`Verification failed: ${error.message}`);
+  process.exitCode=1;
 }
-
-// ── step 2: live bundle check ──
-
-function liveBundle() {
-  try {
-    const js = fetchJS();
-    if (!js) { console.log(red("❌ Cannot find live JS bundle")); return false; }
-    const local = fs.readdirSync("dist/assets").find(f => f.startsWith("index-") && f.endsWith(".js"));
-    if (!local) { console.log(red("❌ No local build found — run npm run build first")); return false; }
-    console.log(`   Local bundle: ${local}`);
-    console.log(`   Live bundle:  ${js}`);
-    if (js === local) {
-      console.log(green("✅ Bundles match — deploy picked up local build"));
-    } else {
-      console.log(yellow("⚠️  Bundle names differ (expected — hashes include build platform)."));
-      console.log(yellow("   Verify a specific string manually if you suspect stale content:"));
-      console.log(yellow(`   curl -s "${LIVE_URL}/${js}" | grep -c "YOUR_EXPECTED_STRING"`));
-    }
-    return true;
-  } catch (e) {
-    console.log(red(`❌ Bundle check failed: ${e.message}`));
-    return false;
-  }
-}
-
-// ── step 3: clear service worker cache ──
-
-function bumpSW() {
-  try {
-    const content = fs.readFileSync(SW_FILE, "utf8");
-    const match = content.match(VERSION_REGEX);
-    if (!match) { console.log(red("❌ Cannot find VERSION in sw.js")); return; }
-    const oldV = match[1];
-    const newV = `v${parseInt(oldV.replace(/^v/, "")) + 1}`;
-    fs.writeFileSync(SW_FILE, content.replace(VERSION_REGEX, `const VERSION = "${newV}"`), "utf8");
-    console.log(green(`✅ Service worker: ${oldV} → ${newV}`));
-    execSync(`git add ${SW_FILE} && git commit -m "chore: bump SW version ${newV}" && git push origin main`,
-      { stdio: "inherit", timeout: 30000 });
-    console.log(green("✅ Cache clear pushed — users will get fresh content on next visit"));
-  } catch (e) {
-    console.log(red(`❌ SW bump failed: ${e.message}`));
-  }
-}
-
-// ── main ──
-
-const args = process.argv.slice(2);
-const verify = args.includes("--verify") || args.includes("-v");
-
-console.log(`\n${'='.repeat(50)}`);
-console.log("  Post-deploy checklist");
-console.log(`${'='.repeat(50)}\n`);
-
-const ciOk = ciStatus();
-console.log("");
-
-if (verify || ciOk) {
-  liveBundle();
-  console.log("");
-}
-
-if (args.includes("--clear-cache")) {
-  bumpSW();
-}
-
-console.log(`${'='.repeat(50)}\n`);
-
-if (!ciOk) {
-  console.log(red("The deploy FAILED or is still running — nothing to verify."));
-  process.exit(1);
-}
-
-console.log("Next steps:");
-console.log(`  1. Test in incognito: ${LIVE_URL}/`);
-console.log("  2. If stale, run: node .opencode/skills/force-site-update/force-update.mjs --clear-cache");
-console.log("  3. Wait 5 min for CDN propagation, then retest\n");

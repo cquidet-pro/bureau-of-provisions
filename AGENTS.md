@@ -29,3 +29,9 @@ For a quick continuation, start with `docs/NEXT_SESSION_START.md`. Read `docs/PR
 - Main scene and lid demo start with straw Up. Keep Close/Open lid and mist controls working, labels apart at phone widths and every leader/mask/emission reprojected to its own view. Main dots stay small beside openings; carry leader touches the strap. Discreet catalogue braille, no cutaway braille, no current prices.
 - Cutaway: pickup moves with upper deck/socket; no exposed white connector or body-fixed duplicate. Show only requested metallic exposed threads, double walls/gap, continuous water to native floor and half-clipped crest. Illustrative additions never alter the source .blend or imply manufacturing validation.
 - Current corrections were explicitly approved for whole-site publication. Future changes still need the review gate. The packed Blender accessory and safe import steps are in `docs/BLENDER_STRAP_HANDOFF.md`. Preserve `/old/` and never stage unrelated user files.
+
+## Shared project skills
+
+- For website product imagery, use `.agents/skills/bop-product-rendering/SKILL.md`.
+- For an authorised release, use `.agents/skills/bop-release/SKILL.md`; the maintained deployment skills are in `.opencode/skills/`.
+- Read `PROJECT_TOOLS.md` for colleague setup, the two-repository layout and the distinction between shared project skills and personal plugin/tool installations.
