@@ -26,6 +26,7 @@ try:
  prefs=bpy.context.preferences.addons['cycles'].preferences;prefs.compute_device_type='METAL';prefs.get_devices()
  for device in prefs.devices:device.use=device.type=='METAL'
  if any(d.type=='METAL' for d in prefs.devices):s.cycles.device='GPU'
+ if os.environ.get('BOP_RENDER_DEVICE')=='CPU':s.cycles.device='CPU'
  print('RENDER DEVICES',[(d.name,d.type,d.use) for d in prefs.devices],flush=True)
 except Exception as exc:print('CPU rendering',str(exc),flush=True)
 s.cycles.max_bounces=12;s.cycles.transmission_bounces=10;s.cycles.transparent_max_bounces=64;s.cycles.min_transparent_bounces=64
@@ -146,6 +147,10 @@ for name in ['03-Fixed-cap','10-Safety-loop','05-Button']:
   if slot.material==bodymat:slot.material=capmat
 # The long webbing colour/pattern is represented by a vector-authored strip texture.
 def palette(e):
+ # White/ivory webbing has a discreet same-fabric fold, not a dark rectangular
+ # stitched patch. Remove the separate contrasting thread on these tabs.
+ for side in (-1,1):
+  s.objects['WEB-tab-stitch-'+str(side)].hide_render=e['number'] in (9,12,17,26,27)
  bpy.data.materials['Cream silicone foot'].node_tree.nodes['Principled BSDF'].inputs['Base Color'].default_value=(*rgb(e['body'] if e['number']==10 else '#f4f3ee'),1)
  bodymat.node_tree.nodes['Principled BSDF'].inputs['Base Color'].default_value=(*rgb(e['body']),1);capmat.node_tree.nodes['Principled BSDF'].inputs['Base Color'].default_value=(*rgb(e['accent']),1)
  p.inputs['Base Color'].default_value=(*rgb(e['accent']),1)

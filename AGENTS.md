@@ -1,5 +1,7 @@
 # Product design rules
 
+- Rendering workflow correction, 16 November 2026: try normal GPU rendering first and check whether it is faster. At the first Blender error, crash or apparent stall, pause the render work and investigate the failure immediately. Capture Blender output, exit status, macOS crash/Metal logs and the exact render settings before retrying or choosing a CPU fallback. Do not leave a failing batch running or silently switch to CPU. Test one isolated GPU job at a time; preserve the completed lossless masters.
+
 - Current physical geometry is V68 in `../water-bottle-design/output/prototype-v68/Bureau-73mm-V68-2p2mm-Button-Surround-REVIEW.blend`. Render its actual meshes for website product images; do not regenerate or infer bottle hardware. Preserve its lid-mounted handle, recessed straw, 73 mm body / 249.1 mm closed envelope, recessed body strap mounts, round push button and compact rear hinge with full 220° opening. The recessed mounts supersede the former external collar-lug placement. See `docs/NATIVE_V68_RENDERING.md` and the geometry-integrity evidence.
 
 For a quick continuation, start with `docs/NEXT_SESSION_START.md`. Read `docs/PRODUCT_DESIGN_GUIDE.md` before modifying bottle images, product concepts, colourways, specifications, or marketing copy. It is the consolidated current specification; the historical archive contains rejected versions. Use `design/product-design.json` for references and edition palettes.

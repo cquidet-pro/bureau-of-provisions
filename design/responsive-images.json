@@ -1,6 +1,6 @@
 {
   "/images/product/bottle-cutaway-native-v68.webp": {
-    "master_sha256": "047acdbef679ef8ca090bdf9c0d7a92af81f5b9e09b3ae82dd8aee8f7feb2304",
+    "master_sha256": "28dbd5aeb09a9ba1e257c745226482adc18b3788c86df7908de05dd50738e437",
     "variants": [
       {
         "src": "/images/product/responsive/bottle-cutaway-native-v68-256w.webp",
@@ -189,7 +189,7 @@
     ]
   },
   "/images/product/edition-09-native-v68.webp": {
-    "master_sha256": "4f16afdcc68fcd305e88d1218559c3621c24ad9c703b0b7da3a5aac31752da89",
+    "master_sha256": "da694f7dee9c45c3c504c71476556790640c092b12057a07fc5ce7c06eb28a43",
     "variants": [
       {
         "src": "/images/product/responsive/edition-09-native-v68-256w.webp",
@@ -252,7 +252,7 @@
     ]
   },
   "/images/product/edition-12-native-v68.webp": {
-    "master_sha256": "44196ced305b7dca0e058a61f220681ebf061d97e4f2c43b250a6f9f2eec04ab",
+    "master_sha256": "c4b76d0c42dcab74d11ddabf3f417f284b48ae651326c4739f1266413f7dd91c",
     "variants": [
       {
         "src": "/images/product/responsive/edition-12-native-v68-256w.webp",
@@ -357,7 +357,7 @@
     ]
   },
   "/images/product/edition-17-native-v68.webp": {
-    "master_sha256": "03194996b3b90386025516b02f1210c67189a1c4cc03ef22aae30d028c735403",
+    "master_sha256": "4b169e05dccecd8b8d82c75fcad8a449f0fe04539c24754cf0fb9a092472b266",
     "variants": [
       {
         "src": "/images/product/responsive/edition-17-native-v68-256w.webp",
@@ -546,7 +546,7 @@
     ]
   },
   "/images/product/edition-26-native-v68.webp": {
-    "master_sha256": "3ccb280b1f43e4c913f894ec71481e0359c40a63e9ef9fdabc1c82f279f9c678",
+    "master_sha256": "6fbbe85ae3eb37e6a12dca232bbfb5dc4f8d808d79b9fd84440e6ad21553b65c",
     "variants": [
       {
         "src": "/images/product/responsive/edition-26-native-v68-256w.webp",
@@ -567,7 +567,7 @@
     ]
   },
   "/images/product/edition-27-native-v68.webp": {
-    "master_sha256": "d18bf67d270751a1734cd4989ee4b9e93d99d50f5efe7dc7da85f7cb472865f4",
+    "master_sha256": "ae2d41f7207f0dfd660cdc19524b13077f1791ade58a9c084614972423273e65",
     "variants": [
       {
         "src": "/images/product/responsive/edition-27-native-v68-256w.webp",
@@ -655,7 +655,7 @@
     ]
   },
   "/images/product/platform-native-v68.webp": {
-    "master_sha256": "4ecb8bf94efbfbc9cef8bd259e151683cd3d87535b628665c6572ff6ea0cfe37",
+    "master_sha256": "bf01f063e3b4f23af03cf0be740698eb8806b25a3749de6346e4bc1a3f1f8dfd",
     "variants": [
       {
         "src": "/images/product/responsive/platform-native-v68-256w.webp",

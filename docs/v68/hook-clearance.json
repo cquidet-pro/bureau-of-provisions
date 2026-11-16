@@ -1,7 +1,7 @@
 {
   "method": "Evaluated native meshes in millimetres; watertight oriented solids; Manifold intersection and minimum gap. Gap search capped at 2 mm.",
   "mesh_export_sha256": "9b1a9a6b4d4075258f889c0da091704cc975ded7c185adb5fd00153b4685f8d5",
-  "render_setup_sha256": "e2b655aeff83979cd3d1522462a4bb6f6f9f84cf870a5a80fdd7209f7cd14903",
+  "render_setup_sha256": "1bd20293a20234a9e31d76b63c84fa0f8483bcf9f7cf6bb9d287347506e90fb1",
   "scope": "Depicted closed snap fit against original body; no strength, manufacturing tolerance or opening-motion certification.",
   "parts": {
     "WEB-round-opening-snap-jaw--1": {

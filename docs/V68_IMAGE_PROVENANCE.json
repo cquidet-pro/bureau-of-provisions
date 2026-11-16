@@ -68,5 +68,13 @@
     "detail_evidence": "docs/v68/main-lid-detail.png"
   },
   "approved_material": "Previous proof sharp translucent lid; rejected physical-smoke experiments removed. Polished stainless button face with coloured surround.",
-  "approval": "design/render-approval.json"
+  "approval": "design/render-approval.json",
+  "evening_closeup_correction": {
+    "approval": "Cedric reviewed the local before/after proof and instructed ok push it, 15 November 2026",
+    "comparison": "docs/v68/macro-correction-comparison.png",
+    "macro": "2176\u00d72890 native Cycles PNG; up to 128 adaptive samples; depth of field disabled; 0.75 pixel filter; reduced spray-head light energy through dedicated Cycles light linking; all other materials and camera preserved",
+    "white_tabs": "Separate contrasting rectangular stitch curves hidden for All White, Away Day, Extra Time, Japan and Canada; exact fabric patterns/prints preserved. Same correction applies to white scene and anatomy tabs.",
+    "render_device": "CPU after Metal GPU command-buffer failure",
+    "publication_date": "2026-11-16"
+  }
 }

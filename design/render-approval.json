@@ -1,7 +1,7 @@
 {
-  "created_at": "2026-11-15T17:57:24.858Z",
-  "input_sha256": "e42ba7b5ecf03d91017141b4fccd285b641e03ca3dbb76d9b55044ee46213971",
-  "snapshot_sha256": "ceae63ccd7301efbc9f05daf9452d72fcafae996d062440cad5adaf0e8795d50",
+  "created_at": "2026-11-15T23:46:24.815Z",
+  "input_sha256": "9a097ac235413826836aa0b962df3232e14a918cd8a8683c3a99bbea9ff2d347",
+  "snapshot_sha256": "38e1bee587971486131caee30f0628da3116728e2b8218758943beabfab46d2a",
   "image_types": [
     "edition-09-native-v68.webp",
     "platform-native-v68.webp",
@@ -16,8 +16,10 @@
     "edition-27-native-v68.webp"
   ],
   "production_unchanged": true,
-  "source": "isolated candidate render",
+  "source": "User-reviewed single raised-straw correction proof; other image types copied from existing production masters",
+  "reviewed_comparison": "docs/v68/macro-correction-comparison.png",
+  "approved_scope": "Apply corrected macro lighting/sharpness to all four lid states; remove dark stitch borders from white/ivory tabs in five editions, main scene and cutaway",
   "reviewer": "Cedric",
-  "approved_at": "2026-11-15T17:57:25.064Z",
+  "approved_at": "2026-11-15T23:46:25.491Z",
   "authorization": "Operator records an explicit user sign-off; this command does not infer approval."
 }

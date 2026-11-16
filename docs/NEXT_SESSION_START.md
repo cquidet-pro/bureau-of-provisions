@@ -23,6 +23,28 @@ Read `AGENTS.md`, `docs/PRODUCT_DESIGN_GUIDE.md` and `design/product-design.json
 
 Use `/tmp/bureau74-venv/bin/python` if that environment still exists, or create a new environment from `scripts/render-v68/requirements.txt`. Blender is `/Applications/Blender.app/Contents/MacOS/Blender`; install Node dependencies and `rsvg-convert`. `rebuild.py --help` checks prerequisites before expensive rendering.
 
+### Approved Fig. 01 close-up correction / 15 November, evening
+
+The user requested less white reflection on the spray head and a sharper recessed
+straw. `native-views.py` now isolates the macro finish: 2176×2890 PNG, up to 128 adaptive samples,
+no depth of field, narrower pixel filter and targeted light linking to reduce the spray-head reflections. The approved steel material, native geometry, fixed camera and
+other image types are retained. `BOP_MACRO_STATES=up` renders just the raised
+straw for the first visual proof; omit it to render all four macro states.
+
+The reviewed assets and a before/after comparison are in
+`output/design-v68/macro-sharp-proof/`. Cedric approved the proof and instructed “ok push it”. The approved finish is rendered in all four lid states; the dark thread is
+removed from the five white/ivory strap editions and white main-scene/cutaway
+tabs. Lossless deliveries and responsive sizes passed the full release checks. Preserve the logical
+1088×1445 SVG coordinate space when delivering these higher-density images.
+The 15 November approved release used `BOP_RENDER_DEVICE=CPU` after a Metal
+command-buffer error. Latest user instruction, 16 November: next time try normal
+GPU rendering first and compare speed. At the first error, crash or apparent
+stall, stop the render work and diagnose it immediately before a retry or CPU
+fallback; capture stdout/exit status and macOS crash/Metal logs. See
+`docs/BLENDER_GPU_DIAGNOSTICS.md` for the separate sandbox launch failures,
+shader-cache warnings and bounded GPU retests. White/ivory folded tabs also
+omit the separate dark rectangular stitch border, per the same evening correction.
+
 ## Fast review loop
 
 1. Render one affected image in isolation. Keep the approved camera and geometry unless the user requests a change.

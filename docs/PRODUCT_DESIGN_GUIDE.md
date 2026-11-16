@@ -211,4 +211,11 @@ The user approved the complete correction proof and authorised the whole website
 
 ## Next update: smallest useful render
 
+Latest local correction, 15 November evening: remove the separate dark
+rectangular stitch border from white/ivory folded strap tabs (All White,
+Away Day, Extra Time, Japan and Canada). Preserve their slim same-fabric folds,
+clean weave, exact prints and edition patterns. Fig. 01 also requires restrained
+steel reflections and a sharply resolved recessed straw. Cedric explicitly approved the comparison and authorised publication with
+“ok push it”. The approved comparison is `docs/v68/macro-correction-comparison.png`.
+
 Use [the workflow](DESIGN_REVIEW_WORKFLOW.md) and [session lessons](V68_SESSION_LESSONS.md). Start with one affected edition/image type; get explicit visual sign-off before a full batch. CSS labels, leaders and exact SVG placement require no Blender render. A catalogue camera/material/hardware change affects all 29 editions; a scene-only correction uses `--part hero`, a cutaway-only correction `--part section`. Preserve PNG masters, export lossless WebP once, regenerate responsive variants, refresh evidence and run the complete release checks. Keep `/old/` unchanged. [Blender handoff](BLENDER_STRAP_HANDOFF.md) provides the packed library and safe next-session import.

@@ -9,6 +9,8 @@ g=runpy.run_path(str(Path(__file__).resolve().parent/'native-studio.py'));global
 palette({'number':9,'body':'#f4f3ee','accent':'#f4f3ee'})
 anchors=json.loads((BASE/'view-anchors.json').read_text()) if (BASE/'view-anchors.json').exists() else {}
 PART=os.environ.get('BOP_VIEWS_PART','all')
+MACRO_STATES=set(os.environ.get('BOP_MACRO_STATES','closed,flat,up,pressed').split(','))
+assert MACRO_STATES <= {'closed','flat','up','pressed'},'Unknown macro state'
 def project(p):
  v=world_to_camera_view(s,c,Vector(p));width,height=(1536,1024) if s.render.resolution_x==4608 else (s.render.resolution_x,s.render.resolution_y);return [round(v.x*width,2),round((1-v.y)*height,2)]
 def witnesses(name):
@@ -31,18 +33,55 @@ def render(name):
  s.render.filepath=str(OUT/(name+'.png'));bpy.ops.render.render(write_still=True);print('FINISHED VIEW',name,flush=True)
 def render_open(name):
  with lid_pose():render(name)
+@contextmanager
+def macro_finish():
+ # Keep the small native recess crisp at high-density display sizes. These
+ # settings affect only the lid stills, never the catalogue or main scene.
+ previous=(s.render.resolution_percentage,s.cycles.samples,c.data.dof.use_dof,s.render.filter_size,s.cycles.use_adaptive_sampling,s.cycles.adaptive_threshold,s.cycles.adaptive_min_samples)
+ lights=[(s.objects['WEB-'+name],factor) for name,factor in [('Key',.04),('Fill',.15),('Rim',.08)]]
+ receivers=[light.light_linking.receiver_collection for light,_ in lights]
+ normal=bpy.data.collections.new('WEB-Macro unchanged lighting receivers')
+ spray=bpy.data.collections.new('WEB-Macro spray reflection receiver')
+ spray.objects.link(s.objects['11-Spray-dummy'])
+ for obj in list(s.objects):
+  if obj.type in {'MESH','CURVE'} and obj.name!='11-Spray-dummy':normal.objects.link(obj)
+ reflection_lights=[]
+ try:
+  s.render.resolution_percentage=200;s.cycles.samples=128;c.data.dof.use_dof=False;s.render.filter_size=.75
+  s.cycles.use_adaptive_sampling=True;s.cycles.adaptive_threshold=.035;s.cycles.adaptive_min_samples=16
+  # Cycles light linking controls the actual reflected softbox intensity on
+  # the spray head; the light's specular_factor is not sufficient here.
+  for light,factor in lights:
+   light.light_linking.receiver_collection=normal
+   reflection=light.copy();reflection.data=light.data.copy();reflection.name='WEB-Macro '+light.name
+   reflection.data.energy*=factor;s.collection.objects.link(reflection)
+   reflection.light_linking.receiver_collection=spray;reflection_lights.append(reflection)
+  yield
+ finally:
+  s.render.resolution_percentage,s.cycles.samples,c.data.dof.use_dof,s.render.filter_size,s.cycles.use_adaptive_sampling,s.cycles.adaptive_threshold,s.cycles.adaptive_min_samples=previous
+  for (light,_),receiver in zip(lights,receivers):light.light_linking.receiver_collection=receiver
+  for light in reflection_lights:
+   data=light.data;bpy.data.objects.remove(light,do_unlink=True);bpy.data.lights.remove(data)
+  bpy.data.collections.remove(normal);bpy.data.collections.remove(spray)
+def render_macro(state,name,opened=True):
+ if PART in ('all','macro') and state in MACRO_STATES:
+  if opened:
+   with lid_pose():
+    with macro_finish():render(name)
+  else:
+   with macro_finish():render(name)
 # Same fixed photographic camera for both actual Blender straw poses.
 s.render.resolution_x=1088;s.render.resolution_y=1445
 front_camera((0,-.241197,.365),(0,0,.218),.205)
 s.frame_set(24);witnesses('lid')
-if PART in ('all','macro'):
- s.frame_set(6);render('lid-closed-native-v68');s.frame_set(24);render_open('lid-native-v68')
+s.frame_set(6);render_macro('closed','lid-closed-native-v68',opened=False)
+s.frame_set(24);render_macro('flat','lid-native-v68')
 s.frame_set(48);witnesses('straw_up')
-if PART in ('all','macro'):render_open('straw-up-native-v68')
+render_macro('up','straw-up-native-v68')
 # Existing website gesture: same native spray mesh, translated for one press.
 # This is an illustrative pump pose, not a new manufacturing mechanism.
 s.frame_set(24);o=s.objects['11-Spray-dummy'];old=o.location.copy();o.location.z-=.002
-if PART in ('all','macro'):render_open('spray-pressed-native-v68')
+render_macro('pressed','spray-pressed-native-v68')
 o.location=old
 # Station product is rendered as an alpha layer. The photographic clean plate
 # is composited separately at Standard/0 exposure to retain its exact colours.
